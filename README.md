@@ -1,6 +1,6 @@
-# UI for Der Die Das Die Doh
+# UI for Der Die Das Die Doh WIP
 
-## What (WiP)
+## What
 A simple flashcard app where the user can pick and choose cards to work on or have them be random. As this is a work in progress, that's as committed as I'm getting, ya hear?
 
 ## Why?
@@ -13,7 +13,10 @@ A simple flashcard app where the user can pick and choose cards to work on or ha
   - JS and CSS: React and Tailwind via Vite
   - Data: The data file is local until I know what I want and quit changing my mind as I go. The data is also for me at the moment. I will not add vocabulary I always know (man, woman, child) and stick with the ones that do my head in. Eventually an API, but until then, I'm playing with local data. 
 
-
+## When
+ - Now: Just frontend and playing with a feel, vive, groove, gestalt
+ - Lata potata, papa Data: Find a dictionary API that isn't $$$ or dead for the data
+ - Later später: user quizzes herself with the words on the review deck
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
