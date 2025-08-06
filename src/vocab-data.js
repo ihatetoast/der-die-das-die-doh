@@ -19,7 +19,7 @@
 
 
 // note to me: build this when you want busy work. this is slowing you down, so ... no TV, young lady, without adding to this
-// https://en.langenscheidt.com/german-english/ and your own Duden. 
+// en.langenscheidt dot com/german-english/ and your own Duden. 
 // Only choose words you either mess up on gender or plural. Don't worry about the general public. This is your app, boo.
 export const VOCABULARY = [
   {
@@ -29,7 +29,7 @@ export const VOCABULARY = [
     english: 'dog',
     gender: 'm',
     clue: '',
-    plural: '-e',
+    plural: 'Hunde',
     examples: {
       nom: 'Der Hund ist süß. Meine Hunde sind groß.',
       acc: 'Ich sehe einen Hund. Ich habe drei Hunde.',
@@ -44,7 +44,7 @@ export const VOCABULARY = [
     english: 'cat',
     gender: 'f',
     clue: '',
-    plural: '-n',
+    plural: 'Katzen',
     examples: {
       nom: 'Die Katze ist klein. Seine Katzen sind süß.',
       acc: 'Ich habe meine Katze gefüttert. Mein Sohn will drei Katzen haben.',
@@ -59,7 +59,7 @@ export const VOCABULARY = [
     english: 'head',
     gender: 'm',
     clue: '',
-    plural: '-¨e',
+    plural: 'Köpfe',
     examples: {
       nom: 'Der Kopf hat drei Flöhe. Diese Köpfe gehören zu diesen Körpern.',
       acc: 'Ich sah seinen Kopf aus dem Fenster. Das Kalb hat zwei Köpfe.',
@@ -74,7 +74,7 @@ export const VOCABULARY = [
     english: 'dish (meal). Also court',
     gender: 'n',
     clue: '',
-    plural: '-e',
+    plural: 'Gerichte',
     examples: {
       nom: 'Mein Gericht ist zu kalt. Diese Gerichte Diese Gerichte sind typisch für die indische Küche.',
       acc: 'Welches Gericht wirst du bestellen? Sie haben viele Gerichte zur Auswahl.',
