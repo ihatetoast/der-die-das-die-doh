@@ -1,4 +1,9 @@
-//  notes: { genderNotes:[], pluralHints:[], pluralNote:"", weakMascNote: 'takes -ns in the genitive singular'}, as i find them. empty notes:{} until i do
+//  notes: { 
+// genderNotes:[], 
+// pluralHints:[], 
+// pluralNote:"", 
+// miscNotes: []
+// weakMascNote: 'takes -ns in the genitive singular'}, as i find them. empty notes:{} until i do
 //     weakMasculine: false,
 //     notes: {}, change to true when i get to them.
 // gender hints
@@ -6,6 +11,14 @@
 // Nouns ending in -ant, -ent, -ist, -ph (der Präsident, der Student, der Journalist)
 // A few irregular ones (der Herr, der Nachbar, der Bauer)
 // Some nationalities (der Franzose, der Grieche)
+
+
+
+// "Der" (masculine) generally goes with endings -ling, -ig, -ner, -smus, -er, -or, -eur, -ent, -ant, -is, -oge and -us, as well as days of the week, months, seasons, monetary units, minerals, and directions.
+
+// "Die" (feminine) generally goes with endings –ung, -ie, -ei, -keit, heit, schaft, –tät, -ik, -(t)ion, -ur, -ar, -ät, -a, -in, -ine, and -euse, as well as numbers, trees, fruits, flowers
+
+// "Das" (neuter) generally goes with endings -chen, -lein, -ment, -tum, -ma, -um, -nis and -ium, as well as colors (when used as nouns), letters, chemical elements
 
 // there are 2000 words coming in.
 export const VOCABULARY_COMMON = [
@@ -1870,7 +1883,7 @@ export const VOCABULARY_COMMON = [
         'Exists only in plural form.',
         "Although 'anderen' (from the adjective pronoun) is more common, 'Anderen' is also valid.",
       ],
-    }, // katy
+    }, 
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: '' },
       {
@@ -21310,12 +21323,12 @@ export const VOCABULARY_COMMON = [
   },
   {
     id: 1474,
-    eng: 'briefcase',
+    eng: 'briefcase (hard shell)',
     article: 'der',
     noun: 'Aktenkoffer',
     plural: 'die Aktenkoffer',
     weakMasculine: false,
-    notes: {},
+    notes: {miscNotes: ["Aktenkoffer can also mean 'attaché case'. It is a higher level of security and usually has a hard shell. Aktentashe is softer, often leather."]},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
       { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
@@ -21699,9 +21712,1406 @@ export const VOCABULARY_COMMON = [
       { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
     ],
     completed: false
+  },
+    {
+    id: 1502,
+    eng: 'briefcase (soft shell)',
+    article: 'die',
+    noun: 'Aktentasche',
+    plural: 'die Aktentaschen',
+    weakMasculine: false,
+    notes: {miscNotes: ["Aktentasche can also mean 'portfolio' or 'messenger bag'. It has a soft shell, usually leather, vinyl, or nylon fabric. Aktenkoffer is hard and secure."]},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1503,
+    eng: 'identity',
+    article: 'die',
+    noun: 'Identität',
+    plural: 'die Identitäten',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1504,
+    eng: 'pavement',
+    article: 'der',
+    noun: 'Gehweg',
+    plural: 'die Gehwege',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1505,
+    eng: 'asshole',
+    article: 'das',
+    noun: 'Arschloch',
+    plural: 'die Arschlöcher',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1506,
+    eng: 'strap',
+    article: 'das',
+    noun: 'Band',
+    plural: 'die Bänder',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1507,
+    eng: 'parlor',
+    article: 'der',
+    noun: 'Salon',
+    plural: 'die Salons',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1508,
+    eng: 'harbor',
+    article: 'der',
+    noun: 'Hafen',
+    plural: 'die Häfen',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1509,
+    eng: 'example',
+    article: 'das',
+    noun: 'Beispiel',
+    plural: 'die Beispiele',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1510,
+    eng: 'web',
+    article: 'das',
+    noun: 'Netz',
+    plural: 'die Netze',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1511,
+    eng: 'golf',
+    article: 'der',
+    noun: 'Golf',
+    plural: 'REPLACE',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1512,
+    eng: 'crap',
+    article: 'der',
+    noun: 'Mist',
+    plural: 'REPLACE',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1513,
+    eng: 'delight',
+    article: 'die',
+    noun: 'Freude',
+    plural: 'REPLACE',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1514,
+    eng: 'quilt',
+    article: 'die',
+    noun: 'Steppdecke',
+    plural: 'die Steppdecken',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1515,
+    eng: 'tax',
+    article: 'die',
+    noun: 'Steuer',
+    plural: 'die Steuern',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1516,
+    eng: 'fold',
+    article: 'die',
+    noun: 'Falte',
+    plural: 'die Falten',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1517,
+    eng: 'portrait',
+    article: 'das',
+    noun: 'Porträt',
+    plural: 'die Porträts',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1518,
+    eng: 'tissue',
+    article: 'das',
+    noun: 'Gewebe',
+    plural: 'die Gewebe',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1519,
+    eng: 'belief',
+    article: 'der',
+    noun: 'Glaube',
+    plural: 'die Glauben',
+    weakMasculine: true,
+    notes: {
+      weakMascNote: 'takes -ns in the genitive singular'
+    },
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1520,
+    eng: 'costume',
+    article: 'das',
+    noun: 'Kostüm',
+    plural: 'die Kostüme',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1521,
+    eng: 'measure',
+    article: 'das',
+    noun: 'Maß',
+    plural: 'die Maße',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1522,
+    eng: 'carriage',
+    article: 'die',
+    noun: 'Kutsche',
+    plural: 'die Kutschen',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1523,
+    eng: 'guitar',
+    article: 'die',
+    noun: 'Gitarre',
+    plural: 'die Gitarren',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1524,
+    eng: 'knight',
+    article: 'der',
+    noun: 'Ritter',
+    plural: 'die Ritter',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1525,
+    eng: 'rank',
+    article: 'der',
+    noun: 'Rang',
+    plural: 'die Ränge',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1526,
+    eng: 'major',
+    article: 'der',
+    noun: 'Major',
+    plural: 'die Majore',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1527,
+    eng: 'fountain',
+    article: 'der',
+    noun: 'Brunnen',
+    plural: 'die Brunnen',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1528,
+    eng: 'stall',
+    article: 'der',
+    noun: 'Stall',
+    plural: 'die Ställe',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1529,
+    eng: 'load',
+    article: 'die',
+    noun: 'Ladung',
+    plural: 'die Ladungen',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1530,
+    eng: 'spark',
+    article: 'der',
+    noun: 'Funke',
+    plural: 'die Funken',
+    weakMasculine: true,
+    notes: {
+      weakMascNote: 'takes -ns in the genitive singular'
+    },
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1531,
+    eng: 'waste',
+    article: 'der',
+    noun: 'Abfall',
+    plural: 'REPLACE',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1532,
+    eng: 'champagne',
+    article: 'der',
+    noun: 'Champagner',
+    plural: 'REPLACE',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1533,
+    eng: 'district',
+    article: 'der',
+    noun: 'Bezirk',
+    plural: 'die Bezirke',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1534,
+    eng: 'protection',
+    article: 'der',
+    noun: 'Schutz',
+    plural: 'REPLACE',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1535,
+    eng: 'judgment',
+    article: 'das',
+    noun: 'Urteil',
+    plural: 'die Urteile',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1536,
+    eng: 'sympathy',
+    article: 'das',
+    noun: 'Mitgefühl',
+    plural: 'REPLACE',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1537,
+    eng: 'violet',
+    article: 'das',
+    noun: 'Veilchen',
+    plural: 'die Veilchen',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1538,
+    eng: 'impact',
+    article: 'der',
+    noun: 'Aufprall',
+    plural: 'die Aufprälle',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1539,
+    eng: 'disappointment',
+    article: 'die',
+    noun: 'Enttäuschung',
+    plural: 'die Enttäuschungen',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1540,
+    eng: 'drinking',
+    article: 'das',
+    noun: 'Trinken',
+    plural: 'REPLACE',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1541,
+    eng: 'consciousness',
+    article: 'das',
+    noun: 'Bewusstsein',
+    plural: 'REPLACE',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1542,
+    eng: 'handkerchief',
+    article: 'das',
+    noun: 'Taschentuch',
+    plural: 'die Taschentücher',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1543,
+    eng: 'dancing',
+    article: 'das',
+    noun: 'Tanzen',
+    plural: 'REPLACE',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1544,
+    eng: 'perfume',
+    article: 'das',
+    noun: 'Parfüm',
+    plural: 'die Parfüms',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1545,
+    eng: 'network',
+    article: 'das',
+    noun: 'Netzwerk',
+    plural: 'die Netzwerke',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1546,
+    eng: 'claim',
+    article: 'die',
+    noun: 'Forderung',
+    plural: 'die Forderungen',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1547,
+    eng: 'nun',
+    article: 'die',
+    noun: 'Nonne',
+    plural: 'die Nonnen',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1548,
+    eng: 'crown',
+    article: 'die',
+    noun: 'Krone',
+    plural: 'die Kronen',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1549,
+    eng: 'railing',
+    article: 'das',
+    noun: 'Geländer',
+    plural: 'die Geländer',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1550,
+    eng: 'license',
+    article: 'die',
+    noun: 'Lizenz',
+    plural: 'die Lizenzen',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1551,
+    eng: 'mercy',
+    article: 'die',
+    noun: 'Gnade',
+    plural: 'REPLACE',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1552,
+    eng: 'balloon',
+    article: 'der',
+    noun: 'Ballon',
+    plural: 'die Ballons',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1553,
+    eng: 'chaos',
+    article: 'das',
+    noun: 'Chaos',
+    plural: 'REPLACE',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1554,
+    eng: 'fever',
+    article: 'das',
+    noun: 'Fieber',
+    plural: 'REPLACE',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1555,
+    eng: 'locker',
+    article: 'das',
+    noun: 'Schließfach',
+    plural: 'die Schließfächer',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1556,
+    eng: 'session',
+    article: 'die',
+    noun: 'Sitzung',
+    plural: 'die Sitzungen',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1557,
+    eng: 'burst',
+    article: 'der',
+    noun: 'Ausbruch',
+    plural: 'die Ausbrüche',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1558,
+    eng: 'peak',
+    article: 'der',
+    noun: 'Gipfel',
+    plural: 'die Gipfel',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1559,
+    eng: 'drum',
+    article: 'die',
+    noun: 'Trommel',
+    plural: 'die Trommeln',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1560,
+    eng: 'focus',
+    article: 'der',
+    noun: 'Fokus',
+    plural: 'die Foki',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1561,
+    eng: 'frog',
+    article: 'der',
+    noun: 'Frosch',
+    plural: 'die Frösche',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1562,
+    eng: 'benefit',
+    article: 'der',
+    noun: 'Nutzen',
+    plural: 'die Nutzen',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1563,
+    eng: 'remark',
+    article: 'die',
+    noun: 'Bemerkung',
+    plural: 'die Bemerkungen',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1564,
+    eng: 'tide',
+    article: 'die',
+    noun: 'Flut',
+    plural: 'die Fluten',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1565,
+    eng: 'suspicion',
+    article: 'der',
+    noun: 'Verdacht',
+    plural: 'die Verdächte',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1566,
+    eng: 'jeep',
+    article: 'der',
+    noun: 'Jeep',
+    plural: 'die Jeeps',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1567,
+    eng: 'worry',
+    article: 'die',
+    noun: 'Sorge',
+    plural: 'die Sorgen',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1568,
+    eng: 'literature',
+    article: 'die',
+    noun: 'Literatur',
+    plural: 'REPLACE',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1569,
+    eng: 'archer',
+    article: 'der',
+    noun: 'Bogenschütze',
+    plural: 'die Bogenschützen',
+    weakMasculine: true,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1570,
+    eng: 'household',
+    article: 'der',
+    noun: 'Haushalt',
+    plural: 'die Haushalte',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1571,
+    eng: 'powder',
+    article: 'das',
+    noun: 'Pulver',
+    plural: 'die Pulver',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1572,
+    eng: 'shepherd',
+    article: 'der',
+    noun: 'Hirte',
+    plural: 'die Hirten',
+    weakMasculine: true,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1573,
+    eng: 'lens',
+    article: 'die',
+    noun: 'Linse',
+    plural: 'die Linsen',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1574,
+    eng: 'favorite',
+    article: 'der',
+    noun: 'Favorit',
+    plural: 'die Favoriten',
+    weakMasculine: true,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1575,
+    eng: 'madame',
+    article: 'die',
+    noun: 'Dame',
+    plural: 'REPLACE',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1576,
+    eng: 'mansion',
+    article: 'die',
+    noun: 'Villa',
+    plural: 'die Villen',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1577,
+    eng: 'boom',
+    article: 'der',
+    noun: 'Boom',
+    plural: 'die Booms',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1578,
+    eng: 'lace',
+    article: 'die',
+    noun: 'Spitze',
+    plural: 'die Spitzen',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1579,
+    eng: 'review',
+    article: 'die',
+    noun: 'Bewertung',
+    plural: 'die Bewertungen',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1580,
+    eng: 'reception',
+    article: 'der',
+    noun: 'Empfang',
+    plural: 'die Empfänge',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1581,
+    eng: 'scrap',
+    article: 'der',
+    noun: 'Schrott',
+    plural: 'REPLACE',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1582,
+    eng: 'bead',
+    article: 'die',
+    noun: 'Perle',
+    plural: 'die Perlen',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1583,
+    eng: 'glare',
+    article: 'das',
+    noun: 'Blenden',
+    plural: 'REPLACE',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1584,
+    eng: 'flow',
+    article: 'der',
+    noun: 'Fluss',
+    plural: 'die Flüsse',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1585,
+    eng: 'cafe',
+    article: 'das',
+    noun: 'Café',
+    plural: 'die Cafés',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1586,
+    eng: 'status',
+    article: 'der',
+    noun: 'Status',
+    plural: 'die Stati',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1587,
+    eng: 'pounding',
+    article: 'das',
+    noun: 'Hämmern',
+    plural: 'REPLACE',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1588,
+    eng: 'rocket',
+    article: 'die',
+    noun: 'Rakete',
+    plural: 'die Raketen',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1589,
+    eng: 'canyon',
+    article: 'die',
+    noun: 'Schlucht',
+    plural: 'die Schluchten',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1590,
+    eng: 'sorrow',
+    article: 'die',
+    noun: 'Trauer',
+    plural: 'REPLACE',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1591,
+    eng: 'spider',
+    article: 'die',
+    noun: 'Spinne',
+    plural: 'die Spinnen',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1592,
+    eng: 'blast',
+    article: 'die',
+    noun: 'Explosion',
+    plural: 'die Explosionen',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1593,
+    eng: 'personality',
+    article: 'die',
+    noun: 'Persönlichkeit',
+    plural: 'die Persönlichkeiten',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1594,
+    eng: 'campus',
+    article: 'der',
+    noun: 'Campus',
+    plural: 'die Campi',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1595,
+    eng: 'curse',
+    article: 'der',
+    noun: 'Fluch',
+    plural: 'die Flüche',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1596,
+    eng: 'staircase',
+    article: 'das',
+    noun: 'Treppenhaus',
+    plural: 'die Treppenhäuser',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1597,
+    eng: 'urge',
+    article: 'der',
+    noun: 'Drang',
+    plural: 'die Dränge',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1598,
+    eng: 'frustration',
+    article: 'die',
+    noun: 'Frustration',
+    plural: 'REPLACE',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1599,
+    eng: 'pump',
+    article: 'die',
+    noun: 'Pumpe',
+    plural: 'die Pumpen',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
+  },
+  {
+    id: 1600,
+    eng: 'ease',
+    article: 'die',
+    noun: 'Leichtigkeit',
+    plural: 'REPLACE',
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+    ],
+    completed: false
   }
 
+// start of new chunk katy
 
+
+
+
+
+
+// end of new chunk katy
 
 
 
