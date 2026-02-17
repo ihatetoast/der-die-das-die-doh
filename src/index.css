@@ -1,18 +1,28 @@
 :root {
   line-height: 1.5;
   --border-radius: 5px;
-  --btn-radius: 20px;
+  --btn-radius: 50px;
 
   --serif: "Rufina","Georgia", "Garamond", serif;
   --sans-serif: "Sintony","Arial", "Verdana", sans-serif;
 
-  --primary: #1f3634; /* v dk green / use as black  */
+  --primary: #1f3634; /* v dk green  */
   --accent: #cace00;
   --white: #fcfbf4;
   --red: #e7403c; /* error or mistake feedback */
   --pink: #e9bac3; /* error  accent */
   --green: #035a5c; /* v dark teal  */
   --blue:#7ba3ce; /* positive feedback  */
+  --black: #022421;
+
+      /* die/cube and buttons must match side */
+  --light-green: #f2fff2; /* bg to die/cube  */
+  --front: #5ba78f; /* english  */
+  --back: #5fa5ad;  /* german  */
+  --top: #cca4d8;  /* article  */
+  --bottom: #a3aad8;  /*  plural  */
+  --left: #b0a3d5;  /* sentence  */
+  --right: #7ba3ce;  /* notes  */
 }
 
 * {

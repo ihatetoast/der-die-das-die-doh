@@ -1,0 +1,41 @@
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: var(--btn-radius);
+  min-width: 5rem;
+  text-transform: capitalize;
+  border: 2px solid transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn.english {
+  background-color: var(--front);
+}
+.btn.german {
+  background-color: var(--back);
+  color: var(--black);
+}
+.btn.article {
+  background-color: var(--top);
+  color: var(--black);
+}
+.btn.plural {
+  background-color: var(--bottom);
+  color: var(--black);
+}
+.btn.sentence {
+  background-color: var(--left);
+  color: var(--black);
+}
+
+.btn.notes {
+  background-color: var(--right);
+  color: var(--black);
+}
+
+.btn:hover {
+  border-color: var(--primary);
+  transform: scale(1.09);
+}
+
+
+
