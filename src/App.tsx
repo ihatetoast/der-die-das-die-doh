@@ -11,10 +11,8 @@ function App() {
   const [mode, setMode] = useState<ModeProp>(null);
   const [wordList, setWordList] = useState<VocabEntry[]>([]);
 
-  // there are over 1500 words but only a few have been completed. get those.
-  // note: after 100 have been done, give option for 5, 10, 20, 50, 100
-
-  // get them on load.
+  const returnedToDeck: string[] = [];
+  
   useEffect(() => {
     const completedNouns = VOCABULARY_COMMON.filter(
       (noun) => noun.completed === true,
