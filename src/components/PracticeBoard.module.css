@@ -1,0 +1,4 @@
+.practiceBoard {
+  display: flex;
+  flex-direction: column;
+}

@@ -964,8 +964,16 @@ export const VOCAB_3: VocabEntry[] = [
         'Other words: Flughafen (airport), Freihafen (free port), Ölhafen (oil port), Fährhafen (ferry harbor), and Handelshafen (commercial harbor).',
     },
     sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
+      {
+        de: 'Das Feuerwerk war wie jedes Jahr am Hafen.',
+        en: 'The fireworks were like every year at the habor.',
+        case: 'dat',
+      },
+      {
+        de: 'Wann wird die Blockade des Hafens aufgehoben?',
+        en: 'When will the blockade at the port be lifted?',
+        case: 'gen',
+      },
     ],
     completed: true,
   },

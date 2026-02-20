@@ -16,4 +16,4 @@ export interface VocabEntry {
   completed: boolean;
 }
 
-export type ModeProp = 'practice' | 'test' | null;
+export type ModeProp = 'practice' | 'test' | 'home';

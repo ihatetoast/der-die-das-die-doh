@@ -1,4 +1,3 @@
-
 import type { VocabEntry } from '../types';
 
 export const VOCAB_4: VocabEntry[] = [
@@ -11,10 +10,18 @@ export const VOCAB_4: VocabEntry[] = [
     weakMasculine: false,
     notes: {},
     sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
+      {
+        de: 'Sie hat überall in der Stadt Poster aufgehängt',
+        en: 'She hung posters all over the city.',
+        case: 'acc',
+      },
+      {
+        de: 'Das Poster klebt an der Wand fest.',
+        en: 'The poster is stuck firmly to the wall.',
+        case: 'nom',
+      },
     ],
-    completed: false,
+    completed: true,
   },
   {
     id: 1502,
@@ -24,13 +31,22 @@ export const VOCAB_4: VocabEntry[] = [
     plural: 'die Aktentaschen',
     weakMasculine: false,
     notes: {
-      miscNote:"Aktentasche can also mean 'portfolio' or 'messenger bag'. It has a soft shell, usually leather, vinyl, or nylon fabric. Aktenkoffer is hard and secure.",
+      miscNote:
+        "Aktentasche can also mean 'portfolio' or 'messenger bag'. It has a soft shell, usually leather, vinyl, or nylon fabric. Aktenkoffer is hard and secure.",
     },
     sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
+      {
+        de: 'Wo ist meine Aktentasche?',
+        en: 'Where is my briefcase',
+        case: 'nom',
+      },
+      {
+        de: 'Ich nehme in den Urlaub eine ganze Aktentasche voll Rätsel mit.',
+        en: 'I take a whole briefcase full of puzzles on vacation.',
+        case: 'acc',
+      },
     ],
-    completed: false,
+    completed: true,
   },
   {
     id: 1503,
@@ -39,7 +55,9 @@ export const VOCAB_4: VocabEntry[] = [
     noun: 'Identität',
     plural: 'die Identitäten',
     weakMasculine: false,
-    notes: {},
+    notes: {
+      genderNote: 'Words ending in -ät are usually feminine.',
+    },
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
       { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
@@ -48,15 +66,26 @@ export const VOCAB_4: VocabEntry[] = [
   },
   {
     id: 1504,
-    eng: 'pavement',
+    eng: 'pavement, sidewalk, footway, walkway',
     article: 'der',
     noun: 'Gehweg',
     plural: 'die Gehwege',
     weakMasculine: false,
-    notes: {},
+    notes: {
+      genderNote:
+        '"Weg" is masculine, so all words ending in -weg are masculine.',
+    },
     sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
+      {
+        de: 'Sie räumten den Schnee vom Gehweg',
+        en: 'They cleared the pavement of snow.',
+        case: 'dat',
+      },
+      {
+        de: ' Mit dem Fahrrad darf man nicht auf dem Gehweg fahren.',
+        en: "You aren't allowed to ride a bike on the sidewalk.",
+        case: 'dat',
+      },
     ],
     completed: false,
   },
@@ -67,7 +96,12 @@ export const VOCAB_4: VocabEntry[] = [
     noun: 'Arschloch',
     plural: 'die Arschlöcher',
     weakMasculine: false,
-    notes: {},
+    notes: {
+      genderNote:
+        '"Loch" is neutral, so all words ending in -loch are neutral.',
+      miscNote:
+        '"Arschloch" is considered slang. Only use it if the person truly deserves it and your parents aren\'t around.',
+    },
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
       { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
@@ -110,11 +144,20 @@ export const VOCAB_4: VocabEntry[] = [
     plural: 'die Terminals',
     weakMasculine: false,
     notes: {
-      miscNote: '"Terminal" is an anglicized flight vocabulary word for the German "Flughalle".'
+      miscNote:
+        '"Terminal" is an anglicized flight vocabulary word for the German "Flughalle".',
     },
     sentences: [
-      { de: 'Zu welchem Terminal wollen Sie?', en: 'Which terminal do you want (to go to)?', case: 'dat' },
-      { de: 'Dieser Flughafen had zwei Terminals.', en: 'This airport has two terminals', case: 'acc' },
+      {
+        de: 'Zu welchem Terminal wollen Sie?',
+        en: 'Which terminal do you want (to go to)?',
+        case: 'dat',
+      },
+      {
+        de: 'Dieser Flughafen had zwei Terminals.',
+        en: 'This airport has two terminals',
+        case: 'acc',
+      },
     ],
     completed: false,
   },
@@ -2820,9 +2863,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1702,
@@ -2834,9 +2877,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1703,
@@ -2848,9 +2891,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1704,
@@ -2862,9 +2905,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1705,
@@ -2876,9 +2919,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1706,
@@ -2890,9 +2933,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1707,
@@ -2904,9 +2947,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1708,
@@ -2918,9 +2961,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1709,
@@ -2932,9 +2975,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1710,
@@ -2946,9 +2989,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1711,
@@ -2960,9 +3003,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1712,
@@ -2974,9 +3017,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1713,
@@ -2988,9 +3031,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1714,
@@ -3002,9 +3045,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1715,
@@ -3016,9 +3059,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1716,
@@ -3030,9 +3073,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1717,
@@ -3044,9 +3087,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1718,
@@ -3058,9 +3101,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1719,
@@ -3072,9 +3115,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1720,
@@ -3086,9 +3129,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1721,
@@ -3100,9 +3143,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1722,
@@ -3114,9 +3157,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1723,
@@ -3128,9 +3171,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1724,
@@ -3142,9 +3185,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1725,
@@ -3156,9 +3199,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1726,
@@ -3170,9 +3213,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1727,
@@ -3184,9 +3227,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1728,
@@ -3198,9 +3241,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1729,
@@ -3212,9 +3255,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1730,
@@ -3226,9 +3269,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1731,
@@ -3240,9 +3283,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1732,
@@ -3254,9 +3297,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1733,
@@ -3268,9 +3311,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1734,
@@ -3282,9 +3325,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1735,
@@ -3296,9 +3339,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1736,
@@ -3310,9 +3353,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1737,
@@ -3324,9 +3367,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1738,
@@ -3338,9 +3381,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1739,
@@ -3352,9 +3395,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1740,
@@ -3366,9 +3409,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1741,
@@ -3380,9 +3423,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1742,
@@ -3394,9 +3437,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1743,
@@ -3408,9 +3451,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1744,
@@ -3422,9 +3465,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1745,
@@ -3436,9 +3479,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1746,
@@ -3450,9 +3493,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1747,
@@ -3464,9 +3507,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1748,
@@ -3478,9 +3521,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1749,
@@ -3492,9 +3535,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1750,
@@ -3506,9 +3549,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1751,
@@ -3520,9 +3563,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1752,
@@ -3534,9 +3577,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1753,
@@ -3548,9 +3591,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1754,
@@ -3562,9 +3605,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1755,
@@ -3576,9 +3619,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1756,
@@ -3590,9 +3633,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1757,
@@ -3604,9 +3647,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1758,
@@ -3618,9 +3661,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1759,
@@ -3632,9 +3675,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1760,
@@ -3646,9 +3689,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1761,
@@ -3660,9 +3703,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1762,
@@ -3674,9 +3717,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1763,
@@ -3688,9 +3731,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1764,
@@ -3702,9 +3745,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1765,
@@ -3716,9 +3759,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1766,
@@ -3730,9 +3773,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1767,
@@ -3744,9 +3787,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1768,
@@ -3758,9 +3801,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1769,
@@ -3772,9 +3815,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1770,
@@ -3786,9 +3829,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1771,
@@ -3800,9 +3843,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1772,
@@ -3814,9 +3857,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1773,
@@ -3828,9 +3871,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1774,
@@ -3842,9 +3885,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1775,
@@ -3856,9 +3899,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1776,
@@ -3870,9 +3913,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1777,
@@ -3884,9 +3927,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1778,
@@ -3898,9 +3941,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1779,
@@ -3912,9 +3955,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1780,
@@ -3926,9 +3969,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1781,
@@ -3940,9 +3983,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1782,
@@ -3954,9 +3997,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1783,
@@ -3968,9 +4011,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1784,
@@ -3982,9 +4025,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1785,
@@ -3996,9 +4039,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1786,
@@ -4010,9 +4053,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1787,
@@ -4024,9 +4067,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1788,
@@ -4038,9 +4081,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1789,
@@ -4052,9 +4095,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1790,
@@ -4066,9 +4109,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1791,
@@ -4080,9 +4123,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1792,
@@ -4094,9 +4137,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1793,
@@ -4108,9 +4151,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1794,
@@ -4122,9 +4165,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1795,
@@ -4136,9 +4179,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1796,
@@ -4150,9 +4193,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1797,
@@ -4164,9 +4207,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1798,
@@ -4178,9 +4221,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1799,
@@ -4192,9 +4235,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1800,
@@ -4206,9 +4249,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1801,
@@ -4220,9 +4263,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1802,
@@ -4234,9 +4277,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1803,
@@ -4248,9 +4291,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1804,
@@ -4262,9 +4305,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1805,
@@ -4276,9 +4319,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1806,
@@ -4290,9 +4333,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1807,
@@ -4304,9 +4347,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1808,
@@ -4318,9 +4361,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1809,
@@ -4332,9 +4375,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1810,
@@ -4346,9 +4389,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1811,
@@ -4360,9 +4403,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1812,
@@ -4374,9 +4417,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1813,
@@ -4388,9 +4431,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1814,
@@ -4402,9 +4445,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1815,
@@ -4416,9 +4459,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1816,
@@ -4430,9 +4473,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1817,
@@ -4444,9 +4487,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1818,
@@ -4458,9 +4501,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1819,
@@ -4472,9 +4515,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1820,
@@ -4486,9 +4529,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1821,
@@ -4500,9 +4543,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1822,
@@ -4514,9 +4557,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1823,
@@ -4528,9 +4571,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1824,
@@ -4542,9 +4585,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1825,
@@ -4556,9 +4599,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1826,
@@ -4570,9 +4613,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1827,
@@ -4584,9 +4627,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1828,
@@ -4598,9 +4641,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1829,
@@ -4612,9 +4655,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1830,
@@ -4626,9 +4669,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1831,
@@ -4640,9 +4683,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1832,
@@ -4654,9 +4697,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1833,
@@ -4668,9 +4711,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1834,
@@ -4682,9 +4725,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1835,
@@ -4696,9 +4739,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1836,
@@ -4710,9 +4753,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1837,
@@ -4724,9 +4767,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1838,
@@ -4738,9 +4781,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1839,
@@ -4752,9 +4795,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1840,
@@ -4766,9 +4809,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1841,
@@ -4780,9 +4823,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1842,
@@ -4794,9 +4837,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1843,
@@ -4808,9 +4851,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1844,
@@ -4822,9 +4865,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1845,
@@ -4836,9 +4879,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1846,
@@ -4850,9 +4893,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1847,
@@ -4864,9 +4907,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1848,
@@ -4878,9 +4921,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1849,
@@ -4892,9 +4935,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1850,
@@ -4906,9 +4949,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1851,
@@ -4920,9 +4963,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1852,
@@ -4934,9 +4977,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1853,
@@ -4948,9 +4991,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1854,
@@ -4962,9 +5005,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1855,
@@ -4976,9 +5019,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1856,
@@ -4990,9 +5033,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1857,
@@ -5004,9 +5047,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1858,
@@ -5018,9 +5061,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1859,
@@ -5032,9 +5075,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1860,
@@ -5046,9 +5089,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1861,
@@ -5060,9 +5103,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1862,
@@ -5074,9 +5117,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1863,
@@ -5088,9 +5131,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1864,
@@ -5102,9 +5145,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1865,
@@ -5116,9 +5159,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1866,
@@ -5130,9 +5173,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1867,
@@ -5144,9 +5187,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1868,
@@ -5158,9 +5201,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1869,
@@ -5172,9 +5215,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1870,
@@ -5186,9 +5229,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1871,
@@ -5200,9 +5243,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1872,
@@ -5214,9 +5257,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1873,
@@ -5228,9 +5271,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1874,
@@ -5242,9 +5285,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1875,
@@ -5256,9 +5299,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1876,
@@ -5270,9 +5313,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1877,
@@ -5284,9 +5327,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1878,
@@ -5298,9 +5341,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1879,
@@ -5312,9 +5355,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1880,
@@ -5326,9 +5369,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1881,
@@ -5340,9 +5383,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1882,
@@ -5354,9 +5397,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1883,
@@ -5368,9 +5411,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1884,
@@ -5382,9 +5425,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1885,
@@ -5396,9 +5439,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1886,
@@ -5410,9 +5453,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1887,
@@ -5424,9 +5467,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1888,
@@ -5438,9 +5481,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1889,
@@ -5452,9 +5495,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1890,
@@ -5466,9 +5509,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1891,
@@ -5480,9 +5523,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1892,
@@ -5494,9 +5537,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1893,
@@ -5508,9 +5551,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1894,
@@ -5522,9 +5565,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1895,
@@ -5536,9 +5579,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1896,
@@ -5550,9 +5593,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1897,
@@ -5564,9 +5607,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1898,
@@ -5578,9 +5621,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1899,
@@ -5592,9 +5635,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1900,
@@ -5606,9 +5649,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1901,
@@ -5620,9 +5663,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1902,
@@ -5634,9 +5677,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1903,
@@ -5648,9 +5691,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1904,
@@ -5662,9 +5705,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1905,
@@ -5676,9 +5719,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1906,
@@ -5690,9 +5733,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1907,
@@ -5704,9 +5747,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1908,
@@ -5718,9 +5761,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1909,
@@ -5732,9 +5775,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1910,
@@ -5746,9 +5789,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1911,
@@ -5760,9 +5803,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1912,
@@ -5774,9 +5817,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1913,
@@ -5788,9 +5831,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1914,
@@ -5802,9 +5845,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1915,
@@ -5816,9 +5859,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1916,
@@ -5830,9 +5873,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1917,
@@ -5844,9 +5887,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1918,
@@ -5858,9 +5901,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1919,
@@ -5872,9 +5915,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1920,
@@ -5886,9 +5929,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1921,
@@ -5900,9 +5943,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1922,
@@ -5914,9 +5957,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1923,
@@ -5928,9 +5971,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1924,
@@ -5942,9 +5985,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1925,
@@ -5956,9 +5999,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1926,
@@ -5970,9 +6013,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1927,
@@ -5984,9 +6027,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1928,
@@ -5998,9 +6041,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1929,
@@ -6012,9 +6055,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1930,
@@ -6026,9 +6069,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1931,
@@ -6040,9 +6083,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1932,
@@ -6054,9 +6097,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1933,
@@ -6068,9 +6111,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1934,
@@ -6082,9 +6125,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1935,
@@ -6096,9 +6139,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1936,
@@ -6110,9 +6153,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1937,
@@ -6124,9 +6167,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1938,
@@ -6138,9 +6181,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1939,
@@ -6152,9 +6195,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1940,
@@ -6166,9 +6209,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1941,
@@ -6180,9 +6223,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1942,
@@ -6194,9 +6237,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1943,
@@ -6208,9 +6251,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1944,
@@ -6222,9 +6265,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1945,
@@ -6236,9 +6279,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1946,
@@ -6250,9 +6293,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1947,
@@ -6264,9 +6307,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1948,
@@ -6278,9 +6321,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1949,
@@ -6292,9 +6335,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1950,
@@ -6306,9 +6349,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1951,
@@ -6320,9 +6363,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1952,
@@ -6334,9 +6377,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1953,
@@ -6348,9 +6391,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1954,
@@ -6362,9 +6405,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1955,
@@ -6376,9 +6419,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1956,
@@ -6390,9 +6433,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1957,
@@ -6404,9 +6447,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1958,
@@ -6418,9 +6461,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1959,
@@ -6432,9 +6475,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1960,
@@ -6446,9 +6489,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1961,
@@ -6460,9 +6503,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1962,
@@ -6474,9 +6517,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1963,
@@ -6488,9 +6531,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1964,
@@ -6502,9 +6545,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1965,
@@ -6516,9 +6559,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1966,
@@ -6530,9 +6573,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1967,
@@ -6544,9 +6587,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1968,
@@ -6558,9 +6601,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1969,
@@ -6572,9 +6615,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1970,
@@ -6586,9 +6629,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1971,
@@ -6600,9 +6643,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1972,
@@ -6614,9 +6657,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1973,
@@ -6628,9 +6671,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1974,
@@ -6642,9 +6685,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1975,
@@ -6656,9 +6699,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1976,
@@ -6670,9 +6713,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1977,
@@ -6684,9 +6727,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1978,
@@ -6698,9 +6741,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1979,
@@ -6712,9 +6755,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1980,
@@ -6726,9 +6769,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1981,
@@ -6740,9 +6783,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1982,
@@ -6754,9 +6797,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1983,
@@ -6768,9 +6811,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1984,
@@ -6782,9 +6825,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1985,
@@ -6796,9 +6839,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1986,
@@ -6810,9 +6853,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1987,
@@ -6824,9 +6867,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1988,
@@ -6838,9 +6881,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1989,
@@ -6852,9 +6895,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1990,
@@ -6866,9 +6909,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1991,
@@ -6880,9 +6923,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1992,
@@ -6894,9 +6937,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1993,
@@ -6908,9 +6951,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1994,
@@ -6922,9 +6965,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1995,
@@ -6936,9 +6979,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1996,
@@ -6950,9 +6993,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1997,
@@ -6964,9 +7007,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1998,
@@ -6978,9 +7021,9 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 1999,
@@ -6992,24 +7035,22 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    completed: false
+    completed: false,
   },
   {
     id: 2000,
     eng: 'cooking',
     article: 'das',
     noun: 'Kochen',
-    plural: 'REPLACE',
+    plural: 'no plural',
     weakMasculine: false,
     notes: {},
     sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' }
+      { de: 'Kochen ist nicht meine Stärke.', en: 'Cooking is not strong suit.', case: 'nom' },
+      { de: 'Kochen schärft das Bewusstsein fürs Essen.', en: 'Cooking sharpens the awareness of food.', case: 'nom' },
     ],
-    completed: false
-  }
-
-
+    completed: true,
+  },
 ];
