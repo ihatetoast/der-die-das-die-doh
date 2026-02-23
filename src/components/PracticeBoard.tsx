@@ -1,35 +1,95 @@
+import { useState, useEffect } from 'react';
 import classes from './PracticeBoard.module.css';
-
+import { VocabEntry, DeckSize } from '../types.ts';
 import LearningCube from './LearningCube.tsx';
 
-type Props = {};
+type Props = {
+  words: VocabEntry[];
+  handleGetActiveDeck: (size: DeckSize) => void;
+};
 
-const PracticeBoard = () => {
-  // buttons here will determine deck size and the cards.
-  // idea is to pass the number back to app where the number is given to a fn
-  // that then gets that number from the wordlist and that deck gets saved in the app but also 
-  // passed to the practice. It is saved in the app because the user might want to practice that deck 
-  // (or another random, but it has to be remembered)
+const PracticeBoard = ({ words, handleGetActiveDeck }: Props) => {
+const [cardsToReview, setCardsToReview]= useState<VocabEntry[]>([]);
+console.log(cardsToReview);
 
-  const cardsToReview: string[] = [];
+/**
+ *  * basic loop  (remove/move cards) DONE
+ * todo:
+
+ * Show 4 buttons when cardsToReview.length === 0
+ * "Test me" → switch to test mode + pass words up to app / usecallbakc?
+ * "Review again" → reset cardsToReview to original words
+ * "New deck" → show deck size buttons again
+ * "Home" → already works via Header / direct users to header or have another button?
+ */
+
+useEffect(() => {
+  if(words.length > 0 ) setCardsToReview([...words])
+}, [words])
+
   return (
     <div className={classes.practiceBoard}>
-      <section>
-        <p>
-          Instructions of some kind. Something like pick the size of your
-          practice deck. At the end of the deck, you can go through all the
-          cards again, review ones you want to review again, or test yourself on
-          your deck.
-        </p>
-        <p>Choose your deck size:</p>
-        <div className={classes.btnContainer}>
-          <button onClick={() =>console.log("deck size is 5")}>5</button>
-          <button onClick={() =>console.log("deck size is 10")}>10</button>
-          <button onClick={() =>console.log("deck size is 20")}>20</button>
-        </div>
-      </section>
+      <h2>Let's practice!</h2>
+      <p>
+        At anytime, you may return to the home page for a complete reset of the
+        session (ie you'll get the option for new cards and deck size or change
+        to test mode.)
+      </p>
+      {words.length === 0 && (
+        <section className={classes.instructions}>
+          <p>
+            You'll have a stack of cubes to practice your vocabulary. Each side
+            or face of the cube gives you some information about the word:
+          </p>
+          <ul>
+            <li>
+              English <span className={classes.example}>(eg Book)</span>
+            </li>
+            <li>
+              German <span className={classes.example}>(eg Buch)</span>
+            </li>
+            <li>
+              The article (singular)
+              <span className={classes.example}>(eg das)</span>
+            </li>
+            <li>
+              Plural <span className={classes.example}>(eg die Bücher)</span>
+            </li>
+            <li>
+              Sentences{' '}
+              <span className={classes.example}>
+                (eg Ich gebe ihm das Buch. / I give him the book.)
+              </span>
+            </li>
+            <li>
+              Notes or review of the word{' '}
+              <span className={classes.example}>
+                (eg Book, das Buch, die Bücher; or notes if there are any.){' '}
+              </span>
+            </li>
+          </ul>
+          <p>Choose the number of words you'd like to practice:</p>
+          <div className={classes.btnContainer}>
+            <button onClick={() => handleGetActiveDeck(5)}>5</button>
+            <button onClick={() => handleGetActiveDeck(10)}>10</button>
+            <button onClick={() => handleGetActiveDeck(20)}>20</button>
+          </div>
+        </section>
+      )}
 
-      <section></section>
+      {cardsToReview.length > 0 &&  (
+        <section className={classes.cubeSection}>
+          <LearningCube word={cardsToReview[0]} />
+          <p>
+            Do you feel you know this word or want to review it again after
+            going through the deck?
+          </p>
+          <button onClick={() => setCardsToReview(prev => [...prev.slice(1), prev[0]])}>
+            D'oh! I need to review
+          </button>
+          <button onClick={() => setCardsToReview(prev => [...prev.slice(1)])}>Oh, I got this</button>
+        </section>
+      )}
     </div>
   );
 };

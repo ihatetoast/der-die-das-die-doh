@@ -1,9 +1,14 @@
 
 import classes from './TestBoard.module.css';
 
+import {VocabEntry} from '../types.ts'
 
+type Props = {
+  words: VocabEntry[];
+};
 
-const TestBoard = () => {
+const TestBoard = ({words}:Props) => {
+console.log(words);
   return (
     <div className={classes.testBoard}>
       <section>
