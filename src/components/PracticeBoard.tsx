@@ -9,10 +9,11 @@ type Props = {
 };
 
 const PracticeBoard = ({ words, handleGetActiveDeck }: Props) => {
-const [cardsToReview, setCardsToReview]= useState<VocabEntry[]>([]);
-console.log(cardsToReview);
+  const [cardsToReview, setCardsToReview] = useState<VocabEntry[]>([]);
+  console.log("cardsToReview ", cardsToReview);
+  console.log("words ", words);
 
-/**
+  /**
  *  * basic loop  (remove/move cards) DONE
  * todo:
 
@@ -23,9 +24,9 @@ console.log(cardsToReview);
  * "Home" → already works via Header / direct users to header or have another button?
  */
 
-useEffect(() => {
-  if(words.length > 0 ) setCardsToReview([...words])
-}, [words])
+  useEffect(() => {
+    if (words.length > 0) setCardsToReview([...words]);
+  }, [words]);
 
   return (
     <div className={classes.practiceBoard}>
@@ -35,7 +36,7 @@ useEffect(() => {
         session (ie you'll get the option for new cards and deck size or change
         to test mode.)
       </p>
-      {words.length === 0 && (
+      {words.length === 0 && cardsToReview.length === 0 && (
         <section className={classes.instructions}>
           <p>
             You'll have a stack of cubes to practice your vocabulary. Each side
@@ -77,19 +78,33 @@ useEffect(() => {
         </section>
       )}
 
-      {cardsToReview.length > 0 &&  (
+      {cardsToReview.length > 0 && (
         <section className={classes.cubeSection}>
+          <div>
+            <p>
+              Do you feel you know this word or want to review it again after
+              going through the deck?
+            </p>
+            <div className={classes.btnContainer}>
+              <button
+                onClick={() =>
+                  setCardsToReview((prev) => [...prev.slice(1), prev[0]])
+                }
+              >
+                D'oh! I need to review
+              </button>
+              <button
+                onClick={() => setCardsToReview((prev) => [...prev.slice(1)])}
+              >
+                I got this
+              </button>
+            </div>
+          </div>
+
           <LearningCube word={cardsToReview[0]} />
-          <p>
-            Do you feel you know this word or want to review it again after
-            going through the deck?
-          </p>
-          <button onClick={() => setCardsToReview(prev => [...prev.slice(1), prev[0]])}>
-            D'oh! I need to review
-          </button>
-          <button onClick={() => setCardsToReview(prev => [...prev.slice(1)])}>Oh, I got this</button>
         </section>
       )}
+      {words.length >0 && cardsToReview.length === 0 && <p>repeat, test, etc</p>}
     </div>
   );
 };

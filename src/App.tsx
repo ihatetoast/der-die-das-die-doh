@@ -12,28 +12,35 @@ function App() {
   const [mode, setMode] = useState<ModeProp>('home');
   const [allShuffledDeck, setAllShuffledDeck] = useState<VocabEntry[]>([]);
   const [activeDeck, setActiveDeck] = useState<VocabEntry[]>([]);
-
+console.log("number of completed cards: ", allShuffledDeck.length);
   const showBoards = mode !== 'home';
 
   useEffect(() => {
-    const completedNouns = VOCABULARY_COMMON.filter(
-      (noun) => noun.completed === true,
-    );
-    const shuffled = shuffle(completedNouns);
-    setAllShuffledDeck(shuffled);
+    shuffleDeck();
   }, []);
 
   const handleSetMode = (mode: ModeProp) => {
+    if (mode === 'home') {
+      shuffleDeck();
+      setActiveDeck([]);
+    }
     setMode(mode);
   };
 
   const handleGetActiveDeck = (size: DeckSize) => {
     setActiveDeck(allShuffledDeck.slice(0, size));
   };
-  // testboard will eventually get either the practice deck or a random deck. 
-  // practice deck if navigated to from practice. 
-  // random if test is chosen first. 
+  // testboard will eventually get either the practice deck or a random deck.
+  // practice deck if navigated to from practice.
+  // random if test is chosen first.
 
+  function shuffleDeck() {
+    const completedNouns = VOCABULARY_COMMON.filter(
+      (noun) => noun.completed === true,
+    );
+    const shuffled = shuffle(completedNouns);
+    setAllShuffledDeck(shuffled);
+  }
   return (
     <>
       <Header onSetMode={handleSetMode} showButtons={!showBoards} />
@@ -57,12 +64,17 @@ function App() {
           </>
         )}
 
-        {mode === 'test' && <TestBoard words={activeDeck}/>}
-        {mode === 'practice'  && <PracticeBoard words={activeDeck} handleGetActiveDeck={handleGetActiveDeck}/>}
+        {mode === 'test' && <TestBoard words={activeDeck} />}
+        {mode === 'practice' && (
+          <PracticeBoard
+            words={activeDeck}
+            handleGetActiveDeck={handleGetActiveDeck}
+          />
+        )}
       </main>
     </>
   );
 }
 
 export default App;
-//https://codepen.io/seanemmel/pen/JdzvzX
+

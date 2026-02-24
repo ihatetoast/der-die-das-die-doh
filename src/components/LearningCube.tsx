@@ -1,31 +1,16 @@
+import { useEffect } from 'react';
 import { VocabEntry } from '../types';
 
 import classes from './LearningCube.module.css';
 import { getNotesContent } from '../helpers.tsx';
 
 import CubeButton from './UI/CubeButton.tsx';
-// Cube Faces:
-
-// front/english (default view) - English: "book" / eng
-// german - German: "Buch" / noun
-// article - Article: "das" (or "No singular form") / article
-// plural - Plural: "die Bücher" (or "No plural form") / plural
-//  sentence- Sentences (both with case labels) / 4 lines 2x eng and ger. fill out later
-// notes - Notes OR default summary / default is the book: das Buch, die Bücher (pl). fill out later.
-
-// special situation where notes are on other faces: if no plural (like blood) or if no singular (like Leute and Medien)
-// deal with later.
-//notes: { pluralNotes: ['Exists only in plural form.'] },
-//plural: 'no plural',
 
 type LearningCubeProps = {
   word: VocabEntry;
 };
 const LearningCube = ({ word }: LearningCubeProps) => {
-  console.log('word in cube ', word);
-
   const handleRotate = (faceClass: string) => {
-    console.log(faceClass);
     const cube = document.querySelector(`.${classes.cube}`);
     cube?.classList.remove(
       classes.showEnglish,
@@ -35,9 +20,12 @@ const LearningCube = ({ word }: LearningCubeProps) => {
       classes.showSentence,
       classes.showNotes,
     );
-//class="_cube_1dehd_5 .undefined
     cube?.classList.add(faceClass);
   };
+
+  useEffect(() => {
+    handleRotate(classes.showEnglish);
+  }, [word]);
 
   return (
     <div className={classes.learningCube}>

@@ -10,6 +10,7 @@ type Props = {
 };
 
 const Header = ({ onSetMode, showButtons }: Props) => {
+
   return (
     <header className={classes.header}>
       <h1>Der Die Das Die ... D'oh!</h1>
