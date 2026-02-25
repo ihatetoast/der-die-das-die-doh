@@ -10,8 +10,9 @@ type Props = {
 
 const PracticeBoard = ({ words, handleGetActiveDeck }: Props) => {
   const [cardsToReview, setCardsToReview] = useState<VocabEntry[]>([]);
-  console.log("cardsToReview ", cardsToReview);
-  console.log("words ", words);
+  const [deckSize, setDeckSize] = useState<DeckSize | null>(null);
+  console.log('cardsToReview ', cardsToReview);
+  console.log('words ', words);
 
   /**
  *  * basic loop  (remove/move cards) DONE
@@ -27,6 +28,11 @@ const PracticeBoard = ({ words, handleGetActiveDeck }: Props) => {
   useEffect(() => {
     if (words.length > 0) setCardsToReview([...words]);
   }, [words]);
+
+  const handleInitialDeckChoice = (size: DeckSize) => {
+    setDeckSize(size);
+    handleGetActiveDeck(size);
+  };
 
   return (
     <div className={classes.practiceBoard}>
@@ -71,9 +77,10 @@ const PracticeBoard = ({ words, handleGetActiveDeck }: Props) => {
           </ul>
           <p>Choose the number of words you'd like to practice:</p>
           <div className={classes.btnContainer}>
-            <button onClick={() => handleGetActiveDeck(5)}>5</button>
-            <button onClick={() => handleGetActiveDeck(10)}>10</button>
-            <button onClick={() => handleGetActiveDeck(20)}>20</button>
+            <button onClick={() => handleInitialDeckChoice(5)}>5</button>
+            <button onClick={() => handleInitialDeckChoice(10)}>10</button>
+            <button onClick={() => handleInitialDeckChoice(20)}>20</button>
+            <button onClick={() => handleInitialDeckChoice(50)}>50</button>
           </div>
         </section>
       )}
@@ -104,7 +111,31 @@ const PracticeBoard = ({ words, handleGetActiveDeck }: Props) => {
           <LearningCube word={cardsToReview[0]} />
         </section>
       )}
-      {words.length >0 && cardsToReview.length === 0 && <p>repeat, test, etc</p>}
+      {words.length > 0 && cardsToReview.length === 0 && (
+        <section>
+          <p>
+            Way to go. You've gone through the deck and have no cards to review.
+            What's next? New deck and new words? Test yourself? repeat this
+            deck?
+          </p>
+          <div className={classes.btnContainer}>
+            <button onClick={() => setCardsToReview(words)}>
+              Review current deck
+            </button>
+            {deckSize && (
+              <button onClick={() => handleGetActiveDeck(deckSize)}>
+                Get {deckSize} new ones!
+              </button>
+            )}
+            <button onClick={() => console.log('go to test page')}>
+              Test me on these.
+            </button>
+          </div>
+          <div className={classes.cubePlaceholder}>
+            <p>Yay! Deck completed.</p>
+          </div>
+        </section>
+      )}
     </div>
   );
 };

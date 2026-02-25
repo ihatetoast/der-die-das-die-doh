@@ -12,9 +12,9 @@ function App() {
   const [mode, setMode] = useState<ModeProp>('home');
   const [allShuffledDeck, setAllShuffledDeck] = useState<VocabEntry[]>([]);
   const [activeDeck, setActiveDeck] = useState<VocabEntry[]>([]);
-console.log("number of completed cards: ", allShuffledDeck.length);
+  const [cardsReviewedTotal, setCardReviewedTotal] = useState<number>(0);
   const showBoards = mode !== 'home';
-
+console.log("number of possible words: ", allShuffledDeck.length);
   useEffect(() => {
     shuffleDeck();
   }, []);
@@ -23,12 +23,29 @@ console.log("number of completed cards: ", allShuffledDeck.length);
     if (mode === 'home') {
       shuffleDeck();
       setActiveDeck([]);
+      setCardReviewedTotal(0);
     }
     setMode(mode);
   };
 
   const handleGetActiveDeck = (size: DeckSize) => {
-    setActiveDeck(allShuffledDeck.slice(0, size));
+    // handle if cardsReviewedTotal = 45 and allShuffledDeck.length = 47 or 
+    // cardsReviewedTotal = 45 and allShuffledDeck.length = 50 BUT they're asking for 10 or 20 more
+    if(cardsReviewedTotal === allShuffledDeck.length) {
+      // if at the end of the deck, reset. 
+      setCardReviewedTotal(0);
+      setActiveDeck(allShuffledDeck.slice(0, size));
+    } else if (cardsReviewedTotal === 0) {
+      setActiveDeck(allShuffledDeck.slice(0, size));
+    } else {
+      setActiveDeck(
+        allShuffledDeck.slice(
+          cardsReviewedTotal,
+          cardsReviewedTotal + size,
+        ),
+      );
+    }
+    setCardReviewedTotal((prev) => prev + size);
   };
   // testboard will eventually get either the practice deck or a random deck.
   // practice deck if navigated to from practice.
@@ -77,4 +94,3 @@ console.log("number of completed cards: ", allShuffledDeck.length);
 }
 
 export default App;
-

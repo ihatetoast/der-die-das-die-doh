@@ -16,11 +16,24 @@
   text-transform: capitalize;
   border: 2px solid transparent;
   transition: all 0.2s ease-in-out;
-
-
 }
-
 
 .example {
   font-style: italic;
 }
+
+.cubePlaceholder {
+  width: 290px;
+  height: 290px;
+  border: 5px solid var(--primary);
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  -webkit-font-smoothing: antialiased;
+  padding: 1rem;
+  background-color: var(--front);
+  margin: 1rem auto;
+}
+
