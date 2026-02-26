@@ -6,7 +6,7 @@ import {VocabEntry} from '../types.ts'
 type Props = {
   words: VocabEntry[];
 };
-
+// ask the user if they want to test on current active deck or all x reviewed
 const TestBoard = ({words}:Props) => {
 console.log(words);
   return (

@@ -9,7 +9,7 @@ type Props = {
 
 const Button = ({mode, onClick}: Props) => {
   return (
-    <button className={classes[mode]} onClick={() => onClick(mode)}>{mode}</button>
+    <button className={classes[mode]} onClick={() => onClick(mode)}>{mode === 'practice' ? 'learn & study' : mode}</button>
   )
 }
 

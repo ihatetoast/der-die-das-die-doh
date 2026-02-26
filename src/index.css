@@ -3,8 +3,8 @@
   --border-radius: 5px;
   --btn-radius: 50px;
 
-  --serif: "Rufina","Georgia", "Garamond", serif;
-  --sans-serif: "Sintony","Arial", "Verdana", sans-serif;
+  --serif: 'Rufina', 'Georgia', 'Garamond', serif;
+  --sans-serif: 'Sintony', 'Arial', 'Verdana', sans-serif;
 
   --primary: #1f3634; /* v dk green  */
   --accent: #cace00;
@@ -12,17 +12,17 @@
   --red: #e7403c; /* error or mistake feedback */
   --pink: #e9bac3; /* error  accent */
   --green: #035a5c; /* v dark teal  */
-  --blue:#7ba3ce; /* positive feedback  */
+  --blue: #7ba3ce; /* positive feedback  */
   --black: #022421;
 
-      /* die/cube and buttons must match side */
+  /* die/cube and buttons must match side */
   --light-green: #f2fff2; /* bg to die/cube  */
   --front: #5ba78f; /* english  */
-  --back: #5fa5ad;  /* german  */
-  --top: #cca4d8;  /* article  */
-  --bottom: #a3aad8;  /*  plural  */
-  --left: #d4c9f0;  /* sentence  */
-  --right: #7ba3ce;  /* notes  */
+  --back: #5fa5ad; /* german  */
+  --top: #cca4d8; /* article  */
+  --bottom: #a3aad8; /*  plural  */
+  --left: #d4c9f0; /* sentence  */
+  --right: #7ba3ce; /* notes  */
 }
 
 * {
@@ -35,12 +35,18 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  max-width: 100vw;
+  max-width: 100%;
   overflow-x: hidden;
   background-color: var(--white);
   color: var(--slate);
   font-family: var(--sans-serif);
   color: var(--primary);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 a {
@@ -55,12 +61,41 @@ button:hover {
   cursor: pointer;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-family: var(--serif);
 }
 
 main {
-  padding: 1rem;
+  padding: 0 1rem;
+  flex: 1;
+}
+
+.intro-images {
+  display: flex;
+  flex-direction: column;
+}
+
+.intro-images {
+  background-color: var(--blue);
+  border-radius: var(--border-radius);
+  width: 280px;
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto 0;
+}
+
+.intro-images .image-container {
+  width: 90%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+}
+
+.intro-images .image-container img {
+  width: 100%;
 }
 
 ul {

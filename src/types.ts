@@ -18,4 +18,4 @@ export interface VocabEntry {
 
 export type ModeProp = 'practice' | 'test' | 'home';
 
-export type DeckSize = 5 | 10 | 20 | 50;
+export type DeckSize = 5 | 10 | 20 ;

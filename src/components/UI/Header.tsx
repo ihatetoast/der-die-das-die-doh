@@ -4,32 +4,47 @@ import classes from './Header.module.css';
 
 import ModeButton from './ModeButton.tsx';
 
-type Props = {
+type HeaderProps = {
   onSetMode: (value: ModeProp) => void;
-  showButtons: boolean;
+  showBoardButtons: boolean;
+  deckTooSmall: boolean;
+  testComplete: boolean; // remove after test board is done
 };
 
-const Header = ({ onSetMode, showButtons }: Props) => {
-
+const Header = ({
+  onSetMode,
+  showBoardButtons,
+  deckTooSmall,
+  testComplete,
+}: HeaderProps) => {
   return (
     <header className={classes.header}>
       <h1>Der Die Das Die ... D'oh!</h1>
-      {!showButtons && <ModeButton onClick={onSetMode} mode='home' />}
-      <div className={classes.buttonContainer}>
-        {showButtons && (
+      {deckTooSmall && (
+        <p>
+          D'oh! Deck is too small to practice or test. Come back later when the
+          vocabulary elves have entered more words.
+        </p>
+      )}
+      {!deckTooSmall && !showBoardButtons && (
+        <>
+          <p>Go home to completely refresh to start over or switch modes.</p>
+          <ModeButton onClick={onSetMode} mode='home' />
+        </>
+      )}
+      {!deckTooSmall && showBoardButtons && (
+        <div className={classes.buttonContainer}>
           <>
             <p>
-              Practice or test yourself on the gender and plural of various
-              German nouns.
+              Learn and study {testComplete ? `or test yourself on` : ''} German nouns.
             </p>
             <div>
               <ModeButton onClick={onSetMode} mode='practice' />
-              <ModeButton onClick={onSetMode} mode='test' />
+              {testComplete && <ModeButton onClick={onSetMode} mode='test' />}
             </div>
-    
           </>
-        )}
-      </div>
+        </div>
+      )}
     </header>
   );
 };

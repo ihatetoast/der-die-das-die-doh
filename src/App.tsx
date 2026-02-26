@@ -8,48 +8,71 @@ import Header from './components/UI/Header';
 import PracticeBoard from './components/PracticeBoard.tsx';
 import TestBoard from './components/TestBoard.tsx';
 
+const TEST_COMPLETE = false; // remove when test board is done
+
 function App() {
   const [mode, setMode] = useState<ModeProp>('home');
   const [allShuffledDeck, setAllShuffledDeck] = useState<VocabEntry[]>([]);
+  const [deckSize, setDeckSize] = useState<DeckSize | null>(null);
   const [activeDeck, setActiveDeck] = useState<VocabEntry[]>([]);
-  const [cardsReviewedTotal, setCardReviewedTotal] = useState<number>(0);
+  const [cardsReviewed, setCardsReviewed] = useState<VocabEntry[]>([]);
   const showBoards = mode !== 'home';
-console.log("number of possible words: ", allShuffledDeck.length);
+  const deckTooSmall = allShuffledDeck.length < 5;
+
+  console.log('number of possible words: ', allShuffledDeck.length);
+
   useEffect(() => {
     shuffleDeck();
   }, []);
 
   const handleSetMode = (mode: ModeProp) => {
+    // home is a total refresh
     if (mode === 'home') {
       shuffleDeck();
       setActiveDeck([]);
-      setCardReviewedTotal(0);
+      setCardsReviewed([]);
+      setDeckSize(null);
     }
     setMode(mode);
   };
 
-  const handleGetActiveDeck = (size: DeckSize) => {
-    // handle if cardsReviewedTotal = 45 and allShuffledDeck.length = 47 or 
-    // cardsReviewedTotal = 45 and allShuffledDeck.length = 50 BUT they're asking for 10 or 20 more
-    if(cardsReviewedTotal === allShuffledDeck.length) {
-      // if at the end of the deck, reset. 
-      setCardReviewedTotal(0);
-      setActiveDeck(allShuffledDeck.slice(0, size));
-    } else if (cardsReviewedTotal === 0) {
-      setActiveDeck(allShuffledDeck.slice(0, size));
-    } else {
-      setActiveDeck(
-        allShuffledDeck.slice(
-          cardsReviewedTotal,
-          cardsReviewedTotal + size,
-        ),
-      );
-    }
-    setCardReviewedTotal((prev) => prev + size);
+  // this has one job: handle the start. Only called at start or after total refresh.
+  const handleGetInitialActiveDeck = (size: DeckSize) => {
+    setDeckSize(size);
+    const deck = allShuffledDeck.slice(0, size);
+    setActiveDeck(deck);
+    setCardsReviewed(deck);
   };
-  // testboard will eventually get either the practice deck or a random deck.
-  // practice deck if navigated to from practice.
-  // random if test is chosen first.
+
+  // this fn is called after the user has gone through a deck. activedeck is totally reset with new words. all cards updated.
+  const handleRefillActiveDeck = (size: DeckSize) => {
+    const startIdx = cardsReviewed.length;
+    const newDeck = getWrappedSlice(allShuffledDeck, startIdx, size);
+    setActiveDeck(newDeck);
+    setCardsReviewed((prev) => [...prev, ...newDeck]);
+  };
+
+  function getWrappedSlice(
+    wordsArr: VocabEntry[],
+    startIdx: number,
+    count: DeckSize,
+  ): VocabEntry[] {
+    const len = wordsArr.length;
+    startIdx = startIdx % len;
+
+    // first "half"
+    const firstWords = wordsArr.slice(startIdx);
+
+    // how many more to get
+    const countToFill = count - firstWords.length;
+
+    if (countToFill > 0) {
+      const lastWords = wordsArr.slice(0, countToFill);
+      return [...firstWords, ...lastWords];
+    } else {
+      return firstWords.slice(0, count);
+    }
+  }
 
   function shuffleDeck() {
     const completedNouns = VOCABULARY_COMMON.filter(
@@ -57,35 +80,48 @@ console.log("number of possible words: ", allShuffledDeck.length);
     );
     const shuffled = shuffle(completedNouns);
     setAllShuffledDeck(shuffled);
+    // setAllShuffledDeck(shuffled.slice(0, 2)); // to test if i lose all my words.
   }
   return (
     <>
-      <Header onSetMode={handleSetMode} showButtons={!showBoards} />
+      <Header
+        onSetMode={handleSetMode}
+        showBoardButtons={!showBoards}
+        deckTooSmall={deckTooSmall}
+        testComplete={TEST_COMPLETE}
+      />
+      {deckTooSmall && <div>STYLE ME WITH SADNESS LATER</div>}
       <main>
-        {mode === 'home' && (
+        {!deckTooSmall && mode === 'home' && (
           <>
             <div className='intro'>
               <p>
-                In practice mode, you'll go over the nouns' gender, definition,
-                plural form, and see examples in sentences. Save ones that need
-                reviewing, and when you feel comfortable testing yourself,
-                choose "test".
+                Choose "Learn & Study" to review gender and plural as well as
+                see example sentences and notes about the word.{' '}
               </p>
+              {TEST_COMPLETE ? (
+                <p> Choose "Test" to see what you've learned and what you need to review. </p>
+              ) : (
+                ``
+              )}
             </div>
-            <div>
-              <p>
-                Eventually screenshots of the look of the test page and the
-                practice page for styling.
-              </p>
+            <div className='intro-images'>
+              <div className='image-container'>
+                <img
+                  src='/practice-view.png'
+                  alt="screenshot of practice mode with a cube showing 'English'"
+                />
+              </div>
             </div>
           </>
         )}
-
-        {mode === 'test' && <TestBoard words={activeDeck} />}
+        {TEST_COMPLETE && mode === 'test' && <TestBoard words={activeDeck} />}
         {mode === 'practice' && (
           <PracticeBoard
             words={activeDeck}
-            handleGetActiveDeck={handleGetActiveDeck}
+            deckSize={deckSize}
+            handleGetInitialActiveDeck={handleGetInitialActiveDeck}
+            handleRefillActiveDeck={handleRefillActiveDeck}
           />
         )}
       </main>

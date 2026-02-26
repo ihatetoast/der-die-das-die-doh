@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { VocabEntry } from '../types';
 
 import classes from './LearningCube.module.css';
@@ -9,10 +9,11 @@ import CubeButton from './UI/CubeButton.tsx';
 type LearningCubeProps = {
   word: VocabEntry;
 };
+
 const LearningCube = ({ word }: LearningCubeProps) => {
+  const cubeRef = useRef<HTMLDivElement>(null);
   const handleRotate = (faceClass: string) => {
-    const cube = document.querySelector(`.${classes.cube}`);
-    cube?.classList.remove(
+    cubeRef.current?.classList.remove(
       classes.showEnglish,
       classes.showGerman,
       classes.showArticle,
@@ -20,7 +21,7 @@ const LearningCube = ({ word }: LearningCubeProps) => {
       classes.showSentence,
       classes.showNotes,
     );
-    cube?.classList.add(faceClass);
+    cubeRef.current?.classList.add(faceClass);
   };
 
   useEffect(() => {
@@ -30,7 +31,7 @@ const LearningCube = ({ word }: LearningCubeProps) => {
   return (
     <div className={classes.learningCube}>
       <div className={classes.cubeContainer}>
-        <div className={classes.cube}>
+        <div className={classes.cube} ref={cubeRef}>
           <div
             data-face='english-side'
             className={`${classes.face} ${classes.english}`}

@@ -203,7 +203,10 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Zimmer',
     plural: 'die Zimmer',
     weakMasculine: false,
-    notes: {miscNote: 'Other words: Wohnzimmer (living room), Ankleidezimmer (dressing room), Mansardenzimmer (attic room).'},
+    notes: {
+      miscNote:
+        'Other words: Wohnzimmer (living room), Ankleidezimmer (dressing room), Mansardenzimmer (attic room).',
+    },
     sentences: [
       {
         de: 'Das Zimmer war picobello',
@@ -225,7 +228,10 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Tür',
     plural: 'die Türen',
     weakMasculine: false,
-    notes: {miscNote: 'Other words: Flügeltür (swing door), Hintertür (back door), Hecktür (tail gate).'},
+    notes: {
+      miscNote:
+        'Other words: Flügeltür (swing door), Hintertür (back door), Hecktür (tail gate).',
+    },
     sentences: [
       { de: 'Ich öffne die Tür.', en: 'I open the door.', case: 'acc' },
       {
@@ -243,9 +249,16 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Frau',
     plural: 'die Frauen',
     weakMasculine: false,
-    notes: {miscNote: "Other words: Schlussfrau (goal keeper), Buhfrau (boogey woman), Wehfrau (mid wife)."},
+    notes: {
+      miscNote:
+        'Other words: Schlussfrau (goal keeper), Buhfrau (boogey woman), Wehfrau (mid wife).',
+    },
     sentences: [
-      { de: 'Die Frau hat zwei Katzen.', en: 'The woman has two cats.', case: 'acc' },
+      {
+        de: 'Die Frau hat zwei Katzen.',
+        en: 'The woman has two cats.',
+        case: 'acc',
+      },
       {
         de: 'Er wollte der Frau ein Buch geben.',
         en: 'He wanted to give the woman a book.',
@@ -261,9 +274,16 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Gesicht',
     plural: 'die Gesichter',
     weakMasculine: false,
-    notes: {miscNote: "Other words: Milchgesicht (milksop), Vollmondgesicht (moon-shaped face)."},
+    notes: {
+      miscNote:
+        'Other words: Milchgesicht (milksop), Vollmondgesicht (moon-shaped face).',
+    },
     sentences: [
-      { de: 'Sein Gesicht spricht Bände.', en: 'His face speaks volumes.', case: 'nom' },
+      {
+        de: 'Sein Gesicht spricht Bände.',
+        en: 'His face speaks volumes.',
+        case: 'nom',
+      },
       {
         de: 'Wasch dir das Gesicht.',
         en: 'Wash your face.',
@@ -279,9 +299,16 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Mutter',
     plural: 'die Mütter',
     weakMasculine: false,
-    notes: {miscNote: "Other words: Flügelmutter (wing nut), Puffmutter (madam of a brothel), Wehmutter (mid wife)."},
+    notes: {
+      miscNote:
+        'Other words: Flügelmutter (wing nut), Puffmutter (madam of a brothel), Wehmutter (mid wife).',
+    },
     sentences: [
-      { de: 'Meine Mutter spricht drei Sprachen.', en: 'My mother speaks three languages.', case: 'acc' },
+      {
+        de: 'Meine Mutter spricht drei Sprachen.',
+        en: 'My mother speaks three languages.',
+        case: 'acc',
+      },
       {
         de: 'Ich liebe meine Mutter.',
         en: 'I love my mother.',
@@ -299,14 +326,18 @@ export const VOCAB_1: VocabEntry[] = [
     weakMasculine: false,
     notes: { pluralNote: 'Exists only in plural form.' },
     sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: '' },
       {
-        de: 'SATZ2',
-        en: 'SENTENCE2',
-        case: '',
+        de: 'Mehr als fünftausend Leute waren bei dem Konzert.',
+        en: 'More than five thousand people were at the concert.',
+        case: 'nom',
+      },
+      {
+        de: 'Niko mag höfliche Leute.',
+        en: 'Niko likes polite people.',
+        case: 'acc',
       },
     ],
-    completed: false,
+    completed: true,
   },
   {
     id: 16,
@@ -315,16 +346,23 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Nacht',
     plural: 'die Nächte',
     weakMasculine: false,
-    notes: {},
+    notes: {
+      miscNote:
+        'Other notes: Fastnacht (Shrove Tuesday), Mondnacht (moonlit night), Mitternacht (midnight).',
+    },
     sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: '' },
       {
-        de: 'SATZ2',
-        en: 'SENTENCE2',
-        case: '',
+        de: 'Die Nacht bringt Rat.',
+        en: 'The night brings advice.',
+        case: 'nom',
+      },
+      {
+        de: 'Wir haben eine Reservierung für drei Nächte.',
+        en: 'We have reservations for three nights.',
+        case: 'acc',
       },
     ],
-    completed: false,
+    completed: true,
   },
   {
     id: 17,
@@ -429,7 +467,10 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Stimme',
     plural: 'die Stimmen',
     weakMasculine: false,
-    notes: {miscNote: 'Other words: Bassstimme (bass voice), Gegenstimme (dissenting voice)'},
+    notes: {
+      miscNote:
+        'Other words: Bassstimme (bass voice), Gegenstimme (dissenting voice)',
+    },
     sentences: [
       { de: 'Ich höre Stimmen.', en: 'I hear voices.', case: 'acc' },
       {
@@ -448,9 +489,15 @@ export const VOCAB_1: VocabEntry[] = [
     plural: 'die Mädchen',
     weakMasculine: false,
     notes: {
-      genderNote: "Words with the diminutive -chen are neuter even if the word represents something male or female."},
+      genderNote:
+        'Words with the diminutive -chen are neuter even if the word represents something male or female.',
+    },
     sentences: [
-      { de: 'Das Mädchen isst gern Spaghettieis.', en: 'The girl likes to eat spaghetti ice cream.', case: 'nom' },
+      {
+        de: 'Das Mädchen isst gern Spaghettieis.',
+        en: 'The girl likes to eat spaghetti ice cream.',
+        case: 'nom',
+      },
       {
         de: 'Diese Bücher gehören dem Mädchen.',
         en: 'These books belong to the girl.',
@@ -466,9 +513,12 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Ort',
     plural: 'die Orte',
     weakMasculine: false,
-    notes: {miscNote:"Other words: Absturzort (crash site), Vorort (suburb), Geburtsort (birth place)."},
+    notes: {
+      miscNote:
+        'Other words: Absturzort (crash site), Vorort (suburb), Geburtsort (birth place).',
+    },
     sentences: [
-      { de: 'Es ist ein cooler Ort.', en: 'It\'s a cool place.', case: 'nom' },
+      { de: 'Es ist ein cooler Ort.', en: "It's a cool place.", case: 'nom' },
       {
         de: 'Ist Freiheit ein Ort oder eine Idee?',
         en: 'Is freedom a place or an idea?',
@@ -484,9 +534,16 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Junge',
     plural: 'die Jungen',
     weakMasculine: true,
-    notes: {miscNote: 'Other words: Bäckerjunge (baker\'s boy ~ apprentice), Gassenjungen (raggamuffin), Strichjunge (hustler, male sex worker).'},
+    notes: {
+      miscNote:
+        "Other words: Bäckerjunge (baker's boy ~ apprentice), Gassenjungen (raggamuffin), Strichjunge (hustler, male sex worker).",
+    },
     sentences: [
-      { de: 'Der Junge trinkt Mineralwasser.', en: 'The boy drinks mineral water.', case: 'nom' },
+      {
+        de: 'Der Junge trinkt Mineralwasser.',
+        en: 'The boy drinks mineral water.',
+        case: 'nom',
+      },
       {
         de: 'Ich sehen den Jungen.',
         en: 'I see the boy.',
@@ -502,7 +559,10 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Auto',
     plural: 'die Autos',
     weakMasculine: false,
-    notes: {miscNote: "Other words: Rennauto (race car), Bücherauto (book mobile, mobile library)."},
+    notes: {
+      miscNote:
+        'Other words: Rennauto (race car), Bücherauto (book mobile, mobile library).',
+    },
     sentences: [
       { de: 'Ich habe ein Auto.', en: 'I have a car.', case: 'acc' },
       {
@@ -520,9 +580,16 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Seite',
     plural: 'die Seiten',
     weakMasculine: false,
-    notes: {miscNote: 'Other words: Kehrseite (flip side),  Schlagseite (list), Passivseite (liability).'},
+    notes: {
+      miscNote:
+        'Other words: Kehrseite (flip side),  Schlagseite (list), Passivseite (liability).',
+    },
     sentences: [
-      { de: 'Jeder Fluss hat zwei Seiten.', en: 'Every river has two sides.', case: 'acc' },
+      {
+        de: 'Jeder Fluss hat zwei Seiten.',
+        en: 'Every river has two sides.',
+        case: 'acc',
+      },
       {
         de: 'Monika wohnt auf der europäischen Seite von Istanbul.',
         en: 'Monika lives on the European side of Istanbul.',
@@ -538,7 +605,10 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Arm',
     plural: 'die Arme',
     weakMasculine: false,
-    notes: {miscNote: 'Other words: Schwenkarm (boom), Fangarm (tentacle), Hauptarm (main branch of a river).'},
+    notes: {
+      miscNote:
+        'Other words: Schwenkarm (boom), Fangarm (tentacle), Hauptarm (main branch of a river).',
+    },
     sentences: [
       { de: 'Mir tut der Arm weh.', en: 'My arm hurts.', case: 'nom' },
       {
@@ -556,9 +626,16 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Kind',
     plural: 'die Kinder',
     weakMasculine: false,
-    notes: {miscNote: 'Other words: Enkelkind (grandchild), Einzelkind (only child), Naturkind (child of nature), Krabbelkind (very young child, younger than toddler).'},
+    notes: {
+      miscNote:
+        'Other words: Enkelkind (grandchild), Einzelkind (only child), Naturkind (child of nature), Krabbelkind (very young child, younger than toddler).',
+    },
     sentences: [
-      { de: 'Das Kind ist brav.', en: 'The child is well behaved.', case: 'nom' },
+      {
+        de: 'Das Kind ist brav.',
+        en: 'The child is well behaved.',
+        case: 'nom',
+      },
       {
         de: 'Die Frau hat drei Kinder.',
         en: 'The woman has three children.',
@@ -574,9 +651,12 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Wort',
     plural: 'die Wörter',
     weakMasculine: false,
-    notes: {miscNote: 'Other words: Leitwort (motto), Fremdwort (foreign word), Sprichwort (proverb).'},
+    notes: {
+      miscNote:
+        'Other words: Leitwort (motto), Fremdwort (foreign word), Sprichwort (proverb).',
+    },
     sentences: [
-      { de: 'Er hält sein Wort.', en: 'He\'s a man of his word.', case: 'acc' },
+      { de: 'Er hält sein Wort.', en: "He's a man of his word.", case: 'acc' },
       {
         de: 'Ich spiele gern mit Wörtern.',
         en: 'I like to play with words.',
@@ -614,16 +694,21 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Haar',
     plural: 'die Haare',
     weakMasculine: false,
-    notes: {},
+    notes: {
+      miscNote:
+        'When getting your hair cut, it is always "Haare", but "Schatz, schüttel dein Haar (singular) für mich" has a poetic feel.',
+      pluralNote:
+        "The plural 'die Haare' is used in everyday language, and 'das Haar' is more poetic.",
+    },
     sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: '' },
+      { de: 'Sie hat nasse Haare.', en: 'She has wet hair.', case: 'acc' },
       {
-        de: 'SATZ2',
-        en: 'SENTENCE2',
-        case: '',
+        de: 'Ich mag kurze Haare.',
+        en: 'I like short hair.',
+        case: 'acc',
       },
     ],
-    completed: false,
+    completed: true,
   },
   {
     id: 32,
@@ -632,16 +717,16 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Fuß',
     plural: 'die Füße',
     weakMasculine: false,
-    notes: {},
+    notes: {miscNote: "Other words: Bleifuß (leadfoot), Zinfuß (interest rate), Münzfuß (monetary standard)."},
     sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: '' },
+      { de: 'Mein Opa ist immer zu Fuß zur Schule gegangen.', en: 'My grandpa always went to school by foot.', case: 'dat' },
       {
-        de: 'SATZ2',
-        en: 'SENTENCE2',
-        case: '',
+        de: 'Mir ist kalt an den Füßen.',
+        en: 'My feet are cold.',
+        case: 'dat',
       },
     ],
-    completed: false,
+    completed: true,
   },
   {
     id: 33,
@@ -651,18 +736,19 @@ export const VOCAB_1: VocabEntry[] = [
     plural: 'die Wasser',
     weakMasculine: false,
     notes: {
+      miscNote:"Other words: Abwasser (effluent), Badewasser (bathw water), Mineralwasser (mineral water).",
       pluralNote:
         'usually uncountable, but when referring to different water types, the plural is used.',
     },
     sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: '' },
+      { de: 'Das Wasser kocht.', en: 'The water\'s boiling.', case: 'nom' },
       {
-        de: 'SATZ2',
-        en: 'SENTENCE2',
-        case: '',
+        de: 'Ich trinke nur warmes Wasser.',
+        en: 'I only drink warm water.',
+        case: 'acc',
       },
     ],
-    completed: false,
+    completed: true,
   },
   {
     id: 34,
@@ -671,16 +757,16 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Licht',
     plural: 'die Lichter',
     weakMasculine: false,
-    notes: {},
+    notes: {miscNote: "Other words: Flutlicht (flood light), Bremslicht (stop light, brake light)."},
     sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: '' },
+      { de: 'Ich mache das Licht aus.', en: 'I turn off the light', case: 'acc' },
       {
-        de: 'SATZ2',
-        en: 'SENTENCE2',
-        case: '',
+        de: 'Alle Lichter sind ausgegangen.',
+        en: 'All the lights went out.',
+        case: 'nom',
       },
     ],
-    completed: false,
+    completed: true,
   },
   {
     id: 35,
@@ -689,16 +775,16 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Welt',
     plural: 'die Welten',
     weakMasculine: false,
-    notes: {},
+    notes: {miscNote: "Other words: Umwelt (environment), Mitwelt (contemporaries)."},
     sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: '' },
+      { de: 'Sprache öffnet Welten.', en: 'Languages open worlds.', case: 'acc' },
       {
-        de: 'SATZ2',
-        en: 'SENTENCE2',
-        case: '',
+        de: 'Die italienische Küche ist auf der ganzen Welt beliebt.',
+        en: 'Italian food is popular all over the world.',
+        case: 'dat',
       },
     ],
-    completed: false,
+    completed: true,
   },
   {
     id: 36,
@@ -706,17 +792,18 @@ export const VOCAB_1: VocabEntry[] = [
     article: 'der',
     noun: 'Name',
     plural: 'die Namen',
-    weakMasculine: false,
-    notes: { weakMascNote: 'Takes -ns in the genitive singular' },
+    weakMasculine: true,
+    notes: { 
+      miscNote: "Other words: Nachname (last name), Spitzname (nickname), Doppelname (double-barrelled name).", weakMascNote: 'Takes -ns in the genitive singular' },
     sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: '' },
+      { de: 'Ich kenne ihren Namen', en: 'I know her name', case: 'acc' },
       {
-        de: 'SATZ2',
-        en: 'SENTENCE2',
-        case: '',
+        de: 'Françoise ist ein französischer Name.',
+        en: 'Françoise is a French name.',
+        case: 'nom',
       },
     ],
-    completed: false,
+    completed: true,
   },
   {
     id: 37,
@@ -725,16 +812,16 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Freund',
     plural: 'die Freunde',
     weakMasculine: false,
-    notes: {},
+    notes: {miscNote: "Other words: Seelenfreund (soul mate), Studienfreund (college or university friend)."},
     sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: '' },
+      { de: 'Johannes ist ein guter Freund.', en: 'Johannes is a good friend.', case: 'nom' },
       {
-        de: 'SATZ2',
-        en: 'SENTENCE2',
-        case: '',
+        de: 'Du bist unter Freunden.',
+        en: 'You\'re among friends.',
+        case: 'dat',
       },
     ],
-    completed: false,
+    completed: true,
   },
   {
     id: 38,
@@ -743,16 +830,16 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Fenster',
     plural: 'die Fenster',
     weakMasculine: false,
-    notes: {},
+    notes: {miscNote: "Other words: Browserfenster (browser window), Bleiglasfenster (stained-glass window)."},
     sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: '' },
+      { de: 'Dieses Zimmer hat keine Fenster.', en: 'This room has no windows.', case: 'acc' },
       {
-        de: 'SATZ2',
-        en: 'SENTENCE2',
-        case: '',
+        de: 'Ich putze die Fenster.',
+        en: 'I\'m cleaning the windows.',
+        case: 'acc',
       },
     ],
-    completed: false,
+    completed: true,
   },
   {
     id: 39,
@@ -2882,10 +2969,18 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Wohnung',
     plural: 'die Wohnungen',
     weakMasculine: false,
-    notes: {genderNote: "Words ending in -ung are generally feminine."},
+    notes: { genderNote: 'Words ending in -ung are generally feminine.' },
     sentences: [
-      { de: 'Meine Wohnung ist viel zu klein.', en: 'My apartment is much too small.', case: 'nom' },
-      { de: 'Wohnungen sind in New York sehr teuer. ', en: 'Apartments in New Yors are very expensive.', case: 'nom' },
+      {
+        de: 'Meine Wohnung ist viel zu klein.',
+        en: 'My apartment is much too small.',
+        case: 'nom',
+      },
+      {
+        de: 'Wohnungen sind in New York sehr teuer. ',
+        en: 'Apartments in New Yors are very expensive.',
+        case: 'nom',
+      },
     ],
     completed: true,
   },
@@ -2924,10 +3019,18 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Sommer',
     plural: 'die Sommer',
     weakMasculine: false,
-    notes: {genderNote: 'The seasons are masculine.'},
+    notes: { genderNote: 'The seasons are masculine.' },
     sentences: [
-      { de: 'Es wird ein sehr nasser Sommer.', en: 'It will be a very wet summer.', case: 'nom' },
-      { de: 'Sie gießt die Blumen im Sommer jeden Tag.', en: 'She waters the flowers every day in the summer.', case: 'dat' },
+      {
+        de: 'Es wird ein sehr nasser Sommer.',
+        en: 'It will be a very wet summer.',
+        case: 'nom',
+      },
+      {
+        de: 'Sie gießt die Blumen im Sommer jeden Tag.',
+        en: 'She waters the flowers every day in the summer.',
+        case: 'dat',
+      },
     ],
     completed: true,
   },
@@ -3008,11 +3111,22 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Kleidung',
     plural: 'die Kleidungen',
     weakMasculine: false,
-    notes: {genderNote: "Words ending in -ung are generally feminine.",
-      pluralNote: 'Kleidung is generally uncountable (likes clothes). "Kleidungen" exists but people generally use "Kleidungsstücke" (items of clothing) or "Kleider" (dresses/clothes).'},
+    notes: {
+      genderNote: 'Words ending in -ung are generally feminine.',
+      pluralNote:
+        'Kleidung is generally uncountable (likes clothes). "Kleidungen" exists but people generally use "Kleidungsstücke" (items of clothing) or "Kleider" (dresses/clothes).',
+    },
     sentences: [
-      { de: 'Wo ist keine Kleidung?.', en: 'Where are your clothes?', case: 'nom' },
-      { de: 'Meine Kleidung sieht teuer aus.', en: 'My clothes look expensive.', case: 'nom' },
+      {
+        de: 'Wo ist keine Kleidung?.',
+        en: 'Where are your clothes?',
+        case: 'nom',
+      },
+      {
+        de: 'Meine Kleidung sieht teuer aus.',
+        en: 'My clothes look expensive.',
+        case: 'nom',
+      },
     ],
     completed: true,
   },
@@ -3051,10 +3165,21 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Musik',
     plural: 'die Musiken',
     weakMasculine: false,
-    notes: {genderNote: 'Words ending in-ik are often feminine.', pluralNote:'Musik is rarely pluralized.'},
+    notes: {
+      genderNote: 'Words ending in-ik are often feminine.',
+      pluralNote: 'Musik is rarely pluralized.',
+    },
     sentences: [
-      { de: 'Das Mädchen hört Musik.', en: 'The girl is listening to music', case: 'acc' },
-      { de: 'Die Musik hier gefällt mir.', en: 'I like the music here.', case: 'nom' },
+      {
+        de: 'Das Mädchen hört Musik.',
+        en: 'The girl is listening to music',
+        case: 'acc',
+      },
+      {
+        de: 'Die Musik hier gefällt mir.',
+        en: 'I like the music here.',
+        case: 'nom',
+      },
     ],
     completed: true,
   },
@@ -3219,7 +3344,7 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Erinnerung',
     plural: 'die Erinnerungen',
     weakMasculine: false,
-    notes: {genderNote: "Words ending in -ung are generally feminine.",},
+    notes: { genderNote: 'Words ending in -ung are generally feminine.' },
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
       { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
@@ -3345,7 +3470,7 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Rechnung',
     plural: 'die Rechnungen',
     weakMasculine: false,
-    notes: {genderNote: "Words ending in -ung are generally feminine.",},
+    notes: { genderNote: 'Words ending in -ung are generally feminine.' },
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
       { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
@@ -3881,7 +4006,7 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Richtung',
     plural: 'die Richtungen',
     weakMasculine: false,
-    notes: {genderNote: "Words ending in -ung are generally feminine.",},
+    notes: { genderNote: 'Words ending in -ung are generally feminine.' },
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
       { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
@@ -4101,7 +4226,7 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Entfernung',
     plural: 'die Entfernungen',
     weakMasculine: false,
-    notes: {genderNote: "Words ending in -ung are generally feminine.",},
+    notes: { genderNote: 'Words ending in -ung are generally feminine.' },
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
       { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
@@ -4519,7 +4644,7 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Bestellung',
     plural: 'die Bestellungen',
     weakMasculine: false,
-    notes: {genderNote: "Words ending in -ung are generally feminine.",},
+    notes: { genderNote: 'Words ending in -ung are generally feminine.' },
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
       { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
@@ -5407,7 +5532,7 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Winter',
     plural: 'die Winter',
     weakMasculine: false,
-    notes: {genderNote: 'The seasons are masculine.'},
+    notes: { genderNote: 'The seasons are masculine.' },
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
       { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
@@ -5421,10 +5546,18 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Front',
     plural: 'die Fronten',
     weakMasculine: false,
-    notes: {genderNote: 'The seasons are masculine.'},
+    notes: { genderNote: 'The seasons are masculine.' },
     sentences: [
-      { de: ' Der Frühling kommt nach dem Winter.', en: 'Spring comes after winter.', case: 'dat' },
-      { de: 'Deutsche Winter sind kalt.', en: 'German winters are cold.', case: 'nom' },
+      {
+        de: ' Der Frühling kommt nach dem Winter.',
+        en: 'Spring comes after winter.',
+        case: 'dat',
+      },
+      {
+        de: 'Deutsche Winter sind kalt.',
+        en: 'German winters are cold.',
+        case: 'nom',
+      },
     ],
     completed: true,
   },
@@ -5575,7 +5708,7 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Veränderung',
     plural: 'die Veränderungen',
     weakMasculine: false,
-    notes: {genderNote: "Words ending in -ung are generally feminine.",},
+    notes: { genderNote: 'Words ending in -ung are generally feminine.' },
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
       { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
@@ -6014,7 +6147,7 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Hoffnung',
     plural: 'die Hoffnungen',
     weakMasculine: false,
-    notes: {genderNote: "Words ending in -ung are generally feminine.",},
+    notes: { genderNote: 'Words ending in -ung are generally feminine.' },
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
       { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
@@ -6056,7 +6189,7 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Überraschung',
     plural: 'die Überraschungen',
     weakMasculine: false,
-    notes: {genderNote: "Words ending in -ung are generally feminine.",},
+    notes: { genderNote: 'Words ending in -ung are generally feminine.' },
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
       { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
@@ -6950,7 +7083,7 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Besatzung',
     plural: 'die Besatzungen',
     weakMasculine: false,
-    notes: {genderNote: "Words ending in -ung are generally feminine.",},
+    notes: { genderNote: 'Words ending in -ung are generally feminine.' },
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
       { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
@@ -6992,7 +7125,7 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Erfahrung',
     plural: 'die Erfahrungen',
     weakMasculine: false,
-    notes: {genderNote: "Words ending in -ung are generally feminine.",},
+    notes: { genderNote: 'Words ending in -ung are generally feminine.' },
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
       { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
@@ -7146,7 +7279,7 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Bewegung',
     plural: 'die Bewegungen',
     weakMasculine: false,
-    notes: {genderNote: "Words ending in -ung are generally feminine.",},
+    notes: { genderNote: 'Words ending in -ung are generally feminine.' },
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
       { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
@@ -7202,7 +7335,7 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Zeitung',
     plural: 'die Zeitungen',
     weakMasculine: false,
-    notes: {genderNote: "Words ending in -ung are generally feminine.",},
+    notes: { genderNote: 'Words ending in -ung are generally feminine.' },
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
       { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
@@ -7510,7 +7643,7 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Abdeckung',
     plural: 'die Abdeckungen',
     weakMasculine: false,
-    notes: {genderNote: "Words ending in -ung are generally feminine."},
+    notes: { genderNote: 'Words ending in -ung are generally feminine.' },
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
       { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
@@ -7650,7 +7783,7 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Wirkung',
     plural: 'die Wirkungen',
     weakMasculine: false,
-    notes: {genderNote: "Words ending in -ung are generally feminine."},
+    notes: { genderNote: 'Words ending in -ung are generally feminine.' },
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
       { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },

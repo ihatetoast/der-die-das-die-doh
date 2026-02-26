@@ -5,33 +5,20 @@ import LearningCube from './LearningCube.tsx';
 
 type Props = {
   words: VocabEntry[];
-  handleGetActiveDeck: (size: DeckSize) => void;
+  deckSize: DeckSize | null;
+  handleGetInitialActiveDeck: (size: DeckSize) => void;
+  handleRefillActiveDeck: (size: DeckSize) => void;
 };
 
-const PracticeBoard = ({ words, handleGetActiveDeck }: Props) => {
+const PracticeBoard = ({ words,deckSize, handleGetInitialActiveDeck, handleRefillActiveDeck }: Props) => {
   const [cardsToReview, setCardsToReview] = useState<VocabEntry[]>([]);
-  const [deckSize, setDeckSize] = useState<DeckSize | null>(null);
-  console.log('cardsToReview ', cardsToReview);
-  console.log('words ', words);
-
-  /**
- *  * basic loop  (remove/move cards) DONE
- * todo:
-
- * Show 4 buttons when cardsToReview.length === 0
- * "Test me" → switch to test mode + pass words up to app / usecallbakc?
- * "Review again" → reset cardsToReview to original words
- * "New deck" → show deck size buttons again
- * "Home" → already works via Header / direct users to header or have another button?
- */
 
   useEffect(() => {
     if (words.length > 0) setCardsToReview([...words]);
   }, [words]);
 
   const handleInitialDeckChoice = (size: DeckSize) => {
-    setDeckSize(size);
-    handleGetActiveDeck(size);
+    handleGetInitialActiveDeck(size);
   };
 
   return (
@@ -56,7 +43,7 @@ const PracticeBoard = ({ words, handleGetActiveDeck }: Props) => {
               German <span className={classes.example}>(eg Buch)</span>
             </li>
             <li>
-              The article (singular)
+              The article (singular){' '}
               <span className={classes.example}>(eg das)</span>
             </li>
             <li>
@@ -71,7 +58,7 @@ const PracticeBoard = ({ words, handleGetActiveDeck }: Props) => {
             <li>
               Notes or review of the word{' '}
               <span className={classes.example}>
-                (eg Book, das Buch, die Bücher; or notes if there are any.){' '}
+                (eg Book, das Buch, die Bücher; or notes if there are any.)
               </span>
             </li>
           </ul>
@@ -80,11 +67,9 @@ const PracticeBoard = ({ words, handleGetActiveDeck }: Props) => {
             <button onClick={() => handleInitialDeckChoice(5)}>5</button>
             <button onClick={() => handleInitialDeckChoice(10)}>10</button>
             <button onClick={() => handleInitialDeckChoice(20)}>20</button>
-            <button onClick={() => handleInitialDeckChoice(50)}>50</button>
           </div>
         </section>
       )}
-
       {cardsToReview.length > 0 && (
         <section className={classes.cubeSection}>
           <div>
@@ -107,7 +92,6 @@ const PracticeBoard = ({ words, handleGetActiveDeck }: Props) => {
               </button>
             </div>
           </div>
-
           <LearningCube word={cardsToReview[0]} />
         </section>
       )}
@@ -116,14 +100,14 @@ const PracticeBoard = ({ words, handleGetActiveDeck }: Props) => {
           <p>
             Way to go. You've gone through the deck and have no cards to review.
             What's next? New deck and new words? Test yourself? repeat this
-            deck?
+            deck? 
           </p>
           <div className={classes.btnContainer}>
             <button onClick={() => setCardsToReview(words)}>
               Review current deck
             </button>
             {deckSize && (
-              <button onClick={() => handleGetActiveDeck(deckSize)}>
+              <button onClick={() => handleRefillActiveDeck(deckSize)}>
                 Get {deckSize} new ones!
               </button>
             )}
@@ -134,6 +118,9 @@ const PracticeBoard = ({ words, handleGetActiveDeck }: Props) => {
           <div className={classes.cubePlaceholder}>
             <p>Yay! Deck completed.</p>
           </div>
+          <p>
+            If you want to completely start over with a clean slate, click "Home" in the header.
+          </p>
         </section>
       )}
     </div>
