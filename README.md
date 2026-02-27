@@ -24,4 +24,4 @@ Learning Desktop:
 ![desktop shot of app showing cube and buttons](screenshots/ddddd-desktop-1.png)
 
 Learning Mobile:
-![screen cast showing cube rotation](screenshots/ddddd-mobile-learning.mp4)
+![screen cast showing cube rotation](screenshots/ddddd-mobile-learning.gif)
