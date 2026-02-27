@@ -269,3 +269,29 @@
     transform: translateZ(-200px) rotateY(-90deg);
   }
 }
+
+@media screen and (min-width: 900px) {
+  .learningCube {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 2px;
+    width: 80%;
+    max-width: 900px;
+  }
+
+  .cubeControls .btnContainer {
+   grid-template-columns: repeat(2, 10rem);
+    gap: 2rem;
+  }
+
+  .cubeControls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cubeControls h2 {
+    margin-bottom: 2rem;
+  }
+}

@@ -92,8 +92,7 @@ const LearningCube = ({ word }: LearningCubeProps) => {
           </div>
         </div>
       </div>
-      <h2>Flip to:</h2>
-      <div className={`${classes.btnContainer} ${classes.cubeBtns}`}>
+      <div className={classes.cubeControls}><h2>Flip to:</h2><div className={`${classes.btnContainer} ${classes.cubeBtns}`}>
         <CubeButton
           label='english'
           onClick={() => handleRotate(classes.showEnglish)}
@@ -118,7 +117,9 @@ const LearningCube = ({ word }: LearningCubeProps) => {
           label='notes'
           onClick={() => handleRotate(classes.showNotes)}
         />
-      </div>
+      </div></div>
+      
+      
     </div>
   );
 };
