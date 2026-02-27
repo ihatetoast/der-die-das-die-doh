@@ -45,8 +45,12 @@ const LearningCube = ({ word }: LearningCubeProps) => {
           >
             <h3>German:</h3>
             <p>{word.noun}</p>
-            {word.weakMasculine && <p><span className={classes.weakMasc}>📣</span>{`${word.noun} is considered a "weak masculine" and adds an "-n" in all cases except nominative, eg "dem ${word.noun}n."`}</p>}
-
+            {word.weakMasculine && (
+              <p className={classes.weakMascPara}>
+                <span className={classes.weakMascEmoji}>📣</span>
+                {`${word.noun} is considered a "weak masculine" and adds an "-n" in all cases except nominative, eg "dem Jungen." or "den Studenten".`}
+              </p>
+            )}
           </div>
           <div
             data-face='article-side'
@@ -74,11 +78,15 @@ const LearningCube = ({ word }: LearningCubeProps) => {
             {word.sentences.map((sent, idx) => {
               return (
                 <dl key={idx} className={classes.sentence}>
-                  <dt><span className={classes.emoji}>🇩🇪</span>
+                  <dt>
+                    <span className={classes.emoji}>🇩🇪</span>
                     {sent.de}{' '}
                     <span className={classes.case}>({sent.case})</span>
                   </dt>
-                  <dd><span className={classes.emoji}>🇬🇧</span>{sent.en}</dd>
+                  <dd>
+                    <span className={classes.emoji}>🇬🇧</span>
+                    {sent.en}
+                  </dd>
                 </dl>
               );
             })}
@@ -92,34 +100,35 @@ const LearningCube = ({ word }: LearningCubeProps) => {
           </div>
         </div>
       </div>
-      <div className={classes.cubeControls}><h2>Flip to:</h2><div className={`${classes.btnContainer} ${classes.cubeBtns}`}>
-        <CubeButton
-          label='english'
-          onClick={() => handleRotate(classes.showEnglish)}
-        />
-        <CubeButton
-          label='german'
-          onClick={() => handleRotate(classes.showGerman)}
-        />
-        <CubeButton
-          label='article'
-          onClick={() => handleRotate(classes.showArticle)}
-        />
-        <CubeButton
-          label='plural'
-          onClick={() => handleRotate(classes.showPlural)}
-        />
-        <CubeButton
-          label='sentence'
-          onClick={() => handleRotate(classes.showSentence)}
-        />
-        <CubeButton
-          label='notes'
-          onClick={() => handleRotate(classes.showNotes)}
-        />
-      </div></div>
-      
-      
+      <div className={classes.cubeControls}>
+        <h2>Flip to:</h2>
+        <div className={`${classes.btnContainer} ${classes.cubeBtns}`}>
+          <CubeButton
+            label='english'
+            onClick={() => handleRotate(classes.showEnglish)}
+          />
+          <CubeButton
+            label='german'
+            onClick={() => handleRotate(classes.showGerman)}
+          />
+          <CubeButton
+            label='article'
+            onClick={() => handleRotate(classes.showArticle)}
+          />
+          <CubeButton
+            label='plural'
+            onClick={() => handleRotate(classes.showPlural)}
+          />
+          <CubeButton
+            label='sentence'
+            onClick={() => handleRotate(classes.showSentence)}
+          />
+          <CubeButton
+            label='notes'
+            onClick={() => handleRotate(classes.showNotes)}
+          />
+        </div>
+      </div>
     </div>
   );
 };
