@@ -3,23 +3,73 @@
   flex-direction: column;
 }
 
-.btnContainer {
-  display: flex;
-  gap: 1rem;
-  padding: 1rem;
+.practiceBoard p {
+  margin-bottom: 0.5rem;
 }
 
-.btnContainer button {
+.practiceBoard h2 {
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.practiceBoard ul {
+  margin-bottom: 1rem;
+}
+
+.instructions {
+  width: 100%;
+}
+
+.listEmoji {
+  margin-right: 0.25rem;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.25rem;
+}
+
+.btnContainer.instructionsBtn {
+  flex-direction: column;
+  gap: 0.2rem;
+  width: 15rem;
+  margin: 0 auto;
+}
+
+.btnContainer.instructionsBtn button {
+  font-size: 1rem;
+}
+
+.instructions .btnContainer button {
+  padding: 1rem;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.btnContainer.instructionsBtn button:not(.warning) {
+  background-color: var(--blue);
+}
+
+.warning {
+  background-color: var(--red);
+}
+
+.btnContainer.instructionsBtn button {
   padding: 0.5rem 1rem;
   border-radius: var(--btn-radius);
   min-width: 5rem;
-  text-transform: capitalize;
   border: 2px solid transparent;
   transition: all 0.2s ease-in-out;
 }
 
 .example {
   font-style: italic;
+  display: none;
 }
 
 .cubePlaceholder {
@@ -37,3 +87,36 @@
   margin: 1rem auto;
 }
 
+.reviewInstructions {
+  text-align: center;
+}
+
+@media screen and (min-width: 425px) {
+  .example {
+    display: inline;
+  }
+
+  .instructions {
+    width: 70%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .btnContainer {
+    gap: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .practiceBoard h2 {
+    font-size: 1.75rem;
+  }
+  .btnContainer.instructionsBtn {
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .btnContainer.instructionsBtn button {
+  }
+}

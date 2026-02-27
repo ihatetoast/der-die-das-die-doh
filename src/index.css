@@ -1,5 +1,5 @@
 :root {
-  line-height: 1.5;
+  line-height: 1.4;
   --border-radius: 5px;
   --btn-radius: 50px;
 
@@ -41,6 +41,7 @@ body {
   color: var(--slate);
   font-family: var(--sans-serif);
   color: var(--primary);
+  font-size: 16px;
 }
 
 .app {
@@ -71,16 +72,17 @@ main {
   flex: 1;
 }
 
+.intro {
+  margin-top: 0.5rem;
+  width: 100%;
+}
 .intro-images {
   display: flex;
   flex-direction: column;
 }
 
 .intro-images {
-  background-color: var(--blue);
   border-radius: var(--border-radius);
-  width: 280px;
-  height: 280px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,7 +90,9 @@ main {
 }
 
 .intro-images .image-container {
-  width: 90%;
+  border: 10px solid var(--blue);
+    width: 280px;
+  height: 280px;
   aspect-ratio: 1 / 1;
   overflow: hidden;
   border-radius: var(--border-radius);
@@ -100,4 +104,45 @@ main {
 
 ul {
   list-style-type: none;
+}
+
+@media screen and (min-width:768px) {
+  :root {
+    line-height: 1.5;
+  }
+
+  body {
+    font-size: 18px;
+  }
+
+  .intro {
+    width: 75%;
+    margin: 0 auto;
+  }
+
+ .intro-images .image-container {
+    width: 360px;
+    height: 360px;
+    border-width: 15px;
+  }
+
+  .intro-images {
+    margin-top: 5rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+    .intro {
+    width: 50%;
+  }
+
+   .intro-images .image-container {
+    width: 450px;
+    height: 450px;
+    border-width: 15px;
+  }
+
+  .intro-images {
+    margin-top: 5rem;
+  }
 }

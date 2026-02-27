@@ -10,7 +10,12 @@ type Props = {
   handleRefillActiveDeck: (size: DeckSize) => void;
 };
 
-const PracticeBoard = ({ words,deckSize, handleGetInitialActiveDeck, handleRefillActiveDeck }: Props) => {
+const PracticeBoard = ({
+  words,
+  deckSize,
+  handleGetInitialActiveDeck,
+  handleRefillActiveDeck,
+}: Props) => {
   const [cardsToReview, setCardsToReview] = useState<VocabEntry[]>([]);
 
   useEffect(() => {
@@ -24,41 +29,32 @@ const PracticeBoard = ({ words,deckSize, handleGetInitialActiveDeck, handleRefil
   return (
     <div className={classes.practiceBoard}>
       <h2>Let's practice!</h2>
-      <p>
-        At anytime, you may return to the home page for a complete reset of the
-        session (ie you'll get the option for new cards and deck size or change
-        to test mode.)
-      </p>
       {words.length === 0 && cardsToReview.length === 0 && (
         <section className={classes.instructions}>
           <p>
-            You'll have a stack of cubes to practice your vocabulary. Each side
-            or face of the cube gives you some information about the word:
+            You'll have a stack of cubes to practice your vocabulary, and each
+            side has information about the word:
           </p>
           <ul>
-            <li>
-              English <span className={classes.example}>(eg Book)</span>
+            <li><span className={classes.listEmoji}>🇬🇧</span>
+              English<span className={classes.example}> (eg Book)</span>
             </li>
-            <li>
-              German <span className={classes.example}>(eg Buch)</span>
+            <li><span className={classes.listEmoji}>🇩🇪</span>
+              German<span className={classes.example}> (eg Buch)</span>
             </li>
-            <li>
-              The article (singular){' '}
-              <span className={classes.example}>(eg das)</span>
+            <li><span className={classes.listEmoji}>🇩🇪</span>
+              The singular article
+              <span className={classes.example}> (eg das)</span>
             </li>
-            <li>
-              Plural <span className={classes.example}>(eg die Bücher)</span>
+            <li><span className={classes.listEmoji}>🇩🇪</span>
+              Plural<span className={classes.example}> (eg die Bücher)</span>
             </li>
-            <li>
-              Sentences{' '}
-              <span className={classes.example}>
-                (eg Ich gebe ihm das Buch. / I give him the book.)
+            <li><span className={classes.listEmoji}>🇩🇪</span>
+              Sentences<span className={classes.example}> (eg Ich gebe ihm das Buch. / I give him the book.)
               </span>
             </li>
-            <li>
-              Notes or review of the word{' '}
-              <span className={classes.example}>
-                (eg Book, das Buch, die Bücher; or notes if there are any.)
+            <li><span className={classes.listEmoji}>🇩🇪</span>Review of the word
+              <span className={classes.example}> (eg Book, das Buch, die Bücher; or notes if there are any.)
               </span>
             </li>
           </ul>
@@ -72,23 +68,23 @@ const PracticeBoard = ({ words,deckSize, handleGetInitialActiveDeck, handleRefil
       )}
       {cardsToReview.length > 0 && (
         <section className={classes.cubeSection}>
-          <div>
+          <div className={classes.reviewInstructions}>
             <p>
-              Do you feel you know this word or want to review it again after
-              going through the deck?
+              Got this? Remove it from the deck; otherwise, keep it in the deck.
             </p>
-            <div className={classes.btnContainer}>
+            <div className={`${classes.btnContainer} ${classes.instructionsBtn}`}>
               <button
+                onClick={() => setCardsToReview((prev) => [...prev.slice(1)])}
+              >
+                I got this
+              </button>
+              <button
+                className={classes.warning}
                 onClick={() =>
                   setCardsToReview((prev) => [...prev.slice(1), prev[0]])
                 }
               >
                 D'oh! I need to review
-              </button>
-              <button
-                onClick={() => setCardsToReview((prev) => [...prev.slice(1)])}
-              >
-                I got this
               </button>
             </div>
           </div>
@@ -100,7 +96,7 @@ const PracticeBoard = ({ words,deckSize, handleGetInitialActiveDeck, handleRefil
           <p>
             Way to go. You've gone through the deck and have no cards to review.
             What's next? New deck and new words? Test yourself? repeat this
-            deck? 
+            deck?
           </p>
           <div className={classes.btnContainer}>
             <button onClick={() => setCardsToReview(words)}>
@@ -119,7 +115,8 @@ const PracticeBoard = ({ words,deckSize, handleGetInitialActiveDeck, handleRefil
             <p>Yay! Deck completed.</p>
           </div>
           <p>
-            If you want to completely start over with a clean slate, click "Home" in the header.
+            If you want to completely start over with a clean slate, click
+            "Home" in the header.
           </p>
         </section>
       )}

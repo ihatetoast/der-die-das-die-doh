@@ -1,5 +1,5 @@
 .btn {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
   border-radius: var(--btn-radius);
   min-width: 5rem;
   text-transform: capitalize;

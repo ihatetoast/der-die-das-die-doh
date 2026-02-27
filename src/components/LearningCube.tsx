@@ -72,11 +72,11 @@ const LearningCube = ({ word }: LearningCubeProps) => {
             {word.sentences.map((sent, idx) => {
               return (
                 <dl key={idx}>
-                  <dt>
+                  <dt><span className={classes.emoji}>🇩🇪</span>
                     {sent.de}{' '}
                     <span className={classes.case}>({sent.case})</span>
                   </dt>
-                  <dd>{sent.en}</dd>
+                  <dd><span className={classes.emoji}>🇬🇧</span>{sent.en}</dd>
                 </dl>
               );
             })}
@@ -90,8 +90,8 @@ const LearningCube = ({ word }: LearningCubeProps) => {
           </div>
         </div>
       </div>
-      <h2>Show:</h2>
-      <div className={classes.btnContainer}>
+      <h2>Flip to:</h2>
+      <div className={`${classes.btnContainer} ${classes.cubeBtns}`}>
         <CubeButton
           label='english'
           onClick={() => handleRotate(classes.showEnglish)}
