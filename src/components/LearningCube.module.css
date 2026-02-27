@@ -3,22 +3,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;
+  margin: 1rem auto;
 }
 
 .cubeContainer {
   position: relative;
-  width: 290px;
-  height: 290px;
+  width: 200px;
+  height: 200px;
   perspective: 1000px;
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
-
 }
 /* note: translate needs to be 1/2 the width/height  */
 .cube {
   position: absolute;
-  transform: translateZ(-145px);
+  transform: translateZ(-100px);
   will-change: transform;
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
@@ -30,8 +29,8 @@
 
 .cube .face {
   position: absolute;
-  width: 290px;
-  height: 290px;
+  width: 200px;
+  height: 200px;
   border: 5px solid var(--primary);
   border-radius: var(--border-radius);
   display: flex;
@@ -43,42 +42,53 @@
   padding: 0.25rem;
 }
 
+/* hide a sentence on smaller screens  */
+.sentences .sentence:nth-of-type(2) {
+  display: none;
+}
+
 /* rotate x or y / left right or top bot by 90  */
 /* front back rot on Y */
 .cube .english {
-  transform: rotateY(0deg) translateZ(145px);
+  transform: rotateY(0deg) translateZ(100px);
   background-color: var(--front);
 }
 
 .cube .german {
-  transform: rotateY(180deg) translateZ(145px);
+  transform: rotateY(180deg) translateZ(100px);
   background-color: var(--back);
+}
+
+.weakMasc {
+  display: inline-block;
+  transform: rotateY(180deg);
+  margin-right: 1rem;
 }
 
 /* top bot rot on X */
 .cube .article {
-  transform: rotateX(90deg) translateZ(145px);
+  transform: rotateX(90deg) translateZ(100px);
   background-color: var(--top);
 }
 .cube .plural {
-  transform: rotateX(-90deg) translateZ(145px);
+  transform: rotateX(-90deg) translateZ(100px);
   background-color: var(--bottom);
 }
 
 /* left right rot on y  */
-.cube .sentence {
-  transform: rotateY(-90deg) translateZ(145px);
+.cube .sentences {
+  transform: rotateY(-90deg) translateZ(100px);
   background-color: var(--left);
   align-items: flex-start;
 }
 
 .cube .notes {
-  transform: rotateY(90deg) translateZ(145px);
+  transform: rotateY(90deg) translateZ(100px);
   background-color: var(--right);
   align-items: flex-start;
 }
 
-.cube .sentence h3,
+.cube .sentences h3,
 .cube .notes h3 {
   text-align: center;
   align-self: center;
@@ -96,23 +106,23 @@
 }
 
 .showEnglish {
-  transform: translateZ(-145px) rotateY(0deg);
+  transform: translateZ(-100px) rotateY(0deg);
 }
 
 .showGerman {
-  transform: translateZ(-145px) rotateY(180deg);
+  transform: translateZ(-100px) rotateY(180deg);
 }
 .showArticle {
-  transform: translateZ(-145px) rotateX(-90deg);
+  transform: translateZ(-100px) rotateX(-90deg);
 }
 .showPlural {
-  transform: translateZ(-145px) rotateX(90deg);
+  transform: translateZ(-100px) rotateX(90deg);
 }
 .showSentence {
-  transform: translateZ(-145px) rotateY(90deg);
+  transform: translateZ(-100px) rotateY(90deg);
 }
 .showNotes {
-  transform: translateZ(-145px) rotateY(-90deg);
+  transform: translateZ(-100px) rotateY(-90deg);
 }
 
 .face h3 {
@@ -150,7 +160,24 @@
   margin-right: 0.5rem;
 }
 
-@media screen and (min-width: 425px) {
+@media screen and (min-width: 430px) {
+  .learningCube {
+    gap: 1rem;
+  }
+
+  .face[data-face='sentence-side'] h3,
+  .face[data-face='notes-side'] h3 {
+    font-size: 1.5rem;
+  }
+
+  .face[data-face='sentence-side'] dl {
+    font-size: 1rem;
+  }
+
+  .sentences .sentence:nth-of-type(2) {
+    display: block;
+  }
+
   .cubeContainer,
   .cube .face {
     width: 320px;
@@ -161,45 +188,44 @@
   }
 
   .cube .english {
-    transform: rotateY(0deg) translateZ(160);
+    transform: rotateY(0deg) translateZ(160px);
   }
   .cube .german {
-    transform: rotateY(180deg) translateZ(160);
+    transform: rotateY(180deg) translateZ(160px);
   }
   .cube .article {
-    transform: rotateX(90deg) translateZ(160);
+    transform: rotateX(90deg) translateZ(160px);
   }
   .cube .plural {
-    transform: rotateX(-90deg) translateZ(160);
+    transform: rotateX(-90deg) translateZ(160px);
   }
-  .cube .sentence {
-    transform: rotateY(-90deg) translateZ(160);
+  .cube .sentences {
+    transform: rotateY(-90deg) translateZ(160px);
   }
   .cube .notes {
-    transform: rotateY(90deg) translateZ(160);
+    transform: rotateY(90deg) translateZ(160px);
   }
   .showEnglish {
-    transform: translateZ(-160) rotateY(0deg);
+    transform: translateZ(-160px) rotateY(0deg);
   }
   .showGerman {
-    transform: translateZ(-160) rotateY(180deg);
+    transform: translateZ(-160px) rotateY(180deg);
   }
   .showArticle {
-    transform: translateZ(-160) rotateX(-90deg);
+    transform: translateZ(-160px) rotateX(-90deg);
   }
   .showPlural {
-    transform: translateZ(-160) rotateX(90deg);
+    transform: translateZ(-160px) rotateX(90deg);
   }
   .showSentence {
-    transform: translateZ(-160) rotateY(90deg);
+    transform: translateZ(-160px) rotateY(90deg);
   }
   .showNotes {
-    transform: translateZ(-160) rotateY(-90deg);
+    transform: translateZ(-160px) rotateY(-90deg);
   }
 }
 
 @media screen and (min-width: 768px) {
-
   .cubeContainer,
   .cube .face {
     width: 400px;
@@ -218,7 +244,7 @@
   .cube .plural {
     transform: rotateX(-90deg) translateZ(200px);
   }
-  .cube .sentence {
+  .cube .sentences {
     transform: rotateY(-90deg) translateZ(200px);
   }
   .cube .notes {

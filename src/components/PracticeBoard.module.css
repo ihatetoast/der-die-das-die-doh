@@ -3,9 +3,6 @@
   flex-direction: column;
 }
 
-.practiceBoard p {
-  margin-bottom: 0.5rem;
-}
 
 .practiceBoard h2 {
   font-size: 1.25rem;
@@ -38,10 +35,6 @@
   margin: 0 auto;
 }
 
-.btnContainer.instructionsBtn button {
-  font-size: 1rem;
-}
-
 .instructions .btnContainer button {
   padding: 1rem;
   border-radius: 50%;
@@ -60,11 +53,11 @@
 }
 
 .btnContainer.instructionsBtn button {
-  padding: 0.5rem 1rem;
   border-radius: var(--btn-radius);
   min-width: 5rem;
   border: 2px solid transparent;
   transition: all 0.2s ease-in-out;
+  padding: 0.3rem;
 }
 
 .example {
@@ -91,7 +84,15 @@
   text-align: center;
 }
 
-@media screen and (min-width: 425px) {
+@media screen and (min-width: 430px) {
+.practiceBoard h2 {
+  font-size: 1.5rem;
+}
+
+.practiceBoard p {
+  margin-bottom: 0.5rem;
+}
+
   .example {
     display: inline;
   }
@@ -104,6 +105,17 @@
 
   .btnContainer {
     gap: 1.5rem;
+  }
+
+  .btnContainer.instructionsBtn {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .btnContainer.instructionsBtn button {
+    padding: 0.5rem;
+    font-size: 1rem;
+    flex: 1;
   }
 }
 
@@ -118,5 +130,6 @@
   }
 
   .btnContainer.instructionsBtn button {
+    padding: 0.75rem 1rem;
   }
 }

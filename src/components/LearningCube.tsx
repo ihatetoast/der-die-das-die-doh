@@ -45,6 +45,8 @@ const LearningCube = ({ word }: LearningCubeProps) => {
           >
             <h3>German:</h3>
             <p>{word.noun}</p>
+            {word.weakMasculine && <p><span className={classes.weakMasc}>📣</span>{`${word.noun} is considered a "weak masculine" and adds an "-n" in all cases except nominative, eg "dem ${word.noun}n."`}</p>}
+
           </div>
           <div
             data-face='article-side'
@@ -66,12 +68,12 @@ const LearningCube = ({ word }: LearningCubeProps) => {
           </div>
           <div
             data-face='sentence-side'
-            className={`${classes.face} ${classes.sentence}`}
+            className={`${classes.face} ${classes.sentences}`}
           >
             <h3>Examples in a sentence:</h3>
             {word.sentences.map((sent, idx) => {
               return (
-                <dl key={idx}>
+                <dl key={idx} className={classes.sentence}>
                   <dt><span className={classes.emoji}>🇩🇪</span>
                     {sent.de}{' '}
                     <span className={classes.case}>({sent.case})</span>

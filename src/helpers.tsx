@@ -37,7 +37,7 @@ const formatNotes = (notes: Record<string, string>): ReactElement => {
   return (
     <ul>
       {Object.entries(notes).map(([key, value]) => (
-        <li key={key}>{value}</li>
+        <li key={key}><p>{value}</p></li>
       ))}
     </ul>
   );
