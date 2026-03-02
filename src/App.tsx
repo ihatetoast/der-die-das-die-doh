@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
 
 import { VOCABULARY_COMMON } from './vocab-data-common.ts';
-import { ModeProp, VocabEntry, DeckSize } from './types';
+import { ModeProp, VocabEntry, DeckSize, TestType } from './types';
 import { shuffle } from './helpers.tsx';
 
 import Header from './components/UI/Header';
 import PracticeBoard from './components/PracticeBoard.tsx';
 import TestBoard from './components/TestBoard.tsx';
 
-const TEST_COMPLETE = false; // remove when test board is done
+const TEST_COMPLETE = true; // remove when test board is done
 
 function App() {
   const [mode, setMode] = useState<ModeProp>('home');
@@ -16,6 +16,7 @@ function App() {
   const [deckSize, setDeckSize] = useState<DeckSize | null>(null);
   const [activeDeck, setActiveDeck] = useState<VocabEntry[]>([]);
   const [cardsReviewed, setCardsReviewed] = useState<VocabEntry[]>([]);
+  const [testType, setTestType] = useState<TestType | null>(null)
   const showBoards = mode !== 'home';
   const deckTooSmall = allShuffledDeck.length < 5;
 
@@ -32,6 +33,7 @@ function App() {
       setActiveDeck([]);
       setCardsReviewed([]);
       setDeckSize(null);
+      setTestType(null)
     }
     setMode(mode);
   };
@@ -43,6 +45,10 @@ function App() {
     setActiveDeck(deck);
     setCardsReviewed(deck);
   };
+
+  const handleGetTestType = (test: TestType) => {
+    setTestType(test)
+  }
 
   // this fn is called after the user has gone through a deck. activedeck is totally reset with new words. all cards updated.
   const handleRefillActiveDeck = (size: DeckSize) => {
@@ -119,7 +125,14 @@ function App() {
             </div>
           </>
         )}
-        {TEST_COMPLETE && mode === 'test' && <TestBoard words={activeDeck} />}
+        {TEST_COMPLETE && mode === 'test' && (
+          <TestBoard
+            words={activeDeck}
+            testType={testType}
+            handleGetInitialActiveDeck={handleGetInitialActiveDeck}
+            handleGetTestType={handleGetTestType}
+          />
+        )}
         {mode === 'practice' && (
           <PracticeBoard
             words={activeDeck}

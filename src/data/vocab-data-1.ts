@@ -717,9 +717,16 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Fuß',
     plural: 'die Füße',
     weakMasculine: false,
-    notes: {miscNote: "Other words: Bleifuß (leadfoot), Zinfuß (interest rate), Münzfuß (monetary standard)."},
+    notes: {
+      miscNote:
+        'Other words: Bleifuß (leadfoot), Zinfuß (interest rate), Münzfuß (monetary standard).',
+    },
     sentences: [
-      { de: 'Mein Opa ist immer zu Fuß zur Schule gegangen.', en: 'My grandpa always went to school by foot.', case: 'dat' },
+      {
+        de: 'Mein Opa ist immer zu Fuß zur Schule gegangen.',
+        en: 'My grandpa always went to school by foot.',
+        case: 'dat',
+      },
       {
         de: 'Mir ist kalt an den Füßen.',
         en: 'My feet are cold.',
@@ -736,12 +743,13 @@ export const VOCAB_1: VocabEntry[] = [
     plural: 'die Wasser',
     weakMasculine: false,
     notes: {
-      miscNote:"Other words: Abwasser (effluent), Badewasser (bathw water), Mineralwasser (mineral water).",
+      miscNote:
+        'Other words: Abwasser (effluent), Badewasser (bathw water), Mineralwasser (mineral water).',
       pluralNote:
         'usually uncountable, but when referring to different water types, the plural is used.',
     },
     sentences: [
-      { de: 'Das Wasser kocht.', en: 'The water\'s boiling.', case: 'nom' },
+      { de: 'Das Wasser kocht.', en: "The water's boiling.", case: 'nom' },
       {
         de: 'Ich trinke nur warmes Wasser.',
         en: 'I only drink warm water.',
@@ -757,9 +765,16 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Licht',
     plural: 'die Lichter',
     weakMasculine: false,
-    notes: {miscNote: "Other words: Flutlicht (flood light), Bremslicht (stop light, brake light)."},
+    notes: {
+      miscNote:
+        'Other words: Flutlicht (flood light), Bremslicht (stop light, brake light).',
+    },
     sentences: [
-      { de: 'Ich mache das Licht aus.', en: 'I turn off the light', case: 'acc' },
+      {
+        de: 'Ich mache das Licht aus.',
+        en: 'I turn off the light',
+        case: 'acc',
+      },
       {
         de: 'Alle Lichter sind ausgegangen.',
         en: 'All the lights went out.',
@@ -775,9 +790,15 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Welt',
     plural: 'die Welten',
     weakMasculine: false,
-    notes: {miscNote: "Other words: Umwelt (environment), Mitwelt (contemporaries)."},
+    notes: {
+      miscNote: 'Other words: Umwelt (environment), Mitwelt (contemporaries).',
+    },
     sentences: [
-      { de: 'Sprache öffnet Welten.', en: 'Languages open worlds.', case: 'acc' },
+      {
+        de: 'Sprache öffnet Welten.',
+        en: 'Languages open worlds.',
+        case: 'acc',
+      },
       {
         de: 'Die italienische Küche ist auf der ganzen Welt beliebt.',
         en: 'Italian food is popular all over the world.',
@@ -793,8 +814,11 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Name',
     plural: 'die Namen',
     weakMasculine: true,
-    notes: { 
-      miscNote: "Other words: Nachname (last name), Spitzname (nickname), Doppelname (double-barrelled name).", weakMascNote: 'Takes -ns in the genitive singular' },
+    notes: {
+      miscNote:
+        'Other words: Nachname (last name), Spitzname (nickname), Doppelname (double-barrelled name).',
+      weakMascNote: 'Takes -ns in the genitive singular',
+    },
     sentences: [
       { de: 'Ich kenne ihren Namen', en: 'I know her name', case: 'acc' },
       {
@@ -812,12 +836,19 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Freund',
     plural: 'die Freunde',
     weakMasculine: false,
-    notes: {miscNote: "Other words: Seelenfreund (soul mate), Studienfreund (college or university friend)."},
+    notes: {
+      miscNote:
+        'Other words: Seelenfreund (soul mate), Studienfreund (college or university friend).',
+    },
     sentences: [
-      { de: 'Johannes ist ein guter Freund.', en: 'Johannes is a good friend.', case: 'nom' },
+      {
+        de: 'Johannes ist ein guter Freund.',
+        en: 'Johannes is a good friend.',
+        case: 'nom',
+      },
       {
         de: 'Du bist unter Freunden.',
-        en: 'You\'re among friends.',
+        en: "You're among friends.",
         case: 'dat',
       },
     ],
@@ -830,12 +861,19 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Fenster',
     plural: 'die Fenster',
     weakMasculine: false,
-    notes: {miscNote: "Other words: Browserfenster (browser window), Bleiglasfenster (stained-glass window)."},
+    notes: {
+      miscNote:
+        'Other words: Browserfenster (browser window), Bleiglasfenster (stained-glass window).',
+    },
     sentences: [
-      { de: 'Dieses Zimmer hat keine Fenster.', en: 'This room has no windows.', case: 'acc' },
+      {
+        de: 'Dieses Zimmer hat keine Fenster.',
+        en: 'This room has no windows.',
+        case: 'acc',
+      },
       {
         de: 'Ich putze die Fenster.',
-        en: 'I\'m cleaning the windows.',
+        en: "I'm cleaning the windows.",
         case: 'acc',
       },
     ],
@@ -848,16 +886,23 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Körper',
     plural: 'die Körper',
     weakMasculine: false,
-    notes: {},
+    notes: {
+      miscNote:
+        'Other words: Oberkörper (torso), Knallkörper (firecracker/banger).',
+    },
     sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: '' },
       {
-        de: 'SATZ2',
-        en: 'SENTENCE2',
-        case: '',
+        de: 'Nasse Kleidung klebt am Körper.',
+        en: 'Wet clothes cling to the body.',
+        case: 'nom',
+      },
+      {
+        de: 'Der Körper weiß mehr als wir.',
+        en: 'The body knows more than we do.',
+        case: 'nom',
       },
     ],
-    completed: false,
+    completed: true,
   },
   {
     id: 40,
@@ -893,14 +938,18 @@ export const VOCAB_1: VocabEntry[] = [
     weakMasculine: false,
     notes: {},
     sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: '' },
       {
-        de: 'SATZ2',
-        en: 'SENTENCE2',
-        case: '',
+        de: 'Wir erwarten den Morgen',
+        en: 'We expected the morning',
+        case: 'acc',
+      },
+      {
+        de: 'Am Morgen fahren wir nach Frankreich.',
+        en: 'In the morning, we are driving to France.',
+        case: 'dat',
       },
     ],
-    completed: false,
+    completed: true,
   },
   {
     id: 42,
@@ -909,16 +958,23 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Bett',
     plural: 'die Betten',
     weakMasculine: false,
-    notes: {},
+    notes: {
+      miscNote:
+        'Other words: Flussbett (river bed), Einzelbett (single bed), Gitterbett (cot).',
+    },
     sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: '' },
       {
-        de: 'SATZ2',
-        en: 'SENTENCE2',
-        case: '',
+        de: 'Meine Katze ist immer unter meinem Bett.',
+        en: 'My cat is always under my bed.',
+        case: 'dat',
+      },
+      {
+        de: 'Ich will ins Bett.',
+        en: 'I want to go to bed.',
+        case: 'acc',
       },
     ],
-    completed: false,
+    completed: true,
   },
   {
     id: 43,
@@ -927,16 +983,19 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Wand',
     plural: 'die Wände',
     weakMasculine: false,
-    notes: {},
+    notes: {
+      miscNote:
+        'Other words: Kletterwand (climbing wall), Zellwand (cell wall).',
+    },
     sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: '' },
+      { de: 'Die Wände sind kalt.', en: 'The walls are cold.', case: 'nom' },
       {
-        de: 'SATZ2',
-        en: 'SENTENCE2',
-        case: '',
+        de: 'Jemand steht hinter der Wand.',
+        en: 'Someone is standing behind the wall.',
+        case: 'dat',
       },
     ],
-    completed: false,
+    completed: true,
   },
   {
     id: 44,
@@ -945,16 +1004,23 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Straße',
     plural: 'die Straßen',
     weakMasculine: false,
-    notes: {},
+    notes: {
+      miscNote:
+        'Other words: Einbahnstraße (one-way street), Küstenstraße (coastal highway), Passstraße (mountain pass).',
+    },
     sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: '' },
       {
-        de: 'SATZ2',
-        en: 'SENTENCE2',
-        case: '',
+        de: 'Die Straße ist schmutzig.',
+        en: 'The street is dirty.',
+        case: 'nom',
+      },
+      {
+        de: 'Es gibt viele Zombies auf der Straße.',
+        en: 'There are many zombies on the street.',
+        case: 'acc',
       },
     ],
-    completed: false,
+    completed: true,
   },
   {
     id: 45,
@@ -963,16 +1029,19 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Schule',
     plural: 'die Schulen',
     weakMasculine: false,
-    notes: {},
+    notes: {
+      miscNote:
+        'Other words: Forstschule (foresry school), Tanzschule (dance school), Fachschule (technical school).',
+    },
     sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: '' },
+      { de: 'Ich war in der Schule.', en: 'I was at school.', case: 'dat' },
       {
-        de: 'SATZ2',
-        en: 'SENTENCE2',
-        case: '',
+        de: 'Ich mag die Schule nicht besonders.',
+        en: "I don't like school very much.",
+        case: 'acc',
       },
     ],
-    completed: false,
+    completed: true,
   },
   {
     id: 46,
