@@ -348,7 +348,7 @@ export const VOCAB_1: VocabEntry[] = [
     weakMasculine: false,
     notes: {
       miscNote:
-        'Other notes: Fastnacht (Shrove Tuesday), Mondnacht (moonlit night), Mitternacht (midnight).',
+        'Other words: Fastnacht (Shrove Tuesday), Mondnacht (moonlit night), Mitternacht (midnight).',
     },
     sentences: [
       {
@@ -1050,34 +1050,34 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Luft',
     plural: 'die Lüfte',
     weakMasculine: false,
-    notes: {},
+    notes: {miscNote: "Other words: Seeluft (sea air), Außenluft (ambient air)."},
     sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: '' },
+      { de: 'Ich brauche Luft.', en: 'I need air.', case: 'acc' },
       {
-        de: 'SATZ2',
-        en: 'SENTENCE2',
-        case: '',
+        de: 'Die Luft hat gestunken!',
+        en: 'The air stank.',
+        case: 'nom',
       },
     ],
-    completed: false,
+    completed: true,
   },
   {
     id: 47,
-    eng: 'floor',
+    eng: 'floor, soil',
     article: 'der',
     noun: 'Boden',
     plural: 'die Böden',
     weakMasculine: false,
-    notes: {},
+    notes: {miscNote:"Other words: Dachboden(loft, attic), Sandboden (sandy soil)."},
     sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: '' },
+      { de: 'Er ist im Boden.', en: 'He is in the ground.', case: 'dat' },
       {
-        de: 'SATZ2',
-        en: 'SENTENCE2',
-        case: '',
+        de: 'Die Böden sind sehr trocken gewesen.',
+        en: 'The soils have been very dry.',
+        case: 'nom',
       },
     ],
-    completed: false,
+    completed: true,
   },
   {
     id: 48,
@@ -1086,16 +1086,16 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Stunde',
     plural: 'die Stunden',
     weakMasculine: false,
-    notes: {},
+    notes: {miscNote: "Other words: Amtsstunden (office hours), Todesstunde (hour of death)."},
     sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: '' },
+      { de: 'Die Wolken deuten auf Regen in den nächsten Stunden.', en: 'The clouds indicate rain in the next few hours.', case: 'dat' },
       {
-        de: 'SATZ2',
-        en: 'SENTENCE2',
-        case: '',
+        de: 'Der Nachtwächter rief die elfte Stunde an.',
+        en: 'The night watchman announced the eleventh hour.',
+        case: 'acc',
       },
     ],
-    completed: false,
+    completed: true,
   },
   {
     id: 49,

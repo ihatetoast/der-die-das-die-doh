@@ -17,6 +17,7 @@ type Props = {
   handleGetInitialActiveDeck: (size: DeckSize) => void;
   handleGetTestType: (test: TestType) => void;
 };
+
 // ask the user if they want to test on current active deck or all x reviewed
 // replace the picsum images with screenshots of the test. hide the image on mob but show at 700ish
 const TestBoard = ({
@@ -47,7 +48,7 @@ const TestBoard = ({
       {testType === 'weak-masc' && <WeakMascGame words={words} />}
       {!testType && (
         <section>
-          <div>
+          <article className={classes.testCard}>
             <div>
               <img
                 src='https://picsum.photos/seed/picsum/200'
@@ -56,17 +57,28 @@ const TestBoard = ({
             </div>
             <h3>Article Speed Round</h3>
             <p>Pick the correct article (nom) before the time is up.</p>
-            <button onClick={() => handleTestButtonClick(5, 'article')}>
-              5
-            </button>{' '}
-            <button onClick={() => handleTestButtonClick(10, 'article')}>
-              10
-            </button>{' '}
-            <button onClick={() => handleTestButtonClick(20, 'article')}>
-              20
-            </button>
-          </div>
-          <div>
+            <div className={classes.gameCardBtnContainer}>
+              <button
+                className={classes.testBtn}
+                onClick={() => handleTestButtonClick(5, 'article')}
+              >
+                5
+              </button>{' '}
+              <button
+                className={classes.testBtn}
+                onClick={() => handleTestButtonClick(10, 'article')}
+              >
+                10
+              </button>{' '}
+              <button
+                className={classes.testBtn}
+                onClick={() => handleTestButtonClick(20, 'article')}
+              >
+                20
+              </button>
+            </div>
+          </article>
+          <article className={classes.testCard}>
             <div>
               <img
                 src='https://picsum.photos/seed/picsum/200'
@@ -75,17 +87,28 @@ const TestBoard = ({
             </div>
             <h3>English-to-German Mini</h3>
             <p>Given an English word, write the German translation.</p>
-            <button onClick={() => handleTestButtonClick(5, 'eng-ger-mini')}>
-              5
-            </button>{' '}
-            <button onClick={() => handleTestButtonClick(10, 'eng-ger-mini')}>
-              10
-            </button>{' '}
-            <button onClick={() => handleTestButtonClick(20, 'eng-ger-mini')}>
-              20
-            </button>
-          </div>
-          <div>
+            <div className={classes.gameCardBtnContainer}>
+              <button
+                className={classes.testBtn}
+                onClick={() => handleTestButtonClick(5, 'eng-ger-mini')}
+              >
+                5
+              </button>{' '}
+              <button
+                className={classes.testBtn}
+                onClick={() => handleTestButtonClick(10, 'eng-ger-mini')}
+              >
+                10
+              </button>{' '}
+              <button
+                className={classes.testBtn}
+                onClick={() => handleTestButtonClick(20, 'eng-ger-mini')}
+              >
+                20
+              </button>
+            </div>
+          </article>
+          <article className={classes.testCard}>
             <div>
               <img
                 src='https://picsum.photos/seed/picsum/200'
@@ -94,17 +117,28 @@ const TestBoard = ({
             </div>
             <h3>German-to-English Mini</h3>
             <p>Given a German word, write the English translation.</p>
-            <button onClick={() => handleTestButtonClick(5, 'ger-eng-mini')}>
-              5
-            </button>{' '}
-            <button onClick={() => handleTestButtonClick(10, 'ger-eng-mini')}>
-              10
-            </button>{' '}
-            <button onClick={() => handleTestButtonClick(20, 'ger-eng-mini')}>
-              20
-            </button>
-          </div>
-          <div>
+            <div className={classes.gameCardBtnContainer}>
+              <button
+                className={classes.testBtn}
+                onClick={() => handleTestButtonClick(5, 'ger-eng-mini')}
+              >
+                5
+              </button>{' '}
+              <button
+                className={classes.testBtn}
+                onClick={() => handleTestButtonClick(10, 'ger-eng-mini')}
+              >
+                10
+              </button>{' '}
+              <button
+                className={classes.testBtn}
+                onClick={() => handleTestButtonClick(20, 'ger-eng-mini')}
+              >
+                20
+              </button>
+            </div>
+          </article>
+          <article className={classes.testCard}>
             <div>
               <img
                 src='https://picsum.photos/seed/picsum/200'
@@ -113,17 +147,28 @@ const TestBoard = ({
             </div>
             <h3>Plural</h3>
             <p>Given the German word, write its plural</p>
-            <button onClick={() => handleTestButtonClick(5, 'plural')}>
-              5
-            </button>{' '}
-            <button onClick={() => handleTestButtonClick(10, 'plural')}>
-              10
-            </button>{' '}
-            <button onClick={() => handleTestButtonClick(20, 'plural')}>
-              20
-            </button>
-          </div>
-          <div>
+            <div className={classes.gameCardBtnContainer}>
+              <button
+                className={classes.testBtn}
+                onClick={() => handleTestButtonClick(5, 'plural')}
+              >
+                5
+              </button>{' '}
+              <button
+                className={classes.testBtn}
+                onClick={() => handleTestButtonClick(10, 'plural')}
+              >
+                10
+              </button>{' '}
+              <button
+                className={classes.testBtn}
+                onClick={() => handleTestButtonClick(20, 'plural')}
+              >
+                20
+              </button>
+            </div>
+          </article>
+          <article className={classes.testCard}>
             <div>
               <img
                 src='https://picsum.photos/seed/picsum/200'
@@ -132,17 +177,28 @@ const TestBoard = ({
             </div>
             <h3>English to German Full</h3>
             <p>Given the German word, write its plural</p>
-            <button onClick={() => handleTestButtonClick(5, 'german-full')}>
-              5
-            </button>{' '}
-            <button onClick={() => handleTestButtonClick(10, 'german-full')}>
-              10
-            </button>{' '}
-            <button onClick={() => handleTestButtonClick(20, 'german-full')}>
-              20
-            </button>
-          </div>
-          <div>
+            <div className={classes.gameCardBtnContainer}>
+              <button
+                className={classes.testBtn}
+                onClick={() => handleTestButtonClick(5, 'german-full')}
+              >
+                5
+              </button>{' '}
+              <button
+                className={classes.testBtn}
+                onClick={() => handleTestButtonClick(10, 'german-full')}
+              >
+                10
+              </button>{' '}
+              <button
+                className={classes.testBtn}
+                onClick={() => handleTestButtonClick(20, 'german-full')}
+              >
+                20
+              </button>
+            </div>
+          </article>
+          <article className={classes.testCard}>
             <div>
               <img
                 src='https://picsum.photos/seed/picsum/200'
@@ -151,16 +207,27 @@ const TestBoard = ({
             </div>
             <h3>Be Strong with Weak Masculine Words</h3>
             <p>Decide if the masculine noun is weak or not.</p>
-            <button onClick={() => handleTestButtonClick(5, 'weak-masc')}>
-              5
-            </button>{' '}
-            <button onClick={() => handleTestButtonClick(10, 'weak-masc')}>
-              10
-            </button>{' '}
-            <button onClick={() => handleTestButtonClick(20, 'weak-masc')}>
-              20
-            </button>
-          </div>
+            <div className={classes.gameCardBtnContainer}>
+              <button
+                className={classes.testBtn}
+                onClick={() => handleTestButtonClick(5, 'weak-masc')}
+              >
+                5
+              </button>{' '}
+              <button
+                className={classes.testBtn}
+                onClick={() => handleTestButtonClick(10, 'weak-masc')}
+              >
+                10
+              </button>{' '}
+              <button
+                className={classes.testBtn}
+                onClick={() => handleTestButtonClick(20, 'weak-masc')}
+              >
+                20
+              </button>
+            </div>
+          </article>
         </section>
       )}
     </div>

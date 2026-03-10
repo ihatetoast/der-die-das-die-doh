@@ -4,26 +4,20 @@
 
 .gameCard {
   display: flex;
+  flex-direction: column;
   width: 100%;
   margin: 1rem auto;
 }
 
-.gameCard div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
- gap: 0.5rem;
-
-}
 
 .gameArticle {
-width: 5rem;
- align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 .gameWord {
-  flex-grow: 1;
-  align-items: center;
+text-align: center;
 }
 
 .gameWord h3 {
@@ -33,7 +27,7 @@ width: 5rem;
 .gameArticle button {
   padding: 0.3rem;
   border-radius: var(--btn-radius);
-  width:4rem;
+  width: 4rem;
   height: 4rem;
   font-size: 1.2rem;
 }

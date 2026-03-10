@@ -1,0 +1,14 @@
+
+.timerDigits {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.timerDigits span {
+  display: inline-block;
+  width: 3rem;
+}
+
+.timerDigits span.bigger {
+  font-size: 1.5rem;
+}

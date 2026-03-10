@@ -23,6 +23,8 @@
   --bottom: #a3aad8; /*  plural  */
   --left: #d4c9f0; /* sentence  */
   --right: #7ba3ce; /* notes  */
+
+  --box-shadow:  0px 9px 15px 1px rgba(2,36,33,0.72);
 }
 
 * {
