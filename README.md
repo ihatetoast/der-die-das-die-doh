@@ -17,6 +17,12 @@ User clicks a button and the cube rotates. There is no testing. Just reviewing o
 ## When
  * Now: Learning, practicing, reviewing mode, logic and mostly styled
  * Next: Testing mode (user can test from the stack they're practicing OR test from a random set)
+  * [x] Article Speed Round (timed)
+  * [ ] Eng-to-Ger Mini
+  * [ ] Ger-to-Eng Mini
+  * [ ] English-to-German Full (English word: give article, German word, plural)
+  * [ ] Plural test
+  * [ ] Weak Masc test
  * Next part deux: After testing is done, finish styling.
  * Later: Continuing to build out the words.
 

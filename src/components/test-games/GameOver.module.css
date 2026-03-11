@@ -1,0 +1,4 @@
+.gameOverContainer {
+  display: flex;
+  flex-direction: column;
+}

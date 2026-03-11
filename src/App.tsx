@@ -131,6 +131,7 @@ function App() {
             testType={testType}
             handleGetInitialActiveDeck={handleGetInitialActiveDeck}
             handleGetTestType={handleGetTestType}
+            handleSetMode={handleSetMode}
           />
         )}
         {mode === 'practice' && (

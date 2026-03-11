@@ -9,7 +9,6 @@
   margin: 1rem auto;
 }
 
-
 .gameArticle {
   display: flex;
   justify-content: center;
@@ -17,7 +16,7 @@
 }
 
 .gameWord {
-text-align: center;
+  text-align: center;
 }
 
 .gameWord h3 {
@@ -30,4 +29,11 @@ text-align: center;
   width: 4rem;
   height: 4rem;
   font-size: 1.2rem;
+}
+
+button[data-state='correct'] {
+  background: var(--accent);
+}
+button[data-state='incorrect'] {
+  background: var(--red);
 }

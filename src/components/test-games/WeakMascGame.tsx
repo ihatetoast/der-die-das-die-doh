@@ -1,6 +1,6 @@
 
-import React from 'react';
-import { VocabEntry } from '../types';
+
+import { VocabEntry } from '../../types';
 
 import classes from './GerEngMiniGame.module.css';
 

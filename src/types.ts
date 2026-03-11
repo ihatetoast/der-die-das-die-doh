@@ -22,4 +22,6 @@ export type DeckSize = 5 | 10 | 20;
 
 export type TestType = 'article' | 'plural' | 'german-full' | 'eng-ger-mini' | 'ger-eng-mini' | 'weak-masc';
 
-export type AnswerState = 'unanswered' | 'correct' | 'incorrect';
+export type AnswerState = 'waiting' | 'skipped' | 'correct' | 'incorrect';
+
+export type GameState = 'waiting' | 'active' | 'over';
