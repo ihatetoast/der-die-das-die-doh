@@ -1050,7 +1050,9 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Luft',
     plural: 'die Lüfte',
     weakMasculine: false,
-    notes: {miscNote: "Other words: Seeluft (sea air), Außenluft (ambient air)."},
+    notes: {
+      miscNote: 'Other words: Seeluft (sea air), Außenluft (ambient air).',
+    },
     sentences: [
       { de: 'Ich brauche Luft.', en: 'I need air.', case: 'acc' },
       {
@@ -1068,7 +1070,9 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Boden',
     plural: 'die Böden',
     weakMasculine: false,
-    notes: {miscNote:"Other words: Dachboden(loft, attic), Sandboden (sandy soil)."},
+    notes: {
+      miscNote: 'Other words: Dachboden(loft, attic), Sandboden (sandy soil).',
+    },
     sentences: [
       { de: 'Er ist im Boden.', en: 'He is in the ground.', case: 'dat' },
       {
@@ -1086,9 +1090,16 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Stunde',
     plural: 'die Stunden',
     weakMasculine: false,
-    notes: {miscNote: "Other words: Amtsstunden (office hours), Todesstunde (hour of death)."},
+    notes: {
+      miscNote:
+        'Other words: Amtsstunden (office hours), Todesstunde (hour of death).',
+    },
     sentences: [
-      { de: 'Die Wolken deuten auf Regen in den nächsten Stunden.', en: 'The clouds indicate rain in the next few hours.', case: 'dat' },
+      {
+        de: 'Die Wolken deuten auf Regen in den nächsten Stunden.',
+        en: 'The clouds indicate rain in the next few hours.',
+        case: 'dat',
+      },
       {
         de: 'Der Nachtwächter rief die elfte Stunde an.',
         en: 'The night watchman announced the eleventh hour.',
@@ -1104,7 +1115,10 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Ende',
     plural: 'die Enden',
     weakMasculine: false,
-    notes: {miscNote: "Other words: Lebensende (death), Kopfende (headboard), Jahresende (year end)."},
+    notes: {
+      miscNote:
+        'Other words: Lebensende (death), Kopfende (headboard), Jahresende (year end).',
+    },
     sentences: [
       { de: 'Das ist das Ende.', en: 'This is the end.', case: 'nom' },
       {
@@ -1122,9 +1136,16 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Familie',
     plural: 'die Familien',
     weakMasculine: false,
-    notes: {miscNote: "Other words: Großfamilie (extended family), Gastfamilie (host family)."},
+    notes: {
+      miscNote:
+        'Other words: Großfamilie (extended family), Gastfamilie (host family).',
+    },
     sentences: [
-      { de: 'Kennst du die Familie?', en: 'Do you know the family?', case: 'acc' },
+      {
+        de: 'Kennst du die Familie?',
+        en: 'Do you know the family?',
+        case: 'acc',
+      },
       {
         de: 'Mein Vater hat die kürzesten Haare in der Familie',
         en: 'My father has the shortest hair in the family.',
@@ -1140,9 +1161,16 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Kerl',
     plural: 'die Kerle',
     weakMasculine: false,
-    notes: {miscNote: "Other words: Dreckskerl (scumbag), Lausekerl (rascal), Scheißkerl (shithead)."},
+    notes: {
+      miscNote:
+        'Other words: Dreckskerl (scumbag), Lausekerl (rascal), Scheißkerl (shithead).',
+    },
     sentences: [
-      { de: 'Er ist der gemeinste Kerl.', en: 'He is the mneanest guy.', case: 'nom' },
+      {
+        de: 'Er ist der gemeinste Kerl.',
+        en: 'He is the mneanest guy.',
+        case: 'nom',
+      },
       {
         de: 'Ich kenne die Kerle alle.',
         en: 'I know all those dudes.',
@@ -1160,7 +1188,11 @@ export const VOCAB_1: VocabEntry[] = [
     weakMasculine: false,
     notes: {},
     sentences: [
-      { de: 'Er ist mehr der ruhige Typ.', en: 'He is more the quiet type.', case: 'nom' },
+      {
+        de: 'Er ist mehr der ruhige Typ.',
+        en: 'He is more the quiet type.',
+        case: 'nom',
+      },
       {
         de: 'Ich war hin und weg von dem Typ',
         en: 'I was blown away by the guy.',
@@ -1176,9 +1208,16 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Art',
     plural: 'die Arten',
     weakMasculine: false,
-    notes: {miscNote: "Other words: Tierart (animal species), Gangart (bearing, gait)."},
+    notes: {
+      miscNote:
+        'Other words: Tierart (animal species), Gangart (bearing, gait).',
+    },
     sentences: [
-      { de: 'Ich habe es auf die altmodische Art getan.', en: 'I did it the old fashioned way.', case: 'acc' },
+      {
+        de: 'Ich habe es auf die altmodische Art getan.',
+        en: 'I did it the old fashioned way.',
+        case: 'acc',
+      },
       {
         de: 'Wir haben verschiedene Arten von Reisen im Angebot.',
         en: 'We have different types of trips on offer.',
@@ -1194,16 +1233,23 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Sorte',
     plural: 'die Sorten',
     weakMasculine: false,
-    notes: {},
+    notes: {
+      miscNote:
+        'Other words: Apfelsorte (kind of apple), Biersorte (brand of beer), Rebsorte (grape variety).',
+    },
     sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: '' },
       {
-        de: 'SATZ2',
-        en: 'SENTENCE2',
-        case: '',
+        de: 'Das ist nicht die Sorte, nach der ich suche.',
+        en: "That is not the kind I'm looking for.",
+        case: 'nom',
+      },
+      {
+        de: 'Ich war nicht jemand von der Sorte, die sich leicht beeindrucken lässt.',
+        en: 'I was not someone of the kind who is easily impressed.',
+        case: 'dat',
       },
     ],
-    completed: false,
+    completed: true,
   },
   {
     id: 55,
@@ -1212,34 +1258,41 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Minute',
     plural: 'die Minuten',
     weakMasculine: false,
-    notes: {},
+    notes: {
+      miscNote:
+        'Other words: Gedenkminute (minute/moment of silence), Strafminute (penalty minute in sports).',
+    },
     sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: '' },
       {
-        de: 'SATZ2',
-        en: 'SENTENCE2',
-        case: '',
+        de: 'Die Minute vergeht schnell.',
+        en: 'The minute goes by fast.',
+        case: 'nom',
+      },
+      {
+        de: 'Die Zahl der Minuten war überraschend.',
+        en: 'The number of minutes was surprising.',
+        case: 'gen',
       },
     ],
-    completed: false,
+    completed: true,
   },
   {
     id: 56,
-    eng: 'story',
+    eng: 'story, history',
     article: 'die',
     noun: 'Geschichte',
     plural: 'die Geschichten',
     weakMasculine: false,
-    notes: {},
+    notes: {miscNote: "Other words: Kunstgeschichte (art history), Gutenachtgeschichte (bedtime story)."},
     sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: '' },
+      { de: 'Geschichte wiederholt sich.', en: 'History repeats itself.', case: 'nom' },
       {
-        de: 'SATZ2',
-        en: 'SENTENCE2',
-        case: '',
+        de: 'Die Geschichte ist sehr populär.',
+        en: 'The story is very popular.',
+        case: 'nom',
       },
     ],
-    completed: false,
+    completed: true,
   },
   {
     id: 57,

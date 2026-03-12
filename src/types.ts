@@ -1,7 +1,7 @@
 export interface Sentence {
   de: string;
   en: string;
-  case: string;
+  case: "nom" | "acc" | "dat" | "gen" | "";
 }
 
 export interface VocabEntry {
