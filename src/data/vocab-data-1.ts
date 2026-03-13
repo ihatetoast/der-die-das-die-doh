@@ -1283,9 +1283,16 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Geschichte',
     plural: 'die Geschichten',
     weakMasculine: false,
-    notes: {miscNote: "Other words: Kunstgeschichte (art history), Gutenachtgeschichte (bedtime story)."},
+    notes: {
+      miscNote:
+        'Other words: Kunstgeschichte (art history), Gutenachtgeschichte (bedtime story).',
+    },
     sentences: [
-      { de: 'Geschichte wiederholt sich.', en: 'History repeats itself.', case: 'nom' },
+      {
+        de: 'Geschichte wiederholt sich.',
+        en: 'History repeats itself.',
+        case: 'nom',
+      },
       {
         de: 'Die Geschichte ist sehr populär.',
         en: 'The story is very popular.',
@@ -1301,16 +1308,19 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Gott',
     plural: 'die Götter',
     weakMasculine: false,
-    notes: {},
+    notes: {
+      miscNote:
+        'Other words: Weingott (god of wine), Schöpfergott (the Maker).',
+    },
     sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: '' },
+      { de: 'Sie fürchten die Götter.', en: 'The fear the gods.', case: 'acc' },
       {
-        de: 'SATZ2',
-        en: 'SENTENCE2',
-        case: '',
+        de: 'Mars ist der Gott des Krieges.',
+        en: 'Mars is the god of war.',
+        case: 'nom',
       },
     ],
-    completed: false,
+    completed: true,
   },
   {
     id: 58,
@@ -1321,14 +1331,14 @@ export const VOCAB_1: VocabEntry[] = [
     weakMasculine: false,
     notes: {},
     sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: '' },
+      { de: 'Die Woche ist vorbei.', en: 'The week is over.', case: 'nom' },
       {
-        de: 'SATZ2',
-        en: 'SENTENCE2',
-        case: '',
+        de: 'Mittwoch ist der dritte Tag der Woche.',
+        en: 'Wednesday is the third day of the week.',
+        case: 'nom',
       },
     ],
-    completed: false,
+    completed: true,
   },
   {
     id: 59,
@@ -1339,14 +1349,18 @@ export const VOCAB_1: VocabEntry[] = [
     weakMasculine: false,
     notes: {},
     sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: '' },
       {
-        de: 'SATZ2',
-        en: 'SENTENCE2',
-        case: '',
+        de: 'Montag geht die Arbeit los.',
+        en: 'The job begins Monday.',
+        case: 'acc',
+      },
+      {
+        de: 'Ich fahre auf die Arbeit.',
+        en: 'I drive to work.',
+        case: 'acc',
       },
     ],
-    completed: false,
+    completed: true,
   },
   {
     id: 60,
@@ -1355,16 +1369,23 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Schulter',
     plural: 'die Schultern',
     weakMasculine: false,
-    notes: {},
+    notes: {
+      miscNote:
+        'Other word: Hängeschultern (drooping shoulders) - only plural.',
+    },
     sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: '' },
       {
-        de: 'SATZ2',
-        en: 'SENTENCE2',
+        de: 'Mir tun die Schultern weh.',
+        en: 'My shoulders hurt.',
+        case: 'nom',
+      },
+      {
+        de: 'Sie hat sich an der Schulter verletzt.',
+        en: 'She injured her shoulder.',
         case: '',
       },
     ],
-    completed: false,
+    completed: true,
   },
   {
     id: 61,
@@ -1373,16 +1394,23 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Teil',
     plural: 'die Teile',
     weakMasculine: false,
-    notes: {},
+    notes: {
+      miscNote:
+        'Other words: Gegenteil (opposite), Anlagenteil (equipment), Einzelteil (component).',
+    },
     sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: '' },
       {
-        de: 'SATZ2',
-        en: 'SENTENCE2',
-        case: '',
+        de: 'Wie passen die Teile zusammen?',
+        en: 'How do the parts fit together?',
+        case: 'nom',
+      },
+      {
+        de: 'Der dritte Teil ist noch nicht übersetzt worden.',
+        en: 'The third part has not yet been translated.',
+        case: 'nom',
       },
     ],
-    completed: false,
+    completed: true,
   },
   {
     id: 62,
@@ -1393,16 +1421,17 @@ export const VOCAB_1: VocabEntry[] = [
     weakMasculine: false,
     notes: {
       pluralNote: "Verstand and Sinn, both being for 'mind' have no plural",
+      miscNote: "Other words: Kunstverstand (art appreciation), Menschenverstand (common sense), Unverstand (lack of judgement)."
     },
     sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: '' },
+      { de: 'Hast du den Verstand verloren?', en: 'Have you lost your mind?', case: '' },
       {
-        de: 'SATZ2',
-        en: 'SENTENCE2',
-        case: '',
+        de: 'Takt ist der Verstand des Herzens.',
+        en: 'Tact is the understanding of the heart.',
+        case: 'nom',
       },
     ],
-    completed: false,
+    completed: true,
   },
   {
     id: 63,
@@ -1411,16 +1440,16 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Buch',
     plural: 'die Bücher',
     weakMasculine: false,
-    notes: {},
+    notes: {miscNote: "Other words: Arbeitsbuch (workbook), Hörbuch (audio book), Skizzenbuch (sketchbook)."},
     sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: '' },
+      { de: 'Das Buch gehört Hans.', en: 'The book belongs to Hans.', case: 'nom' },
       {
-        de: 'SATZ2',
-        en: 'SENTENCE2',
-        case: '',
+        de: 'Katja hat ihm die drei Bücher gegeben.',
+        en: 'Katja gave him the three books.',
+        case: 'acc',
       },
     ],
-    completed: false,
+    completed: true,
   },
   {
     id: 64,
