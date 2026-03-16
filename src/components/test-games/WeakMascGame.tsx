@@ -2,7 +2,7 @@
 
 import { VocabEntry } from '../../types';
 
-import classes from './GerEngMiniGame.module.css';
+import classes from './WeakMascGame.module.css';
 
 type WeakMascGameProps = {
   words: VocabEntry[];

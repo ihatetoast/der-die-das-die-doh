@@ -20,7 +20,9 @@ export type ModeProp = 'practice' | 'test' | 'home';
 
 export type DeckSize = 5 | 10 | 20;
 
-export type TestType = 'article' | 'plural' | 'german-full' | 'eng-ger-mini' | 'ger-eng-mini' | 'weak-masc';
+
+export type MiniTestType = 'eng-ger-mini' | 'ger-eng-mini';
+export type TestType = 'article' | 'plural' | 'german-full' | MiniTestType | 'weak-masc';
 
 export type AnswerState = 'waiting' | 'skipped' | 'correct' | 'incorrect';
 

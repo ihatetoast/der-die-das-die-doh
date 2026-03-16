@@ -18,8 +18,6 @@ const TIME_TO_NEXT_QUESTION = 2000;
 // but reveal that user was right or wrong
 
 const ArticleGame = ({ words, handleSetMode }: ArticleGameProps) => {
-  console.log('words in article game', words);
-
   const [cardsToTest, setCardsToTest] = useState<VocabEntry[]>([]);
   const [answerState, setAnswerState] = useState<AnswerState>('waiting');
   const [testState, setTestState] = useState<GameState>('waiting');

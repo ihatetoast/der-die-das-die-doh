@@ -6,8 +6,7 @@ import { VocabEntry } from '../types.ts';
 
 import ArticleGame from './test-games/ArticleGame.tsx';
 import PluralGame from './test-games/PluralGame.tsx';
-import GerEngMiniGame from './test-games/GerEngMiniGame.tsx';
-import EngGerMiniGame from './test-games/EngGerMiniGame.tsx';
+import MiniGame from './test-games/MiniGame.tsx';
 import GermanFullGame from './test-games/GermanFullGame.tsx';
 import WeakMascGame from './test-games/WeakMascGame.tsx'
 
@@ -32,8 +31,7 @@ const TestBoard = ({
     handleGetInitialActiveDeck(size);
     handleGetTestType(test);
   };
-
-
+console.log("test type is ", testType);
   return (
     <div className={classes.testBoard}>
       {!testType && (
@@ -44,8 +42,7 @@ const TestBoard = ({
       )}
       {testType === 'article' && <ArticleGame words={words} handleSetMode={handleSetMode}/>}
       {testType === 'plural' && <PluralGame words={words} />}
-      {testType === 'eng-ger-mini' && <EngGerMiniGame words={words} />}
-      {testType === 'ger-eng-mini' && <GerEngMiniGame words={words} />}
+      {(testType === 'eng-ger-mini' || testType === 'ger-eng-mini') && <MiniGame words={words} testType={testType}/>}
       {testType === 'german-full' && <GermanFullGame words={words} />}
       {testType === 'weak-masc' && <WeakMascGame words={words} />}
       {!testType && (
@@ -80,36 +77,7 @@ const TestBoard = ({
               </button>
             </div>
           </article>
-          <article className={classes.testCard}>
-            <div>
-              <img
-                src='https://picsum.photos/seed/picsum/200'
-                alt='replace with screenshot'
-              />
-            </div>
-            <h3>English-to-German Mini</h3>
-            <p>Given an English word, write the German translation.</p>
-            <div className={classes.gameCardBtnContainer}>
-              <button
-                className={classes.testBtn}
-                onClick={() => handleTestButtonClick(5, 'eng-ger-mini')}
-              >
-                5
-              </button>{' '}
-              <button
-                className={classes.testBtn}
-                onClick={() => handleTestButtonClick(10, 'eng-ger-mini')}
-              >
-                10
-              </button>{' '}
-              <button
-                className={classes.testBtn}
-                onClick={() => handleTestButtonClick(20, 'eng-ger-mini')}
-              >
-                20
-              </button>
-            </div>
-          </article>
+          
           <article className={classes.testCard}>
             <div>
               <img
@@ -135,6 +103,36 @@ const TestBoard = ({
               <button
                 className={classes.testBtn}
                 onClick={() => handleTestButtonClick(20, 'ger-eng-mini')}
+              >
+                20
+              </button>
+            </div>
+          </article>
+          <article className={classes.testCard}>
+            <div>
+              <img
+                src='https://picsum.photos/seed/picsum/200'
+                alt='replace with screenshot'
+              />
+            </div>
+            <h3>English-to-German Mini</h3>
+            <p>Given an English word, write the German translation.</p>
+            <div className={classes.gameCardBtnContainer}>
+              <button
+                className={classes.testBtn}
+                onClick={() => handleTestButtonClick(5, 'eng-ger-mini')}
+              >
+                5
+              </button>{' '}
+              <button
+                className={classes.testBtn}
+                onClick={() => handleTestButtonClick(10, 'eng-ger-mini')}
+              >
+                10
+              </button>{' '}
+              <button
+                className={classes.testBtn}
+                onClick={() => handleTestButtonClick(20, 'eng-ger-mini')}
               >
                 20
               </button>
