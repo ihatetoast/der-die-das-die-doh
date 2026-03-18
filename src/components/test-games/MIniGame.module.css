@@ -1,3 +1,79 @@
 .engGerMiniGame {
   width: 100%;
 }
+
+.hint {
+  height: 2rem;
+  margin-bottom: 1rem;
+}
+
+.userAnswers {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.articleAnswer,
+.nounAnswer {
+  display: inline-flex;
+  align-items: flex-end;
+
+  min-height: 2rem;
+}
+
+.articleAnswer.waiting,
+.nounAnswer.waiting {
+  border-bottom: 2px solid var(--primary);
+}
+
+.articleAnswer.skipped,
+.nounAnswer.skipped {
+  border-bottom: 2px solid var(--pink);
+}
+
+/* remove hokey style when real style comes in  */
+.articleAnswer.incorrect,
+.nounAnswer.incorrect {
+  border-bottom: 2px solid var(--red);
+}
+.articleAnswer.correct,
+.nounAnswer.correct {
+  border-bottom: 2px solid var(--accent);
+}
+
+.nounAnswer {
+  min-width: 5rem;
+  flex: 1;
+  /* border: 1px solid blue; */
+}
+
+.btnContainer {
+  display: flex;
+  gap: 1rem;
+}
+
+.submitBtn,
+.hintBtn {
+  text-transform: uppercase;
+  padding: 0.3rem;
+  border-radius: var(--btn-radius);
+  min-width: 5rem;
+  border: 2px solid transparent;
+}
+
+.submitBtn {
+  background-color: var(--pink);
+}
+
+.hintBtn {
+  background-color: var(--accent);
+}
+
+.hintBtn.scrambled {
+  background-color: var(--pink);
+}
+
+
+.hintBtn.revealed {
+  display: none;
+}

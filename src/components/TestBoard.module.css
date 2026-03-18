@@ -6,6 +6,12 @@
   padding: 1rem;
 }
 
+.testGrid {
+  display: grid;
+  grid-gap: .6rem;
+  grid-template-columns: auto;
+}
+
 .testCard {
   display: flex;
   flex-direction: column;
@@ -31,4 +37,22 @@
   min-width: 4rem;
   border: 2px solid transparent;
   background-color: var(--blue);
+}
+
+@media screen and (min-width:768px) {
+  .testGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width:768px) {
+  .testGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width:1000px) {
+  .testGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

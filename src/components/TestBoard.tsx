@@ -46,7 +46,7 @@ console.log("test type is ", testType);
       {testType === 'german-full' && <GermanFullGame words={words} />}
       {testType === 'weak-masc' && <WeakMascGame words={words} />}
       {!testType && (
-        <section>
+        <section className={classes.testGrid}>
           <article className={classes.testCard}>
             <div>
               <img
@@ -55,7 +55,7 @@ console.log("test type is ", testType);
               />
             </div>
             <h3>Article Speed Round</h3>
-            <p>Pick the correct article (nom) before the time is up.</p>
+            <p>Pick the correct article before the time is up.</p>
             <div className={classes.gameCardBtnContainer}>
               <button
                 className={classes.testBtn}

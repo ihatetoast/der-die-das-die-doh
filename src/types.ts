@@ -27,3 +27,5 @@ export type TestType = 'article' | 'plural' | 'german-full' | MiniTestType | 'we
 export type AnswerState = 'waiting' | 'skipped' | 'correct' | 'incorrect';
 
 export type GameState = 'waiting' | 'active' | 'over';
+
+export type HintState = null | "scrambled" | "revealed";

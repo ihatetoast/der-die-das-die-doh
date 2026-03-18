@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { VocabEntry } from '../../types';
+import { VocabEntry, AnswerState, HintState } from '../../types';
 
 import classes from './MiniGame.module.css';
 import { MiniTestType } from '../../types';
@@ -9,10 +9,14 @@ type MiniGameProps = {
 };
 
 const MiniGame = ({ words, testType }: MiniGameProps) => {
-  console.log('words in eng to ger man mini game', words);
+  // console.log('words in eng to ger man mini game', words);
   const [cardsToTest, setCardsToTest] = useState<VocabEntry[]>([]);
-  const [userAnswerNoun, setUserAnswerNoun] = useState<string>('');
-  const [userAnswerArticle, setUserAnswerArticle] = useState<VocabEntry['article'] | null>(null);
+  const [userInputNoun, setUserInputNoun] = useState<string>('');
+  const [userInputArticle, setUserInputArticle] = useState<
+    VocabEntry['article'] | null
+  >(null); // eng to german only
+  const [answerState, setAnswerState] = useState<AnswerState>('waiting');
+  const [hintState, setHintState] = useState<HintState>(null);
   useEffect(() => {
     if (words.length > 0) setCardsToTest([...words]);
   }, [words]);
@@ -23,9 +27,39 @@ const MiniGame = ({ words, testType }: MiniGameProps) => {
     originLanguage = 'English';
     targetLanguage = 'German;';
   }
-const evalAnswer = (userAnswerNoun: string) => {
-  console.log(userAnswerNoun);
-}
+
+  const evalAnswer = (userInputNoun: string) => {
+    let answer = userInputNoun.trim();
+    if (answer.length === 0) {
+      setAnswerState('skipped');
+      return;
+    }
+    if (targetLanguage === 'English') {
+      answer = answer.toLocaleLowerCase();
+    }
+
+    if (answer === cardsToTest[0].eng.trim().toLowerCase()) {
+      setAnswerState('correct');
+    } else {
+      setAnswerState('incorrect');
+    }
+  };
+
+  // pause for style change. only let user know correct or incorrect, not answer
+  useEffect(() => {}, [answerState]);
+
+  useEffect(() => {}, [hintState])
+
+  const handleSubmit = () => {};
+
+  const handleHint = () => {
+    setHintState((prev) => {
+      if (prev === null) return 'scrambled';
+      if (prev === 'scrambled') return 'revealed';
+      return prev;
+    });
+  };
+
   return (
     <>
       <h2>
@@ -43,18 +77,46 @@ const evalAnswer = (userAnswerNoun: string) => {
             {originLanguage === 'German' ? `${words[0].article}` : 'the'}{' '}
             {words[0].noun}
           </h3>
-          <p>Answer: {targetLanguage === 'English' ? "the" : userAnswerArticle} {userAnswerNoun}</p>
+          <p className={classes.hint}></p>
+          <div className={classes.userAnswers}>
+            <span>Answer:</span>
+            {targetLanguage === 'English' ? (
+              'the'
+            ) : (
+              <span
+                className={`${classes.articleAnswer} ${classes[answerState]}`}
+              >
+                {userInputArticle}
+              </span>
+            )}
+            <span className={`${classes.nounAnswer} ${classes[answerState]}`}>
+              {userInputNoun}
+            </span>
+          </div>
           <label htmlFor='word'>
             {targetLanguage}:{' '}
             <input
               type='text'
               id='word'
               placeholder={`${targetLanguage} noun`}
-              onChange={(e) => setUserAnswerNoun(e.target.value)}
+              onChange={(e) => setUserInputNoun(e.target.value)}
             />
           </label>
-
-          <button onClick={()=>evalAnswer(userAnswerNoun)}>check</button>
+          <div className={classes.btnContainer}>
+            <button
+              onClick={handleSubmit}
+              disabled={answerState !== 'waiting'}
+              className={classes.submitBtn}
+            >
+              {userInputNoun.trim() === '' ? 'Skip' : 'Check'}
+            </button>
+            <button
+              onClick={handleHint}
+              className={`${classes.hintBtn} ${hintState === null ? undefined : classes[hintState]}`}
+            >
+              {hintState === null ? 'Hint?' : 'Reveal'}
+            </button>
+          </div>
         </div>
       </section>
     </>

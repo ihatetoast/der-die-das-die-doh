@@ -106,11 +106,8 @@ function App() {
                 see example sentences and notes about the word.{' '}
               </p>
               {TEST_COMPLETE ? (
-                <p>
-                  {' '}
-                  Choose "Test" to see what you've learned and what you need to
-                  review.{' '}
-                </p>
+                <p>Choose "Test" to see what you've learned and what you need to
+                  review.</p>
               ) : (
                 ``
               )}
