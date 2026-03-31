@@ -15,6 +15,18 @@ export const shuffle = (arr: VocabEntry[]): VocabEntry[] => {
   return arr;
 };
 
+// fisher-yates again but for shuffling a word
+export const scramble = (word: string): string => {
+  const wordArr = word.split("");
+  for(let i = wordArr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const temp = wordArr[i];
+    wordArr[i] = wordArr[j];
+    wordArr[j] = temp;
+  }
+  return wordArr.join("");
+}
+
 export const getNotesContent = (word: VocabEntry): ReactElement => {
   if (Object.keys(word.notes).length > 0) {
     return formatNotes(word.notes);

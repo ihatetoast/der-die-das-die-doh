@@ -2,54 +2,60 @@
   width: 100%;
 }
 
+.wordsContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.originWord {
+  display: flex;
+  align-items: center;
+}
+
 .hint {
   height: 2rem;
   margin-bottom: 1rem;
 }
 
-.userAnswers {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
+.nounAnswer {
+  appearance: none;
+  font-size: 1rem;
+  field-sizing: content; /* to allow it to grow if we get a large german word*/
+  min-width: 10rem;
+  font-family: inherit;
+  padding: 0.25em 0.5em;
+  background-color: #fff;
+  border: 2px solid var(--input-border);
+  border-radius: 4px;
 }
+
 .articleAnswer,
 .nounAnswer {
   display: inline-flex;
   align-items: flex-end;
-
   min-height: 2rem;
 }
 
-.articleAnswer.waiting,
 .nounAnswer.waiting {
-  border-bottom: 2px solid var(--primary);
+  border: 3px solid var(--primary);
 }
 
-.articleAnswer.skipped,
 .nounAnswer.skipped {
-  border-bottom: 2px solid var(--pink);
+  border: 3px solid var(--pink);
 }
 
-/* remove hokey style when real style comes in  */
-.articleAnswer.incorrect,
 .nounAnswer.incorrect {
-  border-bottom: 2px solid var(--red);
-}
-.articleAnswer.correct,
-.nounAnswer.correct {
-  border-bottom: 2px solid var(--accent);
+  border: 3px solid var(--red);
 }
 
-.nounAnswer {
-  min-width: 5rem;
-  flex: 1;
-  /* border: 1px solid blue; */
+.nounAnswer.correct {
+  border: 3px solid var(--accent);
 }
 
 .btnContainer {
   display: flex;
   gap: 1rem;
+  margin-top: 1rem;
 }
 
 .submitBtn,
@@ -73,7 +79,28 @@
   background-color: var(--pink);
 }
 
-
 .hintBtn.revealed {
   display: none;
+}
+@media screen and (min-width: 520px) {
+  .originWord {
+    justify-content: center;
+  }
+
+  .targetWord {
+    margin-left: 10%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .wordsContainer {
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .originWord {
+    margin-left: 10%;
+  }
+  .targetWord {
+    margin-left: 0;
+  }
 }
