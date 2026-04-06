@@ -1,5 +1,13 @@
 import { useState, useEffect } from 'react';
-import { VocabEntry, AnswerState, HintState } from '../../types';
+import {
+  VocabEntry,
+  AnswerState,
+  HintState,
+  GameState,
+  ModeProp,
+} from '../../types';
+
+import GameOver from './GameOver.tsx';
 
 import classes from './MiniGame.module.css';
 import { MiniTestType } from '../../types';
@@ -8,12 +16,15 @@ import { scramble } from '../../helpers';
 type MiniGameProps = {
   words: VocabEntry[];
   testType: MiniTestType;
+  handleSetMode: (value: ModeProp) => void;
 };
 
-const MiniGame = ({ words, testType }: MiniGameProps) => {
+const MiniGame = ({ words, testType, handleSetMode }: MiniGameProps) => {
   const [cardsToTest, setCardsToTest] = useState<VocabEntry[]>([]);
   const [userInputNoun, setUserInputNoun] = useState<string>('');
   const [hint, setHint] = useState<string>('');
+  const [testState, setTestState] = useState<GameState>('waiting');
+
   // eng to german only
   const [userInputArticle, setUserInputArticle] = useState<
     VocabEntry['article'] | null
@@ -30,6 +41,12 @@ const MiniGame = ({ words, testType }: MiniGameProps) => {
   useEffect(() => {
     if (words.length > 0) setCardsToTest([...words]);
   }, [words]);
+
+  useEffect(() => {
+    if (cardsToTest.length === 0 && testState === 'active') {
+      setTestState('over');
+    }
+  }, [cardsToTest, testState]);
 
   let originLanguage = 'German';
   let targetLanguage = 'English';
@@ -61,7 +78,6 @@ const MiniGame = ({ words, testType }: MiniGameProps) => {
   useEffect(() => {
     if (answerState === 'incorrect' || answerState === 'correct') {
       setTimeout(() => {
-        setCardsToTest((prev) => [...prev.slice(1), prev[0]]);
         if (answerState === 'correct' && hintState === null) {
           setCardsToTest((prev) => prev.slice(1));
         } else {
@@ -114,63 +130,88 @@ const MiniGame = ({ words, testType }: MiniGameProps) => {
       <h2>
         {originLanguage} to {targetLanguage} Mini Test
       </h2>
-      <p>
-        You're given a noun in {originLanguage}. Please supply the{' '}
-        {targetLanguage} noun (in singular).
-      </p>
-      <p>If you need help, click "Hint" to get the letters needed.</p>
-      <section className={classes.engGerMiniGame}>
-        <div className={classes.wordsContainer}>
-          <div className={classes.originWord}>
-            <h3>
-              {originLanguage}:{' '}
-              {needsGermanArticle ? `${cardsToTest[0].article}` : 'the'}{' '}
-              {originWord}
-            </h3>
-          </div>
+      {testState === 'waiting' && (
+        <div>
+          <p>
+            You're given a noun in {originLanguage}. Please supply the{' '}
+            {targetLanguage} noun (in singular).
+          </p>
 
-          <div className={classes.targetWord}>
-            <p className={classes.hint}>
-              {hintState === 'scrambled'
-                ? hint
-                : hintState === 'revealed'
-                  ? targetWord
-                  : null}
-            </p>
-            <label htmlFor='word'>
-              {targetLanguage}:{needsGermanArticle ? ' ' : ' the '}
-              <input
-                type='text'
-                id='word'
-                value={userInputNoun}
-                placeholder={`${targetLanguage} translation`}
-                onChange={(e) => setUserInputNoun(e.target.value)}
-                className={`${classes.nounAnswer} ${classes[answerState]}`}
-              />
-            </label>
-            <div className={classes.btnContainer}>
-              <button
-                onClick={handleSubmit}
-                disabled={answerState !== 'waiting' || hintState === 'revealed'}
-                className={classes.submitBtn}
-              >
-                {userInputNoun.trim() === '' ? 'Skip' : 'Check'}
-              </button>
-              <button
-                onClick={handleHint}
-                className={`${classes.hintBtn} ${hintState === null ? undefined : classes[hintState]}`}
-                disabled={hintState === 'revealed' || answerState !== 'waiting'}
-              >
-                {hintState === null
-                  ? 'Hint?'
-                  : hintState === 'scrambled'
-                    ? 'Reveal?'
-                    : 'Reveal'}
-              </button>
+          <p>
+            If you need help, click "Hint" to get a scrambled version of{' '}
+            {targetLanguage} word. Still stuck? Click "Reveal?" to get the
+            answer.
+          </p>
+          <p>
+            Any words that were incorrect or required a hint will be returned to
+            the deck to review. When the deck is emptied (i.e., you got all
+            right without hints), the test is over and you can return to home.
+          </p>
+          <p>When you're ready, click "Go!".</p>
+          <button onClick={() => setTestState('active')}>Go!</button>
+        </div>
+      )}
+      {testState === 'over' && (
+        <GameOver title={testType === 'ger-eng-mini' ? "German-to-English Flashcards Mini" :  "English-to-German Flashcards Mini"} onSetMode={handleSetMode} />
+      )}
+      {testState === 'active' && (
+        <section className={classes.engGerMiniGame}>
+          <div className={classes.wordsContainer}>
+            <div className={classes.originWord}>
+              <h3>
+                {originLanguage}:{' '}
+                {needsGermanArticle ? `${cardsToTest[0].article}` : 'the'}{' '}
+                {originWord}
+              </h3>
+            </div>
+
+            <div className={classes.targetWord}>
+              <p className={classes.hint}>
+                {hintState === 'scrambled'
+                  ? hint
+                  : hintState === 'revealed'
+                    ? targetWord
+                    : null}
+              </p>
+              <label htmlFor='word'>
+                {targetLanguage}:{needsGermanArticle ? ' ' : ' the '}
+                <input
+                  type='text'
+                  id='word'
+                  value={userInputNoun}
+                  placeholder={`${targetLanguage} translation`}
+                  onChange={(e) => setUserInputNoun(e.target.value)}
+                  className={`${classes.nounAnswer} ${classes[answerState]}`}
+                />
+              </label>
+              <div className={classes.btnContainer}>
+                <button
+                  onClick={handleSubmit}
+                  disabled={
+                    answerState !== 'waiting' || hintState === 'revealed'
+                  }
+                  className={classes.submitBtn}
+                >
+                  {userInputNoun.trim() === '' ? 'Skip' : 'Check'}
+                </button>
+                <button
+                  onClick={handleHint}
+                  className={`${classes.hintBtn} ${hintState === null ? undefined : classes[hintState]}`}
+                  disabled={
+                    hintState === 'revealed' || answerState !== 'waiting'
+                  }
+                >
+                  {hintState === null
+                    ? 'Hint?'
+                    : hintState === 'scrambled'
+                      ? 'Reveal?'
+                      : 'Reveal'}
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
     </>
   );
 };

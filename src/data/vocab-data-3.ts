@@ -954,7 +954,7 @@ export const VOCAB_3: VocabEntry[] = [
   },
   {
     id: 1069,
-    eng: 'dock, harbor, port',
+    eng: 'dock',
     article: 'der',
     noun: 'Hafen',
     plural: 'die Häfen',
@@ -966,12 +966,12 @@ export const VOCAB_3: VocabEntry[] = [
     sentences: [
       {
         de: 'Das Feuerwerk war wie jedes Jahr am Hafen.',
-        en: 'The fireworks were like every year at the habor.',
+        en: 'The fireworks were like every year at the dock.',
         case: 'dat',
       },
       {
         de: 'Wann wird die Blockade des Hafens aufgehoben?',
-        en: 'When will the blockade at the port be lifted?',
+        en: 'When will the blockade at the dock be lifted?',
         case: 'gen',
       },
     ],
@@ -6648,7 +6648,7 @@ export const VOCAB_3: VocabEntry[] = [
   },
   {
     id: 1474,
-    eng: 'briefcase (hard shell)',
+    eng: 'briefcase',
     article: 'der',
     noun: 'Aktenkoffer',
     plural: 'die Aktenkoffer',

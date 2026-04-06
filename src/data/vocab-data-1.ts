@@ -2,7 +2,7 @@ import { VocabEntry } from '../types';
 export const VOCAB_1: VocabEntry[] = [
   {
     id: 1,
-    eng: 'time, period, term',
+    eng: 'time',
     article: 'die',
     noun: 'Zeit',
     plural: 'die Zeiten',
@@ -1181,16 +1181,16 @@ export const VOCAB_1: VocabEntry[] = [
   },
   {
     id: 52,
-    eng: 'guy/type',
+    eng: 'guy',
     article: 'der',
     noun: 'Typ',
     plural: 'die Typen',
     weakMasculine: false,
-    notes: {},
+    notes: {miscNote: 'Can also mean "type".'},
     sentences: [
       {
-        de: 'Er ist mehr der ruhige Typ.',
-        en: 'He is more the quiet type.',
+        de: 'Er ist ein normaler Typ.',
+        en: 'He is a normal guy.',
         case: 'nom',
       },
       {
@@ -1203,14 +1203,14 @@ export const VOCAB_1: VocabEntry[] = [
   },
   {
     id: 53,
-    eng: 'type/kind/species',
+    eng: 'type',
     article: 'die',
     noun: 'Art',
     plural: 'die Arten',
     weakMasculine: false,
     notes: {
       miscNote:
-        'Other words: Tierart (animal species), Gangart (bearing, gait).',
+        'Can also mean "kind" or "species.',
     },
     sentences: [
       {
@@ -1228,7 +1228,7 @@ export const VOCAB_1: VocabEntry[] = [
   },
   {
     id: 54,
-    eng: 'kind (of variety)',
+    eng: 'kind',
     article: 'die',
     noun: 'Sorte',
     plural: 'die Sorten',
@@ -1278,7 +1278,7 @@ export const VOCAB_1: VocabEntry[] = [
   },
   {
     id: 56,
-    eng: 'story, history',
+    eng: 'story',
     article: 'die',
     noun: 'Geschichte',
     plural: 'die Geschichten',
@@ -1289,8 +1289,8 @@ export const VOCAB_1: VocabEntry[] = [
     },
     sentences: [
       {
-        de: 'Geschichte wiederholt sich.',
-        en: 'History repeats itself.',
+        de: 'Das ist eine traurige Geschichte.',
+        en: 'That is a sad story.',
         case: 'nom',
       },
       {
@@ -8060,7 +8060,7 @@ export const VOCAB_1: VocabEntry[] = [
   },
   {
     id: 500,
-    eng: 'leave, farewell, goodbye',
+    eng: 'goodbye',
     article: 'der',
     noun: 'Abschied',
     plural: 'die Abschiede',

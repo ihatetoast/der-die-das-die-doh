@@ -1,6 +1,6 @@
 import type { VocabEntry } from '../types';
 
-export const VOCAB_4: VocabEntry[] = [
+export const VOCAB_5: VocabEntry[] = [
   {
     id: 2001,
     eng: 'century',
@@ -2623,12 +2623,12 @@ export const VOCAB_4: VocabEntry[] = [
   },
   {
     id: 2188,
-    eng: 'carry-on luggage',
+    eng: 'luggage',
     article: 'das',
     noun: 'Handgepäck',
     plural: 'no plural',
     weakMasculine: false,
-    notes: {},
+    notes: {miscNote: 'Usually means carry-on or hand luggage.'},
     sentences: [
       {
         de: 'Ich reise nur mit Handgepäck.',

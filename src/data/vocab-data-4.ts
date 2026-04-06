@@ -25,7 +25,7 @@ export const VOCAB_4: VocabEntry[] = [
   },
   {
     id: 1502,
-    eng: 'briefcase (soft shell)',
+    eng: 'briefcase',
     article: 'die',
     noun: 'Aktentasche',
     plural: 'die Aktentaschen',

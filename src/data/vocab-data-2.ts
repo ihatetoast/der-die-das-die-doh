@@ -716,12 +716,13 @@ export const VOCAB_2: VocabEntry[] = [
   },
   {
     id: 552,
-    eng: 'peace, quietude',
+    eng: 'peace',
     article: 'der',
     noun: 'Frieden',
     plural: 'die Frieden',
     weakMasculine: true,
     notes: {
+      miscNote: "Can also mean 'quietude'.",
       pluralNote: "Not usually pluralized.",
       weakMascNote: 'Takes -ns in the genitive singular',
     },
