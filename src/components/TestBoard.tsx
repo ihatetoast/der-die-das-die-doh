@@ -42,7 +42,7 @@ console.log("test type is ", testType);
       )}
       {testType === 'article' && <ArticleGame words={words} handleSetMode={handleSetMode}/>}
       {testType === 'plural' && <PluralGame words={words} />}
-      {(testType === 'eng-ger-mini' || testType === 'ger-eng-mini') && <MiniGame words={words} testType={testType}/>}
+      {(testType === 'eng-ger-mini' || testType === 'ger-eng-mini') && <MiniGame words={words} testType={testType} handleSetMode={handleSetMode}/>}
       {testType === 'german-full' && <GermanFullGame words={words} />}
       {testType === 'weak-masc' && <WeakMascGame words={words} />}
       {!testType && (

@@ -761,20 +761,6 @@ export const VOCAB_2: VocabEntry[] = [
     completed: false,
   },
   {
-    id: 555,
-    eng: 'type',
-    article: 'die',
-    noun: 'Art',
-    plural: 'REPLACE',
-    weakMasculine: false,
-    notes: {},
-    sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
-    ],
-    completed: false,
-  },
-  {
     id: 556,
     eng: 'cause',
     article: 'die',

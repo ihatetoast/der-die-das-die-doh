@@ -42,6 +42,7 @@ const MiniGame = ({ words, testType, handleSetMode }: MiniGameProps) => {
     if (words.length > 0) setCardsToTest([...words]);
   }, [words]);
 
+// CLAUDE why is this not working?
   useEffect(() => {
     if (cardsToTest.length === 0 && testState === 'active') {
       setTestState('over');
@@ -55,24 +56,25 @@ const MiniGame = ({ words, testType, handleSetMode }: MiniGameProps) => {
     targetLanguage = 'German';
   }
 
-  const evalAnswerNoun = (userInputNoun: string) => {
-    const answer = userInputNoun.trim();
-    if (answer.length === 0) {
-      console.log('user skipped');
-      setAnswerState('skipped');
-      return;
+  const evalAnswerEngNoun = (
+    userInputNoun: string,
+    targetWord: string,
+    otherDefs?: string,
+  ):boolean => {
+    const userAnswer = userInputNoun.trim().toLowerCase();
+
+    if (userAnswer === targetWord) {
+      return true;
+    }
+    if (otherDefs) {
+      const altDefs = otherDefs.split(', ').map((def) => def.toLowerCase());
+      if (altDefs.includes(userAnswer)) return true;
     }
 
-    // handle the cap of first letter in german later. maybe a warning? but don't count as wrong. we can be lazy.
-    // maybe an alert message "Remember, nouns in German are capitalized"
-    if (answer.toLocaleLowerCase() === targetWord.trim().toLowerCase()) {
-      console.log('user was correct');
-      setAnswerState('correct');
-    } else {
-      console.log('user was incorrect');
-      setAnswerState('incorrect');
-    }
+    return false;
   };
+
+
 
   // pause for style change. only let user know correct or incorrect, not answer
   useEffect(() => {
@@ -112,8 +114,11 @@ const MiniGame = ({ words, testType, handleSetMode }: MiniGameProps) => {
     if (targetLanguage === 'German') {
       // handle article check here
     }
-    // both modes eval the noun
-    evalAnswerNoun(userInputNoun);
+    if (targetLanguage === 'English') {
+      const otherDefs = cardsToTest[0].notes.otherEngDefinitions;
+      const isCorrect = evalAnswerEngNoun(userInputNoun, targetWord, otherDefs);
+      setAnswerState(isCorrect ? 'correct' : 'incorrect')
+    }
   };
 
   const handleHint = () => {
@@ -152,15 +157,22 @@ const MiniGame = ({ words, testType, handleSetMode }: MiniGameProps) => {
         </div>
       )}
       {testState === 'over' && (
-        <GameOver title={testType === 'ger-eng-mini' ? "German-to-English Flashcards Mini" :  "English-to-German Flashcards Mini"} onSetMode={handleSetMode} />
+        <GameOver
+          title={
+            testType === 'ger-eng-mini'
+              ? 'German-to-English Flashcards Mini'
+              : 'English-to-German Flashcards Mini'
+          }
+          onSetMode={handleSetMode}
+        />
       )}
-      {testState === 'active' && (
+      {testState === 'active' && cardsToTest.length > 0 && (
         <section className={classes.engGerMiniGame}>
           <div className={classes.wordsContainer}>
             <div className={classes.originWord}>
               <h3>
                 {originLanguage}:{' '}
-                {needsGermanArticle ? `${cardsToTest[0].article}` : 'the'}{' '}
+                {originLanguage === 'German' ? `${cardsToTest[0].article}` : ' the '}{' '}
                 {originWord}
               </h3>
             </div>

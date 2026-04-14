@@ -3,6 +3,6 @@ import {VOCAB_2} from './data/vocab-data-2.ts';
 import {VOCAB_3} from './data/vocab-data-3.ts';
 import {VOCAB_4} from './data/vocab-data-4.ts';
 import {VOCAB_5} from './data/vocab-data-5.ts';
-import {VOCAB_6} from './data/vocab-data-6.ts';
+
 
 export const VOCABULARY_COMMON = [...VOCAB_1, ...VOCAB_2, ...VOCAB_3, ...VOCAB_4, ...VOCAB_5, ...VOCAB_6];

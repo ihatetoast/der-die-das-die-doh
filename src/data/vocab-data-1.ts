@@ -8,6 +8,7 @@ export const VOCAB_1: VocabEntry[] = [
     plural: 'die Zeiten',
     weakMasculine: false,
     notes: {
+      otherEngDefinitions: 'term, period',
       miscNote:
         'Other words: Jahreszeit (season), Mahlzeit (meal time), Freizeit (free time), Arbeitszeit (working hours), Schlafenszeit (bedtime)',
     },
@@ -97,7 +98,9 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Weg',
     plural: 'die Wege',
     weakMasculine: false,
-    notes: {},
+    notes: {
+      otherEngDefinitions:'path'
+    },
     sentences: [
       {
         de: 'Der Weg zum erfolg ist oft steinig',
@@ -1156,12 +1159,13 @@ export const VOCAB_1: VocabEntry[] = [
   },
   {
     id: 51,
-    eng: 'guy',
+    eng: 'chap',
     article: 'der',
     noun: 'Kerl',
     plural: 'die Kerle',
     weakMasculine: false,
     notes: {
+      otherEngDefinitions: 'guy, fellow, bloke',
       miscNote:
         'Other words: Dreckskerl (scumbag), Lausekerl (rascal), Scheißkerl (shithead).',
     },
@@ -1186,7 +1190,9 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Typ',
     plural: 'die Typen',
     weakMasculine: false,
-    notes: {miscNote: 'Can also mean "type".'},
+    notes: {
+      otherEngDefinitions: 'type, character, bloke, model, version',
+    },
     sentences: [
       {
         de: 'Er ist ein normaler Typ.',
@@ -1209,8 +1215,7 @@ export const VOCAB_1: VocabEntry[] = [
     plural: 'die Arten',
     weakMasculine: false,
     notes: {
-      miscNote:
-        'Can also mean "kind" or "species.',
+      miscNote: 'Can also mean "kind" or "species.',
     },
     sentences: [
       {
@@ -1284,6 +1289,7 @@ export const VOCAB_1: VocabEntry[] = [
     plural: 'die Geschichten',
     weakMasculine: false,
     notes: {
+      otherEngDefinitions: 'history',
       miscNote:
         'Other words: Kunstgeschichte (art history), Gutenachtgeschichte (bedtime story).',
     },
@@ -1421,10 +1427,15 @@ export const VOCAB_1: VocabEntry[] = [
     weakMasculine: false,
     notes: {
       pluralNote: "Verstand and Sinn, both being for 'mind' have no plural",
-      miscNote: "Other words: Kunstverstand (art appreciation), Menschenverstand (common sense), Unverstand (lack of judgement)."
+      miscNote:
+        'Other words: Kunstverstand (art appreciation), Menschenverstand (common sense), Unverstand (lack of judgement).',
     },
     sentences: [
-      { de: 'Hast du den Verstand verloren?', en: 'Have you lost your mind?', case: '' },
+      {
+        de: 'Hast du den Verstand verloren?',
+        en: 'Have you lost your mind?',
+        case: '',
+      },
       {
         de: 'Takt ist der Verstand des Herzens.',
         en: 'Tact is the understanding of the heart.',
@@ -1440,9 +1451,16 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Buch',
     plural: 'die Bücher',
     weakMasculine: false,
-    notes: {miscNote: "Other words: Arbeitsbuch (workbook), Hörbuch (audio book), Skizzenbuch (sketchbook)."},
+    notes: {
+      miscNote:
+        'Other words: Arbeitsbuch (workbook), Hörbuch (audio book), Skizzenbuch (sketchbook).',
+    },
     sentences: [
-      { de: 'Das Buch gehört Hans.', en: 'The book belongs to Hans.', case: 'nom' },
+      {
+        de: 'Das Buch gehört Hans.',
+        en: 'The book belongs to Hans.',
+        case: 'nom',
+      },
       {
         de: 'Katja hat ihm die drei Bücher gegeben.',
         en: 'Katja gave him the three books.',
@@ -2594,24 +2612,6 @@ export const VOCAB_1: VocabEntry[] = [
     completed: false,
   },
   {
-    id: 127,
-    eng: 'dad',
-    article: 'der',
-    noun: 'Vater',
-    plural: 'die Väter',
-    weakMasculine: false,
-    notes: {},
-    sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: '' },
-      {
-        de: 'SATZ2',
-        en: 'SENTENCE2',
-        case: '',
-      },
-    ],
-    completed: false,
-  },
-  {
     id: 128,
     eng: 'case',
     article: 'der',
@@ -2671,24 +2671,6 @@ export const VOCAB_1: VocabEntry[] = [
     article: 'der',
     noun: 'Rand',
     plural: 'die Ränder',
-    weakMasculine: false,
-    notes: {},
-    sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: '' },
-      {
-        de: 'SATZ2',
-        en: 'SENTENCE2',
-        case: '',
-      },
-    ],
-    completed: false,
-  },
-  {
-    id: 132,
-    eng: 'mom',
-    article: 'die',
-    noun: 'Mutter',
-    plural: 'die Mütter',
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -4948,20 +4930,6 @@ export const VOCAB_1: VocabEntry[] = [
     article: 'der',
     noun: 'Ausdruck',
     plural: 'die Ausdrücke',
-    weakMasculine: false,
-    notes: {},
-    sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
-    ],
-    completed: false,
-  },
-  {
-    id: 284,
-    eng: 'path',
-    article: 'der',
-    noun: 'Weg',
-    plural: 'die Wege',
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -8066,6 +8034,7 @@ export const VOCAB_1: VocabEntry[] = [
     plural: 'die Abschiede',
     weakMasculine: false,
     notes: {
+      otherEngDefinitions: 'leave, farewell',
       miscNote: 'Other words: Junggesellinnenabschied (bachelorette party)',
     },
     sentences: [

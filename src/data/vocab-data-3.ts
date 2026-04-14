@@ -960,13 +960,14 @@ export const VOCAB_3: VocabEntry[] = [
     plural: 'die Häfen',
     weakMasculine: false,
     notes: {
+      otherEngDefinitions: 'harbor, port',
       miscNote:
         'Other words: Flughafen (airport), Freihafen (free port), Ölhafen (oil port), Fährhafen (ferry harbor), and Handelshafen (commercial harbor).',
     },
     sentences: [
       {
         de: 'Das Feuerwerk war wie jedes Jahr am Hafen.',
-        en: 'The fireworks were like every year at the dock.',
+        en: 'The fireworks were like every year at the harbor.',
         case: 'dat',
       },
       {
@@ -3499,20 +3500,6 @@ export const VOCAB_3: VocabEntry[] = [
     article: 'die',
     noun: 'Phrase',
     plural: 'die Phrasen',
-    weakMasculine: false,
-    notes: {},
-    sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
-    ],
-    completed: false,
-  },
-  {
-    id: 1250,
-    eng: 'nut',
-    article: 'die',
-    noun: 'Mutter',
-    plural: 'die Muttern',
     weakMasculine: false,
     notes: {},
     sentences: [

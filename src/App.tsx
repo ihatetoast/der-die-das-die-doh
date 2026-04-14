@@ -10,6 +10,9 @@ import TestBoard from './components/TestBoard.tsx';
 
 const TEST_COMPLETE = true; // remove when test board is done
 
+// test file with small rep of types of data
+import {TEST_VOCAB} from './data/vocab-test-data.ts';
+
 function App() {
   const [mode, setMode] = useState<ModeProp>('home');
   const [allShuffledDeck, setAllShuffledDeck] = useState<VocabEntry[]>([]);
@@ -81,13 +84,14 @@ function App() {
   }
 
   function shuffleDeck() {
-    const completedNouns = VOCABULARY_COMMON.filter(
+    const completedNouns = TEST_VOCAB.filter(
       (noun) => noun.completed === true,
     );
     const shuffled = shuffle(completedNouns);
     setAllShuffledDeck(shuffled);
     // setAllShuffledDeck(shuffled.slice(0, 2)); // to test if i lose all my words.
   }
+
   return (
     <>
       <Header
