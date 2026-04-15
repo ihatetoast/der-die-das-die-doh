@@ -1349,20 +1349,6 @@ export const VOCAB_2: VocabEntry[] = [
     completed: false,
   },
   {
-    id: 598,
-    eng: 'manner',
-    article: 'die',
-    noun: 'Art',
-    plural: 'REPLACE',
-    weakMasculine: false,
-    notes: {},
-    sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
-    ],
-    completed: false,
-  },
-  {
     id: 599,
     eng: 'sword',
     article: 'das',
@@ -4025,20 +4011,6 @@ export const VOCAB_2: VocabEntry[] = [
     completed: false,
   },
   {
-    id: 789,
-    eng: 'site',
-    article: 'die',
-    noun: 'Seite',
-    plural: 'die Seiten',
-    weakMasculine: false,
-    notes: {},
-    sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
-    ],
-    completed: false,
-  },
-  {
     id: 790,
     eng: 'flash',
     article: 'der',
@@ -6637,7 +6609,7 @@ export const VOCAB_2: VocabEntry[] = [
     noun: 'Schwein',
     plural: 'die Schweine',
     weakMasculine: false,
-    notes: {},
+    notes: {otherEngDefinitions: 'swine'},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
       { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },

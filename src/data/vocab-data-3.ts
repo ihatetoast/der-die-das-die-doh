@@ -2309,20 +2309,6 @@ export const VOCAB_3: VocabEntry[] = [
     completed: false,
   },
   {
-    id: 1165,
-    eng: 'species',
-    article: 'die',
-    noun: 'Art',
-    plural: 'die Arten',
-    weakMasculine: false,
-    notes: {},
-    sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
-    ],
-    completed: false,
-  },
-  {
     id: 1166,
     eng: 'column',
     article: 'die',
@@ -3165,7 +3151,7 @@ export const VOCAB_3: VocabEntry[] = [
     noun: 'Kühlschrank',
     plural: 'die Kühlschränke',
     weakMasculine: false,
-    notes: {},
+    notes: {otherEngDefinitions: 'fridge'},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
       { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },

@@ -99,7 +99,7 @@ export const VOCAB_1: VocabEntry[] = [
     plural: 'die Wege',
     weakMasculine: false,
     notes: {
-      otherEngDefinitions:'path'
+      otherEngDefinitions: 'path',
     },
     sentences: [
       {
@@ -584,6 +584,7 @@ export const VOCAB_1: VocabEntry[] = [
     plural: 'die Seiten',
     weakMasculine: false,
     notes: {
+      otherEngDefinitions: 'site, page',
       miscNote:
         'Other words: Kehrseite (flip side),  Schlagseite (list), Passivseite (liability).',
     },
@@ -630,6 +631,7 @@ export const VOCAB_1: VocabEntry[] = [
     plural: 'die Kinder',
     weakMasculine: false,
     notes: {
+      otherEngDefinitions: 'kid',
       miscNote:
         'Other words: Enkelkind (grandchild), Einzelkind (only child), Naturkind (child of nature), Krabbelkind (very young child, younger than toddler).',
     },
@@ -1008,6 +1010,7 @@ export const VOCAB_1: VocabEntry[] = [
     plural: 'die Straßen',
     weakMasculine: false,
     notes: {
+      otherEngDefinitions: 'road',
       miscNote:
         'Other words: Einbahnstraße (one-way street), Küstenstraße (coastal highway), Passstraße (mountain pass).',
     },
@@ -1215,6 +1218,7 @@ export const VOCAB_1: VocabEntry[] = [
     plural: 'die Arten',
     weakMasculine: false,
     notes: {
+      otherEngDefinitions: 'species, kind, manner, sort',
       miscNote: 'Can also mean "kind" or "species.',
     },
     sentences: [
@@ -1493,24 +1497,6 @@ export const VOCAB_1: VocabEntry[] = [
     article: 'der',
     noun: 'Mund',
     plural: 'die Münder',
-    weakMasculine: false,
-    notes: {},
-    sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: '' },
-      {
-        de: 'SATZ2',
-        en: 'SENTENCE2',
-        case: '',
-      },
-    ],
-    completed: false,
-  },
-  {
-    id: 66,
-    eng: 'kid',
-    article: 'das',
-    noun: 'Kind',
-    plural: 'die Kinder',
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1865,24 +1851,7 @@ export const VOCAB_1: VocabEntry[] = [
     ],
     completed: false,
   },
-  {
-    id: 86,
-    eng: 'road',
-    article: 'die',
-    noun: 'Straße',
-    plural: 'die Straßen',
-    weakMasculine: false,
-    notes: {},
-    sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: '' },
-      {
-        de: 'SATZ2',
-        en: 'SENTENCE2',
-        case: '',
-      },
-    ],
-    completed: false,
-  },
+
   {
     id: 87,
     eng: 'idea',
@@ -3694,20 +3663,7 @@ export const VOCAB_1: VocabEntry[] = [
     ],
     completed: false,
   },
-  {
-    id: 197,
-    eng: 'sort',
-    article: 'die',
-    noun: 'Art',
-    plural: 'REPLACE',
-    weakMasculine: false,
-    notes: {},
-    sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
-    ],
-    completed: false,
-  },
+
   {
     id: 198,
     eng: 'group',
@@ -4645,20 +4601,6 @@ export const VOCAB_1: VocabEntry[] = [
     completed: false,
   },
   {
-    id: 263,
-    eng: 'page',
-    article: 'die',
-    noun: 'Seite',
-    plural: 'die Seiten',
-    weakMasculine: false,
-    notes: {},
-    sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
-    ],
-    completed: false,
-  },
-  {
     id: 264,
     eng: 'captain',
     article: 'der',
@@ -5511,9 +5453,16 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Service',
     plural: 'die Services',
     weakMasculine: false,
-    notes: {},
+    notes: {
+      otherEngDefinitions: 'set',
+      miscNote: 'Refers to service as customer service',
+    },
     sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      {
+        de: 'Der Service in diesem Hotel ist ausgezeichnet, weil das Personal ser freundlich und hilfsberit ist.',
+        en: 'The service in this hotel is excellent because the staff is very friendly and helpful..',
+        case: 'nom',
+      },
       { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
     completed: false,
