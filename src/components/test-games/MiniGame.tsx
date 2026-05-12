@@ -29,6 +29,8 @@ const MiniGame = ({ words, testType, handleSetMode }: MiniGameProps) => {
   const [userInputArticle, setUserInputArticle] = useState<
     VocabEntry['article'] | null
   >(null);
+    const [articleIsCorrect, setArticleIsCorrect] = useState<boolean | null>(null);
+    const [gerNounIsCorrect, setGerNounIsCorrect] = useState<boolean | null>(null);
 
   const [answerState, setAnswerState] = useState<AnswerState>('waiting');
   const [hintState, setHintState] = useState<HintState>(null);
@@ -43,7 +45,7 @@ const MiniGame = ({ words, testType, handleSetMode }: MiniGameProps) => {
     if (words.length > 0) setCardsToTest([...words]);
   }, [words]);
 
-  // CLAUDE why is this not working?
+  
   useEffect(() => {
     if (cardsToTest.length === 0 && testState === 'active') {
       setTestState('over');
@@ -79,21 +81,24 @@ const MiniGame = ({ words, testType, handleSetMode }: MiniGameProps) => {
     targetWord: string,
     otherDefs?: string,
   ) => {
+    console.log('userInputNoun: ', userInputNoun);
+    console.log('targetWord: ', targetWord);
     const userAnswer = userInputNoun.trim().toLowerCase();
 
     // don't count as wrong, but if user doesn't cap first letter, put a note in hint box reminding them.
     const initial = userInputNoun.trim().charAt(0);
     if (initial !== initial.toUpperCase()) {
       setMessage('Remember: German nouns begin with an uppercase letter.');
-      setTimeout(() => {
-        setMessage('');
-      }, 2000);
     }
     // to lower case for both to account for sloppy NOuns or crazy sHift keys
-    if(userAnswer === targetWord.toLowerCase()) return true;
-    // todo: check alternates
-    console.log('user input noun', userInputNoun);
-    console.log('target word is', targetWord);
+    if (userAnswer === targetWord.toLowerCase()) return true;
+    if (otherDefs) {
+      const otherGerDefs = otherDefs
+        .split(', ')
+        .map((def) => def.replace(/^(der|die|das)\s+/i, '').toLowerCase());
+      if (otherGerDefs.includes(userAnswer)) return true;
+    }
+    return false;
   };
 
   // pause for style change. only let user know correct or incorrect, not answer
@@ -108,8 +113,9 @@ const MiniGame = ({ words, testType, handleSetMode }: MiniGameProps) => {
         setHintState(null); // Reset for next word
         setUserInputNoun('');
         setUserInputArticle(null);
+        setMessage('');
         setAnswerState('waiting');
-      }, 2000);
+      }, 3000);
     }
   }, [answerState, hintState]);
 
@@ -126,21 +132,27 @@ const MiniGame = ({ words, testType, handleSetMode }: MiniGameProps) => {
         setUserInputNoun('');
         setUserInputArticle(null);
         setAnswerState('waiting');
-      }, 2000);
+      }, 3000);
     }
   }, [hintState, targetWord]);
+// notes on style feedback
+// for G -> E AND E -> G, the outline of the input (and button if E to G) turns red if incorrect or green if correct
+
 
   const handleSubmit = () => {
     if (targetLanguage === 'German') {
       // handle article check here
 
       const otherGerDefs = cardsToTest[0].notes.otherGerDefinitions;
-      const nounIsCorrect = evalAnswerGerNoun(
+
+      setGerNounIsCorrect(evalAnswerGerNoun(
         userInputNoun,
         targetWord,
         otherGerDefs,
-      );
-      const articleIsCorrect = cardsToTest[0].article === userInputArticle;
+      ))
+      setArticleIsCorrect(cardsToTest[0].article === userInputArticle)
+      const isCorrect = gerNounIsCorrect && articleIsCorrect;
+      setAnswerState(isCorrect ? 'correct' : 'incorrect');
     }
     if (targetLanguage === 'English') {
       const otherEngDefs = cardsToTest[0].notes.otherEngDefinitions;
@@ -229,13 +241,34 @@ const MiniGame = ({ words, testType, handleSetMode }: MiniGameProps) => {
               </label>
               {targetLanguage === 'German' && (
                 <div className={classes.articleButtonContainer}>
-                  <button onClick={() => setUserInputArticle('der')}>
+                  <button
+                    className={
+                      userInputArticle === 'der'
+                        ? `${classes.selected}`
+                        : undefined
+                    }
+                    onClick={() => setUserInputArticle('der')}
+                  >
                     der
                   </button>
-                  <button onClick={() => setUserInputArticle('die')}>
+                  <button
+                    className={
+                      userInputArticle === 'die'
+                        ? `${classes.selected}`
+                        : undefined
+                    }
+                    onClick={() => setUserInputArticle('die')}
+                  >
                     die
                   </button>
-                  <button onClick={() => setUserInputArticle('das')}>
+                  <button
+                    className={
+                      userInputArticle === 'das'
+                        ? `${classes.selected}`
+                        : undefined
+                    }
+                    onClick={() => setUserInputArticle('das')}
+                  >
                     das
                   </button>
                 </div>

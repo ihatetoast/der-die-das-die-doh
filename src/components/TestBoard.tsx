@@ -31,7 +31,7 @@ const TestBoard = ({
     handleGetInitialActiveDeck(size);
     handleGetTestType(test);
   };
-console.log("test type is ", testType);
+
   return (
     <div className={classes.testBoard}>
       {!testType && (

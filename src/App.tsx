@@ -23,8 +23,6 @@ function App() {
   const showBoards = mode !== 'home';
   const deckTooSmall = allShuffledDeck.length < 5;
 
-  console.log('number of possible words: ', allShuffledDeck.length);
-
   useEffect(() => {
     shuffleDeck();
   }, []);
