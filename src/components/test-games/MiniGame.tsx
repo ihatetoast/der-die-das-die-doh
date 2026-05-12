@@ -29,8 +29,12 @@ const MiniGame = ({ words, testType, handleSetMode }: MiniGameProps) => {
   const [userInputArticle, setUserInputArticle] = useState<
     VocabEntry['article'] | null
   >(null);
-    const [articleIsCorrect, setArticleIsCorrect] = useState<boolean | null>(null);
-    const [gerNounIsCorrect, setGerNounIsCorrect] = useState<boolean | null>(null);
+  const [articleIsCorrect, setArticleIsCorrect] = useState<boolean | null>(
+    null,
+  );
+  const [gerNounIsCorrect, setGerNounIsCorrect] = useState<boolean | null>(
+    null,
+  );
 
   const [answerState, setAnswerState] = useState<AnswerState>('waiting');
   const [hintState, setHintState] = useState<HintState>(null);
@@ -45,7 +49,6 @@ const MiniGame = ({ words, testType, handleSetMode }: MiniGameProps) => {
     if (words.length > 0) setCardsToTest([...words]);
   }, [words]);
 
-  
   useEffect(() => {
     if (cardsToTest.length === 0 && testState === 'active') {
       setTestState('over');
@@ -81,8 +84,7 @@ const MiniGame = ({ words, testType, handleSetMode }: MiniGameProps) => {
     targetWord: string,
     otherDefs?: string,
   ) => {
-    console.log('userInputNoun: ', userInputNoun);
-    console.log('targetWord: ', targetWord);
+    setMessage(''); // to clear any message re hand v Hand
     const userAnswer = userInputNoun.trim().toLowerCase();
 
     // don't count as wrong, but if user doesn't cap first letter, put a note in hint box reminding them.
@@ -115,6 +117,8 @@ const MiniGame = ({ words, testType, handleSetMode }: MiniGameProps) => {
         setUserInputArticle(null);
         setMessage('');
         setAnswerState('waiting');
+        setArticleIsCorrect(null);
+        setGerNounIsCorrect(null);
       }, 3000);
     }
   }, [answerState, hintState]);
@@ -135,23 +139,29 @@ const MiniGame = ({ words, testType, handleSetMode }: MiniGameProps) => {
       }, 3000);
     }
   }, [hintState, targetWord]);
-// notes on style feedback
-// for G -> E AND E -> G, the outline of the input (and button if E to G) turns red if incorrect or green if correct
-
 
   const handleSubmit = () => {
     if (targetLanguage === 'German') {
-      // handle article check here
-
+      if (userInputArticle === null && userInputNoun.trim() !== '') {
+        setMessage('Please select an article (der/die/das)');
+        return;
+      }
+      if (userInputNoun.trim() === '' && userInputArticle === null) {
+        setAnswerState('skipped');
+        return;
+      }
       const otherGerDefs = cardsToTest[0].notes.otherGerDefinitions;
 
-      setGerNounIsCorrect(evalAnswerGerNoun(
+      const nounRight = evalAnswerGerNoun(
         userInputNoun,
         targetWord,
         otherGerDefs,
-      ))
-      setArticleIsCorrect(cardsToTest[0].article === userInputArticle)
-      const isCorrect = gerNounIsCorrect && articleIsCorrect;
+      );
+      const articleRight = cardsToTest[0].article === userInputArticle;
+
+      const isCorrect = articleRight && nounRight;
+      setArticleIsCorrect(articleRight);
+      setGerNounIsCorrect(nounRight);
       setAnswerState(isCorrect ? 'correct' : 'incorrect');
     }
     if (targetLanguage === 'English') {
@@ -242,31 +252,31 @@ const MiniGame = ({ words, testType, handleSetMode }: MiniGameProps) => {
               {targetLanguage === 'German' && (
                 <div className={classes.articleButtonContainer}>
                   <button
-                    className={
-                      userInputArticle === 'der'
-                        ? `${classes.selected}`
-                        : undefined
-                    }
+                    className={`
+                      ${userInputArticle === 'der' ? `${classes.selected}` : ''}
+                      ${userInputArticle === 'der' && articleIsCorrect ? `${classes.correct}` : ''}
+                      ${userInputArticle === 'der' && articleIsCorrect === false ? `${classes.incorrect}` : ''}
+                    `.trim()}
                     onClick={() => setUserInputArticle('der')}
                   >
                     der
                   </button>
                   <button
-                    className={
-                      userInputArticle === 'die'
-                        ? `${classes.selected}`
-                        : undefined
-                    }
+                    className={`
+                      ${userInputArticle === 'die' ? `${classes.selected}` : ''}
+                      ${userInputArticle === 'die' && articleIsCorrect ? `${classes.correct}` : ''}
+                      ${userInputArticle === 'die' && articleIsCorrect === false ? `${classes.incorrect}` : ''}
+                    `.trim()}
                     onClick={() => setUserInputArticle('die')}
                   >
                     die
                   </button>
                   <button
-                    className={
-                      userInputArticle === 'das'
-                        ? `${classes.selected}`
-                        : undefined
-                    }
+                    className={`
+                      ${userInputArticle === 'das' ? `${classes.selected}` : ''}
+                      ${userInputArticle === 'das' && articleIsCorrect ? `${classes.correct}` : ''}
+                      ${userInputArticle === 'das' && articleIsCorrect === false ? `${classes.incorrect}` : ''}
+                    `.trim()}
                     onClick={() => setUserInputArticle('das')}
                   >
                     das
@@ -279,7 +289,12 @@ const MiniGame = ({ words, testType, handleSetMode }: MiniGameProps) => {
                 value={userInputNoun}
                 placeholder={`${targetLanguage} translation`}
                 onChange={(e) => setUserInputNoun(e.target.value)}
-                className={`${classes.nounAnswer} ${classes[answerState]}`}
+                className={`
+                  ${classes.nounAnswer} 
+                    ${classes[answerState]}
+                    ${targetLanguage === 'German' && gerNounIsCorrect ? classes.correctGer : ''}
+                    ${targetLanguage === 'German' && gerNounIsCorrect === false ? classes.incorrectGer : ''}
+                  `.trim()}
               />
 
               <div className={classes.btnContainer}>
