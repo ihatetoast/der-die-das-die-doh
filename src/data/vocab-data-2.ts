@@ -197,20 +197,6 @@ export const VOCAB_2: VocabEntry[] = [
     completed: false,
   },
   {
-    id: 515,
-    eng: 'pile',
-    article: 'der',
-    noun: 'Stapel',
-    plural: 'die Stapel',
-    weakMasculine: false,
-    notes: {},
-    sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
-    ],
-    completed: false,
-  },
-  {
     id: 516,
     eng: 'bowl',
     article: 'die',
@@ -1061,7 +1047,7 @@ export const VOCAB_2: VocabEntry[] = [
     noun: 'Stand',
     plural: 'die Stände',
     weakMasculine: false,
-    notes: {},
+    notes: {otherEngDefinitions: 'booth, standing'},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
       { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
@@ -5301,20 +5287,6 @@ export const VOCAB_2: VocabEntry[] = [
     completed: false,
   },
   {
-    id: 882,
-    eng: 'booth',
-    article: 'der',
-    noun: 'Stand',
-    plural: 'die Stände',
-    weakMasculine: false,
-    notes: {},
-    sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
-    ],
-    completed: false,
-  },
-  {
     id: 883,
     eng: 'cash',
     article: 'das',
@@ -6525,7 +6497,7 @@ export const VOCAB_2: VocabEntry[] = [
     noun: 'Stapel',
     plural: 'die Stapel',
     weakMasculine: false,
-    notes: {},
+    notes: {otherEngdefinitions: 'pile'},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
       { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
@@ -6748,20 +6720,6 @@ export const VOCAB_2: VocabEntry[] = [
     article: 'die',
     noun: 'Bandbreite',
     plural: 'die Bandbreiten',
-    weakMasculine: false,
-    notes: {},
-    sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
-    ],
-    completed: false,
-  },
-  {
-    id: 986,
-    eng: 'dick',
-    article: 'der',
-    noun: 'Schwanz',
-    plural: 'die Schwänze',
     weakMasculine: false,
     notes: {},
     sentences: [

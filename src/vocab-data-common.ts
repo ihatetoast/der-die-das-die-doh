@@ -5,4 +5,4 @@ import {VOCAB_4} from './data/vocab-data-4.ts';
 import {VOCAB_5} from './data/vocab-data-5.ts';
 
 
-export const VOCABULARY_COMMON = [...VOCAB_1, ...VOCAB_2, ...VOCAB_3, ...VOCAB_4, ...VOCAB_5, ...VOCAB_6];
+export const VOCABULARY_COMMON = [...VOCAB_1, ...VOCAB_2, ...VOCAB_3, ...VOCAB_4, ...VOCAB_5];

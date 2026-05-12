@@ -192,4 +192,56 @@ export const TEST_VOCAB: VocabEntry[] = [
     ],
     completed: true,
   },
+  {
+    id: 10000052,
+    eng: 'guy',
+    article: 'der',
+    noun: 'Typ',
+    plural: 'die Typen',
+    weakMasculine: false,
+    notes: {
+      otherGerDefinitions: 'der Kerl',
+      otherEngDefinitions: 'type, character, bloke, model, version',
+    },
+    sentences: [
+      {
+        de: 'Er ist ein normaler Typ.',
+        en: 'He is a normal guy.',
+        case: 'nom',
+      },
+      {
+        de: 'Ich war hin und weg von dem Typ',
+        en: 'I was blown away by the guy.',
+        case: 'dat',
+      },
+    ],
+    completed: true,
+  },
+  {
+    id: 10000051,
+    eng: 'chap',
+    article: 'der',
+    noun: 'Kerl',
+    plural: 'die Kerle',
+    weakMasculine: false,
+    notes: {
+      otherEngDefinitions: 'guy, fellow, bloke',
+      otherGerDefinitions: 'der Typ',
+      miscNote:
+        'Other words: Dreckskerl (scumbag), Lausekerl (rascal), Scheißkerl (shithead).',
+    },
+    sentences: [
+      {
+        de: 'Er ist der gemeinste Kerl.',
+        en: 'He is the mneanest guy.',
+        case: 'nom',
+      },
+      {
+        de: 'Ich kenne die Kerle alle.',
+        en: 'I know all those dudes.',
+        case: 'acc',
+      },
+    ],
+    completed: true,
+  },
 ];

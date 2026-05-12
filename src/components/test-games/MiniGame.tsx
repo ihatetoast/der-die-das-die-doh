@@ -24,25 +24,26 @@ const MiniGame = ({ words, testType, handleSetMode }: MiniGameProps) => {
   const [userInputNoun, setUserInputNoun] = useState<string>('');
   const [hint, setHint] = useState<string>('');
   const [testState, setTestState] = useState<GameState>('waiting');
-
+  const [message, setMessage] = useState<string>('');
   // eng to german only
   const [userInputArticle, setUserInputArticle] = useState<
     VocabEntry['article'] | null
   >(null);
+
   const [answerState, setAnswerState] = useState<AnswerState>('waiting');
   const [hintState, setHintState] = useState<HintState>(null);
 
   const originWord =
-    testType === 'ger-eng-mini' ? cardsToTest[0]?.noun : cardsToTest[0].eng;
+    testType === 'ger-eng-mini' ? cardsToTest[0]?.noun : cardsToTest[0]?.eng;
   const targetWord =
-    testType === 'ger-eng-mini' ? cardsToTest[0]?.eng : cardsToTest[0].noun;
+    testType === 'ger-eng-mini' ? cardsToTest[0]?.eng : cardsToTest[0]?.noun;
   const needsGermanArticle = testType === 'eng-ger-mini';
 
   useEffect(() => {
     if (words.length > 0) setCardsToTest([...words]);
   }, [words]);
 
-// CLAUDE why is this not working?
+  // CLAUDE why is this not working?
   useEffect(() => {
     if (cardsToTest.length === 0 && testState === 'active') {
       setTestState('over');
@@ -60,7 +61,7 @@ const MiniGame = ({ words, testType, handleSetMode }: MiniGameProps) => {
     userInputNoun: string,
     targetWord: string,
     otherDefs?: string,
-  ):boolean => {
+  ): boolean => {
     const userAnswer = userInputNoun.trim().toLowerCase();
 
     if (userAnswer === targetWord) {
@@ -70,11 +71,30 @@ const MiniGame = ({ words, testType, handleSetMode }: MiniGameProps) => {
       const altDefs = otherDefs.split(', ').map((def) => def.toLowerCase());
       if (altDefs.includes(userAnswer)) return true;
     }
-
     return false;
   };
 
+  const evalAnswerGerNoun = (
+    userInputNoun: string,
+    targetWord: string,
+    otherDefs?: string,
+  ) => {
+    const userAnswer = userInputNoun.trim().toLowerCase();
 
+    // don't count as wrong, but if user doesn't cap first letter, put a note in hint box reminding them.
+    const initial = userInputNoun.trim().charAt(0);
+    if (initial !== initial.toUpperCase()) {
+      setMessage('Remember: German nouns begin with an uppercase letter.');
+      setTimeout(() => {
+        setMessage('');
+      }, 2000);
+    }
+    // to lower case for both to account for sloppy NOuns or crazy sHift keys
+    if(userAnswer === targetWord.toLowerCase()) return true;
+    // todo: check alternates
+    console.log('user input noun', userInputNoun);
+    console.log('target word is', targetWord);
+  };
 
   // pause for style change. only let user know correct or incorrect, not answer
   useEffect(() => {
@@ -113,11 +133,23 @@ const MiniGame = ({ words, testType, handleSetMode }: MiniGameProps) => {
   const handleSubmit = () => {
     if (targetLanguage === 'German') {
       // handle article check here
+
+      const otherGerDefs = cardsToTest[0].notes.otherGerDefinitions;
+      const nounIsCorrect = evalAnswerGerNoun(
+        userInputNoun,
+        targetWord,
+        otherGerDefs,
+      );
+      const articleIsCorrect = cardsToTest[0].article === userInputArticle;
     }
     if (targetLanguage === 'English') {
-      const otherDefs = cardsToTest[0].notes.otherEngDefinitions;
-      const isCorrect = evalAnswerEngNoun(userInputNoun, targetWord, otherDefs);
-      setAnswerState(isCorrect ? 'correct' : 'incorrect')
+      const otherEngDefs = cardsToTest[0].notes.otherEngDefinitions;
+      const isCorrect = evalAnswerEngNoun(
+        userInputNoun,
+        targetWord,
+        otherEngDefs,
+      );
+      setAnswerState(isCorrect ? 'correct' : 'incorrect');
     }
   };
 
@@ -141,7 +173,12 @@ const MiniGame = ({ words, testType, handleSetMode }: MiniGameProps) => {
             You're given a noun in {originLanguage}. Please supply the{' '}
             {targetLanguage} noun (in singular).
           </p>
-
+          {originLanguage === 'English' && (
+            <p>
+              For the article, choose the correct article using the buttons
+              provided.
+            </p>
+          )}
           <p>
             If you need help, click "Hint" to get a scrambled version of{' '}
             {targetLanguage} word. Still stuck? Click "Reveal?" to get the
@@ -172,7 +209,9 @@ const MiniGame = ({ words, testType, handleSetMode }: MiniGameProps) => {
             <div className={classes.originWord}>
               <h3>
                 {originLanguage}:{' '}
-                {originLanguage === 'German' ? `${cardsToTest[0].article}` : ' the '}{' '}
+                {originLanguage === 'German'
+                  ? `${cardsToTest[0].article}`
+                  : ' the '}{' '}
                 {originWord}
               </h3>
             </div>
@@ -183,19 +222,33 @@ const MiniGame = ({ words, testType, handleSetMode }: MiniGameProps) => {
                   ? hint
                   : hintState === 'revealed'
                     ? targetWord
-                    : null}
+                    : message}
               </p>
               <label htmlFor='word'>
                 {targetLanguage}:{needsGermanArticle ? ' ' : ' the '}
-                <input
-                  type='text'
-                  id='word'
-                  value={userInputNoun}
-                  placeholder={`${targetLanguage} translation`}
-                  onChange={(e) => setUserInputNoun(e.target.value)}
-                  className={`${classes.nounAnswer} ${classes[answerState]}`}
-                />
               </label>
+              {targetLanguage === 'German' && (
+                <div className={classes.articleButtonContainer}>
+                  <button onClick={() => setUserInputArticle('der')}>
+                    der
+                  </button>
+                  <button onClick={() => setUserInputArticle('die')}>
+                    die
+                  </button>
+                  <button onClick={() => setUserInputArticle('das')}>
+                    das
+                  </button>
+                </div>
+              )}
+              <input
+                type='text'
+                id='word'
+                value={userInputNoun}
+                placeholder={`${targetLanguage} translation`}
+                onChange={(e) => setUserInputNoun(e.target.value)}
+                className={`${classes.nounAnswer} ${classes[answerState]}`}
+              />
+
               <div className={classes.btnContainer}>
                 <button
                   onClick={handleSubmit}

@@ -1169,6 +1169,7 @@ export const VOCAB_1: VocabEntry[] = [
     weakMasculine: false,
     notes: {
       otherEngDefinitions: 'guy, fellow, bloke',
+      otherGerDefinitions: 'der Typ',
       miscNote:
         'Other words: Dreckskerl (scumbag), Lausekerl (rascal), Scheißkerl (shithead).',
     },
@@ -1194,6 +1195,7 @@ export const VOCAB_1: VocabEntry[] = [
     plural: 'die Typen',
     weakMasculine: false,
     notes: {
+      otherGerDefinitions: 'der Kerl',
       otherEngDefinitions: 'type, character, bloke, model, version',
     },
     sentences: [

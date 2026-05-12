@@ -1245,20 +1245,6 @@ export const VOCAB_3: VocabEntry[] = [
     completed: false,
   },
   {
-    id: 1089,
-    eng: 'standing',
-    article: 'der',
-    noun: 'Stand',
-    plural: 'REPLACE',
-    weakMasculine: false,
-    notes: {},
-    sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
-      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
-    ],
-    completed: false,
-  },
-  {
     id: 1090,
     eng: 'sack',
     article: 'der',
