@@ -9,6 +9,8 @@ import PluralGame from './test-games/PluralGame.tsx';
 import MiniGame from './test-games/MiniGame.tsx';
 import GermanFullGame from './test-games/GermanFullGame.tsx';
 import WeakMascGame from './test-games/WeakMascGame.tsx'
+import MiniGameGerToEng from './test-games/MiniGameGerToEng.tsx';
+import MiniGameEngToGer from './test-games/MiniGameEngToGer.tsx';
 
 type Props = {
   words: VocabEntry[];
@@ -43,6 +45,8 @@ const TestBoard = ({
       {testType === 'article' && <ArticleGame words={words} handleSetMode={handleSetMode}/>}
       {testType === 'plural' && <PluralGame words={words} />}
       {(testType === 'eng-ger-mini' || testType === 'ger-eng-mini') && <MiniGame words={words} testType={testType} handleSetMode={handleSetMode}/>}
+      {testType === 'ger-eng-mini' && <MiniGameGerToEng words={words} handleSetMode={handleSetMode}/>}
+      {testType === 'eng-ger-mini' && <MiniGameEngToGer words={words} handleSetMode={handleSetMode}/>}
       {testType === 'german-full' && <GermanFullGame words={words} />}
       {testType === 'weak-masc' && <WeakMascGame words={words} />}
       {!testType && (

@@ -29,3 +29,9 @@ export type AnswerState = 'waiting' | 'skipped' | 'correct' | 'incorrect';
 export type GameState = 'waiting' | 'active' | 'over';
 
 export type HintState = null | "scrambled" | "revealed";
+
+// for two mini games:
+export type MiniGameProps = {
+  words: VocabEntry[];
+  handleSetMode: (value: ModeProp) => void;
+};

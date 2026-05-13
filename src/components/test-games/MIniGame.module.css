@@ -17,6 +17,7 @@
   margin-bottom: 1rem;
 }
 
+
 .nounAnswer {
   appearance: none;
   font-size: 1rem;
@@ -69,6 +70,7 @@
   margin-top: 1rem;
 }
 
+.startBtn,
 .submitBtn,
 .hintBtn {
   text-transform: uppercase;
@@ -76,6 +78,9 @@
   border-radius: var(--btn-radius);
   min-width: 5rem;
   border: 2px solid transparent;
+}
+.startBtn {
+background-color: var(--primary);
 }
 
 .submitBtn {
