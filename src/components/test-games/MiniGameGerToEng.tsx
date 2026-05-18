@@ -13,18 +13,14 @@ const MiniGameGerToEng = ({ words, handleSetMode }: MiniGameProps) => {
     setUserInputNoun,
     testState,
     setTestState,
+    hint,
     hintState,
     setHintState,
     message,
     setMessage,
     answerState,
     setAnswerState,
-  } = useFlashcardLogic(words);
-  const originWord = cardsToTest[0]?.noun;
-  const targetWord = cardsToTest[0]?.eng;
-
-  const originLanguage = 'German';
-  const targetLanguage = 'English';
+  } = useFlashcardLogic(words, 'ger-eng-mini');
 
   const evalAnswerEngNoun = (
     userInputNoun: string,
@@ -61,15 +57,15 @@ const MiniGameGerToEng = ({ words, handleSetMode }: MiniGameProps) => {
   }, [answerState, hintState]);
 
   const handleSubmit = () => {
-    if (targetLanguage === 'English') {
+
       const otherEngDefs = cardsToTest[0].notes.otherEngDefinitions;
       const isCorrect = evalAnswerEngNoun(
         userInputNoun,
-        targetWord,
+        cardsToTest[0].eng,
         otherEngDefs,
       );
       setAnswerState(isCorrect ? 'correct' : 'incorrect');
-    }
+    
   };
 
   const handleHint = () => {
@@ -89,11 +85,11 @@ const MiniGameGerToEng = ({ words, handleSetMode }: MiniGameProps) => {
             You're given a noun in German. Write the English definition (in singular).
           </p>
           <p>
-            If you need help, click "Hint" to get the answer scrambled. Still stuck? Click "Reveal?" to get the
+            Need help? Click "Hint" to get the answer scrambled. Still stuck? Click "Reveal?" to get the
             answer.
           </p>
           <p>
-            Any words that were incorrect or required a hint will be returned to
+            Words that were incorrect or required a hint will be returned to
             the deck to review. When the deck is emptied (i.e., you got all
             right without hints), the test is over and you can return to home.
           </p>
@@ -111,13 +107,7 @@ const MiniGameGerToEng = ({ words, handleSetMode }: MiniGameProps) => {
         <section className={classes.engGerMiniGame}>
           <div className={classes.wordsContainer}>
             <div className={classes.originWord}>
-              <h3>
-                {originLanguage}:{' '}
-                {originLanguage === 'German'
-                  ? `${cardsToTest[0].article}`
-                  : ' the '}{' '}
-                {originWord}
-              </h3>
+              <h3>{cardsToTest[0].article} {cardsToTest[0].noun}</h3>
             </div>
 
             <div className={classes.targetWord}>
@@ -125,55 +115,20 @@ const MiniGameGerToEng = ({ words, handleSetMode }: MiniGameProps) => {
                 {hintState === 'scrambled'
                   ? hint
                   : hintState === 'revealed'
-                    ? targetWord
+                    ? cardsToTest[0].eng 
                     : message}
               </p>
-              <span>the</span>
-              {targetLanguage === 'German' && (
-                <div className={classes.articleButtonContainer}>
-                  <button
-                    className={`
-                      ${userInputArticle === 'der' ? `${classes.selected}` : ''}
-                      ${userInputArticle === 'der' && articleIsCorrect ? `${classes.correct}` : ''}
-                      ${userInputArticle === 'der' && articleIsCorrect === false ? `${classes.incorrect}` : ''}
-                    `.trim()}
-                    onClick={() => setUserInputArticle('der')}
-                  >
-                    der
-                  </button>
-                  <button
-                    className={`
-                      ${userInputArticle === 'die' ? `${classes.selected}` : ''}
-                      ${userInputArticle === 'die' && articleIsCorrect ? `${classes.correct}` : ''}
-                      ${userInputArticle === 'die' && articleIsCorrect === false ? `${classes.incorrect}` : ''}
-                    `.trim()}
-                    onClick={() => setUserInputArticle('die')}
-                  >
-                    die
-                  </button>
-                  <button
-                    className={`
-                      ${userInputArticle === 'das' ? `${classes.selected}` : ''}
-                      ${userInputArticle === 'das' && articleIsCorrect ? `${classes.correct}` : ''}
-                      ${userInputArticle === 'das' && articleIsCorrect === false ? `${classes.incorrect}` : ''}
-                    `.trim()}
-                    onClick={() => setUserInputArticle('das')}
-                  >
-                    das
-                  </button>
-                </div>
-              )}
+              <span>the </span>
+              
               <input
                 type='text'
                 id='word'
                 value={userInputNoun}
-                placeholder={`${targetLanguage} translation`}
+                placeholder="English word"
                 onChange={(e) => setUserInputNoun(e.target.value)}
                 className={`
                   ${classes.nounAnswer} 
                     ${classes[answerState]}
-                    ${targetLanguage === 'German' && gerNounIsCorrect ? classes.correctGer : ''}
-                    ${targetLanguage === 'German' && gerNounIsCorrect === false ? classes.incorrectGer : ''}
                   `.trim()}
               />
 

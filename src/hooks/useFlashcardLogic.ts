@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { scramble } from '../helpers';
-import { VocabEntry, AnswerState, HintState, GameState } from '../types';
-export function useFlashcardLogic(words: VocabEntry[]) {
+import { VocabEntry, AnswerState, HintState, GameState, MiniTestType } from '../types';
+export function useFlashcardLogic(words: VocabEntry[], testType: MiniTestType) {
   // todo move shared logic here
   const [cardsToTest, setCardsToTest] = useState<VocabEntry[]>([]);
   const [userInputNoun, setUserInputNoun] = useState<string>('');
@@ -13,20 +13,31 @@ export function useFlashcardLogic(words: VocabEntry[]) {
 
   const [hintState, setHintState] = useState<HintState>(null);
 
+  const originWord = testType === 'ger-eng-mini' ? cardsToTest[0]?.noun : cardsToTest[0]?.eng;
+  const targetWord = testType === 'ger-eng-mini' ? cardsToTest[0]?.eng : cardsToTest[0]?.noun;
+
+
+  const originLanguage = testType === 'ger-eng-mini' ? 'German' : 'English';
+  const targetLanguage = testType === 'ger-eng-mini' ? 'English' : 'German';
+
+
+
   useEffect(() => {
     if (words.length > 0) setCardsToTest([...words]);
   }, [words]);
+    useEffect(() => {
+      if (cardsToTest.length === 0 && testState === 'active') {
+        setTestState('over');
+      }
+    }, [cardsToTest, testState]);
+
 
   useEffect(() => {
     if (hintState === 'scrambled') {
       setHint(scramble(targetWord));
     }
 
-    useEffect(() => {
-      if (cardsToTest.length === 0 && testState === 'active') {
-        setTestState('over');
-      }
-    }, [cardsToTest, testState]);
+
 
     if (hintState === 'revealed') {
       // give user a chance to see the answer

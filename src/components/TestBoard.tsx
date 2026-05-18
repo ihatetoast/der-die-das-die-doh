@@ -44,7 +44,7 @@ const TestBoard = ({
       )}
       {testType === 'article' && <ArticleGame words={words} handleSetMode={handleSetMode}/>}
       {testType === 'plural' && <PluralGame words={words} />}
-      {(testType === 'eng-ger-mini' || testType === 'ger-eng-mini') && <MiniGame words={words} testType={testType} handleSetMode={handleSetMode}/>}
+     
       {testType === 'ger-eng-mini' && <MiniGameGerToEng words={words} handleSetMode={handleSetMode}/>}
       {testType === 'eng-ger-mini' && <MiniGameEngToGer words={words} handleSetMode={handleSetMode}/>}
       {testType === 'german-full' && <GermanFullGame words={words} />}
