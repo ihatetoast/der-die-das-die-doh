@@ -1,3 +1,5 @@
+/* todo: work on the color styles for german. too many colors  */
+
 .engGerMiniGame {
   width: 100%;
 }
@@ -16,7 +18,6 @@
   height: 2rem;
   margin-bottom: 1rem;
 }
-
 
 .nounAnswer {
   appearance: none;
@@ -55,13 +56,13 @@
 
 .nounAnswer.correctGer {
   color: var(--accent);
-    font-weight: bold;
-  background-color: #0052A3;
+  border: 3px solid var(--accent);
+  font-weight: bold;
+  background-color: #0052a3;
 }
 
 .nounAnswer.incorrectGer {
   color: var(--red);
-
 }
 
 .btnContainer {
@@ -80,7 +81,7 @@
   border: 2px solid transparent;
 }
 .startBtn {
-background-color: var(--primary);
+  background-color: var(--primary);
 }
 
 .submitBtn {
@@ -100,7 +101,7 @@ background-color: var(--primary);
 }
 
 .articleButtonContainer {
-  display:flex;
+  display: flex;
   justify-content: space-between;
   margin: 0.5rem 0;
   max-width: 18rem;
@@ -129,7 +130,7 @@ background-color: var(--primary);
 .articleButtonContainer button.correct {
   border: 2px solid var(--accent);
   font-weight: bold;
-  background-color: #0052A3;
+  background-color: #0052a3;
   color: var(--accent);
 }
 

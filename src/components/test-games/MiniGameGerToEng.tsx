@@ -22,6 +22,13 @@ const MiniGameGerToEng = ({ words, handleSetMode }: MiniGameProps) => {
     setAnswerState,
   } = useFlashcardLogic(words, 'ger-eng-mini');
 
+  // todo: address if a user can submit then add to input.
+  // onKeyDown={(e) => {
+  //   if (e.key === 'Enter' && canSubmit) {
+  //     handleSubmit();
+  //   }
+  // }}
+
   const evalAnswerEngNoun = (
     userInputNoun: string,
     targetWord: string,
@@ -57,15 +64,17 @@ const MiniGameGerToEng = ({ words, handleSetMode }: MiniGameProps) => {
   }, [answerState, hintState]);
 
   const handleSubmit = () => {
-
-      const otherEngDefs = cardsToTest[0].notes.otherEngDefinitions;
-      const isCorrect = evalAnswerEngNoun(
-        userInputNoun,
-        cardsToTest[0].eng,
-        otherEngDefs,
-      );
-      setAnswerState(isCorrect ? 'correct' : 'incorrect');
-    
+    if (userInputNoun.trim() === '') {
+      setAnswerState('skipped');
+      return;
+    }
+    const otherEngDefs = cardsToTest[0].notes.otherEngDefinitions;
+    const isCorrect = evalAnswerEngNoun(
+      userInputNoun,
+      cardsToTest[0].eng,
+      otherEngDefs,
+    );
+    setAnswerState(isCorrect ? 'correct' : 'incorrect');
   };
 
   const handleHint = () => {
@@ -75,26 +84,32 @@ const MiniGameGerToEng = ({ words, handleSetMode }: MiniGameProps) => {
       return prev;
     });
   };
-  
+
   return (
     <>
       <h2>German-to-English Mini Test</h2>
       {testState === 'waiting' && (
         <div>
           <p>
-            You're given a noun in German. Write the English definition (in singular).
+            You're given a noun in German. Write the English definition (in
+            singular).
           </p>
           <p>
-            Need help? Click "Hint" to get the answer scrambled. Still stuck? Click "Reveal?" to get the
-            answer.
+            Need help? Click "Hint" to get the answer scrambled. Still stuck?
+            Click "Reveal?" to get the answer.
           </p>
           <p>
-            Words that were incorrect or required a hint will be returned to
-            the deck to review. When the deck is emptied (i.e., you got all
-            right without hints), the test is over and you can return to home.
+            Words that were incorrect or required a hint will be returned to the
+            deck to review. When the deck is emptied (i.e., you got all correct
+            without hints), the test is over and you can return to home.
           </p>
           <p>When you're ready, click "Go!".</p>
-          <button className={classes.startBtn} onClick={() => setTestState('active')}>Go!</button>
+          <button
+            className={classes.startBtn}
+            onClick={() => setTestState('active')}
+          >
+            Go!
+          </button>
         </div>
       )}
       {testState === 'over' && (
@@ -107,7 +122,9 @@ const MiniGameGerToEng = ({ words, handleSetMode }: MiniGameProps) => {
         <section className={classes.engGerMiniGame}>
           <div className={classes.wordsContainer}>
             <div className={classes.originWord}>
-              <h3>{cardsToTest[0].article} {cardsToTest[0].noun}</h3>
+              <h3>
+                {cardsToTest[0].article} {cardsToTest[0].noun}
+              </h3>
             </div>
 
             <div className={classes.targetWord}>
@@ -115,16 +132,17 @@ const MiniGameGerToEng = ({ words, handleSetMode }: MiniGameProps) => {
                 {hintState === 'scrambled'
                   ? hint
                   : hintState === 'revealed'
-                    ? cardsToTest[0].eng 
+                    ? cardsToTest[0].eng
                     : message}
               </p>
               <span>the </span>
-              
+
               <input
+                autoFocus={testState === 'active'}
                 type='text'
                 id='word'
                 value={userInputNoun}
-                placeholder="English word"
+                placeholder='English word'
                 onChange={(e) => setUserInputNoun(e.target.value)}
                 className={`
                   ${classes.nounAnswer} 

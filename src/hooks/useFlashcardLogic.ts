@@ -13,14 +13,7 @@ export function useFlashcardLogic(words: VocabEntry[], testType: MiniTestType) {
 
   const [hintState, setHintState] = useState<HintState>(null);
 
-  const originWord = testType === 'ger-eng-mini' ? cardsToTest[0]?.noun : cardsToTest[0]?.eng;
   const targetWord = testType === 'ger-eng-mini' ? cardsToTest[0]?.eng : cardsToTest[0]?.noun;
-
-
-  const originLanguage = testType === 'ger-eng-mini' ? 'German' : 'English';
-  const targetLanguage = testType === 'ger-eng-mini' ? 'English' : 'German';
-
-
 
   useEffect(() => {
     if (words.length > 0) setCardsToTest([...words]);
@@ -33,11 +26,9 @@ export function useFlashcardLogic(words: VocabEntry[], testType: MiniTestType) {
 
 
   useEffect(() => {
-    if (hintState === 'scrambled') {
+    if (hintState === 'scrambled' && targetWord) {
       setHint(scramble(targetWord));
     }
-
-
 
     if (hintState === 'revealed') {
       // give user a chance to see the answer
@@ -46,6 +37,7 @@ export function useFlashcardLogic(words: VocabEntry[], testType: MiniTestType) {
         setHintState(null); // Reset for next word
         setUserInputNoun('');
         setAnswerState('waiting');
+        setMessage('');
       }, 3000);
     }
   }, [hintState, targetWord]);
