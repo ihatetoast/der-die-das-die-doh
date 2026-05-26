@@ -30,7 +30,7 @@ export type GameState = 'waiting' | 'active' | 'over';
 
 export type HintState = null | "scrambled" | "revealed";
 
-// for two mini games:
+// for  mini games:
 export type MiniGameProps = {
   words: VocabEntry[];
   handleSetMode: (value: ModeProp) => void;

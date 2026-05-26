@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { useFlashcardLogic } from '../../hooks/useFlashcardLogic.ts';
 import GameOver from './GameOver.tsx';
 

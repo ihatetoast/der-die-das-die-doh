@@ -14,7 +14,9 @@
   --green: #035a5c; /* v dark teal  */
   --blue: #7ba3ce; /* positive feedback  */
   --black: #022421;
-
+  /* create colors for test version. don't like using the ones for primary etc. keep those for real accents or errors and generic buttons
+  todo: testing colors. study colors ok as is.
+  */
   /* die/cube and buttons must match side */
   --light-green: #f2fff2; /* bg to die/cube  */
   --front: #5ba78f; /* english  */

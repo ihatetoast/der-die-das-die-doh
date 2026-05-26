@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useFlashcardLogic } from '../../hooks/useFlashcardLogic.ts';
-import { VocabEntry, AnswerState, HintState, GameState } from '../../types.ts';
+import { VocabEntry } from '../../types.ts';
 
 import GameOver from './GameOver.tsx';
 

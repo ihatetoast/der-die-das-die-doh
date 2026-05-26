@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { scramble } from '../helpers';
-import { VocabEntry, AnswerState, HintState, GameState, MiniTestType } from '../types';
-export function useFlashcardLogic(words: VocabEntry[], testType: MiniTestType) {
+import { VocabEntry, AnswerState, HintState, GameState, TestType } from '../types';
+export function useFlashcardLogic(words: VocabEntry[], testType: TestType) {
   // todo move shared logic here
   const [cardsToTest, setCardsToTest] = useState<VocabEntry[]>([]);
   const [userInputNoun, setUserInputNoun] = useState<string>('');

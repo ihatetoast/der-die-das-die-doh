@@ -1,3 +1,20 @@
 .pluralGame {
   width: 100%;
 }
+
+.pluralGrid {
+  display: grid;
+  grid-template-columns: 4rem 1fr 1fr;
+  border: 2px solid var(--front);
+  border-bottom-width: 1px;
+}
+.pluralGrid div {
+  padding: .1rem .5rem;
+  border-bottom: 1px solid var(--front);
+}
+.pluralSignal {
+  text-align: right;
+}
+.highlight {
+  color: var(--red);
+}
