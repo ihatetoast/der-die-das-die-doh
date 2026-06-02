@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {
   VocabEntry,
   MiniGameProps,
@@ -11,21 +11,63 @@ import classes from './PluralGame.module.css';
 import GameOver from './GameOver.tsx';
 
 const PluralGame = ({ words, handleSetMode }: MiniGameProps) => {
-  console.log('words in plural game', words);
-  const [cardsToTest, setCardsToTest] = useState<VocabEntry[]>([]);
-  const [message, setMessage] = useState<string>('');
+  const {
+    cardsToTest,
+    setCardsToTest,
+    testState,
+    setTestState,
+    answerState,
+    setAnswerState,
+    message,
+    setMessage,
+  } = useFlashcardLogic(words, 'plural');
+
+  // const [message, setMessage] = useState<string>(''); 
   const [userInputPlural, setUserInputPlural] = useState<string>('');
-  const [testState, setTestState] = useState<GameState>('waiting');
-  const [answerState, setAnswerState] = useState<AnswerState>('waiting');
-  const targetPlural = cardsToTest[0]?.plural;
+
+  // pause for style change.
+  useEffect(() => {
+    if (answerState === 'incorrect' || answerState === 'correct') {
+      setTimeout(() => {
+        if (answerState === 'correct') {
+          setCardsToTest((prev) => prev.slice(1));
+        } else {
+          setCardsToTest((prev) => [...prev.slice(1), prev[0]]);
+        }
+        setMessage('');
+        setUserInputPlural('');
+        setAnswerState('waiting');
+      }, 3000);
+    }
+  }, [answerState, setCardsToTest, setMessage, setUserInputPlural, setAnswerState]);
+
   const handleSubmit = () => {
     if (userInputPlural.trim() === '') {
       setAnswerState('skipped');
       return;
     }
+    const isCorrect = evalPlural(userInputPlural, cardsToTest[0].plural);
+    setAnswerState(isCorrect ? 'correct' : 'incorrect');
   };
 
-  const evalPlural = (userInputPlural: string, targetPlural: string) => {};
+  const evalPlural = (
+    userInputPlural: string,
+    targetPlural: string,
+  ): boolean => {
+    setMessage('');
+    const correctAnswer = targetPlural.toLowerCase().split(' ').slice(1).join();
+
+    const userAnswer = userInputPlural.trim().toLowerCase();
+
+    // don't count as wrong, but if user doesn't cap first letter, put a note in hint box reminding them.
+    const initial = userInputPlural.trim().charAt(0);
+    if (initial !== initial.toUpperCase()) {
+      setMessage('Remember: German nouns begin with an uppercase letter.');
+    }
+    if (userAnswer === correctAnswer) return true;
+    return false;
+  };
+
   return (
     <>
       <h2>German Plural Mini Test</h2>
@@ -95,6 +137,11 @@ const PluralGame = ({ words, handleSetMode }: MiniGameProps) => {
               </div>
             </div>
           </div>
+          <p>
+            Look out for Greek or Latin exceptions like das Vis
+            <span className={classes.highlight}>a</span> / die Vis
+            <span className={classes.highlight}>um</span>.
+          </p>
           <p>When you're ready, click "Go!".</p>
           <button
             className={classes.startBtn}
@@ -110,20 +157,30 @@ const PluralGame = ({ words, handleSetMode }: MiniGameProps) => {
       {testState === 'active' && cardsToTest.length > 0 && (
         <section className={classes.pluralGame}>
           <div className={classes.wordsContainer}>
-            <h3>English: the {cardsToTest[0].eng}</h3>
-            <span>
-              German: {cardsToTest[0].article} {cardsToTest[0].noun}, die{' '}
-            </span>
-            <input
-              type='text'
-              id='plural'
-              value={userInputPlural}
-              placeholder='plural form'
-              onChange={(e) => setUserInputPlural(e.target.value)}
-            />
-            <button onClick={handleSubmit}>Check</button>
+            <div className={classes.originWord}>
+              <h3>English: the {cardsToTest[0].eng}</h3>
+            </div>
+            <div className={classes.targetWord}>
+              <p className={classes.message}>{message}</p>
+              <span>
+                German: {cardsToTest[0].article} {cardsToTest[0].noun}, die{' '}
+              </span>
+              <input
+                type='text'
+                id='plural'
+                value={userInputPlural}
+                placeholder='plural form'
+                onChange={(e) => setUserInputPlural(e.target.value)}
+                className={`
+                  ${classes.pluralAnswer} 
+                    ${classes[answerState]}
+                  `.trim()}
+              />
+              <button disabled={answerState !== 'waiting'} onClick={handleSubmit}>
+  {userInputPlural.trim() === '' ? 'Skip' : 'Check'}
+</button>
+            </div>
           </div>
-          <div className={classes.message}></div>
         </section>
       )}
     </>

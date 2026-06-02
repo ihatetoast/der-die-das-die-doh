@@ -2315,7 +2315,7 @@ export const VOCAB_1: VocabEntry[] = [
     noun: 'Elternteil',
     plural: 'die Elternteile',
     weakMasculine: false,
-    notes: {},
+    notes: {miscNote: "'Parents' is usually just 'die Eltern' and individually, one would use 'mother' or 'father'."},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: '' },
       {

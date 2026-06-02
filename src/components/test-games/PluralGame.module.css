@@ -18,3 +18,77 @@
 .highlight {
   color: var(--red);
 }
+
+.wordsContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.originWord {
+  display: flex;
+  align-items: center;
+}
+
+.hint {
+  height: 2rem;
+  margin-bottom: 1rem;
+}
+
+
+.pluralAnswer {
+  display: inline-flex;
+  align-items: flex-end;
+  min-height: 2rem;
+    appearance: none;
+  font-size: 1rem;
+  field-sizing: content; /* to allow it to grow if we get a large german word*/
+  min-width: 10rem;
+  font-family: inherit;
+  padding: 0.25em 0.5em;
+  background-color: #fff;
+  border: 2px solid var(--input-border);
+  border-radius: 4px;
+}
+
+.pluralAnswer.waiting {
+  border: 3px solid var(--primary);
+}
+
+.pluralAnswer.skipped {
+  border: 3px solid var(--pink);
+}
+
+.pluralAnswer.incorrect {
+  border: 3px solid var(--red);
+}
+
+.pluralAnswer.correct {
+  border: 3px solid var(--accent);
+}
+
+.message {
+    height: 2rem;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 520px) {
+  .originWord {
+    justify-content: center;
+  }
+
+  .targetWord {
+    margin-left: 10%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .wordsContainer {
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .originWord {
+    margin-left: 10%;
+  }
+  .targetWord {
+    margin-left: 0;
+  }
+}

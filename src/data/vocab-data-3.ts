@@ -1069,7 +1069,9 @@ export const VOCAB_3: VocabEntry[] = [
     noun: 'Museum',
     plural: 'die Museen',
     weakMasculine: false,
-    notes: {},
+    notes: {
+      pluralNote:"From Latin, so irregular plural ending."
+    },
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
       { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },

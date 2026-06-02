@@ -1708,11 +1708,11 @@ export const VOCAB_4: VocabEntry[] = [
   {
     id: 1619,
     eng: 'genius',
-    article: 'das',
+    article: 'der',
     noun: 'Genie',
     plural: 'die Genies',
     weakMasculine: false,
-    notes: {},
+    notes: {pluralNote:"From Latin, so irregular plural ending."},
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
       { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
