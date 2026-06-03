@@ -10,10 +10,20 @@ export interface VocabEntry {
   article: 'der' | 'die' | 'das';
   noun: string;
   plural: string;
+hasNoPlural: boolean; // for things like blood. and remove notes about no plural
   weakMasculine: boolean;
-  notes: Record<string, string> ;
+  notes: NotesType;
   sentences: Sentence[];
   completed: boolean;
+}
+
+// fill in with others until red squiggles disappear
+type NotesType = {
+    otherEngDefinitions?: string;
+  otherGerDefinitions?: string;
+  pluralNote?: string;
+  miscNote?: string;
+  genderNote?: string;
 }
 
 export type ModeProp = 'practice' | 'test' | 'home';
