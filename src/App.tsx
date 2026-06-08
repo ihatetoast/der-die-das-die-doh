@@ -11,7 +11,7 @@ import TestBoard from './components/TestBoard.tsx';
 const TEST_COMPLETE = true; // remove when test board is done
 
 // test file with small rep of types of data
-import {TEST_VOCAB} from './data/vocab-test-data.ts';
+import {TEST_VOCAB} from './data/vocab-test-data.ts'; // dev with this. remove for major testing. 
 
 function App() {
   const [mode, setMode] = useState<ModeProp>('home');

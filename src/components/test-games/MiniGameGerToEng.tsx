@@ -2,10 +2,10 @@ import { useEffect } from 'react';
 import { useFlashcardLogic } from '../../hooks/useFlashcardLogic.ts';
 import GameOver from './GameOver.tsx';
 
-import classes from './MiniGame.module.css';
-import { MiniGameProps } from '../../types.ts';
+import classes from './Game.module.css';
+import { GameProps } from '../../types.ts';
 
-const MiniGameGerToEng = ({ words, handleSetMode }: MiniGameProps) => {
+const MiniGameGerToEng = ({ words, handleSetMode }: GameProps) => {
   const {
     cardsToTest,
     setCardsToTest,
@@ -61,7 +61,7 @@ const MiniGameGerToEng = ({ words, handleSetMode }: MiniGameProps) => {
         setAnswerState('waiting');
       }, 3000);
     }
-  }, [answerState, hintState]);
+  }, [answerState, setAnswerState, hintState, setHintState, setUserInputNoun, setMessage]);
 
   const handleSubmit = () => {
     if (userInputNoun.trim() === '') {
@@ -119,7 +119,7 @@ const MiniGameGerToEng = ({ words, handleSetMode }: MiniGameProps) => {
         />
       )}
       {testState === 'active' && cardsToTest.length > 0 && (
-        <section className={classes.engGerMiniGame}>
+        <section className={classes.gameContainer}>
           <div className={classes.wordsContainer}>
             <div className={classes.originWord}>
               <h3>

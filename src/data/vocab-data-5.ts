@@ -7,6 +7,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'das',
     noun: 'Jahrhundert',
     plural: 'die Jahrhunderte',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -21,6 +22,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'das',
     noun: 'Quartal',
     plural: 'die Quartale',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -35,6 +37,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'das',
     noun: 'Semester',
     plural: 'die Semester',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -49,6 +52,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Abteilung',
     plural: 'die Abteilungen',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -63,6 +67,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Apotheke',
     plural: 'die Apotheken',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -77,6 +82,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Bäckerei',
     plural: 'die Bäckereien',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -91,6 +97,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Klippe',
     plural: 'die Klippen',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -105,6 +112,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Tastatur',
     plural: 'die Tastaturen',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -119,6 +127,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Maus',
     plural: 'die Mäuse',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -133,6 +142,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'das',
     noun: 'Tablet',
     plural: 'die Tablets',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -147,6 +157,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Fernseher',
     plural: 'die Fernseher',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -161,6 +172,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Konsole',
     plural: 'die Konsolen',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -175,6 +187,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'das',
     noun: 'Ladegerät',
     plural: 'die Ladegeräte',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -189,6 +202,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Webseite',
     plural: 'die Webseiten',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -203,6 +217,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'das',
     noun: 'Konto',
     plural: 'die Konten',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -217,6 +232,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'das',
     noun: 'Passwort',
     plural: 'die Passwörter',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -231,6 +247,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Datei',
     plural: 'die Dateien',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -245,6 +262,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Ordner',
     plural: 'die Ordner',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -259,6 +277,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Software',
     plural: 'die Software',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -273,6 +292,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Fußboden',
     plural: 'die Fußböden',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -287,6 +307,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'das',
     noun: 'Wohnzimmer',
     plural: 'die Wohnzimmer',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -301,6 +322,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Kleiderschrank',
     plural: 'die Kleiderschränke',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -315,6 +337,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Vorort',
     plural: 'die Vororte',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -329,6 +352,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Nachbarschaft',
     plural: 'die Nachbarschaften',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -343,6 +367,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Autobahn',
     plural: 'die Autobahnen',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -357,6 +382,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Gasse',
     plural: 'die Gassen',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -371,6 +397,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Kreisel',
     plural: 'die Kreisel',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -385,6 +412,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Kreuzung',
     plural: 'die Kreuzungen',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -400,6 +428,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Enkel',
     plural: 'die Enkel',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -414,6 +443,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Enkelin',
     plural: 'die Enkelinnen',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -428,6 +458,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Großvater',
     plural: 'die Großväter',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -442,6 +473,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Oma',
     plural: 'die Omas',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -456,6 +488,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Bauch',
     plural: 'die Bäuche',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -470,6 +503,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Schenkel',
     plural: 'die Schenkel',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -484,6 +518,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Hintern',
     plural: 'die Hintern',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -498,6 +533,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'das',
     noun: 'Kinn',
     plural: 'die Kinne',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -512,6 +548,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Stirn',
     plural: 'die Stirnen',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -527,6 +564,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Gabel',
     plural: 'die Gabeln',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -541,6 +579,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Wein',
     plural: 'die Weine',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -555,6 +594,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'das',
     noun: 'Gericht',
     plural: 'die Gerichte',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -569,6 +609,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Vorspeise',
     plural: 'die Vorspeisen',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -583,6 +624,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Nachtisch',
     plural: 'die Nachtische',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -597,6 +639,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Krankenschwester',
     plural: 'die Krankenschwestern',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -611,6 +654,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Richter',
     plural: 'die Richter',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -625,6 +669,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Bedienung',
     plural: 'die Bedienungen',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -639,6 +684,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Wissenschaftler',
     plural: 'die Wissenschaftler',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -653,6 +699,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Pullover',
     plural: 'die Pullover',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -667,6 +714,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'das',
     noun: 'T-Shirt',
     plural: 'die T-Shirts',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -681,6 +729,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Socke',
     plural: 'die Socken',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -695,6 +744,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Schuh',
     plural: 'die Schuhe',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -709,6 +759,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Chef',
     plural: 'die Chefs',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -724,6 +775,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'das',
     noun: 'Gehalt',
     plural: 'die Gehälter',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -738,6 +790,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Kunde',
     plural: 'die Kunden',
+    hasNoPlural: false,
     weakMasculine: true,
     notes: {},
     sentences: [
@@ -752,6 +805,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Arbeitgeber',
     plural: 'die Arbeitgeber',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -766,6 +820,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Arbeitnehmer',
     plural: 'die Arbeitnehmer',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -780,6 +835,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Drucker',
     plural: 'die Drucker',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -794,6 +850,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Krawatte',
     plural: 'die Krawatten',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -808,6 +865,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Beruf',
     plural: 'die Berufe',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -822,6 +880,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Karriere',
     plural: 'die Karrieren',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -836,6 +895,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Arbeiter',
     plural: 'die Arbeiter',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -850,6 +910,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Kredit',
     plural: 'die Kredite',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -864,6 +925,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Briefumschlag',
     plural: 'die Briefumschläge',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -878,6 +940,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Zahlung',
     plural: 'die Zahlungen',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -892,6 +955,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Vertrag',
     plural: 'die Verträge',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -907,24 +971,37 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Dienstleistung',
     plural: 'die Dienstleistungen',
+    hasNoPlural: false,
     weakMasculine: false,
-    notes: {miscNote: 'Broader term to encompass a variety of services (Dienst/service + Leistung/performance.'},
+    notes: {
+      miscNote:
+        'Broader term to encompass a variety of services (Dienst/service + Leistung/performance.',
+    },
     sentences: [
-      { de: 'Unser Unternehmen bietet verschiedene Dienstleistungen an, wie zum Beispiel IT-Beratung und Buchhaltung', en: 'Our company offers various services, such as IT consulting and accounting.', case: 'nom' },
+      {
+        de: 'Unser Unternehmen bietet verschiedene Dienstleistungen an, wie zum Beispiel IT-Beratung und Buchhaltung',
+        en: 'Our company offers various services, such as IT consulting and accounting.',
+        case: 'nom',
+      },
       { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
     completed: false,
   },
-    {
+  {
     id: 2032,
     eng: 'service',
     article: 'der',
     noun: 'Dienst',
     plural: 'die Dienste',
+    hasNoPlural: false,
     weakMasculine: false,
-    notes: {miscNote: 'Dienst means service in the sense of duty or obligation, such as military service.'},
+    notes: {
+      miscNote:
+        'Dienst means service in the sense of duty or obligation, such as military service.',
+    },
     sentences: [
-      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
+      { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
+      { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
     completed: false,
   },
@@ -934,6 +1011,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Termin',
     plural: 'die Termine',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -948,6 +1026,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Gewinn',
     plural: 'die Gewinne',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -962,6 +1041,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Verlust',
     plural: 'die Verluste',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -976,6 +1056,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Umsatz',
     plural: 'die Umsätze',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -990,6 +1071,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Bewerbung',
     plural: 'die Bewerbungen',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1004,6 +1086,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Währung',
     plural: 'die Währungen',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1018,6 +1101,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Lebenslauf',
     plural: 'die Lebensläufe',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1032,6 +1116,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'das',
     noun: 'Wachstum',
     plural: 'REPLACE',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1046,6 +1131,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Möglichkeit',
     plural: 'die Möglichkeiten',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1060,6 +1146,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'das',
     noun: 'Nashorn',
     plural: 'die Nashörner',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1074,6 +1161,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'das',
     noun: 'Flusspferd',
     plural: 'die Flusspferde',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1088,6 +1176,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'das',
     noun: 'Krokodil',
     plural: 'die Krokodile',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1102,6 +1191,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'das',
     noun: 'Kaninchen',
     plural: 'die Kaninchen',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1116,6 +1206,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'das',
     noun: 'Kamel',
     plural: 'die Kamele',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1130,6 +1221,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'das',
     noun: 'Hühnchen',
     plural: 'die Hühnchen',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1144,6 +1236,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Wolf',
     plural: 'die Wölfe',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1158,6 +1251,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Wal',
     plural: 'die Wale',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1172,6 +1266,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Skorpion',
     plural: 'die Skorpione',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1186,6 +1281,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Schwan',
     plural: 'die Schwäne',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1200,6 +1296,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Pinguin',
     plural: 'die Pinguine',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1214,6 +1311,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Papagei',
     plural: 'die Papageien',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1228,6 +1326,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Käfer',
     plural: 'die Käfer',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1242,6 +1341,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Igel',
     plural: 'die Igel',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1256,6 +1356,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Hirsch',
     plural: 'die Hirsche',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1270,6 +1371,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Hase',
     plural: 'die Hasen',
+    hasNoPlural: false,
     weakMasculine: true,
     notes: {},
     sentences: [
@@ -1284,6 +1386,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Hamster',
     plural: 'die Hamster',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1298,6 +1401,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Hai',
     plural: 'die Haie',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1312,6 +1416,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Hahn',
     plural: 'die Hähne',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1326,6 +1431,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Esel',
     plural: 'die Esel',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1340,6 +1446,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Eisbär',
     plural: 'die Eisbären',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1354,6 +1461,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Delfin',
     plural: 'die Delfine',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1368,6 +1476,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Dachs',
     plural: 'die Dachse',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1382,6 +1491,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Bär',
     plural: 'die Bären',
+    hasNoPlural: false,
     weakMasculine: true,
     notes: {},
     sentences: [
@@ -1396,6 +1506,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Schlange',
     plural: 'die Schlangen',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1410,6 +1521,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Ratte',
     plural: 'die Ratten',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1424,6 +1536,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Qualle',
     plural: 'die Quallen',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1438,6 +1551,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Kuh',
     plural: 'die Kühe',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1452,6 +1566,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Krabbe',
     plural: 'die Krabben',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1466,6 +1581,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Giraffe',
     plural: 'die Giraffen',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1480,6 +1596,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Fledermaus',
     plural: 'die Fledermäuse',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1494,6 +1611,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Ente',
     plural: 'die Enten',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1508,6 +1626,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'das',
     noun: 'Zebra',
     plural: 'die Zebras',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1522,6 +1641,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Januar',
     plural: 'die Januare',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1536,6 +1656,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Februar',
     plural: 'die Februare',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1550,6 +1671,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'März',
     plural: 'die Märze',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1564,6 +1686,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'April',
     plural: 'die Aprile',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1578,6 +1701,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Mai',
     plural: 'die Maie',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1592,6 +1716,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Juni',
     plural: 'die Junis',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1606,6 +1731,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Juli',
     plural: 'die Julis',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1620,6 +1746,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'August',
     plural: 'die Augusts',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1634,6 +1761,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'September',
     plural: 'die September',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1648,6 +1776,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Oktober',
     plural: 'die Oktober',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1662,6 +1791,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'November',
     plural: 'die November',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1676,6 +1806,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Dezember',
     plural: 'die Dezember',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1690,6 +1821,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Montag',
     plural: 'die Montage',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1704,6 +1836,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Dienstag',
     plural: 'die Dienstage',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1718,6 +1851,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Mittwoch',
     plural: 'die Mittwoche',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1732,6 +1866,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Donnerstag',
     plural: 'die Donnerstage',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1746,6 +1881,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Freitag',
     plural: 'die Freitage',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1760,6 +1896,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Samstag',
     plural: 'die Samstage',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1774,6 +1911,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Sonntag',
     plural: 'die Sonntage',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1788,6 +1926,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Eltern',
     plural: 'die Eltern',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1802,6 +1941,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Opa',
     plural: 'die Opas',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1816,6 +1956,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Enkel',
     plural: 'die Enkel',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1830,6 +1971,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Enkelsohn',
     plural: 'die Enkelsöhne',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1844,6 +1986,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Enkeltochter',
     plural: 'die Enkeltöchter',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1858,6 +2001,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Cousin',
     plural: 'die Cousins',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1872,6 +2016,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Cousine',
     plural: 'die Cousinen',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1886,6 +2031,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Neffe',
     plural: 'die Neffen',
+    hasNoPlural: false,
     weakMasculine: true,
     notes: {},
     sentences: [
@@ -1900,6 +2046,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Nichte',
     plural: 'die Nichten',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1914,6 +2061,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Verlobte',
     plural: 'die Verlobten',
+    hasNoPlural: false,
     weakMasculine: true,
     notes: {},
     sentences: [
@@ -1928,6 +2076,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Verlobte',
     plural: 'die Verlobten',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1942,6 +2091,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Schwiegervater',
     plural: 'die Schwiegerväter',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1956,6 +2106,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Schwiegermutter',
     plural: 'die Schwiegermütter',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1970,6 +2121,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Schwiegersohn',
     plural: 'die Schwiegersöhne',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1984,6 +2136,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Schwiegertochter',
     plural: 'die Schwiegertöchter',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -1998,6 +2151,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Schwager',
     plural: 'die Schwäger',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -2012,6 +2166,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Schwägerin',
     plural: 'die Schwägerinnen',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -2026,6 +2181,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Brust',
     plural: 'die Brüste',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -2040,8 +2196,9 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'das',
     noun: 'Handgepäck',
     plural: 'no plural',
+    hasNoPlural: true,
     weakMasculine: false,
-    notes: {miscNote: 'Usually means carry-on or hand luggage.'},
+    notes: { miscNote: 'Usually means carry-on or hand luggage.' },
     sentences: [
       {
         de: 'Ich reise nur mit Handgepäck.',
@@ -2062,6 +2219,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Ellenbogen',
     plural: 'die Ellenbogen',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -2077,6 +2235,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Daumen',
     plural: 'die Daumen',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -2091,6 +2250,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Muskel',
     plural: 'die Muskeln',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -2105,6 +2265,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Zeh',
     plural: 'die Zehen',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -2119,6 +2280,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Knöchel',
     plural: 'die Knöchel',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -2133,6 +2295,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Ferse',
     plural: 'die Fersen',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -2147,6 +2310,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Backe',
     plural: 'die Backen',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -2161,6 +2325,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Zunge',
     plural: 'die Zungen',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -2175,6 +2340,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Bart',
     plural: 'die Bärte',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -2189,6 +2355,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Augenbraue',
     plural: 'die Augenbrauen',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -2203,6 +2370,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Kiefer',
     plural: 'die Kiefer',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -2217,6 +2385,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Darm',
     plural: 'die Därme',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -2231,6 +2400,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Lunge',
     plural: 'die Lungen',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -2245,6 +2415,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Leber',
     plural: 'die Lebern',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -2259,6 +2430,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Niere',
     plural: 'die Nieren',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -2273,6 +2445,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Nerv',
     plural: 'die Nerven',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -2287,6 +2460,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Ader',
     plural: 'die Adern',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -2301,6 +2475,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Bote',
     plural: 'die Boten',
+    hasNoPlural: false,
     weakMasculine: true,
     notes: {},
     sentences: [
@@ -2315,6 +2490,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Zeuge',
     plural: 'die Zeugen',
+    hasNoPlural: false,
     weakMasculine: true,
     notes: {},
     sentences: [
@@ -2329,6 +2505,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Beweis',
     plural: 'die Beweise',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -2343,6 +2520,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Betrug',
     plural: 'die Betrügereien',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -2357,6 +2535,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Diebstahl',
     plural: 'die Diebstähle',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -2371,6 +2550,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Raub',
     plural: 'die Raubüberfälle',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -2385,6 +2565,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Schaden',
     plural: 'die Schäden',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -2399,6 +2580,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Unfall',
     plural: 'die Unfälle',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -2413,6 +2595,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Festnahme',
     plural: 'die Festnahmen',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -2427,6 +2610,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Franzose',
     plural: 'die Franzosen',
+    hasNoPlural: false,
     weakMasculine: true,
     notes: {},
     sentences: [
@@ -2441,6 +2625,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Philosoph',
     plural: 'die Philosophen',
+    hasNoPlural: false,
     weakMasculine: true,
     notes: {},
     sentences: [
@@ -2455,6 +2640,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Fürst',
     plural: 'die Fürsten',
+    hasNoPlural: false,
     weakMasculine: true,
     notes: {},
     sentences: [
@@ -2469,6 +2655,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Abflug',
     plural: 'die Abflüge',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -2483,6 +2670,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Flug',
     plural: 'die Flüge',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -2497,6 +2685,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Ausflug',
     plural: 'die Ausflüge',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -2511,6 +2700,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Rückflug',
     plural: 'die Rückflüge',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -2525,6 +2715,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Hinflug',
     plural: 'die Hinflüge',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -2539,6 +2730,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Überflug',
     plural: 'die Überflüge',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -2553,6 +2745,7 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'der',
     noun: 'Rundflug',
     plural: 'die Rundflüge',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -2567,8 +2760,9 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'das',
     noun: 'Kuriosum',
     plural: 'Kuriosa',
+    hasNoPlural: false,
     weakMasculine: false,
-    notes: {pluralNote: 'From Latin, so -um becomes -a in the plural.'},
+    notes: { pluralNote: 'From Latin, so -um becomes -a in the plural.' },
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
       { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
@@ -2581,50 +2775,54 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'das',
     noun: 'Visum',
     plural: 'Visa',
+    hasNoPlural: false,
     weakMasculine: false,
-    notes: {pluralNote: 'From Latin, so -um becomes -a in the plural.'},
+    notes: { pluralNote: 'From Latin, so -um becomes -a in the plural.' },
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
       { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
     completed: false,
   },
-    {
+  {
     id: 2240,
     eng: 'criteria',
     article: 'das',
     noun: 'Kriterium',
     plural: 'Kriteria',
+    hasNoPlural: false,
     weakMasculine: false,
-    notes: {pluralNote: 'From Latin, so -um becomes -a in the plural.'},
+    notes: { pluralNote: 'From Latin, so -um becomes -a in the plural.' },
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
       { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
     completed: false,
   },
-    {
+  {
     id: 2241,
     eng: 'maximum',
     article: 'das',
     noun: 'Maximum',
     plural: 'Maxima',
+    hasNoPlural: false,
     weakMasculine: false,
-    notes: {pluralNote: 'From Latin, so -um becomes -a in the plural.'},
+    notes: { pluralNote: 'From Latin, so -um becomes -a in the plural.' },
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
       { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
     completed: false,
   },
-   {
+  {
     id: 2242,
     eng: 'minimum',
     article: 'das',
     noun: 'Minimum',
     plural: 'Minima',
+    hasNoPlural: false,
     weakMasculine: false,
-    notes: {pluralNote: 'From Latin, so -um becomes -a in the plural.'},
+    notes: { pluralNote: 'From Latin, so -um becomes -a in the plural.' },
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
       { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
@@ -2637,8 +2835,9 @@ export const VOCAB_5: VocabEntry[] = [
     article: 'die',
     noun: 'Firma',
     plural: 'Firmen',
+    hasNoPlural: false,
     weakMasculine: false,
-    notes: {pluralNote: 'From Latin, so irregular plural.'},
+    notes: { pluralNote: 'From Latin, so irregular plural.' },
     sentences: [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
       { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },

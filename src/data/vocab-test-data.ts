@@ -7,6 +7,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     article: 'die',
     noun: 'Zeit',
     plural: 'die Zeiten',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {
       otherEngDefinitions: 'term, period',
@@ -33,6 +34,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     article: 'die',
     noun: 'Hand',
     plural: 'die Hände',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -55,6 +57,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     article: 'der',
     noun: 'Tag',
     plural: 'die Tage',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {},
     sentences: [
@@ -77,6 +80,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     article: 'der',
     noun: 'Junge',
     plural: 'die Jungen',
+    hasNoPlural: false,
     weakMasculine: true,
     notes: {
       miscNote:
@@ -102,6 +106,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     article: 'der',
     noun: 'Moment',
     plural: 'die Momente',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: { genderNote: 'Words ending in -ent are often masculine.' },
     sentences: [
@@ -125,12 +130,13 @@ export const TEST_VOCAB: VocabEntry[] = [
     article: 'das',
     noun: 'Wasser',
     plural: 'die Wasser',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {
       miscNote:
         'Other words: Abwasser (effluent), Badewasser (bathw water), Mineralwasser (mineral water).',
       pluralNote:
-        'usually uncountable, but when referring to different water types, the plural is used.',
+        'Usually uncountable, but when referring to different waters or water types, the plural is used. For Example: Die Wasser des Rheins und der Mosel fließen im Frühjahr besonders stark zusammen.',
     },
     sentences: [
       { de: 'Das Wasser kocht.', en: "The water's boiling.", case: 'nom' },
@@ -148,6 +154,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     article: 'das',
     noun: 'Licht',
     plural: 'die Lichter',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {
       miscNote:
@@ -172,6 +179,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     article: 'der',
     noun: 'Hafen',
     plural: 'die Häfen',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {
       otherEngDefinitions: 'harbor, port',
@@ -198,6 +206,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     article: 'der',
     noun: 'Typ',
     plural: 'die Typen',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {
       otherGerDefinitions: 'der Kerl',
@@ -223,6 +232,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     article: 'der',
     noun: 'Kerl',
     plural: 'die Kerle',
+    hasNoPlural: false,
     weakMasculine: false,
     notes: {
       otherEngDefinitions: 'guy, fellow, bloke',
@@ -239,6 +249,48 @@ export const TEST_VOCAB: VocabEntry[] = [
       {
         de: 'Ich kenne die Kerle alle.',
         en: 'I know all those dudes.',
+        case: 'acc',
+      },
+    ],
+    completed: true,
+  },
+    {
+    id: 100000104,
+    eng: 'blood',
+    article: 'das',
+    noun: 'Blut',
+    plural: 'no plural',
+    hasNoPlural: true,
+    weakMasculine: false,
+    notes: {pluralNote: "There is no plural"},
+    sentences: [
+      { de: 'Ist das Blut?', en: 'Is that blood?', case: 'nom' },
+      {
+        de: 'Das Lügen liegt ihm im (in dem) Blut.',
+        en: 'Lying is second nature to him.',
+        case: 'dat',
+      },
+    ],
+    completed: true,
+  },
+    {
+    id: 1000002188,
+    eng: 'luggage',
+    article: 'das',
+    noun: 'Handgepäck',
+    plural: 'no plural',
+    hasNoPlural: true,
+    weakMasculine: false,
+    notes: {miscNote: 'Usually means carry-on or hand luggage.'},
+    sentences: [
+      {
+        de: 'Ich reise nur mit Handgepäck.',
+        en: 'I only travel with carry-on luggage.',
+        case: 'dat',
+      },
+      {
+        de: 'Sie hatte sehr viel Handgepäck.',
+        en: 'She had a lot of carry-on luggage.',
         case: 'acc',
       },
     ],

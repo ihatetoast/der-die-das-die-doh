@@ -1,16 +1,11 @@
 import { useState, useEffect } from 'react';
-import {
-  VocabEntry,
-  MiniGameProps,
-  GameState,
-  AnswerState,
-} from '../../types.ts';
+import { GameProps } from '../../types.ts';
 import { useFlashcardLogic } from '../../hooks/useFlashcardLogic.ts';
 import classes from './PluralGame.module.css';
 
 import GameOver from './GameOver.tsx';
 
-const PluralGame = ({ words, handleSetMode }: MiniGameProps) => {
+const PluralGame = ({ words, handleSetMode }: GameProps) => {
   const {
     cardsToTest,
     setCardsToTest,
@@ -22,7 +17,7 @@ const PluralGame = ({ words, handleSetMode }: MiniGameProps) => {
     setMessage,
   } = useFlashcardLogic(words, 'plural');
 
-  // const [message, setMessage] = useState<string>(''); 
+  // const [message, setMessage] = useState<string>('');
   const [userInputPlural, setUserInputPlural] = useState<string>('');
 
   // pause for style change.
@@ -39,7 +34,13 @@ const PluralGame = ({ words, handleSetMode }: MiniGameProps) => {
         setAnswerState('waiting');
       }, 3000);
     }
-  }, [answerState, setCardsToTest, setMessage, setUserInputPlural, setAnswerState]);
+  }, [
+    answerState,
+    setCardsToTest,
+    setMessage,
+    setUserInputPlural,
+    setAnswerState,
+  ]);
 
   const handleSubmit = () => {
     if (userInputPlural.trim() === '') {
@@ -176,9 +177,12 @@ const PluralGame = ({ words, handleSetMode }: MiniGameProps) => {
                     ${classes[answerState]}
                   `.trim()}
               />
-              <button disabled={answerState !== 'waiting'} onClick={handleSubmit}>
-  {userInputPlural.trim() === '' ? 'Skip' : 'Check'}
-</button>
+              <button
+                disabled={answerState !== 'waiting'}
+                onClick={handleSubmit}
+              >
+                {userInputPlural.trim() === '' ? 'Skip' : 'Check'}
+              </button>
             </div>
           </div>
         </section>

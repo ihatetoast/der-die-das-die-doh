@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
 import { useFlashcardLogic } from '../../hooks/useFlashcardLogic.ts';
-import { VocabEntry } from '../../types.ts';
+import {  ArticleType } from '../../types.ts';
 
 import GameOver from './GameOver.tsx';
 
-import classes from './MiniGame.module.css';
-import { MiniGameProps } from '../../types.ts';
+import classes from './Game.module.css';
+import { GameProps } from '../../types.ts';
 
-const MiniGameEngToGer = ({ words, handleSetMode }: MiniGameProps) => {
+const MiniGameEngToGer = ({ words, handleSetMode }: GameProps) => {
   const {
     cardsToTest,
     setCardsToTest,
@@ -32,7 +32,7 @@ const MiniGameEngToGer = ({ words, handleSetMode }: MiniGameProps) => {
   // }}
 
   const [userInputArticle, setUserInputArticle] = useState<
-    VocabEntry['article'] | null
+    ArticleType | null
   >(null);
   const [articleIsCorrect, setArticleIsCorrect] = useState<boolean | null>(
     null,
@@ -47,7 +47,7 @@ const MiniGameEngToGer = ({ words, handleSetMode }: MiniGameProps) => {
     userInputNoun: string,
     targetWord: string,
     otherDefs?: string,
-  ) => {
+  ):boolean => {
     setMessage(''); // to clear any message re hand v Hand
     const userAnswer = userInputNoun.trim().toLowerCase();
 
@@ -168,7 +168,7 @@ const MiniGameEngToGer = ({ words, handleSetMode }: MiniGameProps) => {
         />
       )}
       {testState === 'active' && cardsToTest.length > 0 && (
-        <section className={classes.engGerMiniGame}>
+        <section className={classes.gameContainer}>
           <div className={classes.wordsContainer}>
             <div className={classes.originWord}>
               <h3> the {cardsToTest[0].eng}</h3>
