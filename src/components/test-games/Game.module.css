@@ -23,7 +23,18 @@
 }
 
 .germanPlural {
-display: inline;
+  display: inline;
+}
+
+.message {
+  height: 2rem;
+  margin-bottom: 1rem;
+}
+.message.correctGer {
+  color: #0052a3;
+}
+.message.incorrectGer {
+  color: var(--red);
 }
 /* end specific to full game:  */
 .hint {

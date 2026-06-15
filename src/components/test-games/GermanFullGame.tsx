@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useFlashcardLogic } from '../../hooks/useFlashcardLogic.ts';
-import {  ArticleType } from '../../types.ts';
+import { ArticleType } from '../../types.ts';
 
 import GameOver from './GameOver.tsx';
 
@@ -27,15 +27,6 @@ const GermanFullGame = ({ words, handleSetMode }: GameProps) => {
 
   const [userInputArticle, setUserInputArticle] = useState<string>('');
   const [userInputPlural, setUserInputPlural] = useState<string>('');
-  const [articleIsCorrect, setArticleIsCorrect] = useState<boolean | null>(
-    null,
-  );
-  const [gerNounIsCorrect, setGerNounIsCorrect] = useState<boolean | null>(
-    null,
-  );
-  const [gerPluralIsCorrect, setGerPluralIsCorrect] = useState<boolean | null>(
-    null,
-  );
 
   const targetWord = cardsToTest[0]?.noun;
   const targetArticle = cardsToTest[0]?.article;
@@ -61,6 +52,9 @@ const GermanFullGame = ({ words, handleSetMode }: GameProps) => {
 
     const initial = userInputNoun.trim().charAt(0);
     if (initial !== initial.toUpperCase()) {
+      // note: this message only seen if everything but the uppercase is correct.
+      // if the user gives der buch... the message will be the correct form and not
+      // the spelling/capitalization note
       setMessage('Remember: German nouns begin with an uppercase letter.');
     }
     // to lower case for both to account for sloppy NOuns or crazy sHift keys
@@ -73,7 +67,7 @@ const GermanFullGame = ({ words, handleSetMode }: GameProps) => {
         setMessage(
           `"${userAnswer}" is also valid, but we were looking for "${targetWord}" this time.`,
         );
-        // allow. remove from deck
+        // allow. remove from deck, don't worry about plural
         return true;
       }
     }
@@ -83,7 +77,6 @@ const GermanFullGame = ({ words, handleSetMode }: GameProps) => {
   const evalAnswerPlural = (
     userInputPlural: string,
     targetPlural: string,
-    otherDefs?: string,
   ): boolean => {
     setMessage('');
     const correctAnswer = targetPlural.toLowerCase().split(' ').slice(1).join();
@@ -93,17 +86,14 @@ const GermanFullGame = ({ words, handleSetMode }: GameProps) => {
       setMessage('Remember: German nouns begin with an uppercase letter.');
     }
     if (userAnswer === correctAnswer) return true;
-    if (otherDefs) {
-      // check if the user's noun matched one of these. We don't have a plural set up for that
-      // just a message "We were looking for 'thisWord', but 'thatWord' is also a valid answer"
-      // and count as correct, ignore the plural and move on?
-      return true;
-    }
     return false;
   };
 
   useEffect(() => {
     if (answerState === 'incorrect' || answerState === 'correct') {
+      const nounPlural = targetPlural.split(' ').slice(1).join();
+      const feedbackMsg = `${targetArticle} ${targetWord}, die ${nounPlural}`;
+      setMessage(feedbackMsg);
       setTimeout(() => {
         if (answerState === 'correct') {
           setCardsToTest((prev) => prev.slice(1));
@@ -115,10 +105,9 @@ const GermanFullGame = ({ words, handleSetMode }: GameProps) => {
         setUserInputNoun('');
         setUserInputPlural('');
         setAnswerState('waiting');
-        setArticleIsCorrect(null);
-        setGerNounIsCorrect(null);
-        setGerPluralIsCorrect(null);
       }, 3000);
+    } else if (answerState === 'skipped') {
+      setMessage('');
     }
   }, [
     answerState,
@@ -128,24 +117,21 @@ const GermanFullGame = ({ words, handleSetMode }: GameProps) => {
     setUserInputNoun,
     setUserInputArticle,
     setUserInputPlural,
+    targetPlural,
+    targetArticle,
+    targetWord,
   ]);
 
+  const allEmpty =
+    userInputNoun.trim() === '' &&
+    userInputArticle === '' &&
+    userInputPlural.trim() === '';
+
   const handleSubmit = () => {
-    // all empty
-    if (
-      userInputNoun.trim() === '' &&
-      userInputArticle === null &&
-      userInputPlural.trim() === ''
-    ) {
+    if (allEmpty) {
       setAnswerState('skipped');
       return;
     }
-
-    // if not all empty but just one is done, count as incorrect.
-    // for noun and plural, give the correct ans in message before moving on
-    // not for article. they have 1/3 chance to get that, but noun can go on forever.
-
-    // todo: work on how to best handle this.
 
     const otherGerDefs = cardsToTest[0].notes.otherGerDefinitions;
 
@@ -155,30 +141,12 @@ const GermanFullGame = ({ words, handleSetMode }: GameProps) => {
       otherGerDefs,
     );
     const articleRight = evalAnswerArticle(userInputArticle, targetArticle);
-    const pluralRight = evalAnswerPlural(
-      userInputPlural,
-      targetPlural,
-      otherGerDefs,
-    );
+    const pluralRight = evalAnswerPlural(userInputPlural, targetPlural);
 
     const isCorrect = articleRight && nounRight && pluralRight;
-    setArticleIsCorrect(articleRight);
-    setGerNounIsCorrect(nounRight);
-    setGerPluralIsCorrect(pluralRight);
-
     setAnswerState(isCorrect ? 'correct' : 'incorrect');
   };
 
-  // structure:
-  // English: the Book
-  // German: [ das ] [ Buch ], die [ Bücher ]
-  // all input fields. message for buch v Buch / bücher v Bücher
-  // no hints. this is the test, while the others are quizzes.
-
-  const allEmpty =
-    userInputNoun.trim() === '' &&
-    userInputArticle === '' &&
-    userInputPlural.trim() === '';
   return (
     <>
       <h2>English to German Test</h2>
@@ -190,7 +158,8 @@ const GermanFullGame = ({ words, handleSetMode }: GameProps) => {
           </p>
           <p>
             Test is over when all nouns were answered with the correct article,
-            translation, and plural. There are no hints in this test.
+            translation, and plural. Correct answers remove the card (noun) from
+            the deck; incorrect and skipped answers are returned.
           </p>
           <p>
             Note: for this app, please use the correct umlaut vowel and not the
@@ -215,7 +184,14 @@ const GermanFullGame = ({ words, handleSetMode }: GameProps) => {
           </div>
           <div className={classes.wordsContainer}>
             <div className={classes.germanAnswers}>
-              <p className={classes.hint}>{message}</p>
+              <p
+                className={`
+                  ${classes.message} 
+                  ${answerState === 'correct' ? classes.correctGer : ''}
+                  ${answerState === 'incorrect' ? classes.incorrectGer : ''}`.trim()}
+              >
+                {message}
+              </p>
 
               <input
                 type='text'
@@ -224,11 +200,7 @@ const GermanFullGame = ({ words, handleSetMode }: GameProps) => {
                 value={userInputArticle}
                 placeholder='ex: das'
                 onChange={(e) => setUserInputArticle(e.target.value)}
-                className={`
-                  ${classes.articleAnswer} 
-                    ${articleIsCorrect ? classes.correctGer : ''}
-                    ${articleIsCorrect === false ? classes.incorrectGer : ''}
-                  `.trim()}
+                className={classes.articleAnswer}
               />
               <input
                 type='text'
@@ -236,25 +208,20 @@ const GermanFullGame = ({ words, handleSetMode }: GameProps) => {
                 value={userInputNoun}
                 placeholder='ex: Buch'
                 onChange={(e) => setUserInputNoun(e.target.value)}
-                className={`
-                  ${classes.nounAnswer} 
-                    ${gerNounIsCorrect ? classes.correctGer : ''}
-                    ${gerNounIsCorrect === false ? classes.incorrectGer : ''}
-                  `.trim()}
+                className={classes.nounAnswer}
               />
               <div className={classes.germanPlural}>
                 <span className={classes.pluralArticle}>die</span>
                 <input
                   type='text'
                   id='plural'
-                  value={userInputPlural}
+                  value={
+                    cardsToTest[0]?.hasNoPlural ? 'no plural' : userInputPlural
+                  }
                   placeholder='ex: Bücher'
+                  disabled={cardsToTest[0]?.hasNoPlural}
                   onChange={(e) => setUserInputPlural(e.target.value)}
-                  className={`
-                  ${classes.pluralAnswer} 
-                    ${gerPluralIsCorrect ? classes.correctGer : ''}
-                    ${gerPluralIsCorrect === false ? classes.incorrectGer : ''}
-                  `.trim()}
+                  className={classes.pluralAnswer}
                 />
               </div>
 
