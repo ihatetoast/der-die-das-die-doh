@@ -11,7 +11,7 @@ import TestBoard from './components/TestBoard.tsx';
 const TEST_COMPLETE = true; // remove when test board is done
 
 // test file with small rep of types of data
-import {TEST_VOCAB} from './data/vocab-test-data.ts'; // dev with this. remove for major testing. 
+import { TEST_VOCAB } from './data/vocab-test-data.ts'; // dev with this. remove for major testing.
 
 function App() {
   const [mode, setMode] = useState<ModeProp>('home');
@@ -19,7 +19,7 @@ function App() {
   const [deckSize, setDeckSize] = useState<DeckSize | null>(null);
   const [activeDeck, setActiveDeck] = useState<VocabEntry[]>([]);
   const [cardsReviewed, setCardsReviewed] = useState<VocabEntry[]>([]);
-  const [testType, setTestType] = useState<TestType | null>(null)
+  const [testType, setTestType] = useState<TestType | null>(null);
   const showBoards = mode !== 'home';
   const deckTooSmall = allShuffledDeck.length < 5;
 
@@ -34,22 +34,30 @@ function App() {
       setActiveDeck([]);
       setCardsReviewed([]);
       setDeckSize(null);
-      setTestType(null)
+      setTestType(null);
     }
     setMode(mode);
   };
 
   // this has one job: handle the start. Only called at start or after total refresh.
-  const handleGetInitialActiveDeck = (size: DeckSize) => {
+  const handleGetInitialActiveDeck = (size: DeckSize, testType?: TestType) => {
     setDeckSize(size);
-    const deck = allShuffledDeck.slice(0, size);
+    let deck: VocabEntry[];
+    if (testType === 'weak-masc') {
+      // todo get filter logic here but for red squiggles, just copy/paste
+
+      deck = allShuffledDeck.slice(0, size);
+    } else {
+      deck = allShuffledDeck.slice(0, size);
+    }
+    // const deck = allShuffledDeck.slice(0, size);
     setActiveDeck(deck);
     setCardsReviewed(deck);
   };
 
   const handleGetTestType = (test: TestType) => {
-    setTestType(test)
-  }
+    setTestType(test);
+  };
 
   // this fn is called after the user has gone through a deck. activedeck is totally reset with new words. all cards updated.
   const handleRefillActiveDeck = (size: DeckSize) => {
@@ -82,9 +90,7 @@ function App() {
   }
 
   function shuffleDeck() {
-    const completedNouns = TEST_VOCAB.filter(
-      (noun) => noun.completed === true,
-    );
+    const completedNouns = TEST_VOCAB.filter((noun) => noun.completed === true);
     const shuffled = shuffle(completedNouns);
     setAllShuffledDeck(shuffled);
     // setAllShuffledDeck(shuffled.slice(0, 2)); // to test if i lose all my words.
@@ -108,8 +114,10 @@ function App() {
                 see example sentences and notes about the word.{' '}
               </p>
               {TEST_COMPLETE ? (
-                <p>Choose "Test" to see what you've learned and what you need to
-                  review.</p>
+                <p>
+                  Choose "Test" to see what you've learned and what you need to
+                  review.
+                </p>
               ) : (
                 ``
               )}

@@ -33,8 +33,8 @@ type NotesType = {
 };
 
 export type ModeProp = 'practice' | 'test' | 'home';
-
-export type DeckSize = 5 | 10 | 20;
+// controlling decksize until I have >500 completed: true. egads
+export type DeckSize = 5 | 10 | 20 | 25 | 50;
 
 export type MiniTestType = 'eng-ger-mini' | 'ger-eng-mini';
 export type TestType =
@@ -50,6 +50,7 @@ export type GameState = 'waiting' | 'active' | 'over';
 
 export type HintState = null | 'scrambled' | 'revealed';
 
+export type WeakMascAnswer = 'yes' | 'no' | 'not-masc';
 
 export type GameProps = {
   words: VocabEntry[];

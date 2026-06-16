@@ -2,13 +2,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: .25rem;
   padding: 1rem;
 }
 
 .testGrid {
   display: grid;
-  grid-gap: .6rem;
+  grid-gap: .5rem;
   grid-template-columns: auto;
 }
 
@@ -20,6 +20,11 @@
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   padding: 0.5rem;
+  max-width: 20rem;
+}
+
+.testCard h3 {
+  font-size: 1rem
 }
 
 .gameCardBtnContainer {
@@ -43,16 +48,16 @@
   .testGrid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .testCard h3 {
+  font-size: 1.2rem
+}
 }
 
-@media screen and (min-width:768px) {
-  .testGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+
 
 @media screen and (min-width:1000px) {
   .testGrid {
     grid-template-columns: repeat(3, 1fr);
   }
+
 }

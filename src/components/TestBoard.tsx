@@ -6,7 +6,6 @@ import { VocabEntry } from '../types.ts';
 
 import ArticleGame from './test-games/ArticleGame.tsx';
 import PluralGame from './test-games/PluralGame.tsx';
-import MiniGame from './test-games/MiniGame.tsx';
 import GermanFullGame from './test-games/GermanFullGame.tsx';
 import WeakMascGame from './test-games/WeakMascGame.tsx'
 import MiniGameGerToEng from './test-games/MiniGameGerToEng.tsx';
@@ -15,7 +14,7 @@ import MiniGameEngToGer from './test-games/MiniGameEngToGer.tsx';
 type Props = {
   words: VocabEntry[];
   testType: TestType | null;
-  handleGetInitialActiveDeck: (size: DeckSize) => void;
+  handleGetInitialActiveDeck: (size: DeckSize, test:TestType) => void;
   handleGetTestType: (test: TestType) => void;
   handleSetMode:  (value: ModeProp) => void;
 };
@@ -29,8 +28,9 @@ const TestBoard = ({
   handleGetTestType,
   handleSetMode
 }: Props) => {
+
   const handleTestButtonClick = (size: DeckSize, test: TestType) => {
-    handleGetInitialActiveDeck(size);
+    handleGetInitialActiveDeck(size, test);
     handleGetTestType(test);
   };
 
@@ -43,18 +43,17 @@ const TestBoard = ({
         </>
       )}
       {testType === 'article' && <ArticleGame words={words} handleSetMode={handleSetMode}/>}
-      {testType === 'plural' && <PluralGame words={words} />}
-     
+      {testType === 'plural' && <PluralGame words={words}handleSetMode={handleSetMode}/>}
       {testType === 'ger-eng-mini' && <MiniGameGerToEng words={words} handleSetMode={handleSetMode}/>}
       {testType === 'eng-ger-mini' && <MiniGameEngToGer words={words} handleSetMode={handleSetMode}/>}
-      {testType === 'german-full' && <GermanFullGame words={words} />}
-      {testType === 'weak-masc' && <WeakMascGame words={words} />}
+      {testType === 'german-full' && <GermanFullGame words={words} handleSetMode={handleSetMode}/>}
+      {testType === 'weak-masc' && <WeakMascGame words={words} handleSetMode={handleSetMode}/>}
       {!testType && (
         <section className={classes.testGrid}>
           <article className={classes.testCard}>
             <div>
               <img
-                src='https://picsum.photos/seed/picsum/200'
+                src='https://picsum.photos/seed/picsum/100'
                 alt='replace with screenshot'
               />
             </div>
@@ -85,7 +84,7 @@ const TestBoard = ({
           <article className={classes.testCard}>
             <div>
               <img
-                src='https://picsum.photos/seed/picsum/200'
+                src='https://picsum.photos/seed/picsum/100'
                 alt='replace with screenshot'
               />
             </div>
@@ -115,7 +114,7 @@ const TestBoard = ({
           <article className={classes.testCard}>
             <div>
               <img
-                src='https://picsum.photos/seed/picsum/200'
+                src='https://picsum.photos/seed/picsum/100'
                 alt='replace with screenshot'
               />
             </div>
@@ -145,11 +144,11 @@ const TestBoard = ({
           <article className={classes.testCard}>
             <div>
               <img
-                src='https://picsum.photos/seed/picsum/200'
+                src='https://picsum.photos/seed/picsum/100'
                 alt='replace with screenshot'
               />
             </div>
-            <h3>Plural</h3>
+            <h3>Plural Mini</h3>
             <p>Given the German word, write its plural</p>
             <div className={classes.gameCardBtnContainer}>
               <button
@@ -175,7 +174,7 @@ const TestBoard = ({
           <article className={classes.testCard}>
             <div>
               <img
-                src='https://picsum.photos/seed/picsum/200'
+                src='https://picsum.photos/seed/picsum/100'
                 alt='replace with screenshot'
               />
             </div>
@@ -205,28 +204,28 @@ const TestBoard = ({
           <article className={classes.testCard}>
             <div>
               <img
-                src='https://picsum.photos/seed/picsum/200'
+                src='https://picsum.photos/seed/picsum/100'
                 alt='replace with screenshot'
               />
             </div>
-            <h3>Be Strong with Weak Masculine Words</h3>
-            <p>Decide if the masculine noun is weak or not.</p>
+            <h3>Spot the Weakling: Speed Round</h3>
+            <p>Decide quickly if it's a weak masculine noun.</p>
             <div className={classes.gameCardBtnContainer}>
               <button
                 className={classes.testBtn}
-                onClick={() => handleTestButtonClick(5, 'weak-masc')}
+                onClick={() => handleTestButtonClick(10, 'weak-masc')}
               >
                 5
               </button>{' '}
               <button
                 className={classes.testBtn}
-                onClick={() => handleTestButtonClick(10, 'weak-masc')}
+                onClick={() => handleTestButtonClick(25, 'weak-masc')}
               >
                 10
               </button>{' '}
               <button
                 className={classes.testBtn}
-                onClick={() => handleTestButtonClick(20, 'weak-masc')}
+                onClick={() => handleTestButtonClick(50, 'weak-masc')}
               >
                 20
               </button>

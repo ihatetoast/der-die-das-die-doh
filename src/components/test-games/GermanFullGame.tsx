@@ -127,6 +127,15 @@ const GermanFullGame = ({ words, handleSetMode }: GameProps) => {
     userInputArticle === '' &&
     userInputPlural.trim() === '';
 
+  const handleArticleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value.toLowerCase();
+    setUserInputArticle(value);
+
+    if (['der', 'die', 'das'].includes(value)) {
+      // Auto-focus noun field
+      document.getElementById('word')?.focus();
+    }
+  };
   const handleSubmit = () => {
     if (allEmpty) {
       setAnswerState('skipped');
@@ -197,11 +206,17 @@ const GermanFullGame = ({ words, handleSetMode }: GameProps) => {
                 type='text'
                 autoFocus={testState === 'active'}
                 id='article'
+                list='articles'
                 value={userInputArticle}
                 placeholder='ex: das'
-                onChange={(e) => setUserInputArticle(e.target.value)}
+                onChange={handleArticleChange}
                 className={classes.articleAnswer}
               />
+              <datalist id='articles'>
+                <option>der</option>
+                <option>die</option>
+                <option>das</option>
+              </datalist>
               <input
                 type='text'
                 id='word'

@@ -1,12 +1,10 @@
 import { useState, useEffect } from 'react';
 
-import { VocabEntry, AnswerState, ModeProp, GameState } from '../../types';
+import { VocabEntry, AnswerState, GameState, GameProps } from '../../types';
 
 import classes from './ArticleGame.module.css';
 import Timer from '../Timer';
 import GameOver from './GameOver.tsx';
-
-import { GameProps } from '../../types.ts';
 
 const TIME_TO_GUESS = 5000;
 
@@ -75,7 +73,12 @@ const ArticleGame = ({ words, handleSetMode }: GameProps) => {
             stack.
           </p>
           <p>When you're ready, click "Go!".</p>
-          <button onClick={() => setTestState('active')}>Go!</button>
+          <button
+            className={classes.startBtn}
+            onClick={() => setTestState('active')}
+          >
+            Go!
+          </button>
         </div>
       )}
 
