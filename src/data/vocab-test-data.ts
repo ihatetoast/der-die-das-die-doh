@@ -26,6 +26,7 @@ export const TEST_VOCAB: VocabEntry[] = [
         case: 'gen',
       },
     ],
+    themes: ['time'],
     completed: true,
   },
   {
@@ -49,6 +50,7 @@ export const TEST_VOCAB: VocabEntry[] = [
         case: 'dat',
       },
     ],
+    themes: ['body'],
     completed: true,
   },
   {
@@ -72,6 +74,7 @@ export const TEST_VOCAB: VocabEntry[] = [
         case: 'dat',
       },
     ],
+    themes: ['time'],
     completed: true,
   },
   {
@@ -98,6 +101,7 @@ export const TEST_VOCAB: VocabEntry[] = [
         case: 'acc',
       },
     ],
+    themes: ['people'],
     completed: true,
   },
     {
@@ -121,6 +125,7 @@ export const TEST_VOCAB: VocabEntry[] = [
         case: 'dat',
       },
     ],
+    themes: ['time'],
     completed: true,
   },
 
@@ -146,6 +151,7 @@ export const TEST_VOCAB: VocabEntry[] = [
         case: 'acc',
       },
     ],
+    themes: ['nature', 'food'],
     completed: true,
   },
   {
@@ -172,6 +178,7 @@ export const TEST_VOCAB: VocabEntry[] = [
         case: 'nom',
       },
     ],
+    themes: ['nature', 'science'],
     completed: true,
   },  {
     id: 10000069,
@@ -198,6 +205,7 @@ export const TEST_VOCAB: VocabEntry[] = [
         case: 'gen',
       },
     ],
+    themes: ['transportation'],
     completed: true,
   },
   {
@@ -224,6 +232,7 @@ export const TEST_VOCAB: VocabEntry[] = [
         case: 'dat',
       },
     ],
+    themes: ['people'],
     completed: true,
   },
   {
@@ -252,6 +261,7 @@ export const TEST_VOCAB: VocabEntry[] = [
         case: 'acc',
       },
     ],
+    themes: ['people'],
     completed: true,
   },
     {
@@ -271,6 +281,7 @@ export const TEST_VOCAB: VocabEntry[] = [
         case: 'dat',
       },
     ],
+    themes: ['body', 'hospital'],
     completed: true,
   },
     {
@@ -294,6 +305,7 @@ export const TEST_VOCAB: VocabEntry[] = [
         case: 'acc',
       },
     ],
+    themes: ['misc', 'travel'],
     completed: true,
   },
 ];

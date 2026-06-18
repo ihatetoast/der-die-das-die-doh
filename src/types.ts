@@ -4,6 +4,47 @@ export interface Sentence {
   case: 'nom' | 'acc' | 'dat' | 'gen' | '';
 }
 export type ArticleType = 'der' | 'die' | 'das';
+
+export const THEMES = [
+  'airport',
+  'animals',
+  'art',
+  'body',
+  'buildings',
+  'city',
+  'clothing',
+  'country', // rural farm, not geo political
+  'doctor',
+  'family', // can include pets, marriage, divorce
+  'finance',
+  'food',
+  'home',
+  'hospital',
+  'hotel',
+  'nature',
+  'office',
+  'people',
+  'profession',
+  'personal', // covers grooming, things in one's desk or private things
+  'religion',
+  'restaurant',
+  'school',
+  'science',
+  'shopping',
+  'social',
+  'sport',
+  'time',
+  'transportation',
+  'travel',
+  'vehicles',
+  'weather',
+  'work',
+  'zoo', // exotics. no dog cat. also name for zoo, and also zoo keeper
+  'misc', // remove when a theme is assigned
+] as const;
+
+export type Theme = (typeof THEMES)[number];
+
 export interface VocabEntry {
   id: number;
   eng: string;
@@ -14,6 +55,7 @@ export interface VocabEntry {
   weakMasculine: boolean;
   notes: NotesType;
   sentences: Sentence[];
+  themes: [Theme, ...Theme[]];
   completed: boolean;
   // theme: 'airport' | 'animals' | 'body' | 'house' | 'family' | 'misc';
 }
