@@ -3634,7 +3634,7 @@ export const VOCAB_1: VocabEntry[] = [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
       { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    themes: ['misc'],
+    themes: ['personal'],
     completed: false,
   },
   {
@@ -3650,7 +3650,7 @@ export const VOCAB_1: VocabEntry[] = [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
       { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    themes: ['misc'],
+    themes: ['clothing', 'personal'],
     completed: false,
   },
   {
@@ -3666,7 +3666,7 @@ export const VOCAB_1: VocabEntry[] = [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
       { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    themes: ['misc'],
+    themes: ['food', 'home'],
     completed: false,
   },
   {
@@ -3682,7 +3682,7 @@ export const VOCAB_1: VocabEntry[] = [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
       { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    themes: ['misc'],
+    themes: ['home', 'buildings'],
     completed: false,
   },
   {
@@ -3698,7 +3698,7 @@ export const VOCAB_1: VocabEntry[] = [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
       { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    themes: ['misc'],
+    themes: ['personal', 'doctor', 'hospital'],
     completed: false,
   },
   {
@@ -3714,7 +3714,7 @@ export const VOCAB_1: VocabEntry[] = [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
       { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    themes: ['misc'],
+    themes: ['time', 'personal'],
     completed: false,
   },
   {
@@ -3730,7 +3730,7 @@ export const VOCAB_1: VocabEntry[] = [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
       { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    themes: ['misc'],
+    themes: ['nature'],
     completed: false,
   },
   {
@@ -3762,7 +3762,7 @@ export const VOCAB_1: VocabEntry[] = [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
       { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    themes: ['misc'],
+    themes: ['body'],
     completed: false,
   },
   {
@@ -3794,7 +3794,7 @@ export const VOCAB_1: VocabEntry[] = [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
       { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    themes: ['misc'],
+    themes: ['profession', 'city'],
     completed: false,
   },
   {
@@ -3810,7 +3810,7 @@ export const VOCAB_1: VocabEntry[] = [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
       { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    themes: ['misc'],
+    themes: ['personal'],
     completed: false,
   },
   {
@@ -3826,7 +3826,7 @@ export const VOCAB_1: VocabEntry[] = [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
       { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    themes: ['misc'],
+    themes: ['art', 'nature'],
     completed: false,
   },
   {
@@ -3842,7 +3842,7 @@ export const VOCAB_1: VocabEntry[] = [
       { de: 'SATZ1', en: 'SENTENCE1', case: 'nom' },
       { de: 'SATZ2', en: 'SENTENCE2', case: 'acc' },
     ],
-    themes: ['misc'],
+    themes: ['body'],
     completed: false,
   },
   {

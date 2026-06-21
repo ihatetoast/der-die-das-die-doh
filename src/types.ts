@@ -8,12 +8,12 @@ export type ArticleType = 'der' | 'die' | 'das';
 export const THEMES = [
   'airport',
   'animals',
-  'art',
+  'art', // eventually add music, studio art, theater and
   'body',
   'buildings',
-  'city',
+  'city', // if mostly in a city, then city. 
   'clothing',
-  'country', // rural farm, not geo political
+  'country', // rural farm, not geo political. if mostly rural country, then here and not city
   'doctor',
   'family', // can include pets, marriage, divorce
   'finance',
@@ -29,7 +29,7 @@ export const THEMES = [
   'religion',
   'restaurant',
   'school',
-  'science',
+  'science', // eventually add biology, geology, zoology
   'shopping',
   'social',
   'sport',
