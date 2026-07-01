@@ -1,34 +1,36 @@
-import { DeckSize, TestType, ModeProp } from '../types.ts';
+import { DeckSize, TestType, ModeProp } from "../types.ts";
 
-import classes from './TestBoard.module.css';
+import classes from "./TestBoard.module.css";
 
-import { VocabEntry } from '../types.ts';
+import { VocabEntry } from "../types.ts";
 
-import ArticleGame from './test-games/ArticleGame.tsx';
-import PluralGame from './test-games/PluralGame.tsx';
-import GermanFullGame from './test-games/GermanFullGame.tsx';
-import WeakMascGame from './test-games/WeakMascGame.tsx'
-import MiniGameGerToEng from './test-games/MiniGameGerToEng.tsx';
-import MiniGameEngToGer from './test-games/MiniGameEngToGer.tsx';
+import ArticleGame from "./test-games/ArticleGame.tsx";
+import PluralGame from "./test-games/PluralGame.tsx";
+import GermanFullGame from "./test-games/GermanFullGame.tsx";
+import WeakMascGame from "./test-games/WeakMascGame.tsx";
+import MiniGameGerToEng from "./test-games/MiniGameGerToEng.tsx";
+import MiniGameEngToGer from "./test-games/MiniGameEngToGer.tsx";
+
+import TextCard from "./UI/TextCard.tsx";
 
 type Props = {
   words: VocabEntry[];
   testType: TestType | null;
-  handleGetInitialActiveDeck: (size: DeckSize, test:TestType) => void;
+  handleGetInitialActiveDeck: (size: DeckSize, test: TestType) => void;
   handleGetTestType: (test: TestType) => void;
-  handleSetMode:  (value: ModeProp) => void;
+  handleSetMode: (value: ModeProp) => void;
+  onSessionComplete: () => void;
 };
 
-// ask the user if they want to test on current active deck or all x reviewed
-// replace the picsum images with screenshots of the test. hide the image on mob but show at 700ish
+// to-do:ask the user if they want to test on current active deck or all x reviewed
 const TestBoard = ({
   words,
   testType,
   handleGetInitialActiveDeck,
   handleGetTestType,
-  handleSetMode
+  handleSetMode,
+  onSessionComplete,
 }: Props) => {
-
   const handleTestButtonClick = (size: DeckSize, test: TestType) => {
     handleGetInitialActiveDeck(size, test);
     handleGetTestType(test);
@@ -42,195 +44,97 @@ const TestBoard = ({
           <p>Challenge yourself by taking one of the tests below.</p>
         </>
       )}
-      {testType === 'article' && <ArticleGame words={words} handleSetMode={handleSetMode}/>}
-      {testType === 'plural' && <PluralGame words={words}handleSetMode={handleSetMode}/>}
-      {testType === 'ger-eng-mini' && <MiniGameGerToEng words={words} handleSetMode={handleSetMode}/>}
-      {testType === 'eng-ger-mini' && <MiniGameEngToGer words={words} handleSetMode={handleSetMode}/>}
-      {testType === 'german-full' && <GermanFullGame words={words} handleSetMode={handleSetMode}/>}
-      {testType === 'weak-masc' && <WeakMascGame words={words} handleSetMode={handleSetMode}/>}
+      {testType === "article" && (
+        <ArticleGame
+          words={words}
+          handleSetMode={handleSetMode}
+          onSessionComplete={onSessionComplete}
+        />
+      )}
+      {testType === "plural" && (
+        <PluralGame
+          words={words}
+          handleSetMode={handleSetMode}
+          onSessionComplete={onSessionComplete}
+        />
+      )}
+      {testType === "ger-eng-mini" && (
+        <MiniGameGerToEng
+          words={words}
+          handleSetMode={handleSetMode}
+          onSessionComplete={onSessionComplete}
+        />
+      )}
+      {testType === "eng-ger-mini" && (
+        <MiniGameEngToGer
+          words={words}
+          handleSetMode={handleSetMode}
+          onSessionComplete={onSessionComplete}
+        />
+      )}
+      {testType === "german-full" && (
+        <GermanFullGame
+          words={words}
+          handleSetMode={handleSetMode}
+          onSessionComplete={onSessionComplete}
+        />
+      )}
+      {testType === "weak-masc" && (
+        <WeakMascGame
+          words={words}
+          handleSetMode={handleSetMode}
+          onSessionComplete={onSessionComplete}
+        />
+      )}
       {!testType && (
         <section className={classes.testGrid}>
-          <article className={classes.testCard}>
-            <div>
-              <img
-                src='https://picsum.photos/seed/picsum/100'
-                alt='replace with screenshot'
-              />
-            </div>
-            <h3>Article Speed Round</h3>
-            <p>Pick the correct article before the time is up.</p>
-            <div className={classes.gameCardBtnContainer}>
-              <button
-                className={classes.testBtn}
-                onClick={() => handleTestButtonClick(5, 'article')}
-              >
-                5
-              </button>{' '}
-              <button
-                className={classes.testBtn}
-                onClick={() => handleTestButtonClick(10, 'article')}
-              >
-                10
-              </button>{' '}
-              <button
-                className={classes.testBtn}
-                onClick={() => handleTestButtonClick(20, 'article')}
-              >
-                20
-              </button>
-            </div>
-          </article>
-          
-          <article className={classes.testCard}>
-            <div>
-              <img
-                src='https://picsum.photos/seed/picsum/100'
-                alt='replace with screenshot'
-              />
-            </div>
-            <h3>German-to-English Mini</h3>
-            <p>Given a German word, write the English translation.</p>
-            <div className={classes.gameCardBtnContainer}>
-              <button
-                className={classes.testBtn}
-                onClick={() => handleTestButtonClick(5, 'ger-eng-mini')}
-              >
-                5
-              </button>{' '}
-              <button
-                className={classes.testBtn}
-                onClick={() => handleTestButtonClick(10, 'ger-eng-mini')}
-              >
-                10
-              </button>{' '}
-              <button
-                className={classes.testBtn}
-                onClick={() => handleTestButtonClick(20, 'ger-eng-mini')}
-              >
-                20
-              </button>
-            </div>
-          </article>
-          <article className={classes.testCard}>
-            <div>
-              <img
-                src='https://picsum.photos/seed/picsum/100'
-                alt='replace with screenshot'
-              />
-            </div>
-            <h3>English-to-German Mini</h3>
-            <p>Given an English word, write the German translation.</p>
-            <div className={classes.gameCardBtnContainer}>
-              <button
-                className={classes.testBtn}
-                onClick={() => handleTestButtonClick(5, 'eng-ger-mini')}
-              >
-                5
-              </button>{' '}
-              <button
-                className={classes.testBtn}
-                onClick={() => handleTestButtonClick(10, 'eng-ger-mini')}
-              >
-                10
-              </button>{' '}
-              <button
-                className={classes.testBtn}
-                onClick={() => handleTestButtonClick(20, 'eng-ger-mini')}
-              >
-                20
-              </button>
-            </div>
-          </article>
-          <article className={classes.testCard}>
-            <div>
-              <img
-                src='https://picsum.photos/seed/picsum/100'
-                alt='replace with screenshot'
-              />
-            </div>
-            <h3>Plural Mini</h3>
-            <p>Given the German word, write its plural</p>
-            <div className={classes.gameCardBtnContainer}>
-              <button
-                className={classes.testBtn}
-                onClick={() => handleTestButtonClick(5, 'plural')}
-              >
-                5
-              </button>{' '}
-              <button
-                className={classes.testBtn}
-                onClick={() => handleTestButtonClick(10, 'plural')}
-              >
-                10
-              </button>{' '}
-              <button
-                className={classes.testBtn}
-                onClick={() => handleTestButtonClick(20, 'plural')}
-              >
-                20
-              </button>
-            </div>
-          </article>
-          <article className={classes.testCard}>
-            <div>
-              <img
-                src='https://picsum.photos/seed/picsum/100'
-                alt='replace with screenshot'
-              />
-            </div>
-            <h3>English to German Full</h3>
-            <p>Given the German word, write its plural</p>
-            <div className={classes.gameCardBtnContainer}>
-              <button
-                className={classes.testBtn}
-                onClick={() => handleTestButtonClick(5, 'german-full')}
-              >
-                5
-              </button>{' '}
-              <button
-                className={classes.testBtn}
-                onClick={() => handleTestButtonClick(10, 'german-full')}
-              >
-                10
-              </button>{' '}
-              <button
-                className={classes.testBtn}
-                onClick={() => handleTestButtonClick(20, 'german-full')}
-              >
-                20
-              </button>
-            </div>
-          </article>
-          <article className={classes.testCard}>
-            <div>
-              <img
-                src='https://picsum.photos/seed/picsum/100'
-                alt='replace with screenshot'
-              />
-            </div>
-            <h3>Spot the Weakling: Speed Round</h3>
-            <p>Decide quickly if it's a weak masculine noun.</p>
-            <div className={classes.gameCardBtnContainer}>
-              <button
-                className={classes.testBtn}
-                onClick={() => handleTestButtonClick(10, 'weak-masc')}
-              >
-                5
-              </button>{' '}
-              <button
-                className={classes.testBtn}
-                onClick={() => handleTestButtonClick(25, 'weak-masc')}
-              >
-                10
-              </button>{' '}
-              <button
-                className={classes.testBtn}
-                onClick={() => handleTestButtonClick(50, 'weak-masc')}
-              >
-                20
-              </button>
-            </div>
-          </article>
+          <TextCard
+            title="Article Speed Round"
+            desc="Pick the correct article (substantive) before the time is up."
+            deckSizeOptions={[10, 20, 40]}
+            testType="article"
+            handleTestStart={handleTestButtonClick}
+          />
+
+          <TextCard
+            title="German-to-English Mini"
+            desc="Given the German word, write the English translation"
+            deckSizeOptions={[10, 25, 50]}
+            testType="ger-eng-mini"
+            handleTestStart={handleTestButtonClick}
+          />
+
+          <TextCard
+            title="English-to-German Mini"
+            desc="Given the English word, write the German translation"
+            deckSizeOptions={[10, 25, 50]}
+            testType="eng-ger-mini"
+            handleTestStart={handleTestButtonClick}
+          />
+
+          <TextCard
+            title="Plural Mini"
+            desc="Given the German word, write its plural"
+            deckSizeOptions={[10, 20, 40]}
+            testType="plural"
+            handleTestStart={handleTestButtonClick}
+          />
+
+          <TextCard
+            title="English to German Full"
+            desc="Given the German word, write its plural"
+            deckSizeOptions={[5, 15, 25]}
+            testType="german-full"
+            handleTestStart={handleTestButtonClick}
+          />
+
+          <TextCard
+            title="Spot the Weakling: Speed Round"
+            desc="Decide quickly if it's a weak masculine (n-declension) noun"
+            deckSizeOptions={[10, 50]}
+            testType="weak-masc"
+            handleTestStart={handleTestButtonClick}
+          />
         </section>
       )}
     </div>

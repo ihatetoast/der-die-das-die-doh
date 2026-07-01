@@ -1,13 +1,14 @@
-import { useState, useEffect } from 'react';
-import classes from './PracticeBoard.module.css';
-import { VocabEntry, DeckSize } from '../types.ts';
-import LearningCube from './LearningCube.tsx';
+import { useState, useEffect } from "react";
+import classes from "./PracticeBoard.module.css";
+import { VocabEntry, DeckSize } from "../types.ts";
+import LearningCube from "./LearningCube.tsx";
 
 type Props = {
   words: VocabEntry[];
   deckSize: DeckSize | null;
   handleGetInitialActiveDeck: (size: DeckSize) => void;
   handleRefillActiveDeck: (size: DeckSize) => void;
+  onSessionComplete: () => void;
 };
 
 const PracticeBoard = ({
@@ -15,6 +16,7 @@ const PracticeBoard = ({
   deckSize,
   handleGetInitialActiveDeck,
   handleRefillActiveDeck,
+  onSessionComplete,
 }: Props) => {
   const [cardsToReview, setCardsToReview] = useState<VocabEntry[]>([]);
 
@@ -26,6 +28,10 @@ const PracticeBoard = ({
     handleGetInitialActiveDeck(size);
   };
 
+  if (words.length > 0 && cardsToReview.length === 0) {
+    onSessionComplete();
+  }
+
   return (
     <div className={classes.practiceBoard}>
       <h2>Let's practice!</h2>
@@ -36,25 +42,36 @@ const PracticeBoard = ({
             side has information about the word:
           </p>
           <ul>
-            <li><span className={classes.listEmoji}>🇬🇧</span>
+            <li>
+              <span className={classes.listEmoji}>🇬🇧</span>
               English<span className={classes.example}> (eg Book)</span>
             </li>
-            <li><span className={classes.listEmoji}>🇩🇪</span>
+            <li>
+              <span className={classes.listEmoji}>🇩🇪</span>
               German<span className={classes.example}> (eg Buch)</span>
             </li>
-            <li><span className={classes.listEmoji}>🇩🇪</span>
+            <li>
+              <span className={classes.listEmoji}>🇩🇪</span>
               The singular article
               <span className={classes.example}> (eg das)</span>
             </li>
-            <li><span className={classes.listEmoji}>🇩🇪</span>
+            <li>
+              <span className={classes.listEmoji}>🇩🇪</span>
               Plural<span className={classes.example}> (eg die Bücher)</span>
             </li>
-            <li><span className={classes.listEmoji}>🇩🇪</span>
-              Sentences<span className={classes.example}> (eg Ich gebe ihm das Buch. / I give him the book.)
+            <li>
+              <span className={classes.listEmoji}>🇩🇪</span>
+              Sentences
+              <span className={classes.example}>
+                {" "}
+                (eg Ich gebe ihm das Buch. / I give him the book.)
               </span>
             </li>
-            <li><span className={classes.listEmoji}>🇩🇪</span>Review of the word
-              <span className={classes.example}> (eg Book, das Buch, die Bücher; or notes if there are any.)
+            <li>
+              <span className={classes.listEmoji}>🇩🇪</span>Review of the word
+              <span className={classes.example}>
+                {" "}
+                (eg Book, das Buch, die Bücher; or notes if there are any.)
               </span>
             </li>
           </ul>
@@ -72,7 +89,9 @@ const PracticeBoard = ({
             <p>
               Got this? Remove it from the deck; otherwise, keep it in the deck.
             </p>
-            <div className={`${classes.btnContainer} ${classes.instructionsBtn}`}>
+            <div
+              className={`${classes.btnContainer} ${classes.instructionsBtn}`}
+            >
               <button
                 onClick={() => setCardsToReview((prev) => [...prev.slice(1)])}
               >
@@ -107,7 +126,7 @@ const PracticeBoard = ({
                 Get {deckSize} new ones!
               </button>
             )}
-            <button onClick={() => console.log('go to test page')}>
+            <button onClick={() => console.log("go to test page")}>
               Test me on these.
             </button>
           </div>

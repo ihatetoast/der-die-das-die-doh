@@ -132,18 +132,18 @@
   line-height: 1;
 }
 
-.face[data-face='sentence-side'],
-.face[data-face='notes-side'] {
+.face[data-face="sentence-side"],
+.face[data-face="notes-side"] {
   justify-content: flex-start;
 }
 
-.face[data-face='sentence-side'] h3,
-.face[data-face='notes-side'] h3 {
+.face[data-face="sentence-side"] h3,
+.face[data-face="notes-side"] h3 {
   font-size: 1rem;
 }
 
 .face .weakMascPara,
-.face[data-face='sentence-side'] dl {
+.face[data-face="sentence-side"] dl {
   font-size: 0.9rem;
   margin-bottom: 0.75rem;
 }
@@ -152,7 +152,7 @@
   line-height: 1.2;
 }
 
-.face[data-face='sentence-side'] dt {
+.face[data-face="sentence-side"] dt {
   margin-bottom: 0.25rem;
 }
 
@@ -170,20 +170,19 @@
     gap: 1rem;
   }
 
-  .face[data-face='sentence-side'] h3,
-  .face[data-face='notes-side'] h3 {
+  .face[data-face="sentence-side"] h3,
+  .face[data-face="notes-side"] h3 {
     font-size: 1.5rem;
   }
 
-  
   .face .weakMascPara,
-  .face[data-face='sentence-side'] dl {
+  .face[data-face="sentence-side"] dl {
     font-size: 1rem;
   }
 
   .face .weakMascPara {
-  line-height: 1.5;
-}
+    line-height: 1.5;
+  }
 
   .sentences .sentence:nth-of-type(2) {
     display: block;
@@ -287,12 +286,12 @@
     justify-content: space-around;
     align-items: flex-start;
     gap: 2px;
-    width: 80%;
+
     max-width: 900px;
   }
 
   .cubeControls .btnContainer {
-   grid-template-columns: repeat(2, 10rem);
+    grid-template-columns: repeat(2, 10rem);
     gap: 2rem;
   }
 

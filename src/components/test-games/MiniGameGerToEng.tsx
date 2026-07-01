@@ -1,11 +1,15 @@
-import { useEffect } from 'react';
-import { useFlashcardLogic } from '../../hooks/useFlashcardLogic.ts';
-import GameOver from './GameOver.tsx';
+import { useEffect } from "react";
+import { useFlashcardLogic } from "../../hooks/useFlashcardLogic.ts";
+import GameOver from "./GameOver.tsx";
 
-import classes from './Game.module.css';
-import { GameProps } from '../../types.ts';
+import classes from "./Game.module.css";
+import { GameProps } from "../../types.ts";
 
-const MiniGameGerToEng = ({ words, handleSetMode }: GameProps) => {
+const MiniGameGerToEng = ({
+  words,
+  handleSetMode,
+  onSessionComplete,
+}: GameProps) => {
   const {
     cardsToTest,
     setCardsToTest,
@@ -20,7 +24,7 @@ const MiniGameGerToEng = ({ words, handleSetMode }: GameProps) => {
     setMessage,
     answerState,
     setAnswerState,
-  } = useFlashcardLogic(words, 'ger-eng-mini');
+  } = useFlashcardLogic(words, "ger-eng-mini");
 
   // todo: address if a user can submit then add to input.
   // onKeyDown={(e) => {
@@ -28,7 +32,9 @@ const MiniGameGerToEng = ({ words, handleSetMode }: GameProps) => {
   //     handleSubmit();
   //   }
   // }}
-
+  if (testState === "over") {
+    onSessionComplete();
+  }
   const evalAnswerEngNoun = (
     userInputNoun: string,
     targetWord: string,
@@ -40,7 +46,7 @@ const MiniGameGerToEng = ({ words, handleSetMode }: GameProps) => {
       return true;
     }
     if (otherDefs) {
-      const altDefs = otherDefs.split(', ').map((def) => def.toLowerCase());
+      const altDefs = otherDefs.split(", ").map((def) => def.toLowerCase());
       if (altDefs.includes(userAnswer)) return true;
     }
     return false;
@@ -48,24 +54,32 @@ const MiniGameGerToEng = ({ words, handleSetMode }: GameProps) => {
 
   // pause for style change. only let user know correct or incorrect, not answer
   useEffect(() => {
-    if (answerState === 'incorrect' || answerState === 'correct') {
+    if (answerState === "incorrect" || answerState === "correct") {
       setTimeout(() => {
-        if (answerState === 'correct' && hintState === null) {
+        if (answerState === "correct" && hintState === null) {
           setCardsToTest((prev) => prev.slice(1));
         } else {
           setCardsToTest((prev) => [...prev.slice(1), prev[0]]);
         }
         setHintState(null); // Reset for next word
-        setUserInputNoun('');
-        setMessage('');
-        setAnswerState('waiting');
+        setUserInputNoun("");
+        setMessage("");
+        setAnswerState("waiting");
       }, 3000);
     }
-  }, [answerState, setAnswerState, hintState, setHintState, setUserInputNoun, setMessage]);
+  }, [
+    answerState,
+    setAnswerState,
+    hintState,
+    setHintState,
+    setUserInputNoun,
+    setMessage,
+    setCardsToTest,
+  ]);
 
   const handleSubmit = () => {
-    if (userInputNoun.trim() === '') {
-      setAnswerState('skipped');
+    if (userInputNoun.trim() === "") {
+      setAnswerState("skipped");
       return;
     }
     const otherEngDefs = cardsToTest[0].notes.otherEngDefinitions;
@@ -74,13 +88,13 @@ const MiniGameGerToEng = ({ words, handleSetMode }: GameProps) => {
       cardsToTest[0].eng,
       otherEngDefs,
     );
-    setAnswerState(isCorrect ? 'correct' : 'incorrect');
+    setAnswerState(isCorrect ? "correct" : "incorrect");
   };
 
   const handleHint = () => {
     setHintState((prev) => {
-      if (prev === null) return 'scrambled';
-      if (prev === 'scrambled') return 'revealed';
+      if (prev === null) return "scrambled";
+      if (prev === "scrambled") return "revealed";
       return prev;
     });
   };
@@ -88,7 +102,7 @@ const MiniGameGerToEng = ({ words, handleSetMode }: GameProps) => {
   return (
     <>
       <h2>German-to-English Mini Test</h2>
-      {testState === 'waiting' && (
+      {testState === "waiting" && (
         <div>
           <p>
             You're given a noun in German. Write the English definition (in
@@ -106,19 +120,19 @@ const MiniGameGerToEng = ({ words, handleSetMode }: GameProps) => {
           <p>When you're ready, click "Go!".</p>
           <button
             className={classes.startBtn}
-            onClick={() => setTestState('active')}
+            onClick={() => setTestState("active")}
           >
             Go!
           </button>
         </div>
       )}
-      {testState === 'over' && (
+      {testState === "over" && (
         <GameOver
-          title='German-to-English Flashcards Mini'
+          title="German-to-English Flashcards Mini"
           onSetMode={handleSetMode}
         />
       )}
-      {testState === 'active' && cardsToTest.length > 0 && (
+      {testState === "active" && cardsToTest.length > 0 && (
         <section className={classes.gameContainer}>
           <div className={classes.wordsContainer}>
             <div className={classes.originWord}>
@@ -129,20 +143,20 @@ const MiniGameGerToEng = ({ words, handleSetMode }: GameProps) => {
 
             <div className={classes.targetWord}>
               <p className={classes.hint}>
-                {hintState === 'scrambled'
+                {hintState === "scrambled"
                   ? hint
-                  : hintState === 'revealed'
+                  : hintState === "revealed"
                     ? cardsToTest[0].eng
                     : message}
               </p>
               <span>the </span>
 
               <input
-                autoFocus={testState === 'active'}
-                type='text'
-                id='word'
+                autoFocus={testState === "active"}
+                type="text"
+                id="word"
                 value={userInputNoun}
-                placeholder='English word'
+                placeholder="English word"
                 onChange={(e) => setUserInputNoun(e.target.value)}
                 className={`
                   ${classes.nounAnswer} 
@@ -154,24 +168,24 @@ const MiniGameGerToEng = ({ words, handleSetMode }: GameProps) => {
                 <button
                   onClick={handleSubmit}
                   disabled={
-                    answerState !== 'waiting' || hintState === 'revealed'
+                    answerState !== "waiting" || hintState === "revealed"
                   }
                   className={classes.submitBtn}
                 >
-                  {userInputNoun.trim() === '' ? 'Skip' : 'Check'}
+                  {userInputNoun.trim() === "" ? "Skip" : "Check"}
                 </button>
                 <button
                   onClick={handleHint}
                   className={`${classes.hintBtn} ${hintState === null ? undefined : classes[hintState]}`}
                   disabled={
-                    hintState === 'revealed' || answerState !== 'waiting'
+                    hintState === "revealed" || answerState !== "waiting"
                   }
                 >
                   {hintState === null
-                    ? 'Hint?'
-                    : hintState === 'scrambled'
-                      ? 'Reveal?'
-                      : 'Reveal'}
+                    ? "Hint?"
+                    : hintState === "scrambled"
+                      ? "Reveal?"
+                      : "Reveal"}
                 </button>
               </div>
             </div>

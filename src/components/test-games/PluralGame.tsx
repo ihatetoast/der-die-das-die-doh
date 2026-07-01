@@ -1,11 +1,11 @@
-import { useState, useEffect } from 'react';
-import { GameProps } from '../../types.ts';
-import { useFlashcardLogic } from '../../hooks/useFlashcardLogic.ts';
-import classes from './PluralGame.module.css';
+import { useState, useEffect } from "react";
+import { GameProps } from "../../types.ts";
+import { useFlashcardLogic } from "../../hooks/useFlashcardLogic.ts";
+import classes from "./PluralGame.module.css";
 
-import GameOver from './GameOver.tsx';
+import GameOver from "./GameOver.tsx";
 
-const PluralGame = ({ words, handleSetMode }: GameProps) => {
+const PluralGame = ({ words, handleSetMode, onSessionComplete }: GameProps) => {
   const {
     cardsToTest,
     setCardsToTest,
@@ -15,23 +15,25 @@ const PluralGame = ({ words, handleSetMode }: GameProps) => {
     setAnswerState,
     message,
     setMessage,
-  } = useFlashcardLogic(words, 'plural');
+  } = useFlashcardLogic(words, "plural");
 
   // const [message, setMessage] = useState<string>('');
-  const [userInputPlural, setUserInputPlural] = useState<string>('');
-
+  const [userInputPlural, setUserInputPlural] = useState<string>("");
+  if (testState === "over") {
+    onSessionComplete();
+  }
   // pause for style change.
   useEffect(() => {
-    if (answerState === 'incorrect' || answerState === 'correct') {
+    if (answerState === "incorrect" || answerState === "correct") {
       setTimeout(() => {
-        if (answerState === 'correct') {
+        if (answerState === "correct") {
           setCardsToTest((prev) => prev.slice(1));
         } else {
           setCardsToTest((prev) => [...prev.slice(1), prev[0]]);
         }
-        setMessage('');
-        setUserInputPlural('');
-        setAnswerState('waiting');
+        setMessage("");
+        setUserInputPlural("");
+        setAnswerState("waiting");
       }, 3000);
     }
   }, [
@@ -43,27 +45,27 @@ const PluralGame = ({ words, handleSetMode }: GameProps) => {
   ]);
 
   const handleSubmit = () => {
-    if (userInputPlural.trim() === '') {
-      setAnswerState('skipped');
+    if (userInputPlural.trim() === "") {
+      setAnswerState("skipped");
       return;
     }
     const isCorrect = evalPlural(userInputPlural, cardsToTest[0].plural);
-    setAnswerState(isCorrect ? 'correct' : 'incorrect');
+    setAnswerState(isCorrect ? "correct" : "incorrect");
   };
 
   const evalPlural = (
     userInputPlural: string,
     targetPlural: string,
   ): boolean => {
-    setMessage('');
-    const correctAnswer = targetPlural.toLowerCase().split(' ').slice(1).join();
+    setMessage("");
+    const correctAnswer = targetPlural.toLowerCase().split(" ").slice(1).join();
 
     const userAnswer = userInputPlural.trim().toLowerCase();
 
     // don't count as wrong, but if user doesn't cap first letter, put a note in hint box reminding them.
     const initial = userInputPlural.trim().charAt(0);
     if (initial !== initial.toUpperCase()) {
-      setMessage('Remember: German nouns begin with an uppercase letter.');
+      setMessage("Remember: German nouns begin with an uppercase letter.");
     }
     if (userAnswer === correctAnswer) return true;
     return false;
@@ -72,7 +74,7 @@ const PluralGame = ({ words, handleSetMode }: GameProps) => {
   return (
     <>
       <h2>German Plural Mini Test</h2>
-      {testState === 'waiting' && (
+      {testState === "waiting" && (
         <div>
           <p>
             You'll get an English word with the German translation in singular.
@@ -146,16 +148,16 @@ const PluralGame = ({ words, handleSetMode }: GameProps) => {
           <p>When you're ready, click "Go!".</p>
           <button
             className={classes.startBtn}
-            onClick={() => setTestState('active')}
+            onClick={() => setTestState("active")}
           >
             Go!
           </button>
         </div>
       )}
-      {testState === 'over' && (
-        <GameOver title='German Plural Mini' onSetMode={handleSetMode} />
+      {testState === "over" && (
+        <GameOver title="German Plural Mini" onSetMode={handleSetMode} />
       )}
-      {testState === 'active' && cardsToTest.length > 0 && (
+      {testState === "active" && cardsToTest.length > 0 && (
         <section className={classes.pluralGame}>
           <div className={classes.wordsContainer}>
             <div className={classes.originWord}>
@@ -164,13 +166,13 @@ const PluralGame = ({ words, handleSetMode }: GameProps) => {
             <div className={classes.targetWord}>
               <p className={classes.message}>{message}</p>
               <span>
-                German: {cardsToTest[0].article} {cardsToTest[0].noun}, die{' '}
+                German: {cardsToTest[0].article} {cardsToTest[0].noun}, die{" "}
               </span>
               <input
-                type='text'
-                id='plural'
+                type="text"
+                id="plural"
                 value={userInputPlural}
-                placeholder='plural form'
+                placeholder="plural form"
                 onChange={(e) => setUserInputPlural(e.target.value)}
                 className={`
                   ${classes.pluralAnswer} 
@@ -178,10 +180,10 @@ const PluralGame = ({ words, handleSetMode }: GameProps) => {
                   `.trim()}
               />
               <button
-                disabled={answerState !== 'waiting'}
+                disabled={answerState !== "waiting"}
                 onClick={handleSubmit}
               >
-                {userInputPlural.trim() === '' ? 'Skip' : 'Check'}
+                {userInputPlural.trim() === "" ? "Skip" : "Check"}
               </button>
             </div>
           </div>

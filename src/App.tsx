@@ -1,26 +1,27 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
-import { VOCABULARY_COMMON } from './vocab-data-common.ts';
-import { ModeProp, VocabEntry, DeckSize, TestType } from './types';
-import { shuffle } from './helpers.tsx';
+// import { VOCABULARY_COMMON } from "./vocab-data-common.ts";
+import { ModeProp, VocabEntry, DeckSize, TestType } from "./types";
+import { shuffle } from "./helpers.tsx";
 
-import Header from './components/UI/Header';
-import PracticeBoard from './components/PracticeBoard.tsx';
-import TestBoard from './components/TestBoard.tsx';
+import Header from "./components/UI/Header";
+import PracticeBoard from "./components/PracticeBoard.tsx";
+import TestBoard from "./components/TestBoard.tsx";
+import ModeButton from "./components/UI/ModeButton.tsx";
 
 const TEST_COMPLETE = true; // remove when test board is done
 
 // test file with small rep of types of data
-import { TEST_VOCAB } from './data/vocab-test-data.ts'; // dev with this. remove for major testing.
+import { TEST_VOCAB } from "./data/vocab-test-data.ts"; // dev with this. remove for major testing.
 
 function App() {
-  const [mode, setMode] = useState<ModeProp>('home');
+  const [mode, setMode] = useState<ModeProp>("home");
+  const [sessionComplete, setSessionComplete] = useState(false); // to assist button display
   const [allShuffledDeck, setAllShuffledDeck] = useState<VocabEntry[]>([]);
   const [deckSize, setDeckSize] = useState<DeckSize | null>(null);
   const [activeDeck, setActiveDeck] = useState<VocabEntry[]>([]);
   const [cardsReviewed, setCardsReviewed] = useState<VocabEntry[]>([]);
   const [testType, setTestType] = useState<TestType | null>(null);
-  const showBoards = mode !== 'home';
   const deckTooSmall = allShuffledDeck.length < 5;
 
   useEffect(() => {
@@ -29,21 +30,30 @@ function App() {
 
   const handleSetMode = (mode: ModeProp) => {
     // home is a total refresh
-    if (mode === 'home') {
+    if (mode === "home") {
       shuffleDeck();
       setActiveDeck([]);
       setCardsReviewed([]);
       setDeckSize(null);
       setTestType(null);
+      setSessionComplete(false);
+    }
+    // reset the sesh
+    if (mode === "practice" || mode === "test") {
+      setSessionComplete(false);
     }
     setMode(mode);
+  };
+
+  const handleSessionComplete = () => {
+    setSessionComplete(true);
   };
 
   // this has one job: handle the start. Only called at start or after total refresh.
   const handleGetInitialActiveDeck = (size: DeckSize, testType?: TestType) => {
     setDeckSize(size);
     let deck: VocabEntry[];
-    if (testType === 'weak-masc') {
+    if (testType === "weak-masc") {
       // todo get filter logic here but for red squiggles, just copy/paste
 
       deck = allShuffledDeck.slice(0, size);
@@ -99,54 +109,64 @@ function App() {
   return (
     <>
       <Header
+        mode={mode}
         onSetMode={handleSetMode}
-        showBoardButtons={!showBoards}
         deckTooSmall={deckTooSmall}
-        testComplete={TEST_COMPLETE}
+        sessionComplete={sessionComplete}
       />
       {deckTooSmall && <div>STYLE ME WITH SADNESS LATER</div>}
       <main>
-        {!deckTooSmall && mode === 'home' && (
+        {!deckTooSmall && mode === "home" && (
           <>
-            <div className='intro'>
-              <p>
-                Choose "Learn & Study" to review gender and plural as well as
-                see example sentences and notes about the word.{' '}
-              </p>
-              {TEST_COMPLETE ? (
+            <div className="images-container">
+              <div className="intro-images learn">
+                <h2>Learn & Practice</h2>
+                <p>
+                  Choose "Learn & Practice" to review gender and plural as well
+                  as see example sentences and notes about the word.
+                </p>
+                <div className="mode-image-container">
+                  <img
+                    src={`${import.meta.env.BASE_URL}practice-view.png`}
+                    alt="screenshot of practice mode"
+                  />
+                </div>
+                <ModeButton onClick={handleSetMode} mode="practice" />
+              </div>
+              <div className="intro-images test">
+                <h2>Test</h2>
                 <p>
                   Choose "Test" to see what you've learned and what you need to
                   review.
                 </p>
-              ) : (
-                ``
-              )}
-            </div>
-            <div className='intro-images'>
-              <div className='image-container'>
-                <img
-                  src={`${import.meta.env.BASE_URL}practice-view.png`}
-                  alt='screenshot of practice mode'
-                />
+                <div className="mode-image-container">
+                  <img
+                    src={`${import.meta.env.BASE_URL}test-view.png`}
+                    alt="screenshot of test mode"
+                  />
+                </div>
+                <ModeButton onClick={handleSetMode} mode="test" />
               </div>
             </div>
           </>
         )}
-        {TEST_COMPLETE && mode === 'test' && (
+        {TEST_COMPLETE && mode === "test" && (
           <TestBoard
             words={activeDeck}
             testType={testType}
             handleGetInitialActiveDeck={handleGetInitialActiveDeck}
             handleGetTestType={handleGetTestType}
             handleSetMode={handleSetMode}
+            onSessionComplete={handleSessionComplete}
           />
         )}
-        {mode === 'practice' && (
+        {mode === "practice" && (
           <PracticeBoard
             words={activeDeck}
             deckSize={deckSize}
             handleGetInitialActiveDeck={handleGetInitialActiveDeck}
             handleRefillActiveDeck={handleRefillActiveDeck}
+            onSessionComplete={handleSessionComplete}
           />
         )}
       </main>

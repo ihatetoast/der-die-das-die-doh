@@ -1,50 +1,47 @@
-import { ModeProp } from '../../types.ts';
+import { ModeProp } from "../../types.ts";
 
-import classes from './Header.module.css';
+import classes from "./Header.module.css";
 
-import ModeButton from './ModeButton.tsx';
+import ModeButton from "./ModeButton.tsx";
 
 type HeaderProps = {
+  mode: ModeProp;
   onSetMode: (value: ModeProp) => void;
-  showBoardButtons: boolean;
+  sessionComplete: boolean;
   deckTooSmall: boolean;
-  testComplete: boolean; // remove after test board is done
 };
-
 const Header = ({
+  mode,
   onSetMode,
-  showBoardButtons,
+  sessionComplete,
   deckTooSmall,
-  testComplete,
 }: HeaderProps) => {
+  if (deckTooSmall) return <p>D'oh! Deck is too small...</p>;
+  if (mode === "home") {
+    return (
+      <header className={classes.header}>
+        <h1>Der Die Das Die ... D'oh!</h1>
+      </header>
+    );
+  }
+  // practice sesh or test is done ...
+  if (sessionComplete) {
+    return (
+      <header>
+        <h1>Der Die Das Die ... D'oh!</h1>
+        <div className={classes.buttonContainer}>
+          <ModeButton onClick={onSetMode} mode="home" />
+          <ModeButton onClick={onSetMode} mode="practice" />
+          <ModeButton onClick={onSetMode} mode="test" />
+        </div>
+      </header>
+    );
+  }
+  // ... ; otherwise, just give them an option to go home any time and that is a total reset.
   return (
     <header className={classes.header}>
       <h1>Der Die Das Die ... D'oh!</h1>
-      {deckTooSmall && (
-        <p>
-          D'oh! Deck is too small to practice or test. Come back later when the
-          vocabulary elves have entered more words.
-        </p>
-      )}
-      {!deckTooSmall && !showBoardButtons && (
-        <>
-          <p>Go home to completely refresh to start over or switch modes.</p>
-          <ModeButton onClick={onSetMode} mode='home' />
-        </>
-      )}
-      {!deckTooSmall && showBoardButtons && (
-        <div className={classes.buttonContainer}>
-          <>
-            <p>
-              Learn and study {testComplete ? `or test yourself on` : ''} German nouns.
-            </p>
-            <div>
-              <ModeButton onClick={onSetMode} mode='practice' />
-              {testComplete && <ModeButton onClick={onSetMode} mode='test' />}
-            </div>
-          </>
-        </div>
-      )}
+      <ModeButton onClick={onSetMode} mode="home" />
     </header>
   );
 };

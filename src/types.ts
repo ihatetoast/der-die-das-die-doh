@@ -76,7 +76,7 @@ type NotesType = {
 
 export type ModeProp = "practice" | "test" | "home";
 // controlling decksize until I have >500 completed: true. egads
-export type DeckSize = 5 | 10 | 20 | 25 | 50;
+export type DeckSize = 5 | 10 | 15 | 20 | 25 | 40 | 50;
 
 export type MiniTestType = "eng-ger-mini" | "ger-eng-mini";
 export type TestType =
@@ -97,4 +97,5 @@ export type WeakMascAnswer = "yes" | "no" | "not-masc";
 export type GameProps = {
   words: VocabEntry[];
   handleSetMode: (value: ModeProp) => void;
+  onSessionComplete: () => void;
 };

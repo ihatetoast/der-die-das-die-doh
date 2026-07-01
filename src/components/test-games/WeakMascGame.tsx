@@ -1,5 +1,4 @@
-
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 import {
   WeakMascAnswer,
@@ -7,92 +6,98 @@ import {
   AnswerState,
   GameState,
   GameProps,
-} from '../../types';
+} from "../../types";
 
-import classes from './WeakMascGame.module.css';
-import Timer from '../Timer';
-import GameOver from './GameOver.tsx';
+import classes from "./WeakMascGame.module.css";
+import Timer from "../Timer";
+import GameOver from "./GameOver.tsx";
 
 const TIME_TO_GUESS = 3000;
 const TIME_TO_NEXT_QUESTION = 2000;
 
-const WeakMascGame = ({ words, handleSetMode }: GameProps) => {
+const WeakMascGame = ({
+  words,
+  handleSetMode,
+  onSessionComplete,
+}: GameProps) => {
   const [cardsToTest, setCardsToTest] = useState<VocabEntry[]>([]);
-  const [answerState, setAnswerState] = useState<AnswerState>('waiting');
-  const [testState, setTestState] = useState<GameState>('waiting');
-  const [userChoice, setUserChoice] = useState<WeakMascAnswer | ''>('');
-  console.log('words in weak masc game', words);
-
+  const [answerState, setAnswerState] = useState<AnswerState>("waiting");
+  const [testState, setTestState] = useState<GameState>("waiting");
+  const [userChoice, setUserChoice] = useState<WeakMascAnswer | "">("");
+  console.log("words in weak masc game", words);
+  if (testState === "over") {
+    onSessionComplete();
+  }
   useEffect(() => {
     if (words.length > 0) setCardsToTest([...words]);
   }, [words]);
 
   useEffect(() => {
-    if (cardsToTest.length === 0 && testState === 'active') {
-      setTestState('over');
+    if (cardsToTest.length === 0 && testState === "active") {
+      setTestState("over");
     }
   }, [cardsToTest, testState]);
 
   const handleSkipped = () => {
-    setAnswerState('skipped');
+    setAnswerState("skipped");
     setCardsToTest((prev) => [...prev.slice(1), prev[0]]);
 
     // delay for user to see it was skipped
     setTimeout(() => {
-      setAnswerState('waiting');
+      setAnswerState("waiting");
     }, 500);
     if (cardsToTest.length === 0) {
-      setTestState('over');
+      setTestState("over");
     }
   };
 
   const handleUserAnswerSelect = (answer: WeakMascAnswer) => {
     setUserChoice(answer);
     let isCorrect;
-    if (cardsToTest[0].article === 'der') {
-      isCorrect = answer === 'yes' && cardsToTest[0].weakMasculine;
+    if (cardsToTest[0].article === "der") {
+      isCorrect = answer === "yes" && cardsToTest[0].weakMasculine;
     } else {
-      isCorrect = answer === 'not-masc';
+      isCorrect = answer === "not-masc";
     }
 
-    setAnswerState(isCorrect ? 'correct' : 'incorrect');
+    setAnswerState(isCorrect ? "correct" : "incorrect");
     setTimeout(() => {
       if (isCorrect) {
         setCardsToTest((prev) => prev.slice(1));
       } else {
         setCardsToTest((prev) => [...prev.slice(1), prev[0]]);
       }
-      setAnswerState('waiting');
+      setAnswerState("waiting");
     }, TIME_TO_NEXT_QUESTION);
     if (cardsToTest.length === 0) {
       // test is completed
-      setTestState('over');
+      setTestState("over");
     }
   };
   return (
     <>
       <h2>Spot the weakling!</h2>
-      {testState === 'waiting' && (
+      {testState === "waiting" && (
         <div>
           <p>
             You'll be given a noun. Is it a "weak" masculine noun (aka
             N-declension)? Click "ja", "nein", or "not masc", but don't be
-            wishy-washy namby-pamby, Bambi. You have only {TIME_TO_GUESS / 1000}{' '}
+            wishy-washy namby-pamby, Bambi. You have only {TIME_TO_GUESS / 1000}{" "}
             seconds.
           </p>
           <p>When you're ready, click "Go!".</p>
           <button
             className={classes.startBtn}
-            onClick={() => setTestState('active')}
+            onClick={() => setTestState("active")}
           >
             Go!
           </button>
         </div>
       )}
-      {testState === 'over' && (
-        <GameOver title='Be strong with weak nouns' onSetMode={handleSetMode} />
+      {testState === "over" && (
+        <GameOver title="Be strong with weak nouns" onSetMode={handleSetMode} />
       )}
-      {testState === 'active' && (
+      {testState === "active" && (
         <>
           <Timer
             key={cardsToTest[0]?.id || null}
@@ -107,25 +112,25 @@ const WeakMascGame = ({ words, handleSetMode }: GameProps) => {
               </div>
               <div className={classes.gameArticle}>
                 <button
-                  onClick={() => handleUserAnswerSelect('yes')}
-                  data-state={userChoice === 'yes' ? answerState : undefined}
-                  disabled={answerState !== 'waiting'}
+                  onClick={() => handleUserAnswerSelect("yes")}
+                  data-state={userChoice === "yes" ? answerState : undefined}
+                  disabled={answerState !== "waiting"}
                 >
                   Ja!
-                </button>{' '}
+                </button>{" "}
                 <button
-                  onClick={() => handleUserAnswerSelect('no')}
-                  data-state={userChoice === 'no' ? answerState : undefined}
-                  disabled={answerState !== 'waiting'}
+                  onClick={() => handleUserAnswerSelect("no")}
+                  data-state={userChoice === "no" ? answerState : undefined}
+                  disabled={answerState !== "waiting"}
                 >
                   Nein!
-                </button>{' '}
+                </button>{" "}
                 <button
-                  onClick={() => handleUserAnswerSelect('not-masc')}
+                  onClick={() => handleUserAnswerSelect("not-masc")}
                   data-state={
-                    userChoice === 'not-masc' ? answerState : undefined
+                    userChoice === "not-masc" ? answerState : undefined
                   }
-                  disabled={answerState !== 'waiting'}
+                  disabled={answerState !== "waiting"}
                 >
                   Not masculine
                 </button>
