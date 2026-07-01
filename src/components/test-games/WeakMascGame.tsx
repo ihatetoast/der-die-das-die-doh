@@ -25,18 +25,20 @@ const WeakMascGame = ({
   const [testState, setTestState] = useState<GameState>("waiting");
   const [userChoice, setUserChoice] = useState<WeakMascAnswer | "">("");
   console.log("words in weak masc game", words);
-  if (testState === "over") {
-    onSessionComplete();
-  }
+
   useEffect(() => {
     if (words.length > 0) setCardsToTest([...words]);
   }, [words]);
-
+  useEffect(() => {
+    if (testState === "over") {
+      onSessionComplete();
+    }
+  }, [testState, onSessionComplete]);
   useEffect(() => {
     if (cardsToTest.length === 0 && testState === "active") {
       setTestState("over");
     }
-  }, [cardsToTest, testState]);
+  }, [cardsToTest, testState, onSessionComplete]);
 
   const handleSkipped = () => {
     setAnswerState("skipped");

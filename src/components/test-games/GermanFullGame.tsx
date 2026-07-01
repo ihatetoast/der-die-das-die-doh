@@ -36,9 +36,11 @@ const GermanFullGame = ({
   const targetArticle = cardsToTest[0]?.article;
   const targetPlural = cardsToTest[0]?.plural;
 
-  if (testState === "over") {
-    onSessionComplete();
-  }
+  useEffect(() => {
+    if (testState === "over") {
+      onSessionComplete();
+    }
+  }, [testState, onSessionComplete]);
 
   const evalAnswerArticle = (
     userInputArticle: string,

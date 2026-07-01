@@ -19,9 +19,11 @@ const PluralGame = ({ words, handleSetMode, onSessionComplete }: GameProps) => {
 
   // const [message, setMessage] = useState<string>('');
   const [userInputPlural, setUserInputPlural] = useState<string>("");
-  if (testState === "over") {
-    onSessionComplete();
-  }
+  useEffect(() => {
+    if (testState === "over") {
+      onSessionComplete();
+    }
+  }, [testState, onSessionComplete]);
   // pause for style change.
   useEffect(() => {
     if (answerState === "incorrect" || answerState === "correct") {

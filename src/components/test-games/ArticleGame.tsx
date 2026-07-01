@@ -34,6 +34,12 @@ const ArticleGame = ({
     }
   }, [cardsToTest, testState]);
 
+  useEffect(() => {
+    if (testState === "over") {
+      onSessionComplete();
+    }
+  }, [testState, onSessionComplete]);
+
   const handleSkipped = () => {
     setAnswerState("skipped");
     setCardsToTest((prev) => [...prev.slice(1), prev[0]]);
@@ -46,10 +52,6 @@ const ArticleGame = ({
       setTestState("over");
     }
   };
-
-  if (testState === "over") {
-    onSessionComplete();
-  }
 
   const handleUserAnswerSelect = (article: VocabEntry["article"]) => {
     setUserChoice(article);

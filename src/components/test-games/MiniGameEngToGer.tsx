@@ -46,9 +46,11 @@ const MiniGameEngToGer = ({
   );
 
   const targetWord = cardsToTest[0]?.noun;
-  if (testState === "over") {
-    onSessionComplete();
-  }
+  useEffect(() => {
+    if (testState === "over") {
+      onSessionComplete();
+    }
+  }, [testState, onSessionComplete]);
   const evalAnswerGerNoun = (
     userInputNoun: string,
     targetWord: string,

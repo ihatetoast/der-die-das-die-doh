@@ -895,7 +895,8 @@ export const VOCAB_1: VocabEntry[] = [
     notes: {
       miscNote:
         "Other words: Nachname (last name), Spitzname (nickname), Doppelname (double-barrelled name).",
-      weakMascNote: "Takes -ns in the genitive singular",
+      weakMascNote:
+        "A little exception to the weak noun. It takes -ns in the genitive singular: des Namens.",
     },
     sentences: [
       { de: "Ich kenne ihren Namen", en: "I know her name", case: "acc" },
@@ -2205,14 +2206,17 @@ export const VOCAB_1: VocabEntry[] = [
     completed: false,
   },
   {
-    id: 96,
+    id: 96, // KATY
     eng: "thought",
     article: "der",
     noun: "Gedanke",
     plural: "die Gedanken",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: { weakMascNote: "Takes -ns in the genitive singular" },
+    notes: {
+      weakMascNote:
+        "A little exception to the weak noun. It takes -ns in the genitive singular: des Gedankens.",
+    },
     sentences: [
       { de: "SATZ1", en: "SENTENCE1", case: "" },
       {
@@ -3284,7 +3288,11 @@ export const VOCAB_1: VocabEntry[] = [
     plural: "die Herren",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: { otherEngDefinitions: "sir, lord, gent, mister" },
+    notes: {
+      genderNote:
+        "An exception to the typical masculine noun pattern in that it adds -n and not -en for accusative, dative, and genitive singular: den/dem/des Herrn.",
+      otherEngDefinitions: "sir, lord, gent, mister",
+    },
     sentences: [
       {
         de: "Ich kenne Herrn Becker schon seit drei Jahren.",
@@ -4567,7 +4575,7 @@ export const VOCAB_1: VocabEntry[] = [
     id: 229,
     eng: "will",
     article: "der",
-    noun: "Wille",
+    noun: "Wille", // KATY
     plural: "REPLACE",
     hasNoPlural: false,
     weakMasculine: true,
@@ -4961,7 +4969,9 @@ export const VOCAB_1: VocabEntry[] = [
     plural: "die Beamten",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: {},
+    notes: {
+      miscNote: "KATY FIX! COMPLETE AND ADD FEMALE VERSION",
+    },
     sentences: [
       { de: "SATZ1", en: "SENTENCE1", case: "nom" },
       { de: "SATZ2", en: "SENTENCE2", case: "acc" },
@@ -5752,13 +5762,15 @@ export const VOCAB_1: VocabEntry[] = [
   },
   {
     id: 303,
-    eng: "cop",
+    eng: "policeman",
     article: "der",
     noun: "Polizist",
     plural: "die Polizisten",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: {},
+    notes: {
+      otherEngDefinitions: "police officer, cop, copper, trooper",
+    },
     sentences: [
       { de: "SATZ1", en: "SENTENCE1", case: "nom" },
       { de: "SATZ2", en: "SENTENCE2", case: "acc" },
@@ -7989,7 +8001,9 @@ export const VOCAB_1: VocabEntry[] = [
     plural: "die Fremden",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: {},
+    notes: {
+      otherGerDefinitions: "die Fremde (female)",
+    },
     sentences: [
       { de: "SATZ1", en: "SENTENCE1", case: "nom" },
       { de: "SATZ2", en: "SENTENCE2", case: "acc" },

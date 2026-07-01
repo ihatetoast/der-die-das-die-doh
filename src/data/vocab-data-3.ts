@@ -5124,13 +5124,15 @@ export const VOCAB_3: VocabEntry[] = [
   },
   {
     id: 1320,
-    eng: "policeman",
-    article: "der",
-    noun: "Polizist",
-    plural: "die Polizisten",
+    eng: "policewoman",
+    article: "die",
+    noun: "Polizistin",
+    plural: "die Polizistinnen",
     hasNoPlural: false,
-    weakMasculine: true,
-    notes: {},
+    weakMasculine: false,
+    notes: {
+      otherEngDefinitions: "police officer, cop, copper, trooper",
+    },
     sentences: [
       { de: "SATZ1", en: "SENTENCE1", case: "nom" },
       { de: "SATZ2", en: "SENTENCE2", case: "acc" },

@@ -28,9 +28,11 @@ const PracticeBoard = ({
     handleGetInitialActiveDeck(size);
   };
 
-  if (words.length > 0 && cardsToReview.length === 0) {
-    onSessionComplete();
-  }
+  useEffect(() => {
+    if (words.length > 0 && cardsToReview.length === 0) {
+      onSessionComplete();
+    }
+  }, [onSessionComplete, words.length, cardsToReview.length]);
 
   return (
     <div className={classes.practiceBoard}>
