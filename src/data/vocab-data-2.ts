@@ -1792,13 +1792,24 @@ export const VOCAB_2: VocabEntry[] = [
     plural: "die Patienten",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: {},
+    notes: {
+      otherGerDefinitions: "die Patientin (female)",
+      genderNote: "Masculine nouns ending in -and, -ant, -ent are often weak.",
+    },
     sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+      {
+        de: "Der Patient hatte kein Fieber.",
+        en: "The patient had no fever.",
+        case: "nom",
+      },
+      {
+        de: "Der Arzt untersucht den Patienten.",
+        en: "The doctor examines the patient.",
+        case: "acc",
+      },
     ],
-    themes: ["misc"],
-    completed: false,
+    themes: ["work", "doctor", "hospital"],
+    completed: true,
   },
   {
     id: 616,

@@ -1156,13 +1156,21 @@ export const VOCAB_3: VocabEntry[] = [
     plural: "die Touristen",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: {},
+    notes: {
+      otherGerDefinitions: "die Touristin (female)",
+      genderNote:
+        "Masculine nouns ending in -ist representing people are usually weak masculine nouns.",
+    },
     sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+      { de: " Ich bin Tourist.", en: "I am a tourist.", case: "nom" },
+      {
+        de: "Ich habe mit einem Touristen gesprochen.",
+        en: "I spoke with a tourist.",
+        case: "acc",
+      },
     ],
-    themes: ["misc"],
-    completed: false,
+    themes: ["people", "travel"],
+    completed: true,
   },
   {
     id: 1073,
@@ -1686,13 +1694,26 @@ export const VOCAB_3: VocabEntry[] = [
     plural: "die Kommandanten",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: {},
+    notes: {
+      otherGerDefinitions: "die Kommandantin (female)",
+      genderNote: "Masculine nouns ending in -and, -ant, -ent are often weak.",
+      miscNote:
+        "-ant Words mostly originate from Latin or French and almost always describe people (often professions or roles).",
+    },
     sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+      {
+        de: "Ein Kommandant darf seinen Untergebenen Befehle erteilen.",
+        en: "A commander may give orders to their subordinates.",
+        case: "nom",
+      },
+      {
+        de: "Soldaten müssen ihren Kommandanten gehorchen.",
+        en: "Soldiers must obey their commanders.",
+        case: "acc",
+      },
     ],
-    themes: ["misc"],
-    completed: false,
+    themes: ["profession", "people"],
+    completed: true,
   },
   {
     id: 1107,
@@ -1862,13 +1883,24 @@ export const VOCAB_3: VocabEntry[] = [
     plural: "die Assistenten",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: {},
+    notes: {
+      otherGerDefinitions: "die Assistentin (female)",
+      genderNote: "Masculine nouns ending in -and, -ant, -ent are often weak.",
+    },
     sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+      {
+        de: "Ich habe einen Assistenten.",
+        en: "I have an assistant.",
+        case: "acc",
+      },
+      {
+        de: "Thomas ist mein Assistent",
+        en: "Thomas is my assistant.",
+        case: "nom",
+      },
     ],
-    themes: ["misc"],
-    completed: false,
+    themes: ["work", "profession", "people"],
+    completed: true,
   },
   {
     id: 1118,

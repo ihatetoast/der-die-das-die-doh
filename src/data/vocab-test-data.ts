@@ -471,4 +471,53 @@ export const TEST_VOCAB: VocabEntry[] = [
     themes: ["animals"],
     completed: true,
   },
+  {
+    id: 219,
+    eng: "student",
+    article: "der",
+    noun: "Student",
+    plural: "die Studenten",
+    hasNoPlural: false,
+    weakMasculine: true,
+    notes: {
+      otherGerDefinitions: "die Studentin (female)",
+      genderNote: "Masculine nouns ending in -and, -ant, -ent are often weak.",
+    },
+    sentences: [
+      { de: "Ich bin Student.", en: "I am a student.", case: "nom" },
+      {
+        de: "Es ist für jeden Studenten ein tolles Thema.",
+        en: "It is a great topic for every student.",
+        case: "acc",
+      },
+    ],
+    themes: ["personal", "education"],
+    completed: true,
+  },
+  {
+    id: 2429,
+    eng: "student",
+    article: "die",
+    noun: "Studentin",
+    plural: "die Studentinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    notes: {
+      otherGerDefinitions: "der Student (male)",
+    },
+    sentences: [
+      {
+        de: "Die Studentin heißt Maria.",
+        en: "The student is named Maria.",
+        case: "nom",
+      },
+      {
+        de: "Ich habe die Studentin gestern gesehen.",
+        en: "I saw the student yesterday.",
+        case: "acc",
+      },
+    ],
+    themes: ["personal", "education"],
+    completed: true,
+  },
 ];

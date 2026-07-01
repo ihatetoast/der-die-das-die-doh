@@ -4406,8 +4406,7 @@ export const VOCAB_1: VocabEntry[] = [
     weakMasculine: true,
     notes: {
       otherGerDefinitions: "die Studentin (female)",
-      genderNote:
-        "Masculine nouns ending in -and, -ant, -ent (usu persons) are often weak.",
+      genderNote: "Masculine nouns ending in -and, -ant, -ent are often weak.",
     },
     sentences: [
       { de: "Ich bin Student.", en: "I am a student.", case: "nom" },
@@ -5584,18 +5583,28 @@ export const VOCAB_1: VocabEntry[] = [
   {
     id: 293,
     eng: "soldier",
-    article: "der",
-    noun: "Soldat",
-    plural: "die Soldaten",
+    article: "die",
+    noun: "Soldatin",
+    plural: "die Soldatinnen",
     hasNoPlural: false,
-    weakMasculine: true,
-    notes: {},
+    weakMasculine: false,
+    notes: {
+      otherGerDefinitions: "der Soldat (male)",
+    },
     sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+      {
+        de: "Die Soldatin erhielt die Schützenschnur in Gold.",
+        en: "The soldier received the protective cord in gold.",
+        case: "nom",
+      },
+      {
+        de: "Die Soldatin wurde Lehrerin. ",
+        en: "The soldier became a teacher.",
+        case: "nom",
+      },
     ],
-    themes: ["misc"],
-    completed: false,
+    themes: ["people", "work"],
+    completed: true,
   },
   {
     id: 294,
@@ -6615,7 +6624,10 @@ export const VOCAB_1: VocabEntry[] = [
     plural: "die Präsidenten",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: {},
+    notes: {
+      otherGerDefinitions: "die Präsidentin (female)",
+      genderNote: "Masculine nouns ending in -and, -ant, -ent are often weak.",
+    },
     sentences: [
       {
         de: "Wo ist der Präsident?",
@@ -6628,7 +6640,7 @@ export const VOCAB_1: VocabEntry[] = [
         case: "gen",
       },
     ],
-    themes: ["misc"],
+    themes: ["people", "work"],
     completed: true,
   },
   {
@@ -7790,7 +7802,10 @@ export const VOCAB_1: VocabEntry[] = [
     plural: "die Agenten",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: {},
+    notes: {
+      otherGerDefinitions: "die Agentin (female)",
+      genderNote: "Masculine nouns ending in -and, -ant, -ent are often weak.",
+    },
     sentences: [
       {
         de: "Agenten vom FBI haben Vals Haus zwei Wochen lang überwacht.",
@@ -7803,7 +7818,7 @@ export const VOCAB_1: VocabEntry[] = [
         case: "nom",
       },
     ],
-    themes: ["misc"],
+    themes: ["work", "people"],
     completed: true,
   },
   {

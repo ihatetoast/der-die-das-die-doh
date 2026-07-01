@@ -3075,8 +3075,7 @@ export const VOCAB_5: VocabEntry[] = [
     weakMasculine: true,
     notes: {
       otherGerDefinitions: "die Doktorandin (female)",
-      genderNote:
-        "Masculine nouns ending in -and, -ant, -ent (usu persons) are often weak.",
+      genderNote: "Masculine nouns ending in -and, -ant, -ent are often weak.",
     },
     sentences: [
       {
@@ -3103,8 +3102,7 @@ export const VOCAB_5: VocabEntry[] = [
     weakMasculine: true,
     notes: {
       otherGerDefinitions: "die Probandin (female)",
-      genderNote:
-        "Masculine nouns ending in -and, -ant, -ent (usu persons) are often weak.",
+      genderNote: "Masculine nouns ending in -and, -ant, -ent are often weak.",
     },
     sentences: [
       {
@@ -3199,6 +3197,295 @@ export const VOCAB_5: VocabEntry[] = [
       },
     ],
     themes: ["personal", "education"],
+    completed: true,
+  },
+  {
+    id: 2430,
+    eng: "multiplicand",
+    article: "der",
+    noun: "Multiplikand",
+    plural: "die Multiplikanden",
+    hasNoPlural: false,
+    weakMasculine: true,
+    notes: {
+      genderNote: "Masculine nouns ending in -and, -ant, -ent are often weak.",
+    },
+    sentences: [
+      {
+        de: "Man multipliziert den Multiplikanden mit dem Multiplikator.",
+        en: "One multiplies the multiplicand by the multiplier.",
+        case: "acc",
+      },
+      {
+        de: "Der Multiplikand ist 5.",
+        en: "The multiplicand is 5.",
+        case: "nom",
+      },
+    ],
+    themes: ["education"],
+    completed: true,
+  },
+  {
+    id: 2431,
+    eng: "commander",
+    article: "die",
+    noun: "Kommandantin",
+    plural: "die Kommandantinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    notes: {
+      otherGerDefinitions: "der Kommandant (male)",
+    },
+    sentences: [
+      {
+        de: "Das Raumschiff wird von einer erfahrenen Kommandantin geleitet.",
+        en: "The spaceship is led by an experienced commander.",
+        case: "dat",
+      },
+      {
+        de: "Die Kommandantin gab den Soldaten den Befehl zum Aufbruch.",
+        en: "The commander gave the soldiers the order to depart.",
+        case: "nom",
+      },
+    ],
+    themes: ["profession", "people"],
+    completed: true,
+  },
+  {
+    id: 2432,
+    eng: "president",
+    article: "die",
+    noun: "Präsidentin",
+    plural: "die Präsidentinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    notes: {
+      otherGerDefinitions: "der Präsident (male)",
+    },
+    sentences: [
+      {
+        de: "Wo ist die Präsidentin?",
+        en: "Where is the president?",
+        case: "nom",
+      },
+      {
+        de: "Oskar ist der Sekretär der Präsidentin.",
+        en: "Oskar is the president's secretary.",
+        case: "gen",
+      },
+    ],
+    themes: ["people", "work"],
+    completed: true,
+  },
+  {
+    id: 2433,
+    eng: "patient",
+    article: "die",
+    noun: "Patientin",
+    plural: "die Patienten",
+    hasNoPlural: false,
+    weakMasculine: false,
+    notes: {
+      otherGerDefinitions: "der Patient (male)",
+    },
+    sentences: [
+      {
+        de: "Der Patientin geht es von Tag zu Tag schlechter.",
+        en: "The patient is getting worse day by day.",
+        case: "dat",
+      },
+      {
+        de: "Die Patientin ist über den Berg.",
+        en: "The patient is over the critical stage.",
+        case: "nom",
+      },
+    ],
+    themes: ["work", "doctor", "hospital"],
+    completed: true,
+  },
+  {
+    id: 2434,
+    eng: "assistant",
+    article: "die",
+    noun: "Assistentin",
+    plural: "die Assistentinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    notes: {
+      otherGerDefinitions: "der Assistent (male)",
+    },
+    sentences: [
+      {
+        de: "Ich bin nicht mehr deine Assistentin.",
+        en: "I am no longer your assistant.",
+        case: "nom",
+      },
+      {
+        de: "Dem Hochschulprofessor wurden zwei Assistentinnen zur Seite gestellt.",
+        en: "The university professor was given two assistants.",
+        case: "acc",
+      },
+    ],
+    themes: ["work", "profession", "people"],
+    completed: true,
+  },
+  {
+    id: 2435,
+    eng: "agent",
+    article: "die",
+    noun: "Agentin",
+    plural: "die Agentinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    notes: {
+      otherGerDefinitions: "der  Agent (male)",
+    },
+    sentences: [
+      {
+        de: "Die Tarnung der Agentin ist aufgeflogen.",
+        en: "The agent's cover was blown (The disguise was uncovered).",
+        case: "gen",
+      },
+      {
+        de: "Hauptberuflich arbeitet sie als Agentin.",
+        en: "She works as an agent full-time.",
+        case: "nom",
+      },
+    ],
+    themes: ["work", "people"],
+    completed: true,
+  },
+  {
+    id: 2436,
+    eng: "biologist",
+    article: "der",
+    noun: "Biologe",
+    plural: "die Biologen",
+    hasNoPlural: false,
+    weakMasculine: true,
+    notes: {
+      otherGerDefinitions: "die Biologin (female)",
+      miscNote:
+        "The suffix '-loge' comes from the Ancient Greek word *lógos* (doctrine, word, reason) and is the equivalent of '-logist' in English.",
+      genderNote: "Masculine nouns ending in '-loge' are weak.",
+    },
+    sentences: [
+      {
+        de: "Der Biologe installierte eine Kamera im Adlerhorst.",
+        en: "The biologist installed a camera in the eagle's nest.",
+        case: "nom",
+      },
+      {
+        de: "Ich dachte an einen Onkel von mir, einen Biologen, der mich mit ein Mikroskop beschenkt hatte.",
+        en: "I was thinking of an uncle of mine, a biologist, who had given me a microscope.",
+        case: "acc",
+      },
+    ],
+    themes: ["work", "people", "science", "profession"],
+    completed: true,
+  },
+  {
+    id: 2437,
+    eng: "biologist",
+    article: "die",
+    noun: "Biologin",
+    plural: "die Biologinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    notes: {
+      otherGerDefinitions: "der Biologe (male)",
+      miscNote:
+        "The suffix 'login' is the feminine form of '-loge' which comes from the Ancient Greek word *lógos* (doctrine, word, reason) and is the equivalent of '-logist' in English.",
+    },
+    sentences: [
+      {
+        de: "Ich kenne die Biologin, die in diesem Labor arbeitet.",
+        en: "I know the biologist who works in this lab.",
+        case: "acc",
+      },
+      {
+        de: "Sie will Biologin werden, um beim Umweltschutz zu helfen.",
+        en: "She wants to become a biologist to help with environmental protection.",
+        case: "nom",
+      },
+    ],
+    themes: ["work", "people", "science", "profession"],
+    completed: true,
+  },
+  {
+    id: 1072,
+    eng: "tourist",
+    article: "die",
+    noun: "Touristin",
+    plural: "die Touristinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    notes: {
+      otherGerDefinitions: "der Tourist (male)",
+    },
+    sentences: [
+      { de: "Ich bin Touristin.", en: "I am a tourist.", case: "nom" },
+      {
+        de: "Ich habe mit einem Touristin gesprochen.",
+        en: "I spoke with a tourist.",
+        case: "dat",
+      },
+    ],
+    themes: ["people", "travel"],
+    completed: true,
+  },
+  {
+    id: 1073,
+    eng: "journalist",
+    article: "die",
+    noun: "Journalistin",
+    plural: "die Journalistinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    notes: {
+      otherGerDefinitions: "der Journalist (male)",
+    },
+    sentences: [
+      {
+        de: "Tina Hassel ist eine bekannte Journalistin.",
+        en: "Tina Hassel is a well-known journalist.",
+        case: "nom",
+      },
+      {
+        de: "Damit ist er ein Vorbild für viele Journalistinnen und Journalisten.",
+        en: "That makes him a role model for many female and male journalists.",
+        case: "acc",
+      },
+    ],
+    themes: ["people", "profession"],
+    completed: true,
+  },
+  {
+    id: 1074,
+    eng: "journalist",
+    article: "der",
+    noun: "Journalist",
+    plural: "die Journalisten",
+    hasNoPlural: false,
+    weakMasculine: true,
+    notes: {
+      otherGerDefinitions: "die Journalistin (female)",
+      genderNote:
+        "Masculine nouns ending in -ist representing people are often weak.",
+    },
+    sentences: [
+      {
+        de: "Es ist von dem Journalisten Michael Wolff",
+        en: "It is from the journalist Michael Wolff",
+        case: "dat",
+      },
+      {
+        de: "Nach dem Krieg ist er Journalist geworden. ",
+        en: "After the war, he became a journalist.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "profession"],
     completed: true,
   },
 ];
