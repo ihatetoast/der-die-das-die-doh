@@ -1794,7 +1794,8 @@ export const VOCAB_2: VocabEntry[] = [
     weakMasculine: true,
     notes: {
       otherGerDefinitions: "die Patientin (female)",
-      genderNote: "Masculine nouns ending in -and, -ant, -ent are often weak.",
+      weakMascNote:
+        "Masculine nouns ending in -and, -ant, -ent are often weak.",
     },
     sentences: [
       {
@@ -3118,7 +3119,7 @@ export const VOCAB_2: VocabEntry[] = [
     weakMasculine: true,
     notes: {
       otherEngDefinitions: "customer",
-      genderNote:
+      weakMascNote:
         "Masculine nouns of people or animals that end in -e are often weak.",
     },
     sentences: [
@@ -3525,8 +3526,8 @@ export const VOCAB_2: VocabEntry[] = [
     eng: "faith",
     article: "der",
     noun: "Glaube",
-    plural: "REPLACE",
-    hasNoPlural: false,
+    plural: "no plural",
+    hasNoPlural: true,
     weakMasculine: true,
     notes: {
       weakMascNote: "Takes -ns in the genitive singular",

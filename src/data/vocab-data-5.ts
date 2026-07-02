@@ -1448,7 +1448,7 @@ export const VOCAB_5: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: true,
     notes: {
-      genderNote:
+      weakMascNote:
         "Masculine nouns of people or animals that end in -e are often weak.",
     },
     sentences: [
@@ -1578,22 +1578,7 @@ export const VOCAB_5: VocabEntry[] = [
     themes: ["misc"],
     completed: false,
   },
-  {
-    id: 2120,
-    eng: "bear",
-    article: "der",
-    noun: "Bär",
-    plural: "die Bären",
-    hasNoPlural: false,
-    weakMasculine: true,
-    notes: {},
-    sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
-    ],
-    themes: ["misc"],
-    completed: false,
-  },
+
   {
     id: 2121,
     eng: "snake",
@@ -2163,7 +2148,7 @@ export const VOCAB_5: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: true,
     notes: {
-      genderNote:
+      weakMascNote:
         "Masculine nouns of people or animals that end in -e are often weak.",
     },
     sentences: [
@@ -2197,22 +2182,7 @@ export const VOCAB_5: VocabEntry[] = [
     themes: ["misc"],
     completed: false,
   },
-  {
-    id: 2171,
-    eng: "fiancé",
-    article: "der",
-    noun: "Verlobte",
-    plural: "die Verlobten",
-    hasNoPlural: false,
-    weakMasculine: true,
-    notes: {},
-    sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
-    ],
-    themes: ["misc"],
-    completed: false,
-  },
+
   {
     id: 2172,
     eng: "fiancée",
@@ -2654,22 +2624,7 @@ export const VOCAB_5: VocabEntry[] = [
     themes: ["misc"],
     completed: false,
   },
-  {
-    id: 2220,
-    eng: "witness",
-    article: "der",
-    noun: "Zeuge",
-    plural: "die Zeugen",
-    hasNoPlural: false,
-    weakMasculine: true,
-    notes: {},
-    sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
-    ],
-    themes: ["misc"],
-    completed: false,
-  },
+
   {
     id: 2221,
     eng: "evidence",
@@ -2783,22 +2738,6 @@ export const VOCAB_5: VocabEntry[] = [
     completed: false,
   },
   {
-    id: 2228,
-    eng: "frenchman",
-    article: "der",
-    noun: "Franzose",
-    plural: "die Franzosen",
-    hasNoPlural: false,
-    weakMasculine: true,
-    notes: {},
-    sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
-    ],
-    themes: ["misc"],
-    completed: false,
-  },
-  {
     id: 2229,
     eng: "philosopher",
     article: "der",
@@ -2814,22 +2753,7 @@ export const VOCAB_5: VocabEntry[] = [
     themes: ["misc"],
     completed: false,
   },
-  {
-    id: 2230,
-    eng: "prince",
-    article: "der",
-    noun: "Fürst",
-    plural: "die Fürsten",
-    hasNoPlural: false,
-    weakMasculine: true,
-    notes: {},
-    sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
-    ],
-    themes: ["misc"],
-    completed: false,
-  },
+
   {
     id: 2231,
     eng: "departure",
@@ -3047,7 +2971,7 @@ export const VOCAB_5: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: true,
     notes: {
-      genderNote:
+      weakMascNote:
         "Masculine nouns of people or animals that end in -e are often weak.",
     },
     sentences: [
@@ -3075,7 +2999,8 @@ export const VOCAB_5: VocabEntry[] = [
     weakMasculine: true,
     notes: {
       otherGerDefinitions: "die Doktorandin (female)",
-      genderNote: "Masculine nouns ending in -and, -ant, -ent are often weak.",
+      weakMascNote:
+        "Masculine nouns ending in -and, -ant, -ent are often weak.",
     },
     sentences: [
       {
@@ -3102,7 +3027,8 @@ export const VOCAB_5: VocabEntry[] = [
     weakMasculine: true,
     notes: {
       otherGerDefinitions: "die Probandin (female)",
-      genderNote: "Masculine nouns ending in -and, -ant, -ent are often weak.",
+      weakMascNote:
+        "Masculine nouns ending in -and, -ant, -ent are often weak.",
     },
     sentences: [
       {
@@ -3208,7 +3134,8 @@ export const VOCAB_5: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: true,
     notes: {
-      genderNote: "Masculine nouns ending in -and, -ant, -ent are often weak.",
+      weakMascNote:
+        "Masculine nouns ending in -and, -ant, -ent are often weak.",
     },
     sentences: [
       {
@@ -3367,7 +3294,7 @@ export const VOCAB_5: VocabEntry[] = [
       otherGerDefinitions: "die Biologin (female)",
       miscNote:
         "The suffix '-loge' comes from the Ancient Greek word *lógos* (doctrine, word, reason) and is the equivalent of '-logist' in English.",
-      genderNote: "Masculine nouns ending in '-loge' are weak.",
+      weakMascNote: "Masculine nouns ending in '-loge' are weak.",
     },
     sentences: [
       {
@@ -3413,7 +3340,7 @@ export const VOCAB_5: VocabEntry[] = [
     completed: true,
   },
   {
-    id: 1072,
+    id: 2438,
     eng: "tourist",
     article: "die",
     noun: "Touristin",
@@ -3434,62 +3361,9 @@ export const VOCAB_5: VocabEntry[] = [
     themes: ["people", "travel"],
     completed: true,
   },
+
   {
-    id: 1073,
-    eng: "journalist",
-    article: "die",
-    noun: "Journalistin",
-    plural: "die Journalistinnen",
-    hasNoPlural: false,
-    weakMasculine: false,
-    notes: {
-      otherGerDefinitions: "der Journalist (male)",
-    },
-    sentences: [
-      {
-        de: "Tina Hassel ist eine bekannte Journalistin.",
-        en: "Tina Hassel is a well-known journalist.",
-        case: "nom",
-      },
-      {
-        de: "Damit ist er ein Vorbild für viele Journalistinnen und Journalisten.",
-        en: "That makes him a role model for many female and male journalists.",
-        case: "acc",
-      },
-    ],
-    themes: ["people", "profession"],
-    completed: true,
-  },
-  {
-    id: 1074,
-    eng: "journalist",
-    article: "der",
-    noun: "Journalist",
-    plural: "die Journalisten",
-    hasNoPlural: false,
-    weakMasculine: true,
-    notes: {
-      otherGerDefinitions: "die Journalistin (female)",
-      genderNote:
-        "Masculine nouns ending in -ist representing people are often weak.",
-    },
-    sentences: [
-      {
-        de: "Es ist von dem Journalisten Michael Wolff",
-        en: "It is from the journalist Michael Wolff",
-        case: "dat",
-      },
-      {
-        de: "Nach dem Krieg ist er Journalist geworden. ",
-        en: "After the war, he became a journalist.",
-        case: "nom",
-      },
-    ],
-    themes: ["people", "profession"],
-    completed: true,
-  },
-  {
-    id: 1075,
+    id: 2441,
     eng: "officer",
     article: "die",
     noun: "Beamtin",
@@ -3507,7 +3381,7 @@ export const VOCAB_5: VocabEntry[] = [
     completed: false,
   },
   {
-    id: 1076,
+    id: 2442,
     eng: "messenger",
     article: "die",
     noun: "Botin",
@@ -3522,18 +3396,152 @@ export const VOCAB_5: VocabEntry[] = [
     themes: ["misc"],
     completed: false,
   },
+
   {
-    id: 1077,
-    eng: "stranger",
+    id: 2444,
+    eng: "princess",
     article: "die",
-    noun: "Fremde",
-    plural: "die Fremden",
+    noun: "Prinzessin",
+    plural: "die Prinzessinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+    ],
+    themes: ["people"],
+    completed: false,
+  },
+  {
+    id: 2445,
+    eng: "pilot",
+    article: "die",
+    noun: "Pilotin",
+    plural: "die Pilotinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+    ],
+    themes: ["misc"],
+    completed: false,
+  },
+  {
+    id: 2446,
+    eng: "farmer",
+    article: "die",
+    noun: "Bauerin",
+    plural: "die Bauerinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+    ],
+    themes: ["misc"],
+    completed: false,
+  },
+  {
+    id: 2447,
+    eng: "saint",
+    article: "die",
+    noun: "Heiligin",
+    plural: "die Heiliginnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+    ],
+    themes: ["misc"],
+    completed: false,
+  },
+  {
+    id: 2448,
+    eng: "colleague",
+    article: "die",
+    noun: "Kollegin",
+    plural: "die Kolleginnen",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {
-      otherGerDefinitions: "der Fremde (male)",
-      miscNote:
-        "The feminine form can refer to a female stranger but also means 'foreign parts', 'outland', and 'abroad', and in this case has no plural.",
+      genderPair: {
+        article: "der",
+        singular: "Kollege",
+        plural: "die Kollegen",
+      },
+    },
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+    ],
+    themes: ["misc"],
+    completed: false,
+  },
+
+  {
+    id: 2450,
+    eng: "senator",
+    article: "die",
+    noun: "Senatorin",
+    plural: "die Senatorinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    notes: {
+      genderPair: {
+        article: "der",
+        singular: "Senator",
+        plural: "die Senatoren",
+      },
+    },
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+    ],
+    themes: ["misc"],
+    completed: false,
+  },
+  {
+    id: 2451,
+    eng: "photographer",
+    article: "die",
+    noun: "Fotografin",
+    plural: "die Fotografinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    notes: {
+      genderPair: {
+        article: "der",
+        singular: "Fotograf",
+        plural: "die Fotografen",
+      },
+    },
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+    ],
+    themes: ["misc"],
+    completed: false,
+  },
+  {
+    id: 2452,
+    eng: "inspector",
+    article: "die",
+    noun: "Inspektorin",
+    plural: "die Inspektorinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    notes: {
+      genderPair: {
+        article: "der",
+        singular: "Inspektor",
+        plural: "die Inspektoren",
+      },
     },
     sentences: [
       { de: "SATZ1", en: "SENTENCE1", case: "nom" },

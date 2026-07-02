@@ -86,7 +86,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: true,
     notes: {
-      genderNote:
+      weakMascNote:
         "Masculine nouns of people or animals that end in -e are often weak.",
       miscNote:
         "Other words: Bäckerjunge (baker's boy ~ apprentice), Gassenjungen (raggamuffin), Strichjunge (hustler, male sex worker).",
@@ -340,7 +340,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     completed: true,
   },
   {
-    id: 10000698,
+    id: 100000698,
     eng: "client",
     article: "der",
     noun: "Kunde",
@@ -349,7 +349,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     weakMasculine: true,
     notes: {
       otherEngDefinitions: "customer",
-      genderNote:
+      weakMascNote:
         "Masculine nouns of people or animals that end in -e are often weak.",
     },
     sentences: [
@@ -376,7 +376,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: true,
     notes: {
-      genderNote:
+      weakMascNote:
         "Masculine nouns of people or animals that end in -e are often weak.",
     },
     sentences: [
@@ -403,7 +403,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: true,
     notes: {
-      genderNote:
+      weakMascNote:
         "Masculine nouns of people or animals that end in -e are often weak.",
     },
     sentences: [
@@ -430,7 +430,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: true,
     notes: {
-      genderNote:
+      weakMascNote:
         "Masculine nouns of people or animals that end in -e are often weak.",
     },
     sentences: [
@@ -457,7 +457,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: true,
     notes: {
-      genderNote:
+      weakMascNote:
         "Masculine nouns of people or animals that end in -e are often weak.",
     },
     sentences: [
@@ -485,7 +485,8 @@ export const TEST_VOCAB: VocabEntry[] = [
     weakMasculine: true,
     notes: {
       otherGerDefinitions: "die Studentin (female)",
-      genderNote: "Masculine nouns ending in -and, -ant, -ent are often weak.",
+      weakMascNote:
+        "Masculine nouns ending in -and, -ant, -ent are often weak.",
     },
     sentences: [
       { de: "Ich bin Student.", en: "I am a student.", case: "nom" },
@@ -616,7 +617,8 @@ export const TEST_VOCAB: VocabEntry[] = [
     weakMasculine: true,
     notes: {
       otherGerDefinitions: "die Präsidentin (female)",
-      genderNote: "Masculine nouns ending in -and, -ant, -ent are often weak.",
+      weakMascNote:
+        "Masculine nouns ending in -and, -ant, -ent are often weak.",
     },
     sentences: [
       {
@@ -707,7 +709,8 @@ export const TEST_VOCAB: VocabEntry[] = [
     weakMasculine: true,
     notes: {
       otherGerDefinitions: "die Agentin (female)",
-      genderNote: "Masculine nouns ending in -and, -ant, -ent are often weak.",
+      weakMascNote:
+        "Masculine nouns ending in -and, -ant, -ent are often weak.",
     },
     sentences: [
       {
@@ -789,5 +792,704 @@ export const TEST_VOCAB: VocabEntry[] = [
     ],
     themes: ["misc"],
     completed: false,
+  },
+  {
+    id: 100000615,
+    eng: "patient",
+    article: "der",
+    noun: "Patient",
+    plural: "die Patienten",
+    hasNoPlural: false,
+    weakMasculine: true,
+    notes: {
+      otherGerDefinitions: "die Patientin (female)",
+      weakMascNote:
+        "Masculine nouns ending in -and, -ant, -ent are often weak.",
+    },
+    sentences: [
+      {
+        de: "Der Patient hatte kein Fieber.",
+        en: "The patient had no fever.",
+        case: "nom",
+      },
+      {
+        de: "Der Arzt untersucht den Patienten.",
+        en: "The doctor examines the patient.",
+        case: "acc",
+      },
+    ],
+    themes: ["work", "doctor", "hospital"],
+    completed: true,
+  },
+  {
+    id: 100000696,
+    eng: "fool",
+    article: "der",
+    noun: "Narr",
+    plural: "die Narren",
+    hasNoPlural: false,
+    weakMasculine: true,
+    notes: {},
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+    ],
+    themes: ["misc"],
+    completed: false,
+  },
+  {
+    id: 100000709,
+    eng: "prince",
+    article: "der",
+    noun: "Prinz",
+    plural: "die Prinzen",
+    hasNoPlural: false,
+    weakMasculine: true,
+    notes: {},
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+    ],
+    themes: ["misc"],
+    completed: false,
+  },
+  {
+    id: 1000000724,
+    eng: "faith",
+    article: "der",
+    noun: "Glaube",
+    plural: "no plural",
+    hasNoPlural: true,
+    weakMasculine: true,
+    notes: {
+      weakMascNote: "Takes -ns in the genitive singular",
+    },
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+    ],
+    themes: ["misc"],
+    completed: false,
+  },
+  {
+    id: 1000000797,
+    eng: "dragon",
+    article: "der",
+    noun: "Drache",
+    plural: "die Drachen",
+    hasNoPlural: false,
+    weakMasculine: true,
+    notes: {},
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+    ],
+    themes: ["misc"],
+    completed: false,
+  },
+  {
+    id: 1000000802,
+    eng: "adult",
+    article: "der",
+    noun: "Erwachsene",
+    plural: "die Erwachsenen",
+    hasNoPlural: false,
+    weakMasculine: true,
+    notes: {},
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+    ],
+    themes: ["misc"],
+    completed: false,
+  },
+  {
+    id: 1000000817,
+    eng: "pilot",
+    article: "der",
+    noun: "Pilot",
+    plural: "die Piloten",
+    hasNoPlural: false,
+    weakMasculine: true,
+    notes: {},
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+    ],
+    themes: ["misc"],
+    completed: false,
+  },
+  {
+    id: 1000000953,
+    eng: "prisoner",
+    article: "der",
+    noun: "Gefangene",
+    plural: "die Gefangenen",
+    hasNoPlural: false,
+    weakMasculine: true,
+    notes: {},
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+    ],
+    themes: ["misc"],
+    completed: false,
+  },
+  {
+    id: 1000001028,
+    eng: "farmer",
+    article: "der",
+    noun: "Bauer",
+    plural: "die Bauern",
+    hasNoPlural: false,
+    weakMasculine: true,
+    notes: {},
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+    ],
+    themes: ["misc"],
+    completed: false,
+  },
+  {
+    id: 1000001056,
+    eng: "diamond",
+    article: "der",
+    noun: "Diamant",
+    plural: "die Diamanten",
+    hasNoPlural: false,
+    weakMasculine: true,
+    notes: {},
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+    ],
+    themes: ["misc"],
+    completed: false,
+  },
+  {
+    id: 100000072,
+    eng: "tourist",
+    article: "der",
+    noun: "Tourist",
+    plural: "die Touristen",
+    hasNoPlural: false,
+    weakMasculine: true,
+    notes: {
+      otherGerDefinitions: "die Touristin (female)",
+      genderNote:
+        "Masculine nouns ending in -ist representing people are usually weak masculine nouns.",
+    },
+    sentences: [
+      { de: " Ich bin Tourist.", en: "I am a tourist.", case: "nom" },
+      {
+        de: "Ich habe mit einem Touristen gesprochen.",
+        en: "I spoke with a tourist.",
+        case: "acc",
+      },
+    ],
+    themes: ["people", "travel"],
+    completed: true,
+  },
+  {
+    id: 1000001100,
+    eng: "saint",
+    article: "der",
+    noun: "Heilige",
+    plural: "die Heiligen",
+    hasNoPlural: false,
+    weakMasculine: true,
+    notes: {},
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+    ],
+    themes: ["misc"],
+    completed: false,
+  },
+  {
+    id: 1000001117,
+    eng: "assistant",
+    article: "der",
+    noun: "Assistent",
+    plural: "die Assistenten",
+    hasNoPlural: false,
+    weakMasculine: true,
+    notes: {
+      otherGerDefinitions: "die Assistentin (female)",
+      weakMascNote:
+        "Masculine nouns ending in -and, -ant, -ent are often weak.",
+    },
+    sentences: [
+      {
+        de: "Ich habe einen Assistenten.",
+        en: "I have an assistant.",
+        case: "acc",
+      },
+      {
+        de: "Thomas ist mein Assistent",
+        en: "Thomas is my assistant.",
+        case: "nom",
+      },
+    ],
+    themes: ["work", "profession", "people"],
+    completed: true,
+  },
+  {
+    id: 1000001106,
+    eng: "commander",
+    article: "der",
+    noun: "Kommandant",
+    plural: "die Kommandanten",
+    hasNoPlural: false,
+    weakMasculine: true,
+    notes: {
+      otherGerDefinitions: "die Kommandantin (female)",
+      weakMascNote:
+        "Masculine nouns ending in -and, -ant, -ent are often weak.",
+      miscNote:
+        "-ant Words mostly originate from Latin or French and almost always describe people (often professions or roles).",
+    },
+    sentences: [
+      {
+        de: "Ein Kommandant darf seinen Untergebenen Befehle erteilen.",
+        en: "A commander may give orders to their subordinates.",
+        case: "nom",
+      },
+      {
+        de: "Soldaten müssen ihren Kommandanten gehorchen.",
+        en: "Soldiers must obey their commanders.",
+        case: "acc",
+      },
+    ],
+    themes: ["profession", "people"],
+    completed: true,
+  },
+  {
+    id: 1000001134,
+    eng: "witness",
+    article: "der",
+    noun: "Zeuge",
+    plural: "die Zeugen",
+    hasNoPlural: false,
+    weakMasculine: true,
+    notes: {},
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+    ],
+    themes: ["misc"],
+    completed: false,
+  },
+  {
+    id: 1000001203,
+    eng: "idiot",
+    article: "der",
+    noun: "Idiot",
+    plural: "die Idioten",
+    hasNoPlural: false,
+    weakMasculine: true,
+    notes: {},
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+    ],
+    themes: ["misc"],
+    completed: false,
+  },
+  {
+    id: 1000001205,
+    eng: "seed",
+    article: "der",
+    noun: "Samen",
+    plural: "die Samen",
+    hasNoPlural: false,
+    weakMasculine: true,
+    notes: {
+      weakMascNote: "Takes -ns in the genitive singular",
+    },
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+    ],
+    themes: ["misc"],
+    completed: false,
+  },
+  {
+    id: 1000001243,
+    eng: "monkey",
+    article: "der",
+    noun: "Affe",
+    plural: "die Affen",
+    hasNoPlural: false,
+    weakMasculine: true,
+    notes: {
+      otherEngDefinitions: "ape",
+      weakMascNote:
+        "Masculine nouns of people or animals that end in -e are often weak.",
+    },
+    sentences: [
+      {
+        de: "Der Affe kletterte auf einen Baum.",
+        en: "The monkey climbed a tree.",
+        case: "nom",
+      },
+      {
+        de: "Ich habe den Affen im Tierpark gesehen.",
+        en: "I saw the ape in the zoo.",
+        case: "acc",
+      },
+    ],
+    themes: ["animals", "zoo"],
+    completed: true,
+  },
+  {
+    id: 1000001304,
+    eng: "colleague",
+    article: "der",
+    noun: "Kollege",
+    plural: "die Kollegen",
+    hasNoPlural: false,
+    weakMasculine: true,
+    notes: {},
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+    ],
+    themes: ["misc"],
+    completed: false,
+  },
+  {
+    id: 1000001318,
+    eng: "expert",
+    article: "der",
+    noun: "Experte",
+    plural: "die Experten",
+    hasNoPlural: false,
+    weakMasculine: true,
+    notes: {},
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+    ],
+    themes: ["misc"],
+    completed: false,
+  },
+  {
+    id: 1000001398,
+    eng: "giant",
+    article: "der",
+    noun: "Riese",
+    plural: "die Riesen",
+    hasNoPlural: false,
+    weakMasculine: true,
+    notes: {},
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+    ],
+    themes: ["misc"],
+    completed: false,
+  },
+  {
+    id: 1000001530,
+    eng: "spark",
+    article: "der",
+    noun: "Funke",
+    plural: "die Funken",
+    hasNoPlural: false,
+    weakMasculine: true,
+    notes: {
+      weakMascNote: "Takes -ns in the genitive singular",
+    },
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+    ],
+    themes: ["misc"],
+    completed: false,
+  },
+  {
+    id: 1000001569,
+    eng: "archer",
+    article: "der",
+    noun: "Bogenschütze",
+    plural: "die Bogenschützen",
+    hasNoPlural: false,
+    weakMasculine: true,
+    notes: {},
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+    ],
+    themes: ["misc"],
+    completed: false,
+  },
+  {
+    id: 1000001572,
+    eng: "shepherd",
+    article: "der",
+    noun: "Hirte",
+    plural: "die Hirten",
+    hasNoPlural: false,
+    weakMasculine: true,
+    notes: {},
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+    ],
+    themes: ["misc"],
+    completed: false,
+  },
+  {
+    id: 1000001574,
+    eng: "favorite",
+    article: "der",
+    noun: "Favorit",
+    plural: "die Favoriten",
+    hasNoPlural: false,
+    weakMasculine: true,
+    notes: {},
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+    ],
+    themes: ["misc"],
+    completed: false,
+  },
+  {
+    id: 1000001609,
+    eng: "pirate",
+    article: "der",
+    noun: "Pirat",
+    plural: "die Piraten",
+    hasNoPlural: false,
+    weakMasculine: true,
+    notes: {},
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+    ],
+    themes: ["misc"],
+    completed: false,
+  },
+  {
+    id: 1000001615,
+    eng: "elephant",
+    article: "der",
+    noun: "Elefant",
+    plural: "die Elefanten",
+    hasNoPlural: false,
+    weakMasculine: true,
+    notes: {
+      miscNote:
+        "-ant Words mostly originate from Latin or French and almost always describe people (often professions or roles).",
+      weakMascNote:
+        "Masculine nouns ending in -and, -ant, -ent are often weak.",
+    },
+    sentences: [
+      {
+        de: "Ich habe einen Elefanten im Zoo gesehen.",
+        en: "I saw an elephant at the zoo.",
+        case: "acc",
+      },
+      {
+        de: "Der Elfant heißt Stefan und mag Schokoladeneis",
+        en: "The elephant is named Stefan and likes chocolate ice cream.",
+        case: "nom",
+      },
+    ],
+    themes: ["zoo", "animals"],
+    completed: true,
+  },
+  {
+    id: 1000001634,
+    eng: "soldier",
+    article: "der",
+    noun: "Soldat",
+    plural: "die Soldaten",
+    hasNoPlural: false,
+    weakMasculine: true,
+    notes: {
+      genderPair: {
+        article: "die",
+        singular: "Soldatin",
+        plural: "die Soldatinnen",
+      },
+      weakMascNote:
+        "Masculine nouns ending in -at that represent people are often weak.",
+    },
+    sentences: [
+      {
+        de: "Der Soldat wurde offiziell für tot erklärt.",
+        en: "The soldier was officially declared dead.",
+        case: "nom",
+      },
+      {
+        de: "Er schoss einen Pfeil auf den Soldaten.",
+        en: "He shot an arrow at the soldier.",
+        case: "acc",
+      },
+    ],
+    themes: ["people", "work"],
+    completed: true,
+  },
+  {
+    id: 1000001731,
+    eng: "senator",
+    article: "der",
+    noun: "Senator",
+    plural: "die Senatoren",
+    hasNoPlural: false,
+    weakMasculine: true,
+    notes: {
+      genderPair: {
+        article: "die",
+        singular: "Senatorin",
+        plural: "die Senatorinnen",
+      },
+    },
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+    ],
+    themes: ["misc"],
+    completed: false,
+  },
+  {
+    id: 1000001748,
+    eng: "photographer",
+    article: "der",
+    noun: "Fotograf",
+    plural: "die Fotografen",
+    hasNoPlural: false,
+    weakMasculine: true,
+    notes: {
+      genderPair: {
+        article: "die",
+        singular: "Fotografin",
+        plural: "die Fotografinnen",
+      },
+    },
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+    ],
+    themes: ["misc"],
+    completed: false,
+  },
+  {
+    id: 1000001820,
+    eng: "satellite",
+    article: "der",
+    noun: "Satellit",
+    plural: "die Satelliten",
+    hasNoPlural: false,
+    weakMasculine: true,
+    notes: {},
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+    ],
+    themes: ["misc"],
+    completed: false,
+  },
+  {
+    id: 1000001822,
+    eng: "puppy",
+    article: "der",
+    noun: "Welpe",
+    plural: "die Welpen",
+    hasNoPlural: false,
+    weakMasculine: true,
+    notes: {},
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+    ],
+    themes: ["misc"],
+    completed: false,
+  },
+  {
+    id: 1000001859,
+    eng: "ancestor",
+    article: "der",
+    noun: "Vorfahr",
+    plural: "die Vorfahren",
+    hasNoPlural: false,
+    weakMasculine: true,
+    notes: {},
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+    ],
+    themes: ["misc"],
+    completed: false,
+  },
+  {
+    id: 1000001874,
+    eng: "inspector",
+    article: "der",
+    noun: "Inspektor",
+    plural: "die Inspektoren",
+    hasNoPlural: false,
+    weakMasculine: true,
+    notes: {
+      genderPair: {
+        article: "die",
+        singular: "Inspektorin",
+        plural: "die Inspektorinnen",
+      },
+    },
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+    ],
+    themes: ["misc"],
+    completed: false,
+  },
+  {
+    id: 1000001910,
+    eng: "elf",
+    article: "der",
+    noun: "Elf",
+    plural: "die Elfen",
+    hasNoPlural: false,
+    weakMasculine: true,
+    notes: {},
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+    ],
+    themes: ["misc"],
+    completed: false,
+  },
+  {
+    id: 1000002440,
+    eng: "journalist",
+    article: "der",
+    noun: "Journalist",
+    plural: "die Journalisten",
+    hasNoPlural: false,
+    weakMasculine: true,
+    notes: {
+      otherGerDefinitions: "die Journalistin (female)",
+      weakMascNote:
+        "Masculine nouns ending in -ist representing people are often weak.",
+    },
+    sentences: [
+      {
+        de: "Es ist von dem Journalisten Michael Wolff",
+        en: "It is from the journalist Michael Wolff",
+        case: "dat",
+      },
+      {
+        de: "Nach dem Krieg ist er Journalist geworden. ",
+        en: "After the war, he became a journalist.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "profession"],
+    completed: true,
   },
 ];

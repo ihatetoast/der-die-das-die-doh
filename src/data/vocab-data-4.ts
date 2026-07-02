@@ -337,24 +337,7 @@ export const VOCAB_4: VocabEntry[] = [
     themes: ["misc"],
     completed: false,
   },
-  {
-    id: 1519,
-    eng: "belief",
-    article: "der",
-    noun: "Glaube",
-    plural: "die Glauben",
-    hasNoPlural: false,
-    weakMasculine: true,
-    notes: {
-      weakMascNote: "Takes -ns in the genitive singular",
-    },
-    sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
-    ],
-    themes: ["misc"],
-    completed: false,
-  },
+
   {
     id: 1520,
     eng: "costume",
@@ -1653,22 +1636,7 @@ export const VOCAB_4: VocabEntry[] = [
     themes: ["misc"],
     completed: false,
   },
-  {
-    id: 1601,
-    eng: "count",
-    article: "der",
-    noun: "Graf",
-    plural: "die Grafen",
-    hasNoPlural: false,
-    weakMasculine: true,
-    notes: {},
-    sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
-    ],
-    themes: ["misc"],
-    completed: false,
-  },
+
   {
     id: 1602,
     eng: "solution",
@@ -1888,7 +1856,8 @@ export const VOCAB_4: VocabEntry[] = [
     notes: {
       miscNote:
         "-ant Words mostly originate from Latin or French and almost always describe people (often professions or roles).",
-      genderNote: "Masculine nouns ending in -and, -ant, -ent are often weak.",
+      weakMascNote:
+        "Masculine nouns ending in -and, -ant, -ent are often weak.",
     },
     sentences: [
       {
@@ -2193,34 +2162,7 @@ export const VOCAB_4: VocabEntry[] = [
     themes: ["misc"],
     completed: false,
   },
-  {
-    id: 1634,
-    eng: "soldier",
-    article: "der",
-    noun: "Soldat",
-    plural: "die Soldaten",
-    hasNoPlural: false,
-    weakMasculine: true,
-    notes: {
-      otherGerDefinitions: "die Soldatin (female)",
-      genderNote:
-        "Masculine nouns ending in -at that represent people are often weak.",
-    },
-    sentences: [
-      {
-        de: "Der Soldat wurde offiziell für tot erklärt.",
-        en: "The soldier was officially declared dead.",
-        case: "nom",
-      },
-      {
-        de: "Er schoss einen Pfeil auf den Soldaten.",
-        en: "He shot an arrow at the soldier.",
-        case: "acc",
-      },
-    ],
-    themes: ["people", "work"],
-    completed: true,
-  },
+
   {
     id: 1635,
     eng: "rider",
@@ -3149,22 +3091,7 @@ export const VOCAB_4: VocabEntry[] = [
     themes: ["misc"],
     completed: false,
   },
-  {
-    id: 1693,
-    eng: "attendant",
-    article: "der",
-    noun: "Bedienstete",
-    plural: "die Bediensteten",
-    hasNoPlural: false,
-    weakMasculine: true,
-    notes: {},
-    sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
-    ],
-    themes: ["misc"],
-    completed: false,
-  },
+
   {
     id: 1694,
     eng: "illusion",
@@ -3765,7 +3692,13 @@ export const VOCAB_4: VocabEntry[] = [
     plural: "die Senatoren",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: {},
+    notes: {
+      genderPair: {
+        article: "die",
+        singular: "Senatorin",
+        plural: "die Senatorinnen",
+      },
+    },
     sentences: [
       { de: "SATZ1", en: "SENTENCE1", case: "nom" },
       { de: "SATZ2", en: "SENTENCE2", case: "acc" },
@@ -4037,7 +3970,13 @@ export const VOCAB_4: VocabEntry[] = [
     plural: "die Fotografen",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: {},
+    notes: {
+      genderPair: {
+        article: "die",
+        singular: "Fotografin",
+        plural: "die Fotografinnen",
+      },
+    },
     sentences: [
       { de: "SATZ1", en: "SENTENCE1", case: "nom" },
       { de: "SATZ2", en: "SENTENCE2", case: "acc" },
@@ -4965,22 +4904,6 @@ export const VOCAB_4: VocabEntry[] = [
     plural: "die Kommandos",
     hasNoPlural: false,
     weakMasculine: false,
-    notes: {},
-    sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
-    ],
-    themes: ["misc"],
-    completed: false,
-  },
-  {
-    id: 1807,
-    eng: "official",
-    article: "der",
-    noun: "Beamte",
-    plural: "die Beamten",
-    hasNoPlural: false,
-    weakMasculine: true,
     notes: {},
     sentences: [
       { de: "SATZ1", en: "SENTENCE1", case: "nom" },
@@ -6053,7 +5976,13 @@ export const VOCAB_4: VocabEntry[] = [
     plural: "die Inspektoren",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: {},
+    notes: {
+      genderPair: {
+        article: "die",
+        singular: "Inspektorin",
+        plural: "die Inspektorinnen",
+      },
+    },
     sentences: [
       { de: "SATZ1", en: "SENTENCE1", case: "nom" },
       { de: "SATZ2", en: "SENTENCE2", case: "acc" },
@@ -6461,22 +6390,7 @@ export const VOCAB_4: VocabEntry[] = [
     themes: ["misc"],
     completed: false,
   },
-  {
-    id: 1900,
-    eng: "traveler",
-    article: "der",
-    noun: "Reisende",
-    plural: "die Reisenden",
-    hasNoPlural: false,
-    weakMasculine: true,
-    notes: {},
-    sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
-    ],
-    themes: ["misc"],
-    completed: false,
-  },
+
   {
     id: 1901,
     eng: "trust",
@@ -7645,22 +7559,7 @@ export const VOCAB_4: VocabEntry[] = [
     themes: ["misc"],
     completed: false,
   },
-  {
-    id: 1975,
-    eng: "operator",
-    article: "der",
-    noun: "Operator",
-    plural: "die Operatoren",
-    hasNoPlural: false,
-    weakMasculine: true,
-    notes: {},
-    sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
-    ],
-    themes: ["misc"],
-    completed: false,
-  },
+
   {
     id: 1976,
     eng: "lift",

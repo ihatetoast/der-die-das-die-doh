@@ -256,22 +256,7 @@ export const VOCAB_3: VocabEntry[] = [
     themes: ["misc"],
     completed: false,
   },
-  {
-    id: 1017,
-    eng: "clerk",
-    article: "der",
-    noun: "Angestellte",
-    plural: "die Angestellten",
-    hasNoPlural: false,
-    weakMasculine: true,
-    notes: {},
-    sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
-    ],
-    themes: ["misc"],
-    completed: false,
-  },
+
   {
     id: 1018,
     eng: "title",
@@ -624,22 +609,7 @@ export const VOCAB_3: VocabEntry[] = [
     themes: ["misc"],
     completed: false,
   },
-  {
-    id: 1040,
-    eng: "slave",
-    article: "der",
-    noun: "Sklave",
-    plural: "die Sklaven",
-    hasNoPlural: false,
-    weakMasculine: true,
-    notes: {},
-    sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
-    ],
-    themes: ["misc"],
-    completed: false,
-  },
+
   {
     id: 1041,
     eng: "lieutenant",
@@ -1696,7 +1666,8 @@ export const VOCAB_3: VocabEntry[] = [
     weakMasculine: true,
     notes: {
       otherGerDefinitions: "die Kommandantin (female)",
-      genderNote: "Masculine nouns ending in -and, -ant, -ent are often weak.",
+      weakMascNote:
+        "Masculine nouns ending in -and, -ant, -ent are often weak.",
       miscNote:
         "-ant Words mostly originate from Latin or French and almost always describe people (often professions or roles).",
     },
@@ -1885,7 +1856,8 @@ export const VOCAB_3: VocabEntry[] = [
     weakMasculine: true,
     notes: {
       otherGerDefinitions: "die Assistentin (female)",
-      genderNote: "Masculine nouns ending in -and, -ant, -ent are often weak.",
+      weakMascNote:
+        "Masculine nouns ending in -and, -ant, -ent are often weak.",
     },
     sentences: [
       {
@@ -1950,22 +1922,7 @@ export const VOCAB_3: VocabEntry[] = [
     themes: ["misc"],
     completed: false,
   },
-  {
-    id: 1121,
-    eng: "earl",
-    article: "der",
-    noun: "Graf",
-    plural: "die Grafen",
-    hasNoPlural: false,
-    weakMasculine: true,
-    notes: {},
-    sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
-    ],
-    themes: ["misc"],
-    completed: false,
-  },
+
   {
     id: 1122,
     eng: "comment",
@@ -3094,31 +3051,18 @@ export const VOCAB_3: VocabEntry[] = [
     themes: ["misc"],
     completed: false,
   },
-  {
-    id: 1193,
-    eng: "french",
-    article: "der",
-    noun: "Franzose",
-    plural: "die Franzosen",
-    hasNoPlural: false,
-    weakMasculine: true,
-    notes: {},
-    sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
-    ],
-    themes: ["misc"],
-    completed: false,
-  },
+
   {
     id: 1194,
-    eng: "mean",
+    eng: "average",
     article: "der",
     noun: "Durchschnitt",
     plural: "die Durchschnitte",
     hasNoPlural: false,
     weakMasculine: false,
-    notes: {},
+    notes: {
+      otherEngDefinitions: "mean, standard",
+    },
     sentences: [
       { de: "SATZ1", en: "SENTENCE1", case: "nom" },
       { de: "SATZ2", en: "SENTENCE2", case: "acc" },
@@ -3656,22 +3600,7 @@ export const VOCAB_3: VocabEntry[] = [
     themes: ["misc"],
     completed: false,
   },
-  {
-    id: 1229,
-    eng: "sailor",
-    article: "der",
-    noun: "Matrose",
-    plural: "die Matrosen",
-    hasNoPlural: false,
-    weakMasculine: true,
-    notes: {},
-    sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
-    ],
-    themes: ["misc"],
-    completed: false,
-  },
+
   {
     id: 1230,
     eng: "attitude",
@@ -3890,7 +3819,7 @@ export const VOCAB_3: VocabEntry[] = [
     weakMasculine: true,
     notes: {
       otherEngDefinitions: "ape",
-      genderNote:
+      weakMascNote:
         "Masculine nouns of people or animals that end in -e are often weak.",
     },
     sentences: [
@@ -3906,7 +3835,7 @@ export const VOCAB_3: VocabEntry[] = [
       },
     ],
     themes: ["animals", "zoo"],
-    completed: false,
+    completed: true,
   },
   {
     id: 1244,
@@ -4300,7 +4229,9 @@ export const VOCAB_3: VocabEntry[] = [
     plural: "die Verwandten",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: {},
+    notes: {
+      otherGerDefinitions: "die Verwandte (female)",
+    },
     sentences: [
       { de: "SATZ1", en: "SENTENCE1", case: "nom" },
       { de: "SATZ2", en: "SENTENCE2", case: "acc" },
@@ -4605,7 +4536,7 @@ export const VOCAB_3: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: true,
     notes: {
-      genderNote:
+      weakMascNote:
         "Masculine nouns of people or animals that end in -e are often weak.",
     },
     sentences: [
@@ -4874,7 +4805,13 @@ export const VOCAB_3: VocabEntry[] = [
     plural: "die Kollegen",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: {},
+    notes: {
+      genderPair: {
+        article: "die",
+        singular: "Kollegin",
+        plural: "die Kolleginnen",
+      },
+    },
     sentences: [
       { de: "SATZ1", en: "SENTENCE1", case: "nom" },
       { de: "SATZ2", en: "SENTENCE2", case: "acc" },
@@ -7005,7 +6942,13 @@ export const VOCAB_3: VocabEntry[] = [
     plural: "die Deutschen",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: {},
+    notes: {
+      genderPair: {
+        article: "die",
+        singular: "Deutsche",
+        plural: "die Deutschen",
+      },
+    },
     sentences: [
       { de: "SATZ1", en: "SENTENCE1", case: "nom" },
       { de: "SATZ2", en: "SENTENCE2", case: "acc" },

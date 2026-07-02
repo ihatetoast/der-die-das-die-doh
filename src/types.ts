@@ -5,6 +5,13 @@ export interface Sentence {
 }
 export type ArticleType = "der" | "die" | "das";
 
+// GenderPair is for Student/Studentin NOT Neffe Niechte
+export interface GenderPair {
+  article: "der" | "die";
+  singular: string;
+  plural: string;
+}
+
 export const THEMES = [
   "airport",
   "animals",
@@ -16,6 +23,7 @@ export const THEMES = [
   "country", // rural farm, not geo political. if mostly rural country, then here and not city
   "doctor",
   "education",
+  "environment",
   "family", // can include pets, marriage, divorce
   "finance",
   "food",
@@ -72,6 +80,7 @@ type NotesType = {
   genderNote?: string;
   weakMascNote?: string;
   genitiveNote?: string;
+  genderPair?: GenderPair;
 };
 
 export type ModeProp = "practice" | "test" | "home";
