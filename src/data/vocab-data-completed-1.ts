@@ -585,8 +585,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: true,
     notes: {
-      weakMascNote:
-        "Masculine nouns of people or animals that end in -e are often weak.",
+      weakMascHint: "Nouns ending in '-e' (people, animals)",
       miscNote:
         "Other words: Bäckerjunge (baker's boy ~ apprentice), Gassenjungen (raggamuffin), Strichjunge (hustler, male sex worker).",
     },
@@ -895,8 +894,8 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     notes: {
       miscNote:
         "Other words: Nachname (last name), Spitzname (nickname), Doppelname (double-barrelled name).",
-      weakMascNote:
-        "A little exception to the weak noun. It takes -ns in the genitive singular.",
+      weakMascHint:
+        "Exceptions: Nouns ending in '-e' but take '-ens' in the genitive singular",
     },
     sentences: [
       { de: "Ich kenne ihren Namen", en: "I know her name", case: "acc" },
@@ -1766,8 +1765,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     weakMasculine: true,
     notes: {
       otherGerDefinitions: "die Studentin (female)",
-      weakMascNote:
-        "Masculine nouns ending in -and, -ant, -ent are often weak.",
+      weakMascHint: "Nouns ending in '-ant', '-and', '-ent''",
     },
     sentences: [
       { de: "Ich bin Student.", en: "I am a student.", case: "nom" },
@@ -1868,8 +1866,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     weakMasculine: true,
     notes: {
       otherGerDefinitions: "die Präsidentin (female)",
-      weakMascNote:
-        "Masculine nouns ending in -and, -ant, -ent are often weak.",
+      weakMascHint: "Nouns ending in '-ant', '-and', '-ent''",
     },
     sentences: [
       {
@@ -1943,8 +1940,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     weakMasculine: true,
     notes: {
       otherGerDefinitions: "die Agentin (female)",
-      weakMascNote:
-        "Masculine nouns ending in -and, -ant, -ent are often weak.",
+      weakMascHint: "Nouns ending in '-ant', '-and', '-ent''",
     },
     sentences: [
       {

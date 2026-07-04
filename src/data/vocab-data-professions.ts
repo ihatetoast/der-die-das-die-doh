@@ -9,14 +9,13 @@ export const VOCAB_PROFESSIONS: VocabEntry[] = [
     plural: "die Journalisten",
     hasNoPlural: false,
     weakMasculine: true,
+    genderPair: {
+      article: "die",
+      singular: "Journalistin",
+      plural: "die Journalistinnen",
+    },
     notes: {
-      genderPair: {
-        article: "die",
-        singular: "Journalistin",
-        plural: "die Journalistinnen",
-      },
-      weakMascNote:
-        "Masculine nouns ending in -ist representing people are often weak.",
+      weakMascHint: "Nouns ending in '-ist'",
     },
     sentences: [
       {
@@ -41,13 +40,12 @@ export const VOCAB_PROFESSIONS: VocabEntry[] = [
     plural: "die Journalistinnen",
     hasNoPlural: false,
     weakMasculine: false,
-    notes: {
-      genderPair: {
-        article: "der",
-        singular: "Journalist",
-        plural: "die Journalisten",
-      },
+    genderPair: {
+      article: "der",
+      singular: "Journalist",
+      plural: "die Journalisten",
     },
+    notes: {},
     sentences: [
       {
         de: "Tina Hassel ist eine bekannte Journalistin.",
@@ -72,14 +70,13 @@ export const VOCAB_PROFESSIONS: VocabEntry[] = [
     plural: "die Soldaten",
     hasNoPlural: false,
     weakMasculine: true,
+    genderPair: {
+      article: "die",
+      singular: "Soldatin",
+      plural: "die Soldatinnen",
+    },
     notes: {
-      genderPair: {
-        article: "die",
-        singular: "Soldatin",
-        plural: "die Soldatinnen",
-      },
-      weakMascNote:
-        "Masculine nouns ending in -at that represent people are often weak.",
+      weakMascHint: "Nouns ending in '-at'",
     },
     sentences: [
       {

@@ -11,6 +11,17 @@ export interface GenderPair {
   singular: string;
   plural: string;
 }
+export const WEAKMASCCOMMENTS = [
+  "Nouns ending in '-e' (people, animals)",
+  "Nouns ending in '-ant', '-and', '-ent''",
+  "Nouns ending in '-loge'",
+  "Nouns ending in '-ad'",
+  "Nouns ending in '-at'",
+  "Nouns ending in '-ist'",
+  "Exceptions: add '-n' and not '-en'",
+  "Exceptions: Nouns ending in '-e' but take '-ens' in the genitive singular",
+] as const;
+export type WeakMascComment = (typeof WEAKMASCCOMMENTS)[number];
 
 export const THEMES = [
   "airport",
@@ -59,6 +70,7 @@ export interface VocabEntry {
   article: ArticleType;
   noun: string;
   plural: string;
+  genderPair?: GenderPair;
   hasNoPlural: boolean; // for things like blood. and remove notes about no plural
   weakMasculine: boolean;
   notes: NotesType;
@@ -78,9 +90,8 @@ type NotesType = {
   pluralNote?: string;
   miscNote?: string;
   genderNote?: string;
-  weakMascNote?: string;
+  weakMascHint?: WeakMascComment;
   genitiveNote?: string;
-  genderPair?: GenderPair;
 };
 
 export type ModeProp = "practice" | "test" | "home";

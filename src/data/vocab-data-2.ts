@@ -811,7 +811,8 @@ export const VOCAB_2: VocabEntry[] = [
     notes: {
       miscNote: "Can also mean 'quietude'.",
       pluralNote: "Not usually pluralized.",
-      weakMascNote: "Takes -ns in the genitive singular",
+      weakMascHint:
+        "Exceptions: Nouns ending in '-e' but take '-ens' in the genitive singular",
     },
     sentences: [
       { de: "Wir wollen Frieden.", en: "We want peace.", case: "acc" },
@@ -1794,8 +1795,7 @@ export const VOCAB_2: VocabEntry[] = [
     weakMasculine: true,
     notes: {
       otherGerDefinitions: "die Patientin (female)",
-      weakMascNote:
-        "Masculine nouns ending in -and, -ant, -ent are often weak.",
+      weakMascHint: "Nouns ending in '-ant', '-and', '-ent''",
     },
     sentences: [
       {
@@ -3119,8 +3119,7 @@ export const VOCAB_2: VocabEntry[] = [
     weakMasculine: true,
     notes: {
       otherEngDefinitions: "customer",
-      weakMascNote:
-        "Masculine nouns of people or animals that end in -e are often weak.",
+      weakMascHint: "Nouns ending in '-e' (people, animals)",
     },
     sentences: [
       {
@@ -3530,7 +3529,8 @@ export const VOCAB_2: VocabEntry[] = [
     hasNoPlural: true,
     weakMasculine: true,
     notes: {
-      weakMascNote: "Takes -ns in the genitive singular",
+      weakMascHint:
+        "Exceptions: Nouns ending in '-e' but take '-ens' in the genitive singular",
     },
     sentences: [
       { de: "SATZ1", en: "SENTENCE1", case: "nom" },

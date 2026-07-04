@@ -13,7 +13,7 @@ export const VOCAB_SCIENTISTS: VocabEntry[] = [
       otherGerDefinitions: "die Biologin (female)",
       miscNote:
         "The suffix '-loge' comes from the Ancient Greek word *lógos* (doctrine, word, reason) and is the equivalent of '-logist' in English.",
-      weakMascNote: "Masculine nouns ending in '-loge' are weak.",
+      weakMascHint: "Nouns ending in '-loge'",
     },
     sentences: [
       {

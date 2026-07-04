@@ -6,7 +6,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "time",
     article: "die",
     noun: "Zeit",
-    plural: "die Zeiten",
+    plural: "Zeiten",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -34,7 +34,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "hand",
     article: "die",
     noun: "Hand",
-    plural: "die Hände",
+    plural: "Hände",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {},
@@ -58,7 +58,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "day",
     article: "der",
     noun: "Tag",
-    plural: "die Tage",
+    plural: "Tage",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {},
@@ -82,12 +82,11 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "boy",
     article: "der",
     noun: "Junge",
-    plural: "die Jungen",
+    plural: "Jungen",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {
-      weakMascNote:
-        "Masculine nouns of people or animals that end in -e are often weak.",
+      weakMascHint: "Nouns ending in '-e' (people, animals)",
       miscNote:
         "Other words: Bäckerjunge (baker's boy ~ apprentice), Gassenjungen (raggamuffin), Strichjunge (hustler, male sex worker).",
     },
@@ -111,7 +110,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "moment",
     article: "der",
     noun: "Moment",
-    plural: "die Momente",
+    plural: "Momente",
     hasNoPlural: false,
     weakMasculine: false,
     notes: { genderNote: "Words ending in -ent are often masculine." },
@@ -136,7 +135,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "water",
     article: "das",
     noun: "Wasser",
-    plural: "die Wasser",
+    plural: "Wasser",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -161,7 +160,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "light",
     article: "das",
     noun: "Licht",
-    plural: "die Lichter",
+    plural: "Lichter",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -188,7 +187,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "dock",
     article: "der",
     noun: "Hafen",
-    plural: "die Häfen",
+    plural: "Häfen",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -216,7 +215,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "guy",
     article: "der",
     noun: "Typ",
-    plural: "die Typen",
+    plural: "Typen",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -243,7 +242,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "chap",
     article: "der",
     noun: "Kerl",
-    plural: "die Kerle",
+    plural: "Kerle",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -316,7 +315,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "gentleman",
     article: "der",
     noun: "Herr",
-    plural: "die Herren",
+    plural: "Herren",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {
@@ -344,13 +343,12 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "client",
     article: "der",
     noun: "Kunde",
-    plural: "die Kunden",
+    plural: "Kunden",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {
       otherEngDefinitions: "customer",
-      weakMascNote:
-        "Masculine nouns of people or animals that end in -e are often weak.",
+      weakMascHint: "Nouns ending in '-e' (people, animals)",
     },
     sentences: [
       {
@@ -372,12 +370,11 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "hare",
     article: "der",
     noun: "Hase",
-    plural: "die Hasen",
+    plural: "Hasen",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {
-      weakMascNote:
-        "Masculine nouns of people or animals that end in -e are often weak.",
+      weakMascHint: "Nouns ending in '-e' (people, animals)",
     },
     sentences: [
       {
@@ -399,12 +396,11 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "lion",
     article: "der",
     noun: "Löwe",
-    plural: "die Löwen",
+    plural: "Löwen",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {
-      weakMascNote:
-        "Masculine nouns of people or animals that end in -e are often weak.",
+      weakMascHint: "Nouns ending in '-e' (people, animals)",
     },
     sentences: [
       {
@@ -426,12 +422,11 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "nephew",
     article: "der",
     noun: "Neffe",
-    plural: "die Neffen",
+    plural: "Neffen",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {
-      weakMascNote:
-        "Masculine nouns of people or animals that end in -e are often weak.",
+      weakMascHint: "Nouns ending in '-e' (people, animals)",
     },
     sentences: [
       {
@@ -457,8 +452,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: true,
     notes: {
-      weakMascNote:
-        "Masculine nouns of people or animals that end in -e are often weak.",
+      weakMascHint: "Nouns ending in '-e' (people, animals)",
     },
     sentences: [
       {
@@ -480,13 +474,16 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "student",
     article: "der",
     noun: "Student",
-    plural: "die Studenten",
+    plural: "Studenten",
     hasNoPlural: false,
     weakMasculine: true,
+    genderPair: {
+      article: "die",
+      singular: "Studentin",
+      plural: "Studentinnen",
+    },
     notes: {
-      otherGerDefinitions: "die Studentin (female)",
-      weakMascNote:
-        "Masculine nouns ending in -and, -ant, -ent are often weak.",
+      weakMascHint: "Nouns ending in '-ant', '-and', '-ent''",
     },
     sentences: [
       { de: "Ich bin Student.", en: "I am a student.", case: "nom" },
@@ -504,12 +501,11 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "student",
     article: "die",
     noun: "Studentin",
-    plural: "die Studentinnen",
+    plural: "Studentinnen",
     hasNoPlural: false,
     weakMasculine: false,
-    notes: {
-      otherGerDefinitions: "der Student (male)",
-    },
+    genderPair: { article: "der", singular: "Student", plural: "Studenten" },
+    notes: {},
     sentences: [
       {
         de: "Die Studentin heißt Maria.",
@@ -530,14 +526,14 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "name",
     article: "der",
     noun: "Name",
-    plural: "die Namen",
+    plural: "Namen",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {
       miscNote:
         "Other words: Nachname (last name), Spitzname (nickname), Doppelname (double-barrelled name).",
-      weakMascNote:
-        "A little exception to the weak noun. It takes -ns in the genitive singular: des Namens.",
+      weakMascHint:
+        "Exceptions: Nouns ending in '-e' but take '-ens' in the genitive singular",
     },
     sentences: [
       { de: "Ich kenne ihren Namen", en: "I know her name", case: "acc" },
@@ -555,12 +551,12 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "thought",
     article: "der",
     noun: "Gedanke",
-    plural: "die Gedanken",
+    plural: "Gedanken",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {
-      weakMascNote:
-        "A little exception to the weak noun. It takes -ns in the genitive singular: des Gedankens.",
+      weakMascHint:
+        "Exceptions: Nouns ending in '-e' but take '-ens' in the genitive singular",
     },
     sentences: [
       { de: "SATZ1", en: "SENTENCE1", case: "" },
@@ -581,7 +577,10 @@ export const TEST_VOCAB: VocabEntry[] = [
     plural: "REPLACE",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: { weakMascNote: "Takes -ns in the genitive singular" },
+    notes: {
+      weakMascHint:
+        "Exceptions: Nouns ending in '-e' but take '-ens' in the genitive singular",
+    },
     sentences: [
       { de: "SATZ1", en: "SENTENCE1", case: "nom" },
       { de: "SATZ2", en: "SENTENCE2", case: "acc" },
@@ -594,7 +593,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "officer",
     article: "der",
     noun: "Beamte",
-    plural: "die Beamten",
+    plural: "Beamten",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {
@@ -612,13 +611,16 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "president",
     article: "der",
     noun: "Präsident",
-    plural: "die Präsidenten",
+    plural: "Präsidenten",
     hasNoPlural: false,
     weakMasculine: true,
+    genderPair: {
+      article: "die",
+      singular: "Präsidentin",
+      plural: "Präsidentinnen",
+    },
     notes: {
-      otherGerDefinitions: "die Präsidentin (female)",
-      weakMascNote:
-        "Masculine nouns ending in -and, -ant, -ent are often weak.",
+      weakMascHint: "Nouns ending in '-ant', '-and', '-ent''",
     },
     sentences: [
       {
@@ -640,7 +642,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "bear",
     article: "der",
     noun: "Bär",
-    plural: "die Bären",
+    plural: "Bären",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {},
@@ -656,7 +658,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "fiancé",
     article: "der",
     noun: "Verlobte",
-    plural: "die Verlobten",
+    plural: "Verlobten",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {},
@@ -672,7 +674,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "messenger",
     article: "der",
     noun: "Bote",
-    plural: "die Boten",
+    plural: "Boten",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {},
@@ -688,7 +690,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "neighbor",
     article: "der",
     noun: "Nachbar",
-    plural: "die Nachbarn",
+    plural: "Nachbarn",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {},
@@ -704,13 +706,12 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "agent",
     article: "der",
     noun: "Agent",
-    plural: "die Agenten",
+    plural: "Agenten",
     hasNoPlural: false,
     weakMasculine: true,
+    genderPair: { article: "die", singular: "Agentin", plural: "Agentinnen" },
     notes: {
-      otherGerDefinitions: "die Agentin (female)",
-      weakMascNote:
-        "Masculine nouns ending in -and, -ant, -ent are often weak.",
+      weakMascHint: "Nouns ending in '-ant', '-and', '-ent''",
     },
     sentences: [
       {
@@ -732,7 +733,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "stranger",
     article: "der",
     noun: "Fremde",
-    plural: "die Fremden",
+    plural: "Fremden",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {},
@@ -748,12 +749,10 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "stranger",
     article: "der",
     noun: "Fremde",
-    plural: "die Fremden",
+    plural: "Fremden",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: {
-      otherGerDefinitions: "die Fremde (female)",
-    },
+    notes: {},
     sentences: [
       { de: "SATZ1", en: "SENTENCE1", case: "nom" },
       { de: "SATZ2", en: "SENTENCE2", case: "acc" },
@@ -766,7 +765,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "planet",
     article: "der",
     noun: "Planet",
-    plural: "die Planeten",
+    plural: "Planeten",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {},
@@ -782,7 +781,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "human",
     article: "der",
     noun: "Mensch",
-    plural: "die Menschen",
+    plural: "Menschen",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {},
@@ -798,13 +797,16 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "patient",
     article: "der",
     noun: "Patient",
-    plural: "die Patienten",
+    plural: "Patienten",
     hasNoPlural: false,
     weakMasculine: true,
+    genderPair: {
+      article: "die",
+      singular: "Patientin",
+      plural: "Patientinnen",
+    },
     notes: {
-      otherGerDefinitions: "die Patientin (female)",
-      weakMascNote:
-        "Masculine nouns ending in -and, -ant, -ent are often weak.",
+      weakMascHint: "Nouns ending in '-ant', '-and', '-ent''",
     },
     sentences: [
       {
@@ -826,7 +828,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "fool",
     article: "der",
     noun: "Narr",
-    plural: "die Narren",
+    plural: "Narren",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {},
@@ -842,7 +844,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "prince",
     article: "der",
     noun: "Prinz",
-    plural: "die Prinzen",
+    plural: "Prinzen",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {},
@@ -862,7 +864,8 @@ export const TEST_VOCAB: VocabEntry[] = [
     hasNoPlural: true,
     weakMasculine: true,
     notes: {
-      weakMascNote: "Takes -ns in the genitive singular",
+      weakMascHint:
+        "Exceptions: Nouns ending in '-e' but take '-ens' in the genitive singular",
     },
     sentences: [
       { de: "SATZ1", en: "SENTENCE1", case: "nom" },
@@ -876,7 +879,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "dragon",
     article: "der",
     noun: "Drache",
-    plural: "die Drachen",
+    plural: "Drachen",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {},
@@ -892,7 +895,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "adult",
     article: "der",
     noun: "Erwachsene",
-    plural: "die Erwachsenen",
+    plural: "Erwachsenen",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {},
@@ -908,7 +911,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "pilot",
     article: "der",
     noun: "Pilot",
-    plural: "die Piloten",
+    plural: "Piloten",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {},
@@ -924,7 +927,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "prisoner",
     article: "der",
     noun: "Gefangene",
-    plural: "die Gefangenen",
+    plural: "Gefangenen",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {},
@@ -940,7 +943,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "farmer",
     article: "der",
     noun: "Bauer",
-    plural: "die Bauern",
+    plural: "Bauern",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {},
@@ -956,7 +959,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "diamond",
     article: "der",
     noun: "Diamant",
-    plural: "die Diamanten",
+    plural: "Diamanten",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {},
@@ -972,11 +975,15 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "tourist",
     article: "der",
     noun: "Tourist",
-    plural: "die Touristen",
+    plural: "Touristen",
     hasNoPlural: false,
     weakMasculine: true,
+    genderPair: {
+      article: "die",
+      singular: "Touristin",
+      plural: "Touristinnen",
+    },
     notes: {
-      otherGerDefinitions: "die Touristin (female)",
       genderNote:
         "Masculine nouns ending in -ist representing people are usually weak masculine nouns.",
     },
@@ -996,7 +1003,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "saint",
     article: "der",
     noun: "Heilige",
-    plural: "die Heiligen",
+    plural: "Heiligen",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {},
@@ -1012,13 +1019,16 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "assistant",
     article: "der",
     noun: "Assistent",
-    plural: "die Assistenten",
+    plural: "Assistenten",
     hasNoPlural: false,
     weakMasculine: true,
+    genderPair: {
+      article: "die",
+      singular: "Assistentin",
+      plural: "Assistentinnen",
+    },
     notes: {
-      otherGerDefinitions: "die Assistentin (female)",
-      weakMascNote:
-        "Masculine nouns ending in -and, -ant, -ent are often weak.",
+      weakMascHint: "Nouns ending in '-ant', '-and', '-ent''",
     },
     sentences: [
       {
@@ -1040,13 +1050,16 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "commander",
     article: "der",
     noun: "Kommandant",
-    plural: "die Kommandanten",
+    plural: "Kommandanten",
     hasNoPlural: false,
     weakMasculine: true,
+    genderPair: {
+      article: "die",
+      singular: "Kommandantin",
+      plural: "Kommandatinnen",
+    },
     notes: {
-      otherGerDefinitions: "die Kommandantin (female)",
-      weakMascNote:
-        "Masculine nouns ending in -and, -ant, -ent are often weak.",
+      weakMascHint: "Nouns ending in '-ant', '-and', '-ent''",
       miscNote:
         "-ant Words mostly originate from Latin or French and almost always describe people (often professions or roles).",
     },
@@ -1070,7 +1083,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "witness",
     article: "der",
     noun: "Zeuge",
-    plural: "die Zeugen",
+    plural: "Zeugen",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {},
@@ -1086,7 +1099,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "idiot",
     article: "der",
     noun: "Idiot",
-    plural: "die Idioten",
+    plural: "Idioten",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {},
@@ -1102,11 +1115,12 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "seed",
     article: "der",
     noun: "Samen",
-    plural: "die Samen",
+    plural: "Samen",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {
-      weakMascNote: "Takes -ns in the genitive singular",
+      weakMascHint:
+        "Exceptions: Nouns ending in '-e' but take '-ens' in the genitive singular",
     },
     sentences: [
       { de: "SATZ1", en: "SENTENCE1", case: "nom" },
@@ -1120,13 +1134,12 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "monkey",
     article: "der",
     noun: "Affe",
-    plural: "die Affen",
+    plural: "Affen",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {
       otherEngDefinitions: "ape",
-      weakMascNote:
-        "Masculine nouns of people or animals that end in -e are often weak.",
+      weakMascHint: "Nouns ending in '-e' (people, animals)",
     },
     sentences: [
       {
@@ -1148,7 +1161,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "colleague",
     article: "der",
     noun: "Kollege",
-    plural: "die Kollegen",
+    plural: "Kollegen",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {},
@@ -1164,7 +1177,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "expert",
     article: "der",
     noun: "Experte",
-    plural: "die Experten",
+    plural: "Experten",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {},
@@ -1180,7 +1193,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "giant",
     article: "der",
     noun: "Riese",
-    plural: "die Riesen",
+    plural: "Riesen",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {},
@@ -1196,11 +1209,12 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "spark",
     article: "der",
     noun: "Funke",
-    plural: "die Funken",
+    plural: "Funken",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {
-      weakMascNote: "Takes -ns in the genitive singular",
+      weakMascHint:
+        "Exceptions: Nouns ending in '-e' but take '-ens' in the genitive singular",
     },
     sentences: [
       { de: "SATZ1", en: "SENTENCE1", case: "nom" },
@@ -1214,7 +1228,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "archer",
     article: "der",
     noun: "Bogenschütze",
-    plural: "die Bogenschützen",
+    plural: "Bogenschützen",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {},
@@ -1230,7 +1244,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "shepherd",
     article: "der",
     noun: "Hirte",
-    plural: "die Hirten",
+    plural: "Hirten",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {},
@@ -1246,7 +1260,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "favorite",
     article: "der",
     noun: "Favorit",
-    plural: "die Favoriten",
+    plural: "Favoriten",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {},
@@ -1262,7 +1276,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "pirate",
     article: "der",
     noun: "Pirat",
-    plural: "die Piraten",
+    plural: "Piraten",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {},
@@ -1278,14 +1292,13 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "elephant",
     article: "der",
     noun: "Elefant",
-    plural: "die Elefanten",
+    plural: "Elefanten",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {
       miscNote:
         "-ant Words mostly originate from Latin or French and almost always describe people (often professions or roles).",
-      weakMascNote:
-        "Masculine nouns ending in -and, -ant, -ent are often weak.",
+      weakMascHint: "Nouns ending in '-ant', '-and', '-ent''",
     },
     sentences: [
       {
@@ -1307,17 +1320,16 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "soldier",
     article: "der",
     noun: "Soldat",
-    plural: "die Soldaten",
+    plural: "Soldaten",
     hasNoPlural: false,
     weakMasculine: true,
+    genderPair: {
+      article: "die",
+      singular: "Soldatin",
+      plural: "Soldatinnen",
+    },
     notes: {
-      genderPair: {
-        article: "die",
-        singular: "Soldatin",
-        plural: "die Soldatinnen",
-      },
-      weakMascNote:
-        "Masculine nouns ending in -at that represent people are often weak.",
+      weakMascHint: "Nouns ending in '-at'",
     },
     sentences: [
       {
@@ -1339,16 +1351,15 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "senator",
     article: "der",
     noun: "Senator",
-    plural: "die Senatoren",
+    plural: "Senatoren",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: {
-      genderPair: {
-        article: "die",
-        singular: "Senatorin",
-        plural: "die Senatorinnen",
-      },
+    genderPair: {
+      article: "die",
+      singular: "Senatorin",
+      plural: "Senatorinnen",
     },
+    notes: {},
     sentences: [
       { de: "SATZ1", en: "SENTENCE1", case: "nom" },
       { de: "SATZ2", en: "SENTENCE2", case: "acc" },
@@ -1361,16 +1372,15 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "photographer",
     article: "der",
     noun: "Fotograf",
-    plural: "die Fotografen",
+    plural: "Fotografen",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: {
-      genderPair: {
-        article: "die",
-        singular: "Fotografin",
-        plural: "die Fotografinnen",
-      },
+    genderPair: {
+      article: "die",
+      singular: "Fotografin",
+      plural: "Fotografinnen",
     },
+    notes: {},
     sentences: [
       { de: "SATZ1", en: "SENTENCE1", case: "nom" },
       { de: "SATZ2", en: "SENTENCE2", case: "acc" },
@@ -1383,7 +1393,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "satellite",
     article: "der",
     noun: "Satellit",
-    plural: "die Satelliten",
+    plural: "Satelliten",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {},
@@ -1399,7 +1409,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "puppy",
     article: "der",
     noun: "Welpe",
-    plural: "die Welpen",
+    plural: "Welpen",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {},
@@ -1415,7 +1425,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "ancestor",
     article: "der",
     noun: "Vorfahr",
-    plural: "die Vorfahren",
+    plural: "Vorfahren",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {},
@@ -1431,16 +1441,15 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "inspector",
     article: "der",
     noun: "Inspektor",
-    plural: "die Inspektoren",
+    plural: "Inspektoren",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: {
-      genderPair: {
-        article: "die",
-        singular: "Inspektorin",
-        plural: "die Inspektorinnen",
-      },
+    genderPair: {
+      article: "die",
+      singular: "Inspektorin",
+      plural: "Inspektorinnen",
     },
+    notes: {},
     sentences: [
       { de: "SATZ1", en: "SENTENCE1", case: "nom" },
       { de: "SATZ2", en: "SENTENCE2", case: "acc" },
@@ -1453,7 +1462,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "elf",
     article: "der",
     noun: "Elf",
-    plural: "die Elfen",
+    plural: "Elfen",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {},
@@ -1469,13 +1478,16 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "journalist",
     article: "der",
     noun: "Journalist",
-    plural: "die Journalisten",
+    plural: "Journalisten",
     hasNoPlural: false,
     weakMasculine: true,
+    genderPair: {
+      article: "die",
+      singular: "Journalistin",
+      plural: "Journalistinnen",
+    },
     notes: {
-      otherGerDefinitions: "die Journalistin (female)",
-      weakMascNote:
-        "Masculine nouns ending in -ist representing people are often weak.",
+      weakMascHint: "Nouns ending in '-ist'",
     },
     sentences: [
       {
@@ -1487,6 +1499,36 @@ export const TEST_VOCAB: VocabEntry[] = [
         de: "Nach dem Krieg ist er Journalist geworden. ",
         en: "After the war, he became a journalist.",
         case: "nom",
+      },
+    ],
+    themes: ["people", "profession"],
+    completed: true,
+  },
+
+  {
+    id: 10000030001,
+    eng: "journalist",
+    article: "die",
+    noun: "Journalistin",
+    plural: "die Journalistinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: {
+      article: "der",
+      singular: "Journalist",
+      plural: "Journalisten",
+    },
+    notes: {},
+    sentences: [
+      {
+        de: "Tina Hassel ist eine bekannte Journalistin.",
+        en: "Tina Hassel is a well-known journalist.",
+        case: "nom",
+      },
+      {
+        de: "Damit ist er ein Vorbild für viele Journalistinnen und Journalisten.",
+        en: "That makes him a role model for many female and male journalists.",
+        case: "acc",
       },
     ],
     themes: ["people", "profession"],
