@@ -1,4 +1,5 @@
 import type { VocabEntry } from "../types";
+// no gender pair for king queen because queen is different word (vs journalist journalist)
 // except scientists
 export const VOCAB_PROFESSIONS: VocabEntry[] = [
   {
@@ -61,7 +62,6 @@ export const VOCAB_PROFESSIONS: VocabEntry[] = [
     themes: ["people", "profession"],
     completed: true,
   },
-
   {
     id: 30002,
     eng: "soldier",
@@ -76,7 +76,7 @@ export const VOCAB_PROFESSIONS: VocabEntry[] = [
       plural: "die Soldatinnen",
     },
     notes: {
-      weakMascHint: "Nouns ending in '-at'",
+      weakMascHint: "Nouns ending in '-at', '-et', '-ot'",
     },
     sentences: [
       {
@@ -101,9 +101,12 @@ export const VOCAB_PROFESSIONS: VocabEntry[] = [
     plural: "die Soldatinnen",
     hasNoPlural: false,
     weakMasculine: false,
-    notes: {
-      otherGerDefinitions: "der Soldat (male)",
+    genderPair: {
+      article: "der",
+      singular: "Soldat",
+      plural: "die Soldaten",
     },
+    notes: {},
     sentences: [
       {
         de: "Die Soldatin erhielt die Schützenschnur in Gold.",
@@ -117,6 +120,442 @@ export const VOCAB_PROFESSIONS: VocabEntry[] = [
       },
     ],
     themes: ["people", "work"],
+    completed: true,
+  },
+  {
+    id: 30004,
+    eng: "king",
+    article: "der",
+    noun: "König",
+    plural: "die Könige",
+    hasNoPlural: false,
+    weakMasculine: false,
+    notes: {
+      genderNote: "Words ending in -ig are usually masculine.",
+      miscNote:
+        "Der Froschkönig is translated to English more often as The Frog Prince.",
+    },
+    sentences: [
+      {
+        de: "Der König ist geschlagen.",
+        en: "The king is defeated.",
+        case: "nom",
+      },
+      {
+        de: "In Europa gibt es noch Könige.",
+        en: "In Europe there are still kings.",
+        case: "acc",
+      },
+    ],
+    themes: ["misc"],
+    completed: true,
+  },
+  {
+    id: 30005,
+    eng: "queen",
+    article: "die",
+    noun: "Königin",
+    plural: "Königinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    notes: {
+      genderNote: "Words ending in -ig are usually masculine.",
+      miscNote:
+        "Der Froschkönig is translated to English more often as The Frog Prince.",
+    },
+    sentences: [
+      {
+        de: "Der König ist geschlagen.",
+        en: "The king is defeated.",
+        case: "nom",
+      },
+      {
+        de: "In Europa gibt es noch Könige.",
+        en: "In Europe there are still kings.",
+        case: "acc",
+      },
+    ],
+    themes: ["misc"],
+    completed: true,
+  },
+  {
+    id: 30006,
+    eng: "president",
+    article: "der",
+    noun: "Präsident",
+    plural: "die Präsidenten",
+    hasNoPlural: false,
+    weakMasculine: true,
+    genderPair: {
+      article: "die",
+      singular: "Präsidentin",
+      plural: "Präsidentinnen",
+    },
+    notes: {
+      weakMascHint: "Nouns ending in '-ant', '-and', '-ent''",
+    },
+    sentences: [
+      {
+        de: "Wo ist der Präsident?",
+        en: "Where is the president?",
+        case: "nom",
+      },
+      {
+        de: "Mayla ist die Sekretärin des Präsidenten.",
+        en: "Mayla is the president's secretary.",
+        case: "gen",
+      },
+    ],
+    themes: ["people", "work"],
+    completed: true,
+  },
+  {
+    id: 30007,
+    eng: "president",
+    article: "die",
+    noun: "Präsidentin",
+    plural: "Präsidentinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: {
+      article: "der",
+      singular: "Präsident",
+      plural: "Präsidenten",
+    },
+    notes: {},
+    sentences: [
+      {
+        de: "Wo ist die Präsidentin?",
+        en: "Where is the president?",
+        case: "nom",
+      },
+      {
+        de: "Oskar ist der Sekretär der Präsidentin.",
+        en: "Oskar is the president's secretary.",
+        case: "gen",
+      },
+    ],
+    themes: ["people", "work"],
+    completed: true,
+  },
+  {
+    id: 30008,
+    eng: "student",
+    article: "der",
+    noun: "Student",
+    plural: "die Studenten",
+    hasNoPlural: false,
+    weakMasculine: true,
+    genderPair: {
+      article: "die",
+      singular: "Studentin",
+      plural: "Studentinnen",
+    },
+    notes: {
+      weakMascHint: "Nouns ending in '-ant', '-and', '-ent''",
+    },
+    sentences: [
+      { de: "Ich bin Student.", en: "I am a student.", case: "nom" },
+      {
+        de: "Es ist für jeden Studenten ein tolles Thema.",
+        en: "It is a great topic for every student.",
+        case: "acc",
+      },
+    ],
+    themes: ["personal", "education"],
+    completed: true,
+  },
+  {
+    id: 30009,
+    eng: "student",
+    article: "die",
+    noun: "Studentin",
+    plural: "Studentinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: {
+      article: "der",
+      singular: "Student",
+      plural: "Studenten",
+    },
+    notes: {},
+    sentences: [
+      {
+        de: "Die Studentin heißt Maria.",
+        en: "The student is named Maria.",
+        case: "nom",
+      },
+      {
+        de: "Ich habe die Studentin gestern gesehen.",
+        en: "I saw the student yesterday.",
+        case: "acc",
+      },
+    ],
+    themes: ["personal", "education"],
+    completed: true,
+  },
+  {
+    id: 300010,
+    eng: "agent",
+    article: "der",
+    noun: "Agent",
+    plural: "die Agenten",
+    hasNoPlural: false,
+    weakMasculine: true,
+    notes: {
+      otherGerDefinitions: "die Agentin (female)",
+      weakMascHint: "Nouns ending in '-ant', '-and', '-ent''",
+    },
+    sentences: [
+      {
+        de: "Agenten vom FBI haben Vals Haus zwei Wochen lang überwacht.",
+        en: "FBI agents staked out Val's house for 2 weeks.",
+        case: "nom",
+      },
+      {
+        de: "Wie jeder Agent kann ich meine Quellen nicht preisgeben.",
+        en: "Like every agent, I cannot reveal my sources.",
+        case: "nom",
+      },
+    ],
+    themes: ["work", "people"],
+    completed: true,
+  },
+  {
+    id: 300011,
+    eng: "agent",
+    article: "die",
+    noun: "Agentin",
+    plural: "Agentinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    notes: {
+      otherGerDefinitions: "der  Agent (male)",
+    },
+    sentences: [
+      {
+        de: "Die Tarnung der Agentin ist aufgeflogen.",
+        en: "The agent's cover was blown (The disguise was uncovered).",
+        case: "gen",
+      },
+      {
+        de: "Hauptberuflich arbeitet sie als Agentin.",
+        en: "She works as an agent full-time.",
+        case: "nom",
+      },
+    ],
+    themes: ["work", "people"],
+    completed: true,
+  },
+
+  {
+    id: 300012,
+    eng: "officer",
+    article: "der",
+    noun: "Beamte",
+    plural: "Beamten",
+    hasNoPlural: false,
+    weakMasculine: true,
+    genderPair: { article: "die", singular: "Beamtin", plural: "Beamtinnen" },
+    notes: {
+      otherEngDefinitions: "civil servant",
+      weakMascHint: "Nouns ending in '-e' (people, animals)",
+    },
+    sentences: [
+      {
+        de: "Beamte arbeiten für den Staat.",
+        en: "Civil servants work for the state.",
+        case: "nom",
+      },
+      {
+        de: "Die Asylbewerberinnen wurden von einem Beamten befragt.",
+        en: "The asylum seekers were interviewed by an official.",
+        case: "dat",
+      },
+    ],
+    themes: ["profession", "people"],
+    completed: true,
+  },
+  {
+    id: 300013,
+    eng: "officer",
+    article: "die",
+    noun: "Beamtin",
+    plural: "Beamtinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: { article: "der", singular: "Beamte", plural: "Beamten" },
+    notes: {
+      otherEngDefinitions: "civil servant, clerk, appointee, public servant",
+    },
+    sentences: [
+      {
+        de: "Agnes will unbedingt Beamtin werden.",
+        en: "Agness definitely wants to become a civil servant.",
+        case: "nom",
+      },
+      {
+        de: "In unserer Behörde arbeiten mehr Beamtinnen als Beamte.",
+        en: "In our agency, more female officials work than male officials.",
+        case: "nom",
+      },
+    ],
+    themes: ["profession", "people"],
+    completed: true,
+  },
+  // katy start here to fix
+  {
+    id: 300014,
+    eng: "policeman",
+    article: "der",
+    noun: "Polizist",
+    plural: "Polizisten",
+    hasNoPlural: false,
+    weakMasculine: true,
+    notes: {
+      otherEngDefinitions: "police officer, cop, copper, trooper",
+    },
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+    ],
+    themes: ["misc"],
+    completed: false,
+  },
+  {
+    id: 300015,
+    eng: "policewoman",
+    article: "die",
+    noun: "Polizistin",
+    plural: "Polizistinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    notes: {
+      otherEngDefinitions: "police officer, cop, copper, trooper",
+    },
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+    ],
+    themes: ["misc"],
+    completed: false,
+  },
+  {
+    id: 300016,
+    eng: "messenger",
+    article: "der",
+    noun: "Bote",
+    plural: "Boten",
+    hasNoPlural: false,
+    weakMasculine: true,
+    genderPair: {
+      article: "die",
+      singular: "Botin",
+      plural: "Botinnen",
+    },
+    notes: {
+      weakMascHint: "Nouns ending in '-e' (people, animals)",
+    },
+    sentences: [
+      {
+        de: "Man erschlägt den Boten nicht.",
+        en: "Don't kill the messener",
+        case: "acc",
+      },
+      {
+        de: "Der berittene Bote begehrte Einlass an der Zugbrücke.",
+        en: "The mounted messenger requested entry at the drawbridge.",
+        case: "nom",
+      },
+    ],
+    themes: ["profession", "people"],
+    completed: true,
+  },
+  {
+    id: 300017,
+    eng: "messenger",
+    article: "die",
+    noun: "Botin",
+    plural: "Botinnin",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: {
+      article: "der",
+      singular: "Bote",
+      plural: "Boten",
+    },
+    notes: {},
+    sentences: [
+      {
+        de: "Sie ist die Botin.",
+        en: "She is the messenger.",
+        case: "nom",
+      },
+      {
+        de: "Endlich fand sich die Botin drüben wieder ein.",
+        en: "Finally, the messenger found herself over there again.",
+        case: "nom",
+      },
+    ],
+    themes: ["profession", "people"],
+    completed: true,
+  },
+  {
+    id: 300018,
+    eng: "pilot",
+    article: "der",
+    noun: "Pilot",
+    plural: "Piloten",
+    hasNoPlural: false,
+    weakMasculine: true,
+    genderPair: {
+      article: "die",
+      singular: "Pilotin",
+      plural: "Pilotinnen",
+    },
+    notes: { weakMascHint: "Nouns ending in '-at', '-et', '-ot'" },
+    sentences: [
+      {
+        de: "Hier spricht der Pilot.",
+        en: "This is your pilot speaking.",
+        case: "nom",
+      },
+      {
+        de: "Das ist der schlimmste Albtraum jedes Piloten. ",
+        en: "This is every pilot's worst nightmare.",
+        case: "gen",
+      },
+    ],
+    themes: ["people", "profession"],
+    completed: true,
+  },
+  {
+    id: 300019,
+    eng: "pilot",
+    article: "die",
+    noun: "Pilotin",
+    plural: "Pilotinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: {
+      article: "der",
+      singular: "Pilot",
+      plural: "Piloten",
+    },
+    notes: {},
+    sentences: [
+      {
+        de: "Frau Bruce war die erste Pilotin, die zwischen England und Japan flog. ",
+        en: "Mrs. Bruce was the first female pilot to fly between England and Japan.",
+        case: "nom",
+      },
+      {
+        de: "Sie wurde bei der Luftwaffe zur Pilotin ausgebildet.",
+        en: "The Air Force trained her to become a pilot.",
+        case: "dat",
+      },
+    ],
+    themes: ["people", "profession"],
     completed: true,
   },
 ];

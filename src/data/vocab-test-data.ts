@@ -1,3 +1,8 @@
+// smaller completed test file. should have examples of all types
+// these entries are elsewhere in the main voc data, so remove once done.
+// vocab-data-completed and -professions etc will be the main source.
+// voc incomplete is where you're working from
+
 import type { VocabEntry } from "../types";
 
 export const TEST_VOCAB: VocabEntry[] = [
@@ -547,7 +552,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     completed: true,
   },
   {
-    id: 10000096, // KATY
+    id: 10000096,
     eng: "thought",
     article: "der",
     noun: "Gedanke",
@@ -555,38 +560,52 @@ export const TEST_VOCAB: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: true,
     notes: {
+      pluralNote: "Usually seen in the plural",
       weakMascHint:
         "Exceptions: Nouns ending in '-e' but take '-ens' in the genitive singular",
     },
     sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "" },
       {
-        de: "SATZ2",
-        en: "SENTENCE2",
-        case: "",
+        de: "Das war mein erster Gedanke.",
+        en: "That was my first thought.",
+        case: "nom",
+      },
+      {
+        de: "Hier war der Wunsch der Vater des Gedankens.",
+        en: "Here the wish was the father of the thought.",
+        case: "gen",
       },
     ],
-    themes: ["misc"],
-    completed: false,
+    themes: ["personal", "religion"],
+    completed: true,
   },
   {
     id: 100000229,
     eng: "will",
     article: "der",
-    noun: "Wille", // KATY
-    plural: "REPLACE",
+    noun: "Wille",
+    plural: "Willen",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {
+      pluralNote: "Rarely seen in the plural",
       weakMascHint:
         "Exceptions: Nouns ending in '-e' but take '-ens' in the genitive singular",
     },
     sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+      {
+        de: "Haben die Menschen einen freien Willen?",
+        en: "Do people have free will?",
+        case: "acc",
+      },
+      {
+        de: "Wo ein Wille ist, ist auch ein Weg. ",
+        en: "Where there's a will, there's a way.",
+        case: "nom",
+      },
     ],
-    themes: ["misc"],
-    completed: false,
+    themes: ["personal", "religion"],
+    completed: true,
   },
   {
     id: 100000252,
@@ -596,15 +615,25 @@ export const TEST_VOCAB: VocabEntry[] = [
     plural: "Beamten",
     hasNoPlural: false,
     weakMasculine: true,
+    genderPair: { article: "die", singular: "Beamtin", plural: "Beamtinnen" },
     notes: {
-      miscNote: "KATY FIX! COMPLETE AND ADD FEMALE VERSION",
+      otherEngDefinitions: "civil servant, clerk, appointee, public servant",
+      weakMascHint: "Nouns ending in '-e' (people, animals)",
     },
     sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+      {
+        de: "Beamte arbeiten für den Staat.",
+        en: "Civil servants work for the state.",
+        case: "nom",
+      },
+      {
+        de: "Die Asylbewerberinnen wurden von einem Beamten befragt.",
+        en: "The asylum seekers were interviewed by an official.",
+        case: "dat",
+      },
     ],
-    themes: ["misc"],
-    completed: false,
+    themes: ["profession", "people"],
+    completed: true,
   },
   {
     id: 100000357,
@@ -645,30 +674,25 @@ export const TEST_VOCAB: VocabEntry[] = [
     plural: "Bären",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: {},
+    notes: {
+      weakMascHint: "Nouns ending in '-e' (people, animals)",
+    },
     sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+      {
+        de: "Der große Bär frisst Honig.",
+        en: "The big bear eats honey.",
+        case: "nom",
+      },
+      {
+        de: "Ich habe Angst vor dem Bären.",
+        en: "I am afraid of the bear.",
+        case: "dat",
+      },
     ],
-    themes: ["misc"],
-    completed: false,
+    themes: ["zoo", "animals"],
+    completed: true,
   },
-  {
-    id: 100002171,
-    eng: "fiancé",
-    article: "der",
-    noun: "Verlobte",
-    plural: "Verlobten",
-    hasNoPlural: false,
-    weakMasculine: true,
-    notes: {},
-    sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
-    ],
-    themes: ["misc"],
-    completed: false,
-  },
+
   {
     id: 100002219,
     eng: "messenger",
@@ -677,13 +701,28 @@ export const TEST_VOCAB: VocabEntry[] = [
     plural: "Boten",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: {},
+    genderPair: {
+      article: "die",
+      singular: "Botin",
+      plural: "Botinnen",
+    },
+    notes: {
+      weakMascHint: "Nouns ending in '-e' (people, animals)",
+    },
     sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+      {
+        de: "Man erschlägt den Boten nicht.",
+        en: "Don't kill the messener",
+        case: "acc",
+      },
+      {
+        de: "Der berittene Bote begehrte Einlass an der Zugbrücke.",
+        en: "The mounted messenger requested entry at the drawbridge.",
+        case: "nom",
+      },
     ],
-    themes: ["misc"],
-    completed: false,
+    themes: ["profession", "people"],
+    completed: true,
   },
   {
     id: 100000412,
@@ -693,13 +732,29 @@ export const TEST_VOCAB: VocabEntry[] = [
     plural: "Nachbarn",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: {},
+    genderPair: {
+      article: "die",
+      singular: "Nachbarin",
+      plural: "Nachbarinnen",
+    },
+    notes: {
+      miscNote: "Use 'direkt' to mean 'nextdoor': direkter Nachbar.",
+      weakMascHint: "Exceptions: add '-n' and not '-en'",
+    },
     sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+      {
+        de: "Thomas ist mein directer Nachbar.",
+        en: "Thomas is my nextdoor neighbour.",
+        case: "nom",
+      },
+      {
+        de: "Er fährt selbst zum Nachbarn mit dem Auto.",
+        en: "He drives himself by car to the neighbour.",
+        case: "dat",
+      },
     ],
-    themes: ["misc"],
-    completed: false,
+    themes: ["people", "city", "social"],
+    completed: true,
   },
   {
     id: 100000429,
@@ -736,29 +791,26 @@ export const TEST_VOCAB: VocabEntry[] = [
     plural: "Fremden",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: {},
+    notes: {
+      weakMascHint: "Nouns ending in '-e' (people, animals)",
+      genderNote:
+        'Usually male. Although "die Fremde" exists as a female stranger, "die Fremde" usually means "foreign lands or parts".',
+      otherEngDefinitions: "non-native, foreigner",
+    },
     sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+      {
+        de: "Nehmt keine Süßigkeiten von Fremden.",
+        en: "Don't take candy from strangers",
+        case: "dat",
+      },
+      {
+        de: "Der Fremde schwieg nicht lange.",
+        en: "The stranger did not stay silent for long.",
+        case: "nom",
+      },
     ],
-    themes: ["misc"],
-    completed: false,
-  },
-  {
-    id: 100000440,
-    eng: "stranger",
-    article: "der",
-    noun: "Fremde",
-    plural: "Fremden",
-    hasNoPlural: false,
-    weakMasculine: true,
-    notes: {},
-    sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
-    ],
-    themes: ["misc"],
-    completed: false,
+    themes: ["people"],
+    completed: true,
   },
   {
     id: 100000455,
@@ -768,13 +820,21 @@ export const TEST_VOCAB: VocabEntry[] = [
     plural: "Planeten",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: {},
+    notes: { weakMascHint: "Nouns ending in '-at', '-et', '-ot'" },
     sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+      {
+        de: "Die Erde ist ein Planet, kein Stern.",
+        en: "The earth is a planet, not a star.",
+        case: "nom",
+      },
+      {
+        de: "Ich muss nun auf meinen Planeten zurückkehren.",
+        en: "I have to get back to my planet now.",
+        case: "acc",
+      },
     ],
-    themes: ["misc"],
-    completed: false,
+    themes: ["science"],
+    completed: true,
   },
   {
     id: 100000463,
@@ -784,13 +844,24 @@ export const TEST_VOCAB: VocabEntry[] = [
     plural: "Menschen",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: {},
+    notes: {
+      weakMascHint:
+        "Group of nouns with no easy rule to follow such as Bauer, Bär, Held, Herr, Nachbar, & Mensch.",
+    },
     sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+      {
+        de: "Menschen sind dumme Tiere.",
+        en: "Humans are stupid animals",
+        case: "nom",
+      },
+      {
+        de: "Niemand mag langweilige Menschen.",
+        en: "No one likes boring people.",
+        case: "acc",
+      },
     ],
-    themes: ["misc"],
-    completed: false,
+    themes: ["people"],
+    completed: true,
   },
   {
     id: 100000615,
@@ -831,14 +902,26 @@ export const TEST_VOCAB: VocabEntry[] = [
     plural: "Narren",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: {},
+    notes: {
+      weakMascHint:
+        "Group of nouns with no easy rule to follow such as Bauer, Bär, Held, Herr, Nachbar, & Mensch.",
+    },
     sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+      {
+        de: "Die Welt ist voller Narren.",
+        en: "The world is full of fools.",
+        case: "dat",
+      },
+      {
+        de: "Nur ein Narr macht keine Experimente.",
+        en: "Only a fool does't experiment.",
+        case: "nom",
+      },
     ],
-    themes: ["misc"],
-    completed: false,
+    themes: ["people"],
+    completed: true,
   },
+  // no genderpair for prince since fem is Prinzessin and not Prinzin
   {
     id: 100000709,
     eng: "prince",
@@ -847,13 +930,24 @@ export const TEST_VOCAB: VocabEntry[] = [
     plural: "Prinzen",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: {},
+    notes: {
+      genderNote:
+        "The female equivalent is Prinzessin (note the ess), not Prinzin.",
+    },
     sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+      {
+        de: "Die Prinzessin verliebte sich in den Prinzen.",
+        en: "The princess fell in love with the prince",
+        case: "acc",
+      },
+      {
+        de: "Der Prinz ist fast hundert Jahre alt.",
+        en: "The prince is almost 100 years old.",
+        case: "nom",
+      },
     ],
-    themes: ["misc"],
-    completed: false,
+    themes: ["people", "profession"],
+    completed: true,
   },
   {
     id: 1000000724,
@@ -864,15 +958,24 @@ export const TEST_VOCAB: VocabEntry[] = [
     hasNoPlural: true,
     weakMasculine: true,
     notes: {
+      otherEngDefinitions: "belief, credence, religion, credence",
       weakMascHint:
         "Exceptions: Nouns ending in '-e' but take '-ens' in the genitive singular",
     },
     sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+      {
+        de: "Der Glaube an sich selbst ist der erste Schritt zum Erfolg.",
+        en: "Belief in oneself is the first step to success.",
+        case: "nom",
+      },
+      {
+        de: "Das ist eine Frage des Glaubens.",
+        en: "That is a question of belief.",
+        case: "gen",
+      },
     ],
-    themes: ["misc"],
-    completed: false,
+    themes: ["religion"],
+    completed: true,
   },
   {
     id: 1000000797,
@@ -882,13 +985,20 @@ export const TEST_VOCAB: VocabEntry[] = [
     plural: "Drachen",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: {},
+    notes: {
+      miscNote: "Careful: dragon - der Drache BUT kite - der Drachen",
+      weakMascHint: "Nouns ending in '-e' (people, animals)",
+    },
     sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+      { de: "Hier sind Drachen!", en: "Here be dragons", case: "nom" },
+      {
+        de: "Ich kenne eine Geschichte über den Drachen.",
+        en: "I know a story about a dragon.",
+        case: "acc",
+      },
     ],
-    themes: ["misc"],
-    completed: false,
+    themes: ["animals", "fantasy"],
+    completed: true,
   },
   {
     id: 1000000802,
@@ -898,13 +1008,26 @@ export const TEST_VOCAB: VocabEntry[] = [
     plural: "Erwachsenen",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: {},
+    notes: {
+      weakMascHint: "Nouns ending in '-e' (people, animals)",
+      pluralNote:
+        "Technically a nominalized adjective, so the ending changes depending on the article that precedes it: die/den/dem/des Erwachsenen but ein Erwachsener (Er ist ein Erwachsener).",
+      otherEngDefinitions: "grownup",
+    },
     sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+      {
+        de: "Auch die Erwachsenen gingen äußerlich ihrem normalen Tagewerk nach.",
+        en: "The adults also outwardly went about their normal daily work.",
+        case: "nom",
+      },
+      {
+        de: "Ich habe gestern Abend den Erwachsenen nach dem Weg gefragt.",
+        en: "I asked the adult for directions yesterday evening.",
+        case: "acc",
+      },
     ],
-    themes: ["misc"],
-    completed: false,
+    themes: ["people", "family"],
+    completed: true,
   },
   {
     id: 1000000817,
@@ -914,13 +1037,26 @@ export const TEST_VOCAB: VocabEntry[] = [
     plural: "Piloten",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: {},
+    genderPair: {
+      article: "die",
+      singular: "Pilotin",
+      plural: "Pilotinnen",
+    },
+    notes: { weakMascHint: "Nouns ending in '-at', '-et', '-ot'" },
     sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+      {
+        de: "Hier spricht der Pilot.",
+        en: "This is your pilot speaking.",
+        case: "nom",
+      },
+      {
+        de: "Das ist der schlimmste Albtraum jedes Piloten. ",
+        en: "This is every pilot's worst nightmare.",
+        case: "gen",
+      },
     ],
-    themes: ["misc"],
-    completed: false,
+    themes: ["people", "profession"],
+    completed: true,
   },
   {
     id: 1000000953,
@@ -930,14 +1066,23 @@ export const TEST_VOCAB: VocabEntry[] = [
     plural: "Gefangenen",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: {},
+    notes: { weakMascHint: "Nouns ending in '-e' (people, animals)" },
     sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+      {
+        de: "Der gefährlichste Gefangene floh.",
+        en: "The most dangerous prisoner escaped.",
+        case: "nom",
+      },
+      {
+        de: "Die Wache führte den Gefangenen in seine Zelle.",
+        en: "The guard led the prisoner to his cell.",
+        case: "acc",
+      },
     ],
-    themes: ["misc"],
-    completed: false,
+    themes: ["people"],
+    completed: true,
   },
+  // NO genderPair because fem is Bäuerin and not Bauerin. more than just in and innen
   {
     id: 1000001028,
     eng: "farmer",
@@ -946,13 +1091,27 @@ export const TEST_VOCAB: VocabEntry[] = [
     plural: "Bauern",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: {},
+
+    notes: {
+      genderNote:
+        "The female form for farmer is Bäuerin and not Bauerin. Note the ä!",
+      weakMascHint:
+        "Group of nouns with no easy rule to follow such as Bauer, Bär, Held, Herr, Nachbar, & Mensch.",
+    },
     sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+      {
+        de: "Er wollte Bauer werden",
+        en: "He wanted to become a farmer",
+        case: "nom",
+      },
+      {
+        de: "Regen bringt dem Bauern Segen.",
+        en: "Rain brings blessings to the farmer",
+        case: "dat",
+      },
     ],
-    themes: ["misc"],
-    completed: false,
+    themes: ["country", "people", "profession"],
+    completed: true,
   },
   {
     id: 1000001056,
@@ -962,13 +1121,23 @@ export const TEST_VOCAB: VocabEntry[] = [
     plural: "Diamanten",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: {},
+    notes: {
+      weakMascHint: "Nouns ending in '-ant', '-and', '-ent''",
+    },
     sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+      {
+        de: "Er rannte mit dem Diamanten davon.",
+        en: "He ran away with the diamond.",
+        case: "nom",
+      },
+      {
+        de: "Wissen Sie, wo Niko den Diamanten gefunden hat?",
+        en: "Do you know where Niko found the diamond?",
+        case: "acc",
+      },
     ],
-    themes: ["misc"],
-    completed: false,
+    themes: ["nature", "science"],
+    completed: true,
   },
   {
     id: 100000072,
@@ -1006,13 +1175,23 @@ export const TEST_VOCAB: VocabEntry[] = [
     plural: "Heiligen",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: {},
+    notes: {
+      weakMascHint: "Nouns ending in '-e' (people, animals)",
+    },
     sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+      {
+        de: "Es gibt keinen Heiligen, der ohne Makel ist.",
+        en: "There is no saint without flaw.",
+        case: "acc",
+      },
+      {
+        de: "Jeder Heilige hat eine Vergangenheit, und jeder Sünder hat eine Zukunft.",
+        en: "Every saint has a past, and every sinner has a future.",
+        case: "nom",
+      },
     ],
-    themes: ["misc"],
-    completed: false,
+    themes: ["people", "religion"],
+    completed: true,
   },
   {
     id: 1000001117,
@@ -1086,13 +1265,19 @@ export const TEST_VOCAB: VocabEntry[] = [
     plural: "Zeugen",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: {},
+    notes: {
+      weakMascHint: "Nouns ending in '-e' (people, animals)",
+    },
     sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+      { de: "Es gab einen Zeugen. ", en: "There was a witness", case: "acc" },
+      {
+        de: "Der Richter glaubt dem Zeugen.",
+        en: "The judge believes the witness.",
+        case: "dat",
+      },
     ],
-    themes: ["misc"],
-    completed: false,
+    themes: ["people"],
+    completed: true,
   },
   {
     id: 1000001203,
@@ -1102,33 +1287,26 @@ export const TEST_VOCAB: VocabEntry[] = [
     plural: "Idioten",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: {},
-    sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
-    ],
-    themes: ["misc"],
-    completed: false,
-  },
-  {
-    id: 1000001205,
-    eng: "seed",
-    article: "der",
-    noun: "Samen",
-    plural: "Samen",
-    hasNoPlural: false,
-    weakMasculine: true,
     notes: {
-      weakMascHint:
-        "Exceptions: Nouns ending in '-e' but take '-ens' in the genitive singular",
+      weakMascHint: "Nouns ending in '-at', '-et', '-ot'",
+      otherEngDefinitions: "fool",
     },
     sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+      {
+        de: "Du benimmst dich wie ein Idiot.",
+        en: "You're acting like a fool.",
+        case: "nom",
+      },
+      {
+        de: "Hältst du mich für einen Idioten?",
+        en: "Do you think I'm an idiot?",
+        case: "acc",
+      },
     ],
-    themes: ["misc"],
-    completed: false,
+    themes: ["people"],
+    completed: true,
   },
+
   {
     id: 1000001243,
     eng: "monkey",
@@ -1164,13 +1342,22 @@ export const TEST_VOCAB: VocabEntry[] = [
     plural: "Kollegen",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: {},
+    genderPair: {
+      article: "die",
+      singular: "Kollegin",
+      plural: "Kolleginnen",
+    },
+    notes: { weakMascHint: "Nouns ending in '-e' (people, animals)" },
     sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+      {
+        de: "Der Austausch mit den Kollegen fehlt mir immer mehr. ",
+        en: "I miss the exchange with my colleagues more and more.",
+        case: "dat",
+      },
+      { de: "Er war mein Kollege.", en: "He was my colleague.", case: "nom" },
     ],
-    themes: ["misc"],
-    completed: false,
+    themes: ["people", "profession"],
+    completed: true,
   },
   {
     id: 1000001318,
@@ -1180,13 +1367,26 @@ export const TEST_VOCAB: VocabEntry[] = [
     plural: "Experten",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: {},
+    genderPair: {
+      article: "die",
+      singular: "Expertin",
+      plural: "Expertinnen",
+    },
+    notes: { weakMascHint: "Nouns ending in '-e' (people, animals)" },
     sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+      {
+        de: "Merten ist ein Experte in seinem Beruf.",
+        en: "Merten is an expert in his profession.",
+        case: "nom",
+      },
+      {
+        de: "Am besten überlässt man die Reparatur einem Experten.",
+        en: "It is best to leave the repair to an expert.",
+        case: "dat",
+      },
     ],
-    themes: ["misc"],
-    completed: false,
+    themes: ["people", "profession"],
+    completed: true,
   },
   {
     id: 1000001398,
@@ -1196,13 +1396,29 @@ export const TEST_VOCAB: VocabEntry[] = [
     plural: "Riesen",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: {},
+    genderPair: {
+      article: "die",
+      singular: "Riesin",
+      plural: "Riesinnen",
+    },
+    notes: {
+      otherEngDefinitions: "colossus, grand",
+      weakMascHint: "Nouns ending in '-e' (people, animals)",
+    },
     sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+      {
+        de: "Der Boxer war ein Riese, über zwei Meter groß.",
+        en: "The boxer was a giant, over two meters tall.",
+        case: "nom",
+      },
+      {
+        de: "Die Riesen fraßen die Pilze und die Schlümpfe, die drin waren, gleich mit.",
+        en: "The giants ate the mushrooms and the smurfs that were inside.",
+        case: "nom",
+      },
     ],
-    themes: ["misc"],
-    completed: false,
+    themes: ["people", "fantasy"],
+    completed: true,
   },
   {
     id: 1000001530,
@@ -1217,11 +1433,19 @@ export const TEST_VOCAB: VocabEntry[] = [
         "Exceptions: Nouns ending in '-e' but take '-ens' in the genitive singular",
     },
     sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+      {
+        de: "Feuer fängt mit Funken an.",
+        en: "Fire starts with sparks.",
+        case: "dat",
+      },
+      {
+        de: "Der Funke durchbrannte das Tischtuch.",
+        en: "The spark burned through the tablecloth.",
+        case: "nom",
+      },
     ],
-    themes: ["misc"],
-    completed: false,
+    themes: ["nature"],
+    completed: true,
   },
   {
     id: 1000001569,
@@ -1231,13 +1455,24 @@ export const TEST_VOCAB: VocabEntry[] = [
     plural: "Bogenschützen",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: {},
+    notes: {
+      weakMascHint:
+        "Group of nouns with no easy rule to follow such as Bauer, Bär, Held, Herr, Nachbar, & Mensch.",
+    },
     sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+      {
+        de: "In den Armeen des Mittelalters kämpften Speerträger und Bogenschützen.",
+        en: "In the armies of the Middle Ages, spear bearers and archers fought.",
+        case: "nom",
+      },
+      {
+        de: "Die Schilde schützten die Ritter vor den Pfeilen der Bogenschützen.",
+        en: "The shields protected the knights from the arrows of the archers.",
+        case: "gen",
+      },
     ],
-    themes: ["misc"],
-    completed: false,
+    themes: ["people", "profession"],
+    completed: true,
   },
   {
     id: 1000001572,
@@ -1247,30 +1482,25 @@ export const TEST_VOCAB: VocabEntry[] = [
     plural: "Hirten",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: {},
+    notes: {
+      weakMascHint: "Nouns ending in '-e' (people, animals)",
+    },
     sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+      {
+        de: "Der Hirte hütet seine Schafe.",
+        en: "The shepherd guards his sheep.",
+        case: "nom",
+      },
+      {
+        de: "Ein furchtbar wütend Schrecknis ist der Krieg, die Herde schlägt er und den Hirten.",
+        en: "A terribly angry horror is war, it strikes the flock and the shepherd.",
+        case: "acc",
+      },
     ],
-    themes: ["misc"],
-    completed: false,
+    themes: ["people", "profession"],
+    completed: true,
   },
-  {
-    id: 1000001574,
-    eng: "favorite",
-    article: "der",
-    noun: "Favorit",
-    plural: "Favoriten",
-    hasNoPlural: false,
-    weakMasculine: true,
-    notes: {},
-    sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
-    ],
-    themes: ["misc"],
-    completed: false,
-  },
+
   {
     id: 1000001609,
     eng: "pirate",
@@ -1279,13 +1509,23 @@ export const TEST_VOCAB: VocabEntry[] = [
     plural: "Piraten",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: {},
+    notes: {
+      weakMascHint: "Nouns ending in '-at', '-et', '-ot'",
+    },
     sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+      {
+        de: "Die Piraten vergruben den Schatz in der Erde.",
+        en: "The pirates buried their treasure in the ground.",
+        case: "nom",
+      },
+      {
+        de: "Schwarzbart war einer der berüchtigtsten Piraten.",
+        en: "Blackbeard is one of the most famous pirates.",
+        case: "gen",
+      },
     ],
-    themes: ["misc"],
-    completed: false,
+    themes: ["people", "profession", "fantasy"],
+    completed: true,
   },
   {
     id: 1000001615,
@@ -1329,7 +1569,7 @@ export const TEST_VOCAB: VocabEntry[] = [
       plural: "Soldatinnen",
     },
     notes: {
-      weakMascHint: "Nouns ending in '-at'",
+      weakMascHint: "Nouns ending in '-at', '-et', '-ot'",
     },
     sentences: [
       {
@@ -1359,13 +1599,21 @@ export const TEST_VOCAB: VocabEntry[] = [
       singular: "Senatorin",
       plural: "Senatorinnen",
     },
-    notes: {},
+    notes: { weakMascHint: "Nouns ending in '-or'" },
     sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+      {
+        de: "Der Senator bewahrte in der heftigen Debatte seine Neutralität.",
+        en: "The senator maintained his neutrality in the heated debate.",
+        case: "nom",
+      },
+      {
+        de: "Die Senatoren werden meine Aktion loben.",
+        en: "The senators will praise my action.",
+        case: "nom",
+      },
     ],
-    themes: ["misc"],
-    completed: false,
+    themes: ["people", "profession"],
+    completed: true,
   },
   {
     id: 1000001748,
@@ -1380,13 +1628,21 @@ export const TEST_VOCAB: VocabEntry[] = [
       singular: "Fotografin",
       plural: "Fotografinnen",
     },
-    notes: {},
+    notes: { weakMascHint: "Nouns ending in '-f', '-ph'" },
     sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+      {
+        de: "Du bist wirklich ein guter Fotograf.",
+        en: "You are a really good photographer.",
+        case: "nom",
+      },
+      {
+        de: "Franz ist einer der teuersten Fotografen der Welt.",
+        en: "Franz is one of the most expensive photographers in the world.",
+        case: "gen",
+      },
     ],
-    themes: ["misc"],
-    completed: false,
+    themes: ["people", "profession"],
+    completed: true,
   },
   {
     id: 1000001820,
@@ -1396,13 +1652,24 @@ export const TEST_VOCAB: VocabEntry[] = [
     plural: "Satelliten",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: {},
+    notes: {
+      weakMascHint:
+        "Group of nouns with no easy rule to follow such as Bauer, Bär, Held, Herr, Nachbar, & Mensch.",
+    },
     sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+      {
+        de: "Der Mond ist ein Satellit der Erde.",
+        en: "The moon is a satellite of the Earth.",
+        case: "nom",
+      },
+      {
+        de: "Das Fernsehsignal kommt vom Satelliten.",
+        en: "The TV signal comes from satellites.",
+        case: "dat",
+      },
     ],
-    themes: ["misc"],
-    completed: false,
+    themes: ["science"],
+    completed: true,
   },
   {
     id: 1000001822,
@@ -1412,13 +1679,17 @@ export const TEST_VOCAB: VocabEntry[] = [
     plural: "Welpen",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: {},
+    notes: { weakMascHint: "Nouns ending in '-e' (people, animals)" },
     sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+      { de: "Ich liebe Welpen.", en: "I love puppies", case: "acc" },
+      {
+        de: "Julia wollte ihren Welpen Jetzie nennen.",
+        en: "Julia wanted to name her puppy Jetzie.",
+        case: "acc",
+      },
     ],
-    themes: ["misc"],
-    completed: false,
+    themes: ["animals", "family"],
+    completed: true,
   },
   {
     id: 1000001859,
@@ -1428,13 +1699,24 @@ export const TEST_VOCAB: VocabEntry[] = [
     plural: "Vorfahren",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: {},
+    notes: {
+      weakMascHint:
+        "Group of nouns with no easy rule to follow such as Bauer, Bär, Held, Herr, Nachbar, & Mensch.",
+    },
     sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+      {
+        de: "Sind Mensch und Affe Abarten eines gemeinsamen Vorfahren?",
+        en: "Are humans and apes varieties of a common ancestor?",
+        case: "gen",
+      },
+      {
+        de: "Woher kommen eure Vorfahren?",
+        en: "Where are your ancestors from?",
+        case: "nom",
+      },
     ],
-    themes: ["misc"],
-    completed: false,
+    themes: ["people", "family"],
+    completed: true,
   },
   {
     id: 1000001874,
@@ -1449,13 +1731,23 @@ export const TEST_VOCAB: VocabEntry[] = [
       singular: "Inspektorin",
       plural: "Inspektorinnen",
     },
-    notes: {},
+    notes: {
+      weakMascHint: "Nouns ending in '-or'",
+    },
     sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+      {
+        de: "Der Inspektor hat seine Untersuchung abgeschlossen.",
+        en: "The inspector has completed his investigation.",
+        case: "nom",
+      },
+      {
+        de: "Der Verdächtige belog den Inspektor.",
+        en: "The suspect told a lie to the inspector.",
+        case: "acc",
+      },
     ],
-    themes: ["misc"],
-    completed: false,
+    themes: ["people", "profession"],
+    completed: true,
   },
   {
     id: 1000001910,
@@ -1465,13 +1757,23 @@ export const TEST_VOCAB: VocabEntry[] = [
     plural: "Elfen",
     hasNoPlural: false,
     weakMasculine: true,
-    notes: {},
+    notes: {
+      weakMascHint: "Nouns ending in '-f', '-ph'",
+    },
     sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+      {
+        de: "Der Elf hatte spitze Ohren und trug ein grünes Gewand.",
+        en: "The elf had pointy ears and wore a green garment.",
+        case: "nom",
+      },
+      {
+        de: "Elfen sind die kleinen Helfer des Weihnachtsmannes.",
+        en: "Elves are Santa's little helpbers",
+        case: "acc",
+      },
     ],
-    themes: ["misc"],
-    completed: false,
+    themes: ["fantasy", "people"],
+    completed: true,
   },
   {
     id: 1000002440,

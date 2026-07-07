@@ -1,8 +1,10 @@
-import {VOCAB_1} from './data/vocab-data-1.ts';
-import {VOCAB_2} from './data/vocab-data-2.ts';
-import {VOCAB_3} from './data/vocab-data-3.ts';
-import {VOCAB_4} from './data/vocab-data-4.ts';
-import {VOCAB_5} from './data/vocab-data-5.ts';
-
-
-export const VOCABULARY_COMMON = [...VOCAB_1, ...VOCAB_2, ...VOCAB_3, ...VOCAB_4, ...VOCAB_5];
+import { VOCAB_MISC_1 } from "./data/vocab-data-incomplete.ts"; // THIS IS TOO BIG, BUT IT'LL BE SPLIT
+import { VOCAB_NATIONALITIES } from "./data/vocab-data-nationalities.ts";
+import { VOCAB_PROFESSIONS } from "./data/vocab-data-professions.ts";
+import { VOCAB_SCIENTISTS } from "./data/vocab-data-scientists.ts";
+export const VOCABULARY_COMMON = [
+  ...VOCAB_MISC_1,
+  ...VOCAB_NATIONALITIES,
+  ...VOCAB_PROFESSIONS,
+  ...VOCAB_SCIENTISTS,
+];

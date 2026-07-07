@@ -11,15 +11,20 @@ export interface GenderPair {
   singular: string;
   plural: string;
 }
+// some of these rules could be grouped together, but I think
+// visually it is easier to associate et and ot and at as one and ent ant together
 export const WEAKMASCCOMMENTS = [
   "Nouns ending in '-e' (people, animals)",
   "Nouns ending in '-ant', '-and', '-ent''",
   "Nouns ending in '-loge'",
   "Nouns ending in '-ad'",
-  "Nouns ending in '-at'",
+  "Nouns ending in '-at', '-et', '-ot'",
   "Nouns ending in '-ist'",
+  "Nouns ending in '-or'",
+  "Nouns ending in '-f', '-ph'",
   "Exceptions: add '-n' and not '-en'",
   "Exceptions: Nouns ending in '-e' but take '-ens' in the genitive singular",
+  "Group of nouns with no easy rule to follow such as Bauer, Bär, Held, Herr, Nachbar, & Mensch.",
 ] as const;
 export type WeakMascComment = (typeof WEAKMASCCOMMENTS)[number];
 
@@ -35,6 +40,7 @@ export const THEMES = [
   "doctor",
   "education",
   "environment",
+  "fantasy",
   "family", // can include pets, marriage, divorce
   "finance",
   "food",
@@ -46,7 +52,7 @@ export const THEMES = [
   "people",
   "profession",
   "personal", // covers grooming, things in one's desk or private things
-  "religion",
+  "religion", // keep but have the button be religion/spiritualality/mind until there's enough to split
   "restaurant",
   "science", // eventually add biology, geology, zoology
   "shopping",
