@@ -54,13 +54,25 @@ function App() {
     setDeckSize(size);
     let deck: VocabEntry[];
     if (testType === "weak-masc") {
-      // todo get filter logic here but for red squiggles, just copy/paste
+      const weakPercentage = Math.floor(Math.random() * 76) + 25; // 25-100%
+      const weakCount = Math.ceil(size * (weakPercentage / 100));
 
-      deck = allShuffledDeck.slice(0, size);
+      const weakNouns = allShuffledDeck.filter((n) => n.weakMasculine);
+      const otherNouns = allShuffledDeck.filter((n) => !n.weakMasculine);
+
+      const remaining = size - weakCount;
+
+      const maxWeak = Math.min(weakCount, weakNouns.length);
+      const maxOther = Math.min(remaining, otherNouns.length);
+      const weakDeck = shuffle(weakNouns).slice(0, maxWeak);
+      const otherDeck = shuffle(otherNouns).slice(0, maxOther);
+
+      const finalDeck = shuffle([...weakDeck, ...otherDeck]);
+
+      deck = finalDeck.slice(0, size);
     } else {
       deck = allShuffledDeck.slice(0, size);
     }
-    // const deck = allShuffledDeck.slice(0, size);
     setActiveDeck(deck);
     setCardsReviewed(deck);
   };

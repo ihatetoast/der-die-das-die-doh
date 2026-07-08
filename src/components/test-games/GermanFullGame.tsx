@@ -89,7 +89,7 @@ const GermanFullGame = ({
     targetPlural: string,
   ): boolean => {
     setMessage("");
-    const correctAnswer = targetPlural.toLowerCase().split(" ").slice(1).join();
+    const correctAnswer = targetPlural.toLowerCase();
     const userAnswer = userInputPlural.trim().toLowerCase();
     const initial = userInputPlural.trim().charAt(0);
     if (initial !== initial.toUpperCase()) {
@@ -101,8 +101,7 @@ const GermanFullGame = ({
 
   useEffect(() => {
     if (answerState === "incorrect" || answerState === "correct") {
-      const nounPlural = targetPlural.split(" ").slice(1).join();
-      const feedbackMsg = `${targetArticle} ${targetWord}, die ${nounPlural}`;
+      const feedbackMsg = `${targetArticle} ${targetWord}, die ${targetPlural}`;
       setMessage(feedbackMsg);
       setTimeout(() => {
         if (answerState === "correct") {

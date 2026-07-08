@@ -60,7 +60,7 @@ const PluralGame = ({ words, handleSetMode, onSessionComplete }: GameProps) => {
     targetPlural: string,
   ): boolean => {
     setMessage("");
-    const correctAnswer = targetPlural.toLowerCase().split(" ").slice(1).join();
+    const correctAnswer = targetPlural.toLowerCase();
 
     const userAnswer = userInputPlural.trim().toLowerCase();
 

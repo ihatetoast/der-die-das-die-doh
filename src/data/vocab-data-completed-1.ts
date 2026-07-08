@@ -5,7 +5,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "time",
     article: "die",
     noun: "Zeit",
-    plural: "die Zeiten",
+    plural: "Zeiten",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -33,7 +33,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "man",
     article: "der",
     noun: "Mann",
-    plural: "die Männer",
+    plural: "Männer",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -56,7 +56,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "hand",
     article: "die",
     noun: "Hand",
-    plural: "die Hände",
+    plural: "Hände",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {},
@@ -80,7 +80,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "day",
     article: "der",
     noun: "Tag",
-    plural: "die Tage",
+    plural: "Tage",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {},
@@ -104,7 +104,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "way",
     article: "der",
     noun: "Weg",
-    plural: "die Wege",
+    plural: "Wege",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -130,7 +130,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "eye",
     article: "das",
     noun: "Auge",
-    plural: "die Augen",
+    plural: "Augen",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {},
@@ -150,7 +150,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "thing",
     article: "die",
     noun: "Sache",
-    plural: "die Sachen",
+    plural: "Sachen",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {},
@@ -174,7 +174,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "head",
     article: "der",
     noun: "Kopf",
-    plural: "die Köpfe",
+    plural: "Köpfe",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {},
@@ -198,7 +198,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "year",
     article: "das",
     noun: "Jahr",
-    plural: "die Jahre",
+    plural: "Jahre",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {},
@@ -222,7 +222,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "room",
     article: "das",
     noun: "Zimmer",
-    plural: "die Zimmer",
+    plural: "Zimmer",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -236,7 +236,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
         case: "nom",
       },
       {
-        de: "Mit 10 renovierten Zimmern sieht das alte Herrenhaus komplett neu aus. ",
+        de: "Mit 10 renovierten Zimmern sieht das alte Herrenhaus komplett neu aus.",
         en: "With 10 renovated rooms, the old mansion looks completely new.",
         case: "dat",
       },
@@ -249,7 +249,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "door",
     article: "die",
     noun: "Tür",
-    plural: "die Türen",
+    plural: "Türen",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -272,7 +272,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "woman",
     article: "die",
     noun: "Frau",
-    plural: "die Frauen",
+    plural: "Frauen",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -299,7 +299,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "face",
     article: "das",
     noun: "Gesicht",
-    plural: "die Gesichter",
+    plural: "Gesichter",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -326,7 +326,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "mother",
     article: "die",
     noun: "Mutter",
-    plural: "die Mütter",
+    plural: "Mütter",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -353,7 +353,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "people",
     article: "die",
     noun: "Leute",
-    plural: "die Leute",
+    plural: "Leute",
     hasNoPlural: false,
     weakMasculine: false,
     notes: { pluralNote: "Exists only in plural form." },
@@ -377,7 +377,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "night",
     article: "die",
     noun: "Nacht",
-    plural: "die Nächte",
+    plural: "Nächte",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -404,7 +404,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "house",
     article: "das",
     noun: "Haus",
-    plural: "die Häuser",
+    plural: "Häuser",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -433,7 +433,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "father",
     article: "der",
     noun: "Vater",
-    plural: "die Väter",
+    plural: "Väter",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {},
@@ -457,7 +457,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "life",
     article: "das",
     noun: "Leben",
-    plural: "die Leben",
+    plural: "Leben",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -484,7 +484,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "back",
     article: "der",
     noun: "Rücken",
-    plural: "die Rücken",
+    plural: "Rücken",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {},
@@ -508,7 +508,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "voice",
     article: "die",
     noun: "Stimme",
-    plural: "die Stimmen",
+    plural: "Stimmen",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -531,7 +531,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "girl",
     article: "das",
     noun: "Mädchen",
-    plural: "die Mädchen",
+    plural: "Mädchen",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -558,7 +558,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "place",
     article: "der",
     noun: "Ort",
-    plural: "die Orte",
+    plural: "Orte",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -581,7 +581,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "boy",
     article: "der",
     noun: "Junge",
-    plural: "die Jungen",
+    plural: "Jungen",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {
@@ -609,7 +609,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "car",
     article: "das",
     noun: "Auto",
-    plural: "die Autos",
+    plural: "Autos",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -632,7 +632,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "side",
     article: "die",
     noun: "Seite",
-    plural: "die Seiten",
+    plural: "Seiten",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -660,7 +660,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "arm",
     article: "der",
     noun: "Arm",
-    plural: "die Arme",
+    plural: "Arme",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -683,7 +683,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "child",
     article: "das",
     noun: "Kind",
-    plural: "die Kinder",
+    plural: "Kinder",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -711,7 +711,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "word",
     article: "das",
     noun: "Wort",
-    plural: "die Wörter",
+    plural: "Wörter",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -734,7 +734,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "moment",
     article: "der",
     noun: "Moment",
-    plural: "die Momente",
+    plural: "Momente",
     hasNoPlural: false,
     weakMasculine: false,
     notes: { genderNote: "Words ending in -ent are often masculine." },
@@ -758,7 +758,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "hair",
     article: "das",
     noun: "Haar",
-    plural: "die Haare",
+    plural: "Haare",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -783,7 +783,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "foot",
     article: "der",
     noun: "Fuß",
-    plural: "die Füße",
+    plural: "Füße",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -810,7 +810,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "water",
     article: "das",
     noun: "Wasser",
-    plural: "die Wasser",
+    plural: "Wasser",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -835,7 +835,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "light",
     article: "das",
     noun: "Licht",
-    plural: "die Lichter",
+    plural: "Lichter",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -862,7 +862,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "world",
     article: "die",
     noun: "Welt",
-    plural: "die Welten",
+    plural: "Welten",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -888,7 +888,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "name",
     article: "der",
     noun: "Name",
-    plural: "die Namen",
+    plural: "Namen",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {
@@ -913,7 +913,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "friend",
     article: "der",
     noun: "Freund",
-    plural: "die Freunde",
+    plural: "Freunde",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -941,7 +941,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "window",
     article: "das",
     noun: "Fenster",
-    plural: "die Fenster",
+    plural: "Fenster",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -968,7 +968,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "body",
     article: "der",
     noun: "Körper",
-    plural: "die Körper",
+    plural: "Körper",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -995,7 +995,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "table",
     article: "der",
     noun: "Tisch",
-    plural: "die Tische",
+    plural: "Tische",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -1022,7 +1022,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "morning",
     article: "der",
     noun: "Morgen",
-    plural: "die Morgen",
+    plural: "Morgen",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {},
@@ -1046,7 +1046,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "bed",
     article: "das",
     noun: "Bett",
-    plural: "die Betten",
+    plural: "Betten",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -1073,7 +1073,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "wall",
     article: "die",
     noun: "Wand",
-    plural: "die Wände",
+    plural: "Wände",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -1096,7 +1096,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "street",
     article: "die",
     noun: "Straße",
-    plural: "die Straßen",
+    plural: "Straßen",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -1124,7 +1124,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "school",
     article: "die",
     noun: "Schule",
-    plural: "die Schulen",
+    plural: "Schulen",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -1147,7 +1147,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "air",
     article: "die",
     noun: "Luft",
-    plural: "die Lüfte",
+    plural: "Lüfte",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -1169,7 +1169,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "floor, soil",
     article: "der",
     noun: "Boden",
-    plural: "die Böden",
+    plural: "Böden",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -1191,7 +1191,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "hour",
     article: "die",
     noun: "Stunde",
-    plural: "die Stunden",
+    plural: "Stunden",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -1218,7 +1218,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "end",
     article: "das",
     noun: "Ende",
-    plural: "die Enden",
+    plural: "Enden",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -1241,7 +1241,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "family",
     article: "die",
     noun: "Familie",
-    plural: "die Familien",
+    plural: "Familien",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -1268,7 +1268,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "chap",
     article: "der",
     noun: "Kerl",
-    plural: "die Kerle",
+    plural: "Kerle",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -1297,7 +1297,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "guy",
     article: "der",
     noun: "Typ",
-    plural: "die Typen",
+    plural: "Typen",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -1324,7 +1324,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "type",
     article: "die",
     noun: "Art",
-    plural: "die Arten",
+    plural: "Arten",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -1351,7 +1351,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "kind",
     article: "die",
     noun: "Sorte",
-    plural: "die Sorten",
+    plural: "Sorten",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -1378,7 +1378,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "minute",
     article: "die",
     noun: "Minute",
-    plural: "die Minuten",
+    plural: "Minuten",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -1405,7 +1405,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "story",
     article: "die",
     noun: "Geschichte",
-    plural: "die Geschichten",
+    plural: "Geschichten",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -1433,7 +1433,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "god",
     article: "der",
     noun: "Gott",
-    plural: "die Götter",
+    plural: "Götter",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -1456,7 +1456,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "week",
     article: "die",
     noun: "Woche",
-    plural: "die Wochen",
+    plural: "Wochen",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {},
@@ -1476,7 +1476,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "work",
     article: "die",
     noun: "Arbeit",
-    plural: "die Arbeiten",
+    plural: "Arbeiten",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {},
@@ -1500,7 +1500,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "shoulder",
     article: "die",
     noun: "Schulter",
-    plural: "die Schultern",
+    plural: "Schultern",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -1527,7 +1527,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "part",
     article: "der",
     noun: "Teil",
-    plural: "die Teile",
+    plural: "Teile",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -1582,7 +1582,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "book",
     article: "das",
     noun: "Buch",
-    plural: "die Bücher",
+    plural: "Bücher",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -1629,7 +1629,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "gentleman",
     article: "der",
     noun: "Herr",
-    plural: "die Herren",
+    plural: "Herren",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {
@@ -1657,7 +1657,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "apartment",
     article: "die",
     noun: "Wohnung",
-    plural: "die Wohnungen",
+    plural: "Wohnungen",
     hasNoPlural: false,
     weakMasculine: false,
     notes: { genderNote: "Words ending in -ung are generally feminine." },
@@ -1668,7 +1668,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
         case: "nom",
       },
       {
-        de: "Wohnungen sind in New York sehr teuer. ",
+        de: "Wohnungen sind in New York sehr teuer.
         en: "Apartments in New Yors are very expensive.",
         case: "nom",
       },
@@ -1681,7 +1681,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "summer",
     article: "der",
     noun: "Sommer",
-    plural: "die Sommer",
+    plural: "Sommer",
     hasNoPlural: false,
     weakMasculine: false,
     notes: { genderNote: "The seasons are masculine." },
@@ -1705,7 +1705,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "clothes",
     article: "die",
     noun: "Kleidung",
-    plural: "die Kleidungen",
+    plural: "Kleidungen",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -1733,7 +1733,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "music",
     article: "die",
     noun: "Musik",
-    plural: "die Musiken",
+    plural: "Musiken",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -1761,7 +1761,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "hospital",
     article: "das",
     noun: "Krankenhaus",
-    plural: "die Krankenhäuser",
+    plural: "Krankenhäuser",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -1788,13 +1788,13 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "front",
     article: "die",
     noun: "Front",
-    plural: "die Fronten",
+    plural: "Fronten",
     hasNoPlural: false,
     weakMasculine: false,
     notes: { genderNote: "The seasons are masculine." },
     sentences: [
       {
-        de: " Der Frühling kommt nach dem Winter.",
+        de: "Der Frühling kommt nach dem Winter.",
         en: "Spring comes after winter.",
         case: "dat",
       },
@@ -1813,7 +1813,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "spring",
     article: "der",
     noun: "Frühling",
-    plural: "die Frühlinge",
+    plural: "Frühlinge",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -1840,7 +1840,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "engine",
     article: "der",
     noun: "Motor",
-    plural: "die Motoren",
+    plural: "Motoren",
     hasNoPlural: false,
     weakMasculine: false,
     notes: { genderNote: "Words ending in -or are often masculine." },
@@ -1861,7 +1861,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "dance",
     article: "der",
     noun: "Tanz",
-    plural: "die Tänze",
+    plural: "Tänze",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -1888,7 +1888,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "ghost",
     article: "der",
     noun: "Geist",
-    plural: "die Geister",
+    plural: "Geister",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -1915,7 +1915,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "glance",
     article: "der",
     noun: "Blick",
-    plural: "die Blicke",
+    plural: "Blicke",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -1942,7 +1942,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     eng: "goodbye",
     article: "der",
     noun: "Abschied",
-    plural: "die Abschiede",
+    plural: "Abschiede",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -2445,7 +2445,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
         "Masculine nouns ending in -ist representing people are usually weak masculine nouns.",
     },
     sentences: [
-      { de: " Ich bin Tourist.", en: "I am a tourist.", case: "nom" },
+      { de: "Ich bin Tourist.", en: "I am a tourist.", case: "nom" },
       {
         de: "Ich habe mit einem Touristen gesprochen.",
         en: "I spoke with a tourist.",
@@ -2522,7 +2522,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
       weakMascHint: "Nouns ending in '-e' (people, animals)",
     },
     sentences: [
-      { de: "Es gab einen Zeugen. ", en: "There was a witness", case: "acc" },
+      { de: "Es gab einen Zeugen.", en: "There was a witness", case: "acc" },
       {
         de: "Der Richter glaubt dem Zeugen.",
         en: "The judge believes the witness.",
@@ -2628,7 +2628,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     notes: { weakMascHint: "Nouns ending in '-e' (people, animals)" },
     sentences: [
       {
-        de: "Der Austausch mit den Kollegen fehlt mir immer mehr. ",
+        de: "Der Austausch mit den Kollegen fehlt mir immer mehr.",
         en: "I miss the exchange with my colleagues more and more.",
         case: "dat",
       },
@@ -2763,7 +2763,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
         case: "dat",
       },
       {
-        de: " Mit dem Fahrrad darf man nicht auf dem Gehweg fahren.",
+        de: "Mit dem Fahrrad darf man nicht auf dem Gehweg fahren.",
         en: "You aren't allowed to ride a bike on the sidewalk.",
         case: "dat",
       },
@@ -3163,7 +3163,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     sentences: [
       {
         de: "Da liegt der Hase im Pfeffer.",
-        en: "That's the fly in the ointment! ",
+        en: "That's the fly in the ointment!",
         case: "nom",
       },
       {
@@ -3595,7 +3595,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
         case: "nom",
       },
       {
-        de: " Die Bäuerinnen und Bauern unseres Landes verdienen unsere Unterstützung.",
+        de: "Die Bäuerinnen und Bauern unseres Landes verdienen unsere Unterstützung.",
         en: "The farmers of our country deserve our support.",
         case: "nom",
       },
@@ -3706,7 +3706,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     notes: {},
     sentences: [
       {
-        de: "Sie arbeitet als Inspektorin im gehobenen Dienst. ",
+        de: "Sie arbeitet als Inspektorin im gehobenen Dienst.",
         en: "She works as an inspector in the higher service.",
         case: "nom",
       },

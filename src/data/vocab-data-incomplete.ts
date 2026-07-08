@@ -32675,7 +32675,7 @@ export const VOCAB_MISC_1: VocabEntry[] = [
         case: "acc",
       },
       {
-        de: "Über dem Baum fliegt ein Drachen. ",
+        de: "Über dem Baum fliegt ein Drachen.",
         en: "There is a kite flying above the tree.",
         case: "nom",
       },

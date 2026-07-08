@@ -6,7 +6,7 @@ export const VOCAB_NATIONALITIES: VocabEntry[] = [
     eng: "frenchman",
     article: "der",
     noun: "Franzose",
-    plural: "die Franzosen",
+    plural: "Franzosen",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {},

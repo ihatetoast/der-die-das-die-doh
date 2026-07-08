@@ -6,7 +6,7 @@ export const VOCAB_SCIENTISTS: VocabEntry[] = [
     eng: "biologist",
     article: "der",
     noun: "Biologe",
-    plural: "die Biologen",
+    plural: "Biologen",
     hasNoPlural: false,
     weakMasculine: true,
     genderPair: {

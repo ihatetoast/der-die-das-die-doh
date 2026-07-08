@@ -1,10 +1,10 @@
-import { useEffect, useRef } from 'react';
-import { VocabEntry } from '../types';
+import { useEffect, useRef } from "react";
+import { VocabEntry } from "../types";
 
-import classes from './LearningCube.module.css';
-import { getNotesContent } from '../helpers.tsx';
+import classes from "./LearningCube.module.css";
+import { getNotesContent } from "../helpers.tsx";
 
-import CubeButton from './UI/CubeButton.tsx';
+import CubeButton from "./UI/CubeButton.tsx";
 
 type LearningCubeProps = {
   word: VocabEntry;
@@ -33,14 +33,14 @@ const LearningCube = ({ word }: LearningCubeProps) => {
       <div className={classes.cubeContainer}>
         <div className={classes.cube} ref={cubeRef}>
           <div
-            data-face='english-side'
+            data-face="english-side"
             className={`${classes.face} ${classes.english}`}
           >
             <h3>English:</h3>
             <p>{word.eng}</p>
           </div>
           <div
-            data-face='german-side'
+            data-face="german-side"
             className={`${classes.face} ${classes.german}`}
           >
             <h3>German:</h3>
@@ -53,25 +53,25 @@ const LearningCube = ({ word }: LearningCubeProps) => {
             )}
           </div>
           <div
-            data-face='article-side'
+            data-face="article-side"
             className={`${classes.face} ${classes.article}`}
           >
             <h3>Article:</h3>
             <p>{word.article}</p>
           </div>
           <div
-            data-face='plural-side'
+            data-face="plural-side"
             className={`${classes.face} ${classes.plural}`}
           >
             <h3>Plural:</h3>
             <p>
-              {word.plural === 'no plural'
+              {word.plural === "no plural"
                 ? `Note: ${word.noun} has no plural`
-                : word.plural}
+                : `die ${word.plural}`}
             </p>
           </div>
           <div
-            data-face='sentence-side'
+            data-face="sentence-side"
             className={`${classes.face} ${classes.sentences}`}
           >
             <h3>Examples in a sentence:</h3>
@@ -80,7 +80,7 @@ const LearningCube = ({ word }: LearningCubeProps) => {
                 <dl key={idx} className={classes.sentence}>
                   <dt>
                     <span className={classes.emoji}>🇩🇪</span>
-                    {sent.de}{' '}
+                    {sent.de}{" "}
                     <span className={classes.case}>({sent.case})</span>
                   </dt>
                   <dd>
@@ -92,7 +92,7 @@ const LearningCube = ({ word }: LearningCubeProps) => {
             })}
           </div>
           <div
-            data-face='notes-side'
+            data-face="notes-side"
             className={`${classes.face} ${classes.notes}`}
           >
             <h3>Notes:</h3>
@@ -104,27 +104,27 @@ const LearningCube = ({ word }: LearningCubeProps) => {
         <h2>Flip to:</h2>
         <div className={`${classes.btnContainer} ${classes.cubeBtns}`}>
           <CubeButton
-            label='english'
+            label="english"
             onClick={() => handleRotate(classes.showEnglish)}
           />
           <CubeButton
-            label='german'
+            label="german"
             onClick={() => handleRotate(classes.showGerman)}
           />
           <CubeButton
-            label='article'
+            label="article"
             onClick={() => handleRotate(classes.showArticle)}
           />
           <CubeButton
-            label='plural'
+            label="plural"
             onClick={() => handleRotate(classes.showPlural)}
           />
           <CubeButton
-            label='sentence'
+            label="sentence"
             onClick={() => handleRotate(classes.showSentence)}
           />
           <CubeButton
-            label='notes'
+            label="notes"
             onClick={() => handleRotate(classes.showNotes)}
           />
         </div>

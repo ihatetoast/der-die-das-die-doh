@@ -384,7 +384,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     sentences: [
       {
         de: "Da liegt der Hase im Pfeffer.",
-        en: "That's the fly in the ointment! ",
+        en: "That's the fly in the ointment!",
         case: "nom",
       },
       {
@@ -599,7 +599,7 @@ export const TEST_VOCAB: VocabEntry[] = [
         case: "acc",
       },
       {
-        de: "Wo ein Wille ist, ist auch ein Weg. ",
+        de: "Wo ein Wille ist, ist auch ein Weg.",
         en: "Where there's a will, there's a way.",
         case: "nom",
       },
@@ -1050,7 +1050,7 @@ export const TEST_VOCAB: VocabEntry[] = [
         case: "nom",
       },
       {
-        de: "Das ist der schlimmste Albtraum jedes Piloten. ",
+        de: "Das ist der schlimmste Albtraum jedes Piloten.",
         en: "This is every pilot's worst nightmare.",
         case: "gen",
       },
@@ -1157,7 +1157,7 @@ export const TEST_VOCAB: VocabEntry[] = [
         "Masculine nouns ending in -ist representing people are usually weak masculine nouns.",
     },
     sentences: [
-      { de: " Ich bin Tourist.", en: "I am a tourist.", case: "nom" },
+      { de: "Ich bin Tourist.", en: "I am a tourist.", case: "nom" },
       {
         de: "Ich habe mit einem Touristen gesprochen.",
         en: "I spoke with a tourist.",
@@ -1269,7 +1269,7 @@ export const TEST_VOCAB: VocabEntry[] = [
       weakMascHint: "Nouns ending in '-e' (people, animals)",
     },
     sentences: [
-      { de: "Es gab einen Zeugen. ", en: "There was a witness", case: "acc" },
+      { de: "Es gab einen Zeugen.", en: "There was a witness", case: "acc" },
       {
         de: "Der Richter glaubt dem Zeugen.",
         en: "The judge believes the witness.",
@@ -1350,7 +1350,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     notes: { weakMascHint: "Nouns ending in '-e' (people, animals)" },
     sentences: [
       {
-        de: "Der Austausch mit den Kollegen fehlt mir immer mehr. ",
+        de: "Der Austausch mit den Kollegen fehlt mir immer mehr.",
         en: "I miss the exchange with my colleagues more and more.",
         case: "dat",
       },
@@ -1798,7 +1798,7 @@ export const TEST_VOCAB: VocabEntry[] = [
         case: "dat",
       },
       {
-        de: "Nach dem Krieg ist er Journalist geworden. ",
+        de: "Nach dem Krieg ist er Journalist geworden.",
         en: "After the war, he became a journalist.",
         case: "nom",
       },
@@ -1812,7 +1812,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     eng: "journalist",
     article: "die",
     noun: "Journalistin",
-    plural: "die Journalistinnen",
+    plural: "Journalistinnen",
     hasNoPlural: false,
     weakMasculine: false,
     genderPair: {

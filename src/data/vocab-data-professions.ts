@@ -7,13 +7,13 @@ export const VOCAB_PROFESSIONS: VocabEntry[] = [
     eng: "journalist",
     article: "der",
     noun: "Journalist",
-    plural: "die Journalisten",
+    plural: "Journalisten",
     hasNoPlural: false,
     weakMasculine: true,
     genderPair: {
       article: "die",
       singular: "Journalistin",
-      plural: "die Journalistinnen",
+      plural: "Journalistinnen",
     },
     notes: {
       weakMascHint: "Nouns ending in '-ist'",
@@ -25,7 +25,7 @@ export const VOCAB_PROFESSIONS: VocabEntry[] = [
         case: "dat",
       },
       {
-        de: "Nach dem Krieg ist er Journalist geworden. ",
+        de: "Nach dem Krieg ist er Journalist geworden.",
         en: "After the war, he became a journalist.",
         case: "nom",
       },
@@ -38,13 +38,13 @@ export const VOCAB_PROFESSIONS: VocabEntry[] = [
     eng: "journalist",
     article: "die",
     noun: "Journalistin",
-    plural: "die Journalistinnen",
+    plural: "Journalistinnen",
     hasNoPlural: false,
     weakMasculine: false,
     genderPair: {
       article: "der",
       singular: "Journalist",
-      plural: "die Journalisten",
+      plural: "Journalisten",
     },
     notes: {},
     sentences: [
@@ -67,13 +67,13 @@ export const VOCAB_PROFESSIONS: VocabEntry[] = [
     eng: "soldier",
     article: "der",
     noun: "Soldat",
-    plural: "die Soldaten",
+    plural: "Soldaten",
     hasNoPlural: false,
     weakMasculine: true,
     genderPair: {
       article: "die",
       singular: "Soldatin",
-      plural: "die Soldatinnen",
+      plural: "Soldatinnen",
     },
     notes: {
       weakMascHint: "Nouns ending in '-at', '-et', '-ot'",
@@ -98,13 +98,13 @@ export const VOCAB_PROFESSIONS: VocabEntry[] = [
     eng: "soldier",
     article: "die",
     noun: "Soldatin",
-    plural: "die Soldatinnen",
+    plural: "Soldatinnen",
     hasNoPlural: false,
     weakMasculine: false,
     genderPair: {
       article: "der",
       singular: "Soldat",
-      plural: "die Soldaten",
+      plural: "Soldaten",
     },
     notes: {},
     sentences: [
@@ -114,7 +114,7 @@ export const VOCAB_PROFESSIONS: VocabEntry[] = [
         case: "nom",
       },
       {
-        de: "Die Soldatin wurde Lehrerin. ",
+        de: "Die Soldatin wurde Lehrerin.",
         en: "The soldier became a teacher.",
         case: "nom",
       },
@@ -127,7 +127,7 @@ export const VOCAB_PROFESSIONS: VocabEntry[] = [
     eng: "king",
     article: "der",
     noun: "König",
-    plural: "die Könige",
+    plural: "Könige",
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
@@ -183,7 +183,7 @@ export const VOCAB_PROFESSIONS: VocabEntry[] = [
     eng: "president",
     article: "der",
     noun: "Präsident",
-    plural: "die Präsidenten",
+    plural: "Präsidenten",
     hasNoPlural: false,
     weakMasculine: true,
     genderPair: {
@@ -243,7 +243,7 @@ export const VOCAB_PROFESSIONS: VocabEntry[] = [
     eng: "student",
     article: "der",
     noun: "Student",
-    plural: "die Studenten",
+    plural: "Studenten",
     hasNoPlural: false,
     weakMasculine: true,
     genderPair: {
@@ -299,7 +299,7 @@ export const VOCAB_PROFESSIONS: VocabEntry[] = [
     eng: "agent",
     article: "der",
     noun: "Agent",
-    plural: "die Agenten",
+    plural: "Agenten",
     hasNoPlural: false,
     weakMasculine: true,
     notes: {
@@ -521,7 +521,7 @@ export const VOCAB_PROFESSIONS: VocabEntry[] = [
         case: "nom",
       },
       {
-        de: "Das ist der schlimmste Albtraum jedes Piloten. ",
+        de: "Das ist der schlimmste Albtraum jedes Piloten.",
         en: "This is every pilot's worst nightmare.",
         case: "gen",
       },
@@ -545,7 +545,7 @@ export const VOCAB_PROFESSIONS: VocabEntry[] = [
     notes: {},
     sentences: [
       {
-        de: "Frau Bruce war die erste Pilotin, die zwischen England und Japan flog. ",
+        de: "Frau Bruce war die erste Pilotin, die zwischen England und Japan flog.",
         en: "Mrs. Bruce was the first female pilot to fly between England and Japan.",
         case: "nom",
       },
