@@ -115,14 +115,14 @@ const ArticleGame = ({
                   disabled={answerState !== "waiting"}
                 >
                   der
-                </button>{" "}
+                </button>
                 <button
                   onClick={() => handleUserAnswerSelect("die")}
                   data-state={userChoice === "die" ? answerState : undefined}
                   disabled={answerState !== "waiting"}
                 >
                   die
-                </button>{" "}
+                </button>
                 <button
                   onClick={() => handleUserAnswerSelect("das")}
                   data-state={userChoice === "das" ? answerState : undefined}
@@ -132,7 +132,7 @@ const ArticleGame = ({
                 </button>
               </div>
             </div>
-          </section>{" "}
+          </section>
         </>
       )}
     </>

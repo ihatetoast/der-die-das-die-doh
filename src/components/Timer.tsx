@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import classes from './Timer.module.css';
+import { useState, useEffect } from "react";
+import classes from "./Timer.module.css";
 type TimerProps = {
   duration: number;
   answerState: string;
@@ -8,7 +8,6 @@ type TimerProps = {
 
 const Timer = ({ duration, answerState, onTimesUp }: TimerProps) => {
   const [timeRemaining, setTimeRemaining] = useState(duration);
-  console.log(duration, answerState);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -30,13 +29,16 @@ const Timer = ({ duration, answerState, onTimesUp }: TimerProps) => {
     };
   }, []);
 
-  const questionEvaluated = answerState === 'correct' || answerState === 'incorrect';
+  const questionEvaluated =
+    answerState === "correct" || answerState === "incorrect";
 
   const secondsAsc = [...Array(duration / 1000)].map((_, idx) => (
     <span
       key={idx}
       data-second={idx + 1}
-      className={idx + 1 === timeRemaining / 1000 ? `${classes.bigger} ` : undefined}
+      className={
+        idx + 1 === timeRemaining / 1000 ? `${classes.bigger} ` : undefined
+      }
     >
       {idx + 1}
     </span>
