@@ -1668,7 +1668,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
         case: "nom",
       },
       {
-        de: "Wohnungen sind in New York sehr teuer.
+        de: "Wohnungen sind in New York sehr teuer.",
         en: "Apartments in New Yors are very expensive.",
         case: "nom",
       },
@@ -2136,7 +2136,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
       plural: "Patientinnen",
     },
     notes: {
-      weakMascHint: "Nouns ending in '-ant', '-and', '-ent''",
+      weakMascHint: "Nouns ending in '-ant', '-and', '-ent'",
     },
     sentences: [
       {
@@ -2386,7 +2386,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: true,
     notes: {
-      weakMascHint: "Nouns ending in '-ant', '-and', '-ent''",
+      weakMascHint: "Nouns ending in '-ant', '-and', '-ent'",
     },
     sentences: [
       {
@@ -2491,7 +2491,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     weakMasculine: true,
     notes: {
       otherGerDefinitions: "die Kommandantin (female)",
-      weakMascHint: "Nouns ending in '-ant', '-and', '-ent''",
+      weakMascHint: "Nouns ending in '-ant', '-and', '-ent'",
       miscNote:
         "-ant Words mostly originate from Latin or French and almost always describe people (often professions or roles).",
     },
@@ -2676,7 +2676,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     weakMasculine: true,
     notes: {
       otherGerDefinitions: "die Assistentin (female)",
-      weakMascHint: "Nouns ending in '-ant', '-and', '-ent''",
+      weakMascHint: "Nouns ending in '-ant', '-and', '-ent'",
     },
     sentences: [
       {
@@ -2888,7 +2888,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     notes: {
       miscNote:
         "-ant Words mostly originate from Latin or French and almost always describe people (often professions or roles).",
-      weakMascHint: "Nouns ending in '-ant', '-and', '-ent''",
+      weakMascHint: "Nouns ending in '-ant', '-and', '-ent'",
     },
     sentences: [
       {
@@ -3319,7 +3319,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     weakMasculine: true,
     notes: {
       otherGerDefinitions: "die Doktorandin (female)",
-      weakMascHint: "Nouns ending in '-ant', '-and', '-ent''",
+      weakMascHint: "Nouns ending in '-ant', '-and', '-ent'",
     },
     sentences: [
       {
@@ -3346,7 +3346,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     weakMasculine: true,
     notes: {
       otherGerDefinitions: "die Probandin (female)",
-      weakMascHint: "Nouns ending in '-ant', '-and', '-ent''",
+      weakMascHint: "Nouns ending in '-ant', '-and', '-ent'",
     },
     sentences: [
       {
@@ -3426,7 +3426,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: true,
     notes: {
-      weakMascHint: "Nouns ending in '-ant', '-and', '-ent''",
+      weakMascHint: "Nouns ending in '-ant', '-and', '-ent'",
     },
     sentences: [
       {

@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useFlashcardLogic } from "../../hooks/useFlashcardLogic.ts";
-import { ArticleType } from "../../types.ts";
+import { ArticleType, MatchType } from "../../types.ts";
 
 import GameOver from "./GameOver.tsx";
 
@@ -45,15 +45,32 @@ const MiniGameEngToGer = ({
     null,
   );
 
+  const [matchType, setMatchType] = useState<MatchType | null>(null);
+  // keep matchType for styling later. message given will tell why we accept it, but
+  // decide on a "right but not what we wanted at the mo" color. remove and use message only if
+  // later if decided to just give a message.
+
   const targetWord = cardsToTest[0]?.noun;
+
+  // for focus to return to first button after loading and play has started.
+  const derButtonRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    if (testState === "active" && answerState === "waiting") {
+      derButtonRef.current?.focus();
+    }
+  }, [answerState, testState]);
+
   useEffect(() => {
     if (testState === "over") {
       onSessionComplete();
     }
   }, [testState, onSessionComplete]);
+
   const evalAnswerGerNoun = (
     userInputNoun: string,
     targetWord: string,
+    genderPairNoun?: string,
     otherDefs?: string,
   ): boolean => {
     setMessage(""); // to clear any message re hand v Hand
@@ -65,12 +82,31 @@ const MiniGameEngToGer = ({
       setMessage("Remember: German nouns begin with an uppercase letter.");
     }
     // to lower case for both to account for sloppy NOuns or crazy sHift keys
-    if (userAnswer === targetWord.toLowerCase()) return true;
+    if (userAnswer === targetWord.toLowerCase()) {
+      setMatchType("primary");
+      return true;
+    }
+
+    // genderpair check
+    if (genderPairNoun && userAnswer === genderPairNoun.toLowerCase()) {
+      setMessage(
+        `That's also correct, but we were looking for the other gender: ${cardsToTest[0].article} ${targetWord}.`,
+      );
+      setMatchType("genderPair");
+      return true;
+    }
+
     if (otherDefs) {
       const otherGerDefs = otherDefs
         .split(", ")
         .map((def) => def.replace(/^(der|die|das)\s+/i, "").toLowerCase());
-      if (otherGerDefs.includes(userAnswer)) return true;
+      if (otherGerDefs.includes(userAnswer)) {
+        setMessage(
+          `Excellent! That's another (correct!) definition. We were looking for ${targetWord}.`,
+        );
+        setMatchType("alternate");
+        return true;
+      }
     }
     return false;
   };
@@ -91,6 +127,7 @@ const MiniGameEngToGer = ({
         setAnswerState("waiting");
         setArticleIsCorrect(null);
         setGerNounIsCorrect(null);
+        setMatchType(null);
       }, 3000);
     }
   }, [
@@ -101,6 +138,10 @@ const MiniGameEngToGer = ({
     setHintState,
     setMessage,
     setUserInputNoun,
+    setUserInputArticle,
+    setArticleIsCorrect,
+    setGerNounIsCorrect,
+    setMatchType,
   ]);
 
   const handleSubmit = () => {
@@ -120,9 +161,16 @@ const MiniGameEngToGer = ({
     const nounRight = evalAnswerGerNoun(
       userInputNoun,
       targetWord,
+      cardsToTest[0].genderPair?.singular,
       otherGerDefs,
     );
-    const articleRight = cardsToTest[0].article === userInputArticle;
+    // handle der Journalist / die Journalistin for words that have a genderPair
+    // note: genderpairs are for when the root word is the same and only the ending is different.
+    // NOT for der Mann / die Frau or even der Bauer die Bäurin (note the ä)
+
+    const articleRight =
+      userInputArticle === cardsToTest[0].article ||
+      cardsToTest[0].genderPair?.article === userInputArticle;
 
     const isCorrect = articleRight && nounRight;
     setArticleIsCorrect(articleRight);
@@ -194,6 +242,7 @@ const MiniGameEngToGer = ({
               <div className={classes.articleButtonContainer}>
                 <button
                   autoFocus={testState === "active"}
+                  ref={derButtonRef}
                   className={`
                       ${userInputArticle === "der" ? `${classes.selected}` : ""}
                       ${userInputArticle === "der" && articleIsCorrect ? `${classes.correct}` : ""}
@@ -231,6 +280,14 @@ const MiniGameEngToGer = ({
                 value={userInputNoun}
                 placeholder="German noun"
                 onChange={(e) => setUserInputNoun(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" && userInputArticle !== null) {
+                    handleSubmit();
+                  }
+                  if (e.key === "Enter") {
+                    handleSubmit();
+                  }
+                }}
                 className={`
                   ${classes.nounAnswer} 
                     ${gerNounIsCorrect ? classes.correctGer : ""}

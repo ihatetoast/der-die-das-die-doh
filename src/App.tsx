@@ -28,6 +28,12 @@ function App() {
     shuffleDeck();
   }, []);
 
+  //
+  useEffect(() => {
+    setActiveDeck([]);
+    setDeckSize(null);
+  }, [testType, setActiveDeck, setDeckSize]);
+
   const handleSetMode = (mode: ModeProp) => {
     // home is a total refresh
     if (mode === "home") {

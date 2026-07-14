@@ -15,7 +15,7 @@ export interface GenderPair {
 // visually it is easier to associate et and ot and at as one and ent ant together
 export const WEAKMASCCOMMENTS = [
   "Nouns ending in '-e' (people, animals)",
-  "Nouns ending in '-ant', '-and', '-ent''",
+  "Nouns ending in '-ant', '-and', '-ent'",
   "Nouns ending in '-loge'",
   "Nouns ending in '-ad'",
   "Nouns ending in '-at', '-et', '-ot'",

@@ -488,7 +488,7 @@ export const TEST_VOCAB: VocabEntry[] = [
       plural: "Studentinnen",
     },
     notes: {
-      weakMascHint: "Nouns ending in '-ant', '-and', '-ent''",
+      weakMascHint: "Nouns ending in '-ant', '-and', '-ent'",
     },
     sentences: [
       { de: "Ich bin Student.", en: "I am a student.", case: "nom" },
@@ -649,7 +649,7 @@ export const TEST_VOCAB: VocabEntry[] = [
       plural: "Präsidentinnen",
     },
     notes: {
-      weakMascHint: "Nouns ending in '-ant', '-and', '-ent''",
+      weakMascHint: "Nouns ending in '-ant', '-and', '-ent'",
     },
     sentences: [
       {
@@ -766,7 +766,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     weakMasculine: true,
     genderPair: { article: "die", singular: "Agentin", plural: "Agentinnen" },
     notes: {
-      weakMascHint: "Nouns ending in '-ant', '-and', '-ent''",
+      weakMascHint: "Nouns ending in '-ant', '-and', '-ent'",
     },
     sentences: [
       {
@@ -877,7 +877,7 @@ export const TEST_VOCAB: VocabEntry[] = [
       plural: "Patientinnen",
     },
     notes: {
-      weakMascHint: "Nouns ending in '-ant', '-and', '-ent''",
+      weakMascHint: "Nouns ending in '-ant', '-and', '-ent'",
     },
     sentences: [
       {
@@ -1122,7 +1122,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: true,
     notes: {
-      weakMascHint: "Nouns ending in '-ant', '-and', '-ent''",
+      weakMascHint: "Nouns ending in '-ant', '-and', '-ent'",
     },
     sentences: [
       {
@@ -1207,7 +1207,7 @@ export const TEST_VOCAB: VocabEntry[] = [
       plural: "Assistentinnen",
     },
     notes: {
-      weakMascHint: "Nouns ending in '-ant', '-and', '-ent''",
+      weakMascHint: "Nouns ending in '-ant', '-and', '-ent'",
     },
     sentences: [
       {
@@ -1238,7 +1238,7 @@ export const TEST_VOCAB: VocabEntry[] = [
       plural: "Kommandatinnen",
     },
     notes: {
-      weakMascHint: "Nouns ending in '-ant', '-and', '-ent''",
+      weakMascHint: "Nouns ending in '-ant', '-and', '-ent'",
       miscNote:
         "-ant Words mostly originate from Latin or French and almost always describe people (often professions or roles).",
     },
@@ -1538,7 +1538,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     notes: {
       miscNote:
         "-ant Words mostly originate from Latin or French and almost always describe people (often professions or roles).",
-      weakMascHint: "Nouns ending in '-ant', '-and', '-ent''",
+      weakMascHint: "Nouns ending in '-ant', '-and', '-ent'",
     },
     sentences: [
       {

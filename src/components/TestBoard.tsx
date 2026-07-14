@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 import { DeckSize, TestType, ModeProp } from "../types.ts";
 
 import classes from "./TestBoard.module.css";

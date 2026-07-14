@@ -192,7 +192,7 @@ export const VOCAB_PROFESSIONS: VocabEntry[] = [
       plural: "Präsidentinnen",
     },
     notes: {
-      weakMascHint: "Nouns ending in '-ant', '-and', '-ent''",
+      weakMascHint: "Nouns ending in '-ant', '-and', '-ent'",
     },
     sentences: [
       {
@@ -252,7 +252,7 @@ export const VOCAB_PROFESSIONS: VocabEntry[] = [
       plural: "Studentinnen",
     },
     notes: {
-      weakMascHint: "Nouns ending in '-ant', '-and', '-ent''",
+      weakMascHint: "Nouns ending in '-ant', '-and', '-ent'",
     },
     sentences: [
       { de: "Ich bin Student.", en: "I am a student.", case: "nom" },
@@ -304,7 +304,7 @@ export const VOCAB_PROFESSIONS: VocabEntry[] = [
     weakMasculine: true,
     notes: {
       otherGerDefinitions: "die Agentin (female)",
-      weakMascHint: "Nouns ending in '-ant', '-and', '-ent''",
+      weakMascHint: "Nouns ending in '-ant', '-and', '-ent'",
     },
     sentences: [
       {
