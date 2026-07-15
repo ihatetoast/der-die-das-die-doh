@@ -104,6 +104,8 @@ export type ModeProp = "practice" | "test" | "home";
 // controlling decksize until I have >500 completed: true. egads
 export type DeckSize = 5 | 10 | 15 | 20 | 25 | 40 | 50;
 
+export type MatchType = "primary" | "genderPair" | "alternate";
+
 export type MiniTestType = "eng-ger-mini" | "ger-eng-mini";
 export type TestType =
   | "article"

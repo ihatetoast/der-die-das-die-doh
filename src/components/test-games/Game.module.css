@@ -3,7 +3,9 @@
 .gameContainer {
   width: 100%;
 }
-
+.highlight {
+  color: var(--red);
+}
 .wordsContainer {
   display: flex;
   flex-direction: column;

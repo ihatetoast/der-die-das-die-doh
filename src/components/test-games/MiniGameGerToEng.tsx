@@ -4,7 +4,8 @@ import GameOver from "./GameOver.tsx";
 
 import classes from "./Game.module.css";
 import { GameProps } from "../../types.ts";
-
+// todo: mention in the intro to NOT put in female or (female) for words that have a feminine ending.
+// a doctor is a doctor. not doctor v female doctor. this isn't 1980.
 const MiniGameGerToEng = ({
   words,
   handleSetMode,
@@ -41,6 +42,13 @@ const MiniGameGerToEng = ({
     otherDefs?: string,
   ): boolean => {
     const userAnswer = userInputNoun.trim().toLowerCase();
+
+    // Check for male female etc. in case they don't read directions.
+    const genderModifiers = ["male", "female", "woman", "man", "girl", "boy"];
+    if (genderModifiers.some((mod) => userAnswer.includes(mod))) {
+      setMessage("Did you add 'male' or 'female'? Just the noun!");
+      return false;
+    }
 
     if (userAnswer === targetWord) {
       return true;
@@ -106,7 +114,11 @@ const MiniGameGerToEng = ({
         <div>
           <p>
             You're given a noun in German. Write the English definition (in
-            singular).
+            singular). <br />
+            <span className={classes.highlight}>Note:</span> Do not add
+            modifiers such as 'male' or 'female' to answers. The answer is
+            'student,' never 'female student' or 'male student.' Gender only
+            matters when the story requires it.
           </p>
           <p>
             Need help? Click "Hint" to get the answer scrambled. Still stuck?
