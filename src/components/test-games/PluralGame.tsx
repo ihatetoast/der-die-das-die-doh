@@ -174,12 +174,17 @@ const PluralGame = ({ words, handleSetMode, onSessionComplete }: GameProps) => {
                 type="text"
                 id="plural"
                 value={userInputPlural}
-                placeholder="plural form"
-                onChange={(e) => setUserInputPlural(e.target.value)}
                 className={`
                   ${classes.pluralAnswer} 
                     ${classes[answerState]}
                   `.trim()}
+                placeholder="plural form"
+                onChange={(e) => setUserInputPlural(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    handleSubmit();
+                  }
+                }}
               />
               <button
                 disabled={answerState !== "waiting"}

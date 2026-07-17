@@ -168,12 +168,17 @@ const MiniGameGerToEng = ({
                 type="text"
                 id="word"
                 value={userInputNoun}
-                placeholder="English word"
-                onChange={(e) => setUserInputNoun(e.target.value)}
                 className={`
                   ${classes.nounAnswer} 
                     ${classes[answerState]}
                   `.trim()}
+                placeholder="English word"
+                onChange={(e) => setUserInputNoun(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    handleSubmit();
+                  }
+                }}
               />
 
               <div className={classes.btnContainer}>

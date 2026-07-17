@@ -14,8 +14,6 @@ const GermanFullGame = ({
   handleSetMode,
   onSessionComplete,
 }: GameProps) => {
-  console.log("words in german full game", words);
-
   const {
     cardsToTest,
     setCardsToTest,
@@ -31,7 +29,6 @@ const GermanFullGame = ({
 
   const [userInputArticle, setUserInputArticle] = useState<string>("");
   const [userInputPlural, setUserInputPlural] = useState<string>("");
-
   const targetWord = cardsToTest[0]?.noun;
   const targetArticle = cardsToTest[0]?.article;
   const targetPlural = cardsToTest[0]?.plural;
@@ -42,62 +39,30 @@ const GermanFullGame = ({
     }
   }, [testState, onSessionComplete]);
 
-  const evalAnswerArticle = (
-    userInputArticle: string,
-    targetArticle: ArticleType,
-  ): boolean => {
-    setMessage(""); //
-    const userAnswer = userInputArticle.trim().toLowerCase();
-    if (userAnswer === targetArticle) return true;
-    return false;
-  };
+  useEffect(() => {
+    // eval and ret early if they entered a genderPair. No "other defs", so no need for that
+    if (cardsToTest[0].genderPair) {
+      const articleRight =
+        userInputArticle === cardsToTest[0].genderPair.article;
+      const nounRight =
+        userInputNoun.toLowerCase() ===
+        cardsToTest[0].genderPair.singular.toLowerCase();
+      const pluralRight =
+        userInputPlural.toLowerCase() ===
+        cardsToTest[0].genderPair.plural.toLowerCase();
 
-  const evalAnswerGerNoun = (
-    userInputNoun: string,
-    targetWord: string,
-    otherDefs?: string,
-  ): boolean => {
-    setMessage(""); // to clear any message re hand v Hand
-    const userAnswer = userInputNoun.trim().toLowerCase();
-
-    const initial = userInputNoun.trim().charAt(0);
-    if (initial !== initial.toUpperCase()) {
-      // note: this message only seen if everything but the uppercase is correct.
-      // if the user gives der buch... the message will be the correct form and not
-      // the spelling/capitalization note
-      setMessage("Remember: German nouns begin with an uppercase letter.");
-    }
-    // to lower case for both to account for sloppy NOuns or crazy sHift keys
-    if (userAnswer === targetWord.toLowerCase()) return true;
-    if (otherDefs) {
-      const otherGerDefs = otherDefs
-        .split(", ")
-        .map((def) => def.replace(/^(der|die|das)\s+/i, "").toLowerCase());
-      if (otherGerDefs.includes(userAnswer)) {
-        setMessage(
-          `"${userAnswer}" is also valid, but we were looking for "${targetWord}" this time.`,
-        );
-        // allow. remove from deck, don't worry about plural
-        return true;
+      if (articleRight && nounRight && pluralRight) {
+        setAnswerState("correct");
+        return;
       }
     }
-    return false;
-  };
-
-  const evalAnswerPlural = (
-    userInputPlural: string,
-    targetPlural: string,
-  ): boolean => {
-    setMessage("");
-    const correctAnswer = targetPlural.toLowerCase();
-    const userAnswer = userInputPlural.trim().toLowerCase();
-    const initial = userInputPlural.trim().charAt(0);
-    if (initial !== initial.toUpperCase()) {
-      setMessage("Remember: German nouns begin with an uppercase letter.");
-    }
-    if (userAnswer === correctAnswer) return true;
-    return false;
-  };
+  }, [
+    cardsToTest,
+    setAnswerState,
+    userInputArticle,
+    userInputNoun,
+    userInputPlural,
+  ]);
 
   useEffect(() => {
     if (answerState === "incorrect" || answerState === "correct") {
@@ -131,6 +96,70 @@ const GermanFullGame = ({
     targetWord,
   ]);
 
+  const evalAnswerArticle = (
+    userInputArticle: string,
+    targetArticle: ArticleType,
+  ): boolean => {
+    setMessage(""); //
+    const userAnswer = userInputArticle.trim().toLowerCase();
+    if (userAnswer === targetArticle) {
+      return true;
+    }
+    return false;
+  };
+
+  const evalAnswerGerNoun = (
+    userInputNoun: string,
+    targetWord: string,
+    otherDefs?: string,
+  ): boolean => {
+    setMessage(""); // to clear any message re hand v Hand
+    const userAnswer = userInputNoun.trim().toLowerCase();
+
+    const initial = userInputNoun.trim().charAt(0);
+    if (initial !== initial.toUpperCase()) {
+      setMessage("Remember: German nouns begin with an uppercase letter.");
+    }
+    // to lower case for both to account for sloppy NOuns or crazy sHift keys
+    if (userAnswer === targetWord.toLowerCase()) {
+      return true;
+    }
+
+    if (otherDefs) {
+      const otherGerDefs = otherDefs
+        .split(", ")
+        .map((def) => def.replace(/^(der|die|das)\s+/i, "").toLowerCase());
+      if (otherGerDefs.includes(userAnswer)) {
+        setMessage(
+          `"${userAnswer}" is also valid, but we were looking for "${targetWord}" this time.`,
+        );
+
+        return true;
+      }
+    }
+    return false;
+  };
+
+  const evalAnswerPlural = (
+    userInputPlural: string,
+    targetPlural: string,
+  ): boolean => {
+    // if there is otherGerDefinitions and the user chose that, there's no plural to eval.
+    // double check that if they chose that for noun (not plural),
+    //  it's just counted as correct and we move on
+    setMessage("");
+    const correctAnswer = targetPlural.toLowerCase();
+    const userAnswer = userInputPlural.trim().toLowerCase();
+    const initial = userInputPlural.trim().charAt(0);
+    if (initial !== initial.toUpperCase()) {
+      setMessage("Remember: German nouns begin with an uppercase letter.");
+    }
+    if (userAnswer === correctAnswer) {
+      return true;
+    }
+    return false;
+  };
+
   const allEmpty =
     userInputNoun.trim() === "" &&
     userInputArticle === "" &&
@@ -145,6 +174,7 @@ const GermanFullGame = ({
       document.getElementById("word")?.focus();
     }
   };
+
   const handleSubmit = () => {
     if (allEmpty) {
       setAnswerState("skipped");
@@ -242,10 +272,20 @@ const GermanFullGame = ({
                   value={
                     cardsToTest[0]?.hasNoPlural ? "no plural" : userInputPlural
                   }
+                  className={classes.pluralAnswer}
                   placeholder="ex: Bücher"
                   disabled={cardsToTest[0]?.hasNoPlural}
                   onChange={(e) => setUserInputPlural(e.target.value)}
-                  className={classes.pluralAnswer}
+                  onKeyDown={(e) => {
+                    if (
+                      e.key === "Enter" &&
+                      userInputArticle !== null &&
+                      userInputNoun !== "" &&
+                      userInputPlural !== ""
+                    ) {
+                      handleSubmit();
+                    }
+                  }}
                 />
               </div>
 
