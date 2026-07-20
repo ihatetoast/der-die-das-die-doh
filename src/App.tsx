@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 
 // import { VOCABULARY_COMMON } from "./vocab-data-common.ts";
 import { ModeProp, VocabEntry, DeckSize, TestType } from "./types";
@@ -28,7 +28,6 @@ function App() {
     shuffleDeck();
   }, []);
 
-  //
   useEffect(() => {
     setActiveDeck([]);
     setDeckSize(null);
@@ -51,9 +50,9 @@ function App() {
     setMode(mode);
   };
 
-  const handleSessionComplete = () => {
+  const handleSessionComplete = useCallback(() => {
     setSessionComplete(true);
-  };
+  }, []);
 
   // this has one job: handle the start. Only called at start or after total refresh.
   const handleGetInitialActiveDeck = (size: DeckSize, testType?: TestType) => {

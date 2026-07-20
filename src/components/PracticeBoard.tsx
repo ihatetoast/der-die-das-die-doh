@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import classes from "./PracticeBoard.module.css";
 import { VocabEntry, DeckSize } from "../types.ts";
 import LearningCube from "./LearningCube.tsx";
@@ -19,20 +19,26 @@ const PracticeBoard = ({
   onSessionComplete,
 }: Props) => {
   const [cardsToReview, setCardsToReview] = useState<VocabEntry[]>([]);
+  // first length (more than one as it has been filled)
+  const prevLengthRef = useRef(cardsToReview.length);
 
+  // first effect gets the cards:
   useEffect(() => {
     if (words.length > 0) setCardsToReview([...words]);
   }, [words]);
 
+  useEffect(() => {
+    // before was more than 0        but now is 0, so it has moved to 0
+    if (prevLengthRef.current > 0 && cardsToReview.length === 0) {
+      onSessionComplete();
+    }
+    // update the ref (the before for the nex ttime there's a comparison)
+    prevLengthRef.current = cardsToReview.length;
+  }, [onSessionComplete, cardsToReview.length]);
+
   const handleInitialDeckChoice = (size: DeckSize) => {
     handleGetInitialActiveDeck(size);
   };
-
-  useEffect(() => {
-    if (words.length > 0 && cardsToReview.length === 0) {
-      onSessionComplete();
-    }
-  }, [onSessionComplete, words.length, cardsToReview.length]);
 
   return (
     <div className={classes.practiceBoard}>

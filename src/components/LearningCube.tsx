@@ -48,7 +48,7 @@ const LearningCube = ({ word }: LearningCubeProps) => {
             {word.weakMasculine && (
               <p className={classes.weakMascPara}>
                 <span className={classes.weakMascEmoji}>📣</span>
-                {`${word.noun} is considered a "weak masculine" and adds an "-n" in all cases except nominative, eg "dem Jungen." or "den Studenten".`}
+                {`${word.noun} is a "weak" masculine (N-declension) noun. It adds an "-n" in all cases except nominative, eg "dem Jungen." or "den Studenten". There are some exceptions. See "Notes" for exceptions or hints.`}
               </p>
             )}
           </div>

@@ -90,14 +90,14 @@ export interface VocabEntry {
 // keep completed as a bool for that and in case you change your mind about a sentence or whatever, you can prevent
 // it from being chosen while it's being edited.
 // fill in with others until red squiggles disappear
-type NotesType = {
+export type NotesType = {
   otherEngDefinitions?: string;
   otherGerDefinitions?: string;
   pluralNote?: string;
   miscNote?: string;
   genderNote?: string;
   weakMascHint?: WeakMascComment;
-  genitiveNote?: string;
+  genitiveNote?: string; // KATY remove soon
 };
 
 export type ModeProp = "practice" | "test" | "home";
@@ -124,4 +124,9 @@ export type GameProps = {
   words: VocabEntry[];
   handleSetMode: (value: ModeProp) => void;
   onSessionComplete: () => void;
+};
+
+export type NoteWithType = {
+  type: "weakMasc" | "misc" | "gender" | "plural" | "genitive";
+  value: string;
 };
