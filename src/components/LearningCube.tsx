@@ -66,7 +66,7 @@ const LearningCube = ({ word }: LearningCubeProps) => {
             <h3>Plural:</h3>
             <p>
               {word.plural === "no plural"
-                ? `Note: ${word.noun} has no plural`
+                ? `Note: ${word.noun} has no plural. Some nouns may add "-sorten" (sorts or types) to indicate a more than one type of something.`
                 : `die ${word.plural}`}
             </p>
           </div>

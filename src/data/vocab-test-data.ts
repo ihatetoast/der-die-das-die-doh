@@ -16,7 +16,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     weakMasculine: false,
     notes: {
       otherEngDefinitions: "term, period",
-      miscNote:
+      compoundWords:
         "Other words: Jahreszeit (season), Mahlzeit (meal time), Freizeit (free time), Arbeitszeit (working hours), Schlafenszeit (bedtime)",
     },
     sentences: [
@@ -92,7 +92,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     weakMasculine: true,
     notes: {
       weakMascHint: "Nouns ending in '-e' (people, animals)",
-      miscNote:
+      compoundWords:
         "Other words: Bäckerjunge (baker's boy ~ apprentice), Gassenjungen (raggamuffin), Strichjunge (hustler, male sex worker).",
     },
     sentences: [
@@ -144,7 +144,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
-      miscNote:
+      compoundWords:
         "Other words: Abwasser (effluent), Badewasser (bathw water), Mineralwasser (mineral water).",
       pluralNote:
         "Usually uncountable, but when referring to different waters or water types, the plural is used. For Example: Die Wasser des Rheins und der Mosel fließen im Frühjahr besonders stark zusammen.",
@@ -169,7 +169,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
-      miscNote:
+      compoundWords:
         "Other words: Flutlicht (flood light), Bremslicht (stop light, brake light).",
     },
     sentences: [
@@ -197,7 +197,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     weakMasculine: false,
     notes: {
       otherEngDefinitions: "harbor, port",
-      miscNote:
+      compoundWords:
         "Other words: Flughafen (airport), Freihafen (free port), Ölhafen (oil port), Fährhafen (ferry harbor), and Handelshafen (commercial harbor).",
     },
     sentences: [
@@ -253,7 +253,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     notes: {
       otherEngDefinitions: "guy, fellow, bloke",
       otherGerDefinitions: "der Typ",
-      miscNote:
+      compoundWords:
         "Other words: Dreckskerl (scumbag), Lausekerl (rascal), Scheißkerl (shithead).",
     },
     sentences: [
@@ -279,7 +279,11 @@ export const TEST_VOCAB: VocabEntry[] = [
     plural: "no plural",
     hasNoPlural: true,
     weakMasculine: false,
-    notes: { pluralNote: "There is no plural" },
+    notes: {
+      pluralNote: "There is no plural",
+      miscNote:
+        "Blut is what most people think of as blood. 'Geblüt' is archaic and refers to lineage, ancestry, or a bloodline.",
+    },
     sentences: [
       { de: "Ist das Blut?", en: "Is that blood?", case: "nom" },
       {
@@ -291,30 +295,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     themes: ["body", "hospital"],
     completed: true,
   },
-  {
-    id: 1000002188,
-    eng: "luggage",
-    article: "das",
-    noun: "Handgepäck",
-    plural: "no plural",
-    hasNoPlural: true,
-    weakMasculine: false,
-    notes: { miscNote: "Usually means carry-on or hand luggage." },
-    sentences: [
-      {
-        de: "Ich reise nur mit Handgepäck.",
-        en: "I only travel with carry-on luggage.",
-        case: "dat",
-      },
-      {
-        de: "Sie hatte sehr viel Handgepäck.",
-        en: "She had a lot of carry-on luggage.",
-        case: "acc",
-      },
-    ],
-    themes: ["misc", "travel"],
-    completed: true,
-  },
+
   {
     id: 100000151,
     eng: "gentleman",
@@ -370,162 +351,162 @@ export const TEST_VOCAB: VocabEntry[] = [
     themes: ["work"],
     completed: true,
   },
-  {
-    id: 1000002111,
-    eng: "hare",
-    article: "der",
-    noun: "Hase",
-    plural: "Hasen",
-    hasNoPlural: false,
-    weakMasculine: true,
-    notes: {
-      weakMascHint: "Nouns ending in '-e' (people, animals)",
-    },
-    sentences: [
-      {
-        de: "Da liegt der Hase im Pfeffer.",
-        en: "That's the fly in the ointment!",
-        case: "nom",
-      },
-      {
-        de: "Ich habe meinen Hasen schon gefüttert.",
-        en: "I have already fed my rabbit.",
-        case: "acc",
-      },
-    ],
-    themes: ["animals"],
-    completed: true,
-  },
-  {
-    id: 1000001288,
-    eng: "lion",
-    article: "der",
-    noun: "Löwe",
-    plural: "Löwen",
-    hasNoPlural: false,
-    weakMasculine: true,
-    notes: {
-      weakMascHint: "Nouns ending in '-e' (people, animals)",
-    },
-    sentences: [
-      {
-        de: "Die Zähne eines Löwen sind scharf.",
-        en: "The teeth of a lion are sharp.",
-        case: "gen",
-      },
-      {
-        de: "Der Löwe trinkt Wasser.",
-        en: "The lion is drinking water.",
-        case: "nom",
-      },
-    ],
-    themes: ["animals", "zoo"],
-    completed: true,
-  },
-  {
-    id: 1000002169,
-    eng: "nephew",
-    article: "der",
-    noun: "Neffe",
-    plural: "Neffen",
-    hasNoPlural: false,
-    weakMasculine: true,
-    notes: {
-      weakMascHint: "Nouns ending in '-e' (people, animals)",
-    },
-    sentences: [
-      {
-        de: "Mein Neffe heißt Tristan.",
-        en: "My nephew is named Tristan.",
-        case: "nom",
-      },
-      {
-        de: "Meine Schwester hat zwei Söhne, somit habe ich zwei Neffen.",
-        en: "My sister has two sons, so I have two nephews.",
-        case: "acc",
-      },
-    ],
-    themes: ["people", "family"],
-    completed: true,
-  },
-  {
-    id: 1000002424,
-    eng: "raven",
-    article: "der",
-    noun: "Rabe",
-    plural: "Raben",
-    hasNoPlural: false,
-    weakMasculine: true,
-    notes: {
-      weakMascHint: "Nouns ending in '-e' (people, animals)",
-    },
-    sentences: [
-      {
-        de: "Sprach der Rabe: 'Nimmermehr.'",
-        en: "Quoth the raven, 'Nevermore'.",
-        case: "nom",
-      },
-      {
-        de: "Raben zeugen keine Tauben",
-        en: "Ravens don't lay doves (idiom: A wild goose never laid a tame egg.",
-        case: "nom",
-      },
-    ],
-    themes: ["animals"],
-    completed: true,
-  },
-  {
-    id: 100000219,
-    eng: "student",
-    article: "der",
-    noun: "Student",
-    plural: "Studenten",
-    hasNoPlural: false,
-    weakMasculine: true,
-    genderPair: {
-      article: "die",
-      singular: "Studentin",
-      plural: "Studentinnen",
-    },
-    notes: {
-      weakMascHint: "Nouns ending in '-ant', '-and', '-ent'",
-    },
-    sentences: [
-      { de: "Ich bin Student.", en: "I am a student.", case: "nom" },
-      {
-        de: "Es ist für jeden Studenten ein tolles Thema.",
-        en: "It is a great topic for every student.",
-        case: "acc",
-      },
-    ],
-    themes: ["personal", "education"],
-    completed: true,
-  },
-  {
-    id: 1000002429,
-    eng: "student",
-    article: "die",
-    noun: "Studentin",
-    plural: "Studentinnen",
-    hasNoPlural: false,
-    weakMasculine: false,
-    genderPair: { article: "der", singular: "Student", plural: "Studenten" },
-    notes: {},
-    sentences: [
-      {
-        de: "Die Studentin heißt Maria.",
-        en: "The student is named Maria.",
-        case: "nom",
-      },
-      {
-        de: "Ich habe die Studentin gestern gesehen.",
-        en: "I saw the student yesterday.",
-        case: "acc",
-      },
-    ],
-    themes: ["personal", "education"],
-    completed: true,
-  },
+  // {
+  //   id: 1000002111,
+  //   eng: "hare",
+  //   article: "der",
+  //   noun: "Hase",
+  //   plural: "Hasen",
+  //   hasNoPlural: false,
+  //   weakMasculine: true,
+  //   notes: {
+  //     weakMascHint: "Nouns ending in '-e' (people, animals)",
+  //   },
+  //   sentences: [
+  //     {
+  //       de: "Da liegt der Hase im Pfeffer.",
+  //       en: "That's the fly in the ointment!",
+  //       case: "nom",
+  //     },
+  //     {
+  //       de: "Ich habe meinen Hasen schon gefüttert.",
+  //       en: "I have already fed my rabbit.",
+  //       case: "acc",
+  //     },
+  //   ],
+  //   themes: ["animals"],
+  //   completed: true,
+  // },
+  // {
+  //   id: 1000001288,
+  //   eng: "lion",
+  //   article: "der",
+  //   noun: "Löwe",
+  //   plural: "Löwen",
+  //   hasNoPlural: false,
+  //   weakMasculine: true,
+  //   notes: {
+  //     weakMascHint: "Nouns ending in '-e' (people, animals)",
+  //   },
+  //   sentences: [
+  //     {
+  //       de: "Die Zähne eines Löwen sind scharf.",
+  //       en: "The teeth of a lion are sharp.",
+  //       case: "gen",
+  //     },
+  //     {
+  //       de: "Der Löwe trinkt Wasser.",
+  //       en: "The lion is drinking water.",
+  //       case: "nom",
+  //     },
+  //   ],
+  //   themes: ["animals", "zoo"],
+  //   completed: true,
+  // },
+  // {
+  //   id: 1000002169,
+  //   eng: "nephew",
+  //   article: "der",
+  //   noun: "Neffe",
+  //   plural: "Neffen",
+  //   hasNoPlural: false,
+  //   weakMasculine: true,
+  //   notes: {
+  //     weakMascHint: "Nouns ending in '-e' (people, animals)",
+  //   },
+  //   sentences: [
+  //     {
+  //       de: "Mein Neffe heißt Tristan.",
+  //       en: "My nephew is named Tristan.",
+  //       case: "nom",
+  //     },
+  //     {
+  //       de: "Meine Schwester hat zwei Söhne, somit habe ich zwei Neffen.",
+  //       en: "My sister has two sons, so I have two nephews.",
+  //       case: "acc",
+  //     },
+  //   ],
+  //   themes: ["people", "family"],
+  //   completed: true,
+  // },
+  // {
+  //   id: 1000002424,
+  //   eng: "raven",
+  //   article: "der",
+  //   noun: "Rabe",
+  //   plural: "Raben",
+  //   hasNoPlural: false,
+  //   weakMasculine: true,
+  //   notes: {
+  //     weakMascHint: "Nouns ending in '-e' (people, animals)",
+  //   },
+  //   sentences: [
+  //     {
+  //       de: "Sprach der Rabe: 'Nimmermehr.'",
+  //       en: "Quoth the raven, 'Nevermore'.",
+  //       case: "nom",
+  //     },
+  //     {
+  //       de: "Raben zeugen keine Tauben",
+  //       en: "Ravens don't lay doves (idiom: A wild goose never laid a tame egg.",
+  //       case: "nom",
+  //     },
+  //   ],
+  //   themes: ["animals"],
+  //   completed: true,
+  // },
+  // {
+  //   id: 100000219,
+  //   eng: "student",
+  //   article: "der",
+  //   noun: "Student",
+  //   plural: "Studenten",
+  //   hasNoPlural: false,
+  //   weakMasculine: true,
+  //   genderPair: {
+  //     article: "die",
+  //     singular: "Studentin",
+  //     plural: "Studentinnen",
+  //   },
+  //   notes: {
+  //     weakMascHint: "Nouns ending in '-ant', '-and', '-ent'",
+  //   },
+  //   sentences: [
+  //     { de: "Ich bin Student.", en: "I am a student.", case: "nom" },
+  //     {
+  //       de: "Es ist für jeden Studenten ein tolles Thema.",
+  //       en: "It is a great topic for every student.",
+  //       case: "acc",
+  //     },
+  //   ],
+  //   themes: ["personal", "education"],
+  //   completed: true,
+  // },
+  // {
+  //   id: 1000002429,
+  //   eng: "student",
+  //   article: "die",
+  //   noun: "Studentin",
+  //   plural: "Studentinnen",
+  //   hasNoPlural: false,
+  //   weakMasculine: false,
+  //   genderPair: { article: "der", singular: "Student", plural: "Studenten" },
+  //   notes: {},
+  //   sentences: [
+  //     {
+  //       de: "Die Studentin heißt Maria.",
+  //       en: "The student is named Maria.",
+  //       case: "nom",
+  //     },
+  //     {
+  //       de: "Ich habe die Studentin gestern gesehen.",
+  //       en: "I saw the student yesterday.",
+  //       case: "acc",
+  //     },
+  //   ],
+  //   themes: ["personal", "education"],
+  //   completed: true,
+  // },
   {
     id: 10000036,
     eng: "name",
@@ -535,7 +516,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: true,
     notes: {
-      miscNote:
+      compoundWords:
         "Other words: Nachname (last name), Spitzname (nickname), Doppelname (double-barrelled name).",
       weakMascHint:
         "Exceptions: Nouns ending in '-e' but take '-ens' in the genitive singular",

@@ -40,31 +40,6 @@ const GermanFullGame = ({
   }, [testState, onSessionComplete]);
 
   useEffect(() => {
-    // eval and ret early if they entered a genderPair. No "other defs", so no need for that
-    if (cardsToTest[0].genderPair) {
-      const articleRight =
-        userInputArticle === cardsToTest[0].genderPair.article;
-      const nounRight =
-        userInputNoun.toLowerCase() ===
-        cardsToTest[0].genderPair.singular.toLowerCase();
-      const pluralRight =
-        userInputPlural.toLowerCase() ===
-        cardsToTest[0].genderPair.plural.toLowerCase();
-
-      if (articleRight && nounRight && pluralRight) {
-        setAnswerState("correct");
-        return;
-      }
-    }
-  }, [
-    cardsToTest,
-    setAnswerState,
-    userInputArticle,
-    userInputNoun,
-    userInputPlural,
-  ]);
-
-  useEffect(() => {
     if (answerState === "incorrect" || answerState === "correct") {
       const feedbackMsg = `${targetArticle} ${targetWord}, die ${targetPlural}`;
       setMessage(feedbackMsg);
@@ -180,8 +155,42 @@ const GermanFullGame = ({
       setAnswerState("skipped");
       return;
     }
-
     const otherGerDefs = cardsToTest[0].notes.otherGerDefinitions;
+    // eval and ret early if they entered a genderPair. No "other defs", so no need for that
+    if (cardsToTest[0].genderPair) {
+      const articleRight =
+        userInputArticle === cardsToTest[0].genderPair.article;
+      const nounRight =
+        userInputNoun.toLowerCase() ===
+        cardsToTest[0].genderPair.singular.toLowerCase();
+      const pluralRight =
+        userInputPlural.toLowerCase() ===
+        cardsToTest[0].genderPair.plural.toLowerCase();
+
+      if (articleRight && nounRight && pluralRight) {
+        setAnswerState("correct");
+        return;
+      }
+    }
+
+    // if user enters one of hte other defs, we don't have plural for that. not a true database. Just check for noun and article
+    // give them a note, remove from deck.
+    if (otherGerDefs) {
+      const otherNoun = otherGerDefs
+        .replace(/^(der|die|das)\s+/i, "")
+        .toLowerCase();
+
+      if (
+        userInputArticle === cardsToTest[0].article &&
+        userInputNoun.toLowerCase() === otherNoun
+      ) {
+        setMessage(
+          `That's correct! We were looking for: ${cardsToTest[0].article} ${cardsToTest[0].noun}, die ${cardsToTest[0].plural}`,
+        );
+        setAnswerState("correct");
+        return;
+      }
+    }
 
     const nounRight = evalAnswerGerNoun(
       userInputNoun,

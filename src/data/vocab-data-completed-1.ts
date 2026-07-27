@@ -817,7 +817,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
       miscNote:
         "Other words: Abwasser (effluent), Badewasser (bathw water), Mineralwasser (mineral water).",
       pluralNote:
-        "usually uncountable, but when referring to different water types, the plural is used.",
+        "Usually uncountable, but when referring to different water types, the plural is used.",
     },
     sentences: [
       { de: "Das Wasser kocht.", en: "The water's boiling.", case: "nom" },

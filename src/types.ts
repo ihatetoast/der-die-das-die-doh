@@ -93,6 +93,7 @@ export interface VocabEntry {
 export type NotesType = {
   otherEngDefinitions?: string;
   otherGerDefinitions?: string;
+  compoundWords?: string;
   pluralNote?: string;
   miscNote?: string;
   genderNote?: string;
