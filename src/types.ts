@@ -100,7 +100,7 @@ export type NotesType = {
   otherGerDefinitions?: string;
   compoundWords?: string;
   pluralNote?: string;
-  miscNote?: string; // find idioms for here
+  miscNote?: string; // find idioms for here, etymology
   genderNote?: string;
   weakMascHint?: WeakMascComment;
   genitiveNote?: string; // KATY remove soon

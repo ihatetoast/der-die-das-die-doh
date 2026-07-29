@@ -61,7 +61,12 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     plural: "Hände",
     hasNoPlural: false,
     weakMasculine: false,
-    notes: {},
+    notes: {
+      pluralNote:
+        "Feminine nouns that are monosyllabic with a or u often add ¨-e like Kuh/Kühe and Nuss/Nüsse.",
+      miscNote:
+        'Idiom: "Hand und Fuß haben" (lit. to have hand and foot) - to make sense',
+    },
     sentences: [
       {
         de: "Mir sind die Hände in Unschuld.",
@@ -85,7 +90,12 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     plural: "Tage",
     hasNoPlural: false,
     weakMasculine: false,
-    notes: {},
+    notes: {
+      pluralNote:
+        "Almost all masculine nouns will add an -e to make it plural.",
+      miscNote:
+        "Idiom: \"Man soll den Tag nicht vor dem Abend loben\" (lit.One shouldn't praise the day before the evening.) - Don't count your chickens before they hatch.",
+    },
     sentences: [
       {
         de: "Der Tag fängt gerade erst an, und ich bin schon erschöpt.",
@@ -586,6 +596,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: true,
     notes: {
+      miscNote: `Idioms: "Da werden Weiber zu Hyänen und die Jungen zu Wölfen" (lit. There, women turn into hyenas and the boys into wolves.) - A dramatic way to describe a scene where chaos, greed, or a frenzy breaks out. From Friedrich Schiller's "Das Lied von der Glocke"; "Ein schwerer Junge" (lit. a heavy boy) - Slang for a hardened criminal.`,
       weakMascHint: "Nouns ending in '-e' (people, animals)",
       compoundWords:
         "Bäckerjunge (baker's boy ~ apprentice), Gassenjungen (raggamuffin), Strichjunge (hustler, male sex worker).",
@@ -738,7 +749,10 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     plural: "Momente",
     hasNoPlural: false,
     weakMasculine: false,
-    notes: { genderNote: "Words ending in -ent are often masculine." },
+    notes: {
+      miscNote: `Useful expressions: "Moment mal!" - Hold on a second / Wait a minute!; "Im Moment" - At the moment / currently; "Einen Moment, bitte!" - Just a moment, please!`,
+      genderNote: "Words ending in -ent are often masculine.",
+    },
     sentences: [
       {
         de: "Hast du einen Moment Zeit?",
@@ -817,8 +831,10 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     notes: {
       compoundWords:
         "Abwasser (effluent), Badewasser (bathw water), Mineralwasser (mineral water).",
-      pluralNote:
-        "Usually uncountable, but when referring to different water types, the plural is used.",
+      pluralNote: `Usually uncountable, but can be made plural in two ways. 
+      \nDie Wasser: Used in a formal or poetic way to mean large bodies of water, oceans, or seas (like the English "waters") and found in set phrases, such as "mit allen Wassern gewaschen" (to be street-smart or cunning). 
+      \ndie Wässer: Used when talking about different kinds or brands of liquid, medicinal lotions, colognes, or types of schnapps/brandy, and is more common in technical, commercial, or medical contexts when sorting distinct types of fluid
+      \nIn test mode, use "Wasser".`,
     },
     sentences: [
       { de: "Das Wasser kocht.", en: "The water's boiling.", case: "nom" },
