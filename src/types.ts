@@ -5,6 +5,11 @@ export interface Sentence {
 }
 export type ArticleType = "der" | "die" | "das";
 
+export type SpecialCharacter = {
+  char: string;
+  code: string; // numbers to match chars will be "1" - "7"
+};
+
 // GenderPair is for Student/Studentin NOT Neffe Niechte
 export interface GenderPair {
   article: "der" | "die";
@@ -95,12 +100,12 @@ export type NotesType = {
   otherGerDefinitions?: string;
   compoundWords?: string;
   pluralNote?: string;
-  miscNote?: string;
+  miscNote?: string; // find idioms for here
   genderNote?: string;
   weakMascHint?: WeakMascComment;
   genitiveNote?: string; // KATY remove soon
 };
-
+// miscNote: 'Idioms: "Zeit totschlagen" (lit: to beat time to death) — to kill/waste time while waiting; "Kommt Zeit, kommt Rat" (lit. comes time, comes advice) — time will tell.',
 export type ModeProp = "practice" | "test" | "home";
 // controlling decksize until I have >500 completed: true. egads
 export type DeckSize = 5 | 10 | 15 | 20 | 25 | 40 | 50;

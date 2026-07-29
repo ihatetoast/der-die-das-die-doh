@@ -15,9 +15,11 @@ export const TEST_VOCAB: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
+      miscNote:
+        'Idioms: "Zeit totschlagen" (lit: to beat time to death) — to kill/waste time while waiting; "Kommt Zeit, kommt Rat" (lit. comes time, comes advice) — time will tell.',
       otherEngDefinitions: "term, period",
       compoundWords:
-        "Other words: Jahreszeit (season), Mahlzeit (meal time), Freizeit (free time), Arbeitszeit (working hours), Schlafenszeit (bedtime)",
+        "Jahreszeit (season), Mahlzeit (meal time), Freizeit (free time), Arbeitszeit (working hours), Schlafenszeit (bedtime)",
     },
     sentences: [
       {
@@ -93,7 +95,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     notes: {
       weakMascHint: "Nouns ending in '-e' (people, animals)",
       compoundWords:
-        "Other words: Bäckerjunge (baker's boy ~ apprentice), Gassenjungen (raggamuffin), Strichjunge (hustler, male sex worker).",
+        "Bäckerjunge (baker's boy ~ apprentice), Gassenjungen (raggamuffin), Strichjunge (hustler, male sex worker).",
     },
     sentences: [
       {
@@ -145,7 +147,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     weakMasculine: false,
     notes: {
       compoundWords:
-        "Other words: Abwasser (effluent), Badewasser (bathw water), Mineralwasser (mineral water).",
+        "Abwasser (effluent), Badewasser (bathw water), Mineralwasser (mineral water).",
       pluralNote:
         "Usually uncountable, but when referring to different waters or water types, the plural is used. For Example: Die Wasser des Rheins und der Mosel fließen im Frühjahr besonders stark zusammen.",
     },
@@ -170,7 +172,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     weakMasculine: false,
     notes: {
       compoundWords:
-        "Other words: Flutlicht (flood light), Bremslicht (stop light, brake light).",
+        "Flutlicht (flood light), Bremslicht (stop light, brake light).",
     },
     sentences: [
       {
@@ -198,7 +200,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     notes: {
       otherEngDefinitions: "harbor, port",
       compoundWords:
-        "Other words: Flughafen (airport), Freihafen (free port), Ölhafen (oil port), Fährhafen (ferry harbor), and Handelshafen (commercial harbor).",
+        "Flughafen (airport), Freihafen (free port), Ölhafen (oil port), Fährhafen (ferry harbor), and Handelshafen (commercial harbor).",
     },
     sentences: [
       {
@@ -254,7 +256,7 @@ export const TEST_VOCAB: VocabEntry[] = [
       otherEngDefinitions: "guy, fellow, bloke",
       otherGerDefinitions: "der Typ",
       compoundWords:
-        "Other words: Dreckskerl (scumbag), Lausekerl (rascal), Scheißkerl (shithead).",
+        "Dreckskerl (scumbag), Lausekerl (rascal), Scheißkerl (shithead).",
     },
     sentences: [
       {
@@ -306,7 +308,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     weakMasculine: true,
     notes: {
       genderNote:
-        "An exception to the typical masculine noun pattern in that it adds -n and not -en for accusative, dative, and genitive singular: den/dem/des Herrn.",
+        "An exception to the typical masculine noun pattern in that it adds -n and not -en for ",
       otherEngDefinitions: "sir, lord, gent, mister",
     },
     sentences: [
@@ -517,7 +519,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     weakMasculine: true,
     notes: {
       compoundWords:
-        "Other words: Nachname (last name), Spitzname (nickname), Doppelname (double-barrelled name).",
+        "Nachname (last name), Spitzname (nickname), Doppelname (double-barrelled name).",
       weakMascHint:
         "Exceptions: Nouns ending in '-e' but take '-ens' in the genitive singular",
     },

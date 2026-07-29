@@ -23,7 +23,7 @@ const LearningCube = ({ word }: LearningCubeProps) => {
     );
     cubeRef.current?.classList.add(faceClass);
   };
-
+  console.log(word);
   useEffect(() => {
     handleRotate(classes.showEnglish);
   }, [word]);
@@ -36,19 +36,38 @@ const LearningCube = ({ word }: LearningCubeProps) => {
             data-face="english-side"
             className={`${classes.face} ${classes.english}`}
           >
-            <h3>English:</h3>
-            <p>{word.eng}</p>
+            <h3>English: {word.eng}</h3>
+            {word.notes.otherEngDefinitions && (
+              <p>
+                <span className="bold">Also:</span>{" "}
+                {word.notes.otherEngDefinitions}
+              </p>
+            )}
           </div>
           <div
             data-face="german-side"
             className={`${classes.face} ${classes.german}`}
           >
-            <h3>German:</h3>
-            <p>{word.noun}</p>
+            <h3>German: {word.noun}</h3>
+
             {word.weakMasculine && (
               <p className={classes.weakMascPara}>
                 <span className={classes.weakMascEmoji}>📣</span>
                 {`${word.noun} is a "weak" masculine (N-declension) noun. It adds an "-n" in all cases except nominative, eg "dem Jungen." or "den Studenten". There are some exceptions. See "Notes" for exceptions or hints.`}
+              </p>
+            )}
+            {word.notes.otherGerDefinitions && (
+              <p>
+                <span className="bold">Also:</span>{" "}
+                {word.notes.otherGerDefinitions}
+              </p>
+            )}
+            {word.notes.compoundWords && (
+              <p>
+                <span className="bold">
+                  Compound words ending in -{word.noun.toLowerCase()}:
+                </span>{" "}
+                {word.notes.compoundWords}
               </p>
             )}
           </div>
@@ -74,9 +93,10 @@ const LearningCube = ({ word }: LearningCubeProps) => {
             data-face="sentence-side"
             className={`${classes.face} ${classes.sentences}`}
           >
-            <h3>Examples in a sentence:</h3>
-            {word.sentences.map((sent, idx) => {
-              return (
+            <h3>Sentences:</h3>
+            {word.sentences
+              .filter((sent) => sent.de && sent.en)
+              .map((sent, idx) => (
                 <dl key={idx} className={classes.sentence}>
                   <dt>
                     <span className={classes.emoji}>🇩🇪</span>
@@ -88,8 +108,7 @@ const LearningCube = ({ word }: LearningCubeProps) => {
                     {sent.en}
                   </dd>
                 </dl>
-              );
-            })}
+              ))}
           </div>
           <div
             data-face="notes-side"

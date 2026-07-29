@@ -9,9 +9,11 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
-      otherEngDefinitions: "term, period",
       miscNote:
-        "Other words: Jahreszeit (season), Mahlzeit (meal time), Freizeit (free time), Arbeitszeit (working hours), Schlafenszeit (bedtime)",
+        'Idioms: "Zeit totschlagen" (lit: to beat time to death) — to kill/waste time while waiting; "Kommt Zeit, kommt Rat" (lit. comes time, comes advice) — time will tell.',
+      otherEngDefinitions: "term, period",
+      compoundWords:
+        "Jahreszeit (season), Mahlzeit (meal time), Freizeit (free time), Arbeitszeit (working hours), Schlafenszeit (bedtime)",
     },
     sentences: [
       {
@@ -37,8 +39,8 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
-      miscNote:
-        "Other words: Bergmann (digger), Seemann (sailor), Fachmann (male expert v Fachfrau), Kaufmann (male businessman v Kauffrau), Ehemann (husband).",
+      compoundWords:
+        "Bergmann (digger), Seemann (sailor), Fachmann (male expert v Fachfrau), Kaufmann (male businessman v Kauffrau), Ehemann (husband).",
     },
     sentences: [
       { de: "Der Mann stinkt.", en: "The man stinks.", case: "nom" },
@@ -226,8 +228,8 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
-      miscNote:
-        "Other words: Wohnzimmer (living room), Ankleidezimmer (dressing room), Mansardenzimmer (attic room).",
+      compoundWords:
+        "Wohnzimmer (living room), Ankleidezimmer (dressing room), Mansardenzimmer (attic room).",
     },
     sentences: [
       {
@@ -253,8 +255,8 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
-      miscNote:
-        "Other words: Flügeltür (swing door), Hintertür (back door), Hecktür (tail gate).",
+      compoundWords:
+        "Flügeltür (swing door), Hintertür (back door), Hecktür (tail gate).",
     },
     sentences: [
       { de: "Ich öffne die Tür.", en: "I open the door.", case: "acc" },
@@ -276,8 +278,8 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
-      miscNote:
-        "Other words: Schlussfrau (goal keeper), Buhfrau (boogey woman), Wehfrau (mid wife).",
+      compoundWords:
+        "Schlussfrau (goal keeper), Buhfrau (boogey woman), Wehfrau (mid wife).",
     },
     sentences: [
       {
@@ -303,8 +305,8 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
-      miscNote:
-        "Other words: Milchgesicht (milksop), Vollmondgesicht (moon-shaped face).",
+      compoundWords:
+        "Milchgesicht (milksop), Vollmondgesicht (moon-shaped face).",
     },
     sentences: [
       {
@@ -330,8 +332,8 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
-      miscNote:
-        "Other words: Flügelmutter (wing nut), Puffmutter (madam of a brothel), Wehmutter (mid wife).",
+      compoundWords:
+        "Flügelmutter (wing nut), Puffmutter (madam of a brothel), Wehmutter (mid wife).",
     },
     sentences: [
       {
@@ -381,8 +383,8 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
-      miscNote:
-        "Other words: Fastnacht (Shrove Tuesday), Mondnacht (moonlit night), Mitternacht (midnight).",
+      compoundWords:
+        "Fastnacht (Shrove Tuesday), Mondnacht (moonlit night), Mitternacht (midnight).",
     },
     sentences: [
       {
@@ -408,8 +410,8 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
-      miscNote:
-        "Other words: Herrenhaus (manor), Krankenhaus (hospital), Gasthaus (guest house).",
+      compoundWords:
+        "Herrenhaus (manor), Krankenhaus (hospital), Gasthaus (guest house).",
       genitiveNote:
         "Words that end in -s take an -es in the genitive to emphasize extra sibilant.",
     },
@@ -512,8 +514,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
-      miscNote:
-        "Other words: Bassstimme (bass voice), Gegenstimme (dissenting voice)",
+      compoundWords: "Bassstimme (bass voice), Gegenstimme (dissenting voice)",
     },
     sentences: [
       { de: "Ich höre Stimmen.", en: "I hear voices.", case: "acc" },
@@ -562,8 +563,8 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
-      miscNote:
-        "Other words: Absturzort (crash site), Vorort (suburb), Geburtsort (birth place).",
+      compoundWords:
+        "Absturzort (crash site), Vorort (suburb), Geburtsort (birth place).",
     },
     sentences: [
       { de: "Es ist ein cooler Ort.", en: "It's a cool place.", case: "nom" },
@@ -586,8 +587,8 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     weakMasculine: true,
     notes: {
       weakMascHint: "Nouns ending in '-e' (people, animals)",
-      miscNote:
-        "Other words: Bäckerjunge (baker's boy ~ apprentice), Gassenjungen (raggamuffin), Strichjunge (hustler, male sex worker).",
+      compoundWords:
+        "Bäckerjunge (baker's boy ~ apprentice), Gassenjungen (raggamuffin), Strichjunge (hustler, male sex worker).",
     },
     sentences: [
       {
@@ -613,8 +614,8 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
-      miscNote:
-        "Other words: Rennauto (race car), Bücherauto (book mobile, mobile library).",
+      compoundWords:
+        "Rennauto (race car), Bücherauto (book mobile, mobile library).",
     },
     sentences: [
       { de: "Ich habe ein Auto.", en: "I have a car.", case: "acc" },
@@ -637,8 +638,8 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     weakMasculine: false,
     notes: {
       otherEngDefinitions: "site, page",
-      miscNote:
-        "Other words: Kehrseite (flip side),  Schlagseite (list), Passivseite (liability).",
+      compoundWords:
+        "Kehrseite (flip side),  Schlagseite (list), Passivseite (liability).",
     },
     sentences: [
       {
@@ -664,8 +665,8 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
-      miscNote:
-        "Other words: Schwenkarm (boom), Fangarm (tentacle), Hauptarm (main branch of a river).",
+      compoundWords:
+        "Schwenkarm (boom), Fangarm (tentacle), Hauptarm (main branch of a river).",
     },
     sentences: [
       { de: "Mir tut der Arm weh.", en: "My arm hurts.", case: "nom" },
@@ -688,8 +689,8 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     weakMasculine: false,
     notes: {
       otherEngDefinitions: "kid",
-      miscNote:
-        "Other words: Enkelkind (grandchild), Einzelkind (only child), Naturkind (child of nature), Krabbelkind (very young child, younger than toddler).",
+      compoundWords:
+        "Enkelkind (grandchild), Einzelkind (only child), Naturkind (child of nature), Krabbelkind (very young child, younger than toddler).",
     },
     sentences: [
       {
@@ -715,8 +716,8 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
-      miscNote:
-        "Other words: Leitwort (motto), Fremdwort (foreign word), Sprichwort (proverb).",
+      compoundWords:
+        "Leitwort (motto), Fremdwort (foreign word), Sprichwort (proverb).",
     },
     sentences: [
       { de: "Er hält sein Wort.", en: "He's a man of his word.", case: "acc" },
@@ -787,8 +788,8 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
-      miscNote:
-        "Other words: Bleifuß (leadfoot), Zinfuß (interest rate), Münzfuß (monetary standard).",
+      compoundWords:
+        "Bleifuß (leadfoot), Zinfuß (interest rate), Münzfuß (monetary standard).",
     },
     sentences: [
       {
@@ -814,8 +815,8 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
-      miscNote:
-        "Other words: Abwasser (effluent), Badewasser (bathw water), Mineralwasser (mineral water).",
+      compoundWords:
+        "Abwasser (effluent), Badewasser (bathw water), Mineralwasser (mineral water).",
       pluralNote:
         "Usually uncountable, but when referring to different water types, the plural is used.",
     },
@@ -839,8 +840,8 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
-      miscNote:
-        "Other words: Flutlicht (flood light), Bremslicht (stop light, brake light).",
+      compoundWords:
+        "Flutlicht (flood light), Bremslicht (stop light, brake light).",
     },
     sentences: [
       {
@@ -866,7 +867,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
-      miscNote: "Other words: Umwelt (environment), Mitwelt (contemporaries).",
+      compoundWords: "Umwelt (environment), Mitwelt (contemporaries).",
     },
     sentences: [
       {
@@ -892,8 +893,8 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: true,
     notes: {
-      miscNote:
-        "Other words: Nachname (last name), Spitzname (nickname), Doppelname (double-barrelled name).",
+      compoundWords:
+        "Nachname (last name), Spitzname (nickname), Doppelname (double-barrelled name).",
       weakMascHint:
         "Exceptions: Nouns ending in '-e' but take '-ens' in the genitive singular",
     },
@@ -917,8 +918,8 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
-      miscNote:
-        "Other words: Seelenfreund (soul mate), Studienfreund (college or university friend).",
+      compoundWords:
+        "Seelenfreund (soul mate), Studienfreund (college or university friend).",
     },
     sentences: [
       {
@@ -945,8 +946,8 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
-      miscNote:
-        "Other words: Browserfenster (browser window), Bleiglasfenster (stained-glass window).",
+      compoundWords:
+        "Browserfenster (browser window), Bleiglasfenster (stained-glass window).",
     },
     sentences: [
       {
@@ -972,8 +973,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
-      miscNote:
-        "Other words: Oberkörper (torso), Knallkörper (firecracker/banger).",
+      compoundWords: "Oberkörper (torso), Knallkörper (firecracker/banger).",
     },
     sentences: [
       {
@@ -999,8 +999,8 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
-      miscNote:
-        "Other words: Schreibtisch (desk), Esstisch (dining table), Couchtisch (coffee table), Nachttisch (bedside table).",
+      compoundWords:
+        "Schreibtisch (desk), Esstisch (dining table), Couchtisch (coffee table), Nachttisch (bedside table).",
     },
     sentences: [
       {
@@ -1050,8 +1050,8 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
-      miscNote:
-        "Other words: Flussbett (river bed), Einzelbett (single bed), Gitterbett (cot).",
+      compoundWords:
+        "Flussbett (river bed), Einzelbett (single bed), Gitterbett (cot).",
     },
     sentences: [
       {
@@ -1077,8 +1077,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
-      miscNote:
-        "Other words: Kletterwand (climbing wall), Zellwand (cell wall).",
+      compoundWords: "Kletterwand (climbing wall), Zellwand (cell wall).",
     },
     sentences: [
       { de: "Die Wände sind kalt.", en: "The walls are cold.", case: "nom" },
@@ -1101,8 +1100,8 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     weakMasculine: false,
     notes: {
       otherEngDefinitions: "road",
-      miscNote:
-        "Other words: Einbahnstraße (one-way street), Küstenstraße (coastal highway), Passstraße (mountain pass).",
+      compoundWords:
+        "Einbahnstraße (one-way street), Küstenstraße (coastal highway), Passstraße (mountain pass).",
     },
     sentences: [
       {
@@ -1128,8 +1127,8 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
-      miscNote:
-        "Other words: Forstschule (foresry school), Tanzschule (dance school), Fachschule (technical school).",
+      compoundWords:
+        "Forstschule (foresry school), Tanzschule (dance school), Fachschule (technical school).",
     },
     sentences: [
       { de: "Ich war in der Schule.", en: "I was at school.", case: "dat" },
@@ -1151,7 +1150,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
-      miscNote: "Other words: Seeluft (sea air), Außenluft (ambient air).",
+      compoundWords: "Seeluft (sea air), Außenluft (ambient air).",
     },
     sentences: [
       { de: "Ich brauche Luft.", en: "I need air.", case: "acc" },
@@ -1173,7 +1172,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
-      miscNote: "Other words: Dachboden(loft, attic), Sandboden (sandy soil).",
+      compoundWords: "Dachboden(loft, attic), Sandboden (sandy soil).",
     },
     sentences: [
       { de: "Er ist im Boden.", en: "He is in the ground.", case: "dat" },
@@ -1195,8 +1194,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
-      miscNote:
-        "Other words: Amtsstunden (office hours), Todesstunde (hour of death).",
+      compoundWords: "Amtsstunden (office hours), Todesstunde (hour of death).",
     },
     sentences: [
       {
@@ -1222,8 +1220,8 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
-      miscNote:
-        "Other words: Lebensende (death), Kopfende (headboard), Jahresende (year end).",
+      compoundWords:
+        "Lebensende (death), Kopfende (headboard), Jahresende (year end).",
     },
     sentences: [
       { de: "Das ist das Ende.", en: "This is the end.", case: "nom" },
@@ -1245,8 +1243,8 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
-      miscNote:
-        "Other words: Großfamilie (extended family), Gastfamilie (host family).",
+      compoundWords:
+        "Großfamilie (extended family), Gastfamilie (host family).",
     },
     sentences: [
       {
@@ -1274,8 +1272,8 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     notes: {
       otherEngDefinitions: "guy, fellow, bloke",
       otherGerDefinitions: "der Typ",
-      miscNote:
-        "Other words: Dreckskerl (scumbag), Lausekerl (rascal), Scheißkerl (shithead).",
+      compoundWords:
+        "Dreckskerl (scumbag), Lausekerl (rascal), Scheißkerl (shithead).",
     },
     sentences: [
       {
@@ -1355,8 +1353,8 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
-      miscNote:
-        "Other words: Apfelsorte (kind of apple), Biersorte (brand of beer), Rebsorte (grape variety).",
+      compoundWords:
+        "Apfelsorte (kind of apple), Biersorte (brand of beer), Rebsorte (grape variety).",
     },
     sentences: [
       {
@@ -1382,8 +1380,8 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
-      miscNote:
-        "Other words: Gedenkminute (minute/moment of silence), Strafminute (penalty minute in sports).",
+      compoundWords:
+        "Gedenkminute (minute/moment of silence), Strafminute (penalty minute in sports).",
     },
     sentences: [
       {
@@ -1410,8 +1408,8 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     weakMasculine: false,
     notes: {
       otherEngDefinitions: "history",
-      miscNote:
-        "Other words: Kunstgeschichte (art history), Gutenachtgeschichte (bedtime story).",
+      compoundWords:
+        "Kunstgeschichte (art history), Gutenachtgeschichte (bedtime story).",
     },
     sentences: [
       {
@@ -1437,8 +1435,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
-      miscNote:
-        "Other words: Weingott (god of wine), Schöpfergott (the Maker).",
+      compoundWords: "Weingott (god of wine), Schöpfergott (the Maker).",
     },
     sentences: [
       { de: "Sie fürchten die Götter.", en: "The fear the gods.", case: "acc" },
@@ -1531,8 +1528,8 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
-      miscNote:
-        "Other words: Gegenteil (opposite), Anlagenteil (equipment), Einzelteil (component).",
+      compoundWords:
+        "Gegenteil (opposite), Anlagenteil (equipment), Einzelteil (component).",
     },
     sentences: [
       {
@@ -1559,8 +1556,8 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     weakMasculine: false,
     notes: {
       pluralNote: "Verstand and Sinn, both being for 'mind' have no plural",
-      miscNote:
-        "Other words: Kunstverstand (art appreciation), Menschenverstand (common sense), Unverstand (lack of judgement).",
+      compoundWords:
+        "Kunstverstand (art appreciation), Menschenverstand (common sense), Unverstand (lack of judgement).",
     },
     sentences: [
       {
@@ -1586,8 +1583,8 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
-      miscNote:
-        "Other words: Arbeitsbuch (workbook), Hörbuch (audio book), Skizzenbuch (sketchbook).",
+      compoundWords:
+        "Arbeitsbuch (workbook), Hörbuch (audio book), Skizzenbuch (sketchbook).",
     },
     sentences: [
       {
@@ -1865,8 +1862,8 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
-      miscNote:
-        "Other words: Volktanz (folk dance), Paartanz (partner dance), Ausdruckstanz (free/interpretive dance.",
+      compoundWords:
+        "Volktanz (folk dance), Paartanz (partner dance), Ausdruckstanz (free/interpretive dance.",
     },
     sentences: [
       {
@@ -1919,8 +1916,8 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
-      miscNote:
-        "Other words: Augenblick (moment), Überblick (overview), Ausblick (outlook/view), Tunnelblick (tunnel vision).",
+      compoundWords:
+        "Augenblick (moment), Überblick (overview), Ausblick (outlook/view), Tunnelblick (tunnel vision).",
     },
     sentences: [
       {
@@ -1947,7 +1944,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     weakMasculine: false,
     notes: {
       otherEngDefinitions: "leave, farewell",
-      miscNote: "Other words: Junggesellinnenabschied (bachelorette party)",
+      compoundWords: "Junggesellinnenabschied (bachelorette party)",
     },
     sentences: [
       {
@@ -2413,8 +2410,8 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     weakMasculine: false,
     notes: {
       otherEngDefinitions: "harbor, port",
-      miscNote:
-        "Other words: Flughafen (airport), Freihafen (free port), Ölhafen (oil port), Fährhafen (ferry harbor), and Handelshafen (commercial harbor).",
+      compoundWords:
+        "Flughafen (airport), Freihafen (free port), Ölhafen (oil port), Fährhafen (ferry harbor), and Handelshafen (commercial harbor).",
     },
     sentences: [
       {

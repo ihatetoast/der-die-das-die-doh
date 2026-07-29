@@ -78,6 +78,10 @@ main {
   margin: 0 auto;
 }
 
+.bold {
+  font-weight: 700;
+}
+
 .intro-images {
   display: flex;
   flex-direction: column;
