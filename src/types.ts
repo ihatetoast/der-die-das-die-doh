@@ -49,6 +49,7 @@ export const THEMES = [
   "family", // can include pets, marriage, divorce
   "finance",
   "food",
+  "geography",
   "home",
   "hospital",
   "hotel",
