@@ -4724,4 +4724,2105 @@ export const VOCAB_NATIONALITIES: VocabEntry[] = [
     themes: ["people", "geography"],
     completed: true,
   },
+  {
+    id: 50082,
+    eng: "French",
+    article: "der",
+    noun: "Franzose",
+    plural: "Franzosen",
+    hasNoPlural: false,
+    weakMasculine: true,
+    genderPair: {
+      article: "die",
+      singular: "Französin",
+      plural: "Französinnen",
+    },
+    notes: {
+      weakMascHint: "Nouns ending in '-e' (people, animals)",
+      miscNote:
+        "France is the world's most visited country. French has influenced English more than any other language!",
+    },
+    sentences: [
+      {
+        de: "Ein Mann aus Frankreich ist ein Franzose.",
+        en: "A man from France is a Frenchman.",
+        case: "nom",
+      },
+      {
+        de: "Der Franzose spricht Französisch und Italienisch.",
+        en: "The Frenchman speaks French and Italian.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 51082,
+    eng: "French",
+    article: "die",
+    noun: "Französin",
+    plural: "Französinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: { article: "der", singular: "Franzose", plural: "Franzosen" },
+    notes: {
+      miscNote:
+        "France is the world's most visited country. French has influenced English more than any other language!",
+    },
+    sentences: [
+      {
+        de: "Eine Frau aus Frankreich ist eine Französin.",
+        en: "A woman from France is a Frenchwoman.",
+        case: "nom",
+      },
+      {
+        de: "Die Französin spricht Französisch und Spanisch.",
+        en: "The Frenchwoman speaks French and Spanish.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 50083,
+    eng: "Gabonese",
+    article: "der",
+    noun: "Gabuner",
+    plural: "Gabuner",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: {
+      article: "die",
+      singular: "Gabunerin",
+      plural: "Gabunerinnen",
+    },
+    notes: {
+      miscNote:
+        "Gabon is a Central African country known for oil wealth and rainforests. French is official; Fang and Bantu languages are widely spoken.",
+    },
+    sentences: [
+      {
+        de: "Ein Mann aus Gabun ist ein Gabuner.",
+        en: "A man from Gabon is a Gabonese.",
+        case: "nom",
+      },
+      {
+        de: "Der Gabuner spricht Französisch und Fang.",
+        en: "The Gabonese speaks French and Fang.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 51083,
+    eng: "Gabonese",
+    article: "die",
+    noun: "Gabunerin",
+    plural: "Gabunerinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: { article: "der", singular: "Gabuner", plural: "Gabuner" },
+    notes: {
+      miscNote:
+        "Gabon is a Central African country known for oil wealth and rainforests. French is official; Fang and Bantu languages are widely spoken.",
+    },
+    sentences: [
+      {
+        de: "Eine Frau aus Gabun ist eine Gabunerin.",
+        en: "A woman from Gabon is a Gabonese.",
+        case: "nom",
+      },
+      {
+        de: "Die Gabunerin spricht Französisch und Bantu.",
+        en: "The Gabonese speaks French and Bantu.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 50084,
+    eng: "Gambian",
+    article: "der",
+    noun: "Gambier",
+    plural: "Gambier",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: {
+      article: "die",
+      singular: "Gambierin",
+      plural: "Gambierinnen",
+    },
+    notes: {
+      miscNote:
+        "The Gambia is the smallest country in mainland Africa. English is official; Wolof, Mandinka, and Fula are widely spoken.",
+    },
+    sentences: [
+      {
+        de: "Ein Mann aus Gambia ist ein Gambier.",
+        en: "A man from the Gambia is a Gambian.",
+        case: "nom",
+      },
+      {
+        de: "Der Gambier spricht Englisch und Wolof.",
+        en: "The Gambian speaks English and Wolof.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 51084,
+    eng: "Gambian",
+    article: "die",
+    noun: "Gambierin",
+    plural: "Gambierinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: { article: "der", singular: "Gambier", plural: "Gambier" },
+    notes: {
+      miscNote:
+        "The Gambia is the smallest country in mainland Africa. English is official; Wolof, Mandinka, and Fula are widely spoken.",
+    },
+    sentences: [
+      {
+        de: "Eine Frau aus Gambia ist eine Gambierin.",
+        en: "A woman from the Gambia is a Gambian.",
+        case: "nom",
+      },
+      {
+        de: "Die Gambierin spricht Englisch und Mandinka.",
+        en: "The Gambian speaks English and Mandinka.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 50085,
+    eng: "Georgian",
+    article: "der",
+    noun: "Georgier",
+    plural: "Georgier",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: {
+      article: "die",
+      singular: "Georgierin",
+      plural: "Georgierinnen",
+    },
+    notes: {
+      miscNote:
+        "Georgia is located at the crossroads of Europe and Asia. Georgian is written in its own unique alphabet and is one of the world's oldest languages.",
+    },
+    sentences: [
+      {
+        de: "Ein Mann aus Georgien ist ein Georgier.",
+        en: "A man from Georgia is a Georgian.",
+        case: "nom",
+      },
+      {
+        de: "Der Georgier spricht Georgisch und Russisch.",
+        en: "The Georgian speaks Georgian and Russian.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 51085,
+    eng: "Georgian",
+    article: "die",
+    noun: "Georgierin",
+    plural: "Georgierinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: { article: "der", singular: "Georgier", plural: "Georgier" },
+    notes: {
+      miscNote:
+        "Georgia is located at the crossroads of Europe and Asia. Georgian is written in its own unique alphabet and is one of the world's oldest languages.",
+    },
+    sentences: [
+      {
+        de: "Eine Frau aus Georgien ist eine Georgierin.",
+        en: "A woman from Georgia is a Georgian.",
+        case: "nom",
+      },
+      {
+        de: "Die Georgierin spricht Georgisch und Englisch.",
+        en: "The Georgian speaks Georgian and English.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 50086,
+    eng: "German",
+    article: "der",
+    noun: "Deutsche",
+    plural: "Deutschen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: { article: "die", singular: "Deutsche", plural: "Deutschen" },
+    notes: {
+      miscNote:
+        "Germany is Europe's largest economy. German has four cases and three grammatical genders, making it a fascinating language to learn!",
+    },
+    sentences: [
+      {
+        de: "Ein Mann aus Deutschland ist ein Deutscher.",
+        en: "A man from Germany is a German.",
+        case: "nom",
+      },
+      {
+        de: "Der Deutsche spricht Deutsch und Englisch.",
+        en: "The German speaks German and English.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 51086,
+    eng: "German",
+    article: "die",
+    noun: "Deutsche",
+    plural: "Deutschen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: { article: "der", singular: "Deutsche", plural: "Deutschen" },
+    notes: {
+      miscNote:
+        "Germany is Europe's largest economy. German has four cases and three grammatical genders, making it a fascinating language to learn!",
+    },
+    sentences: [
+      {
+        de: "Eine Frau aus Deutschland ist eine Deutsche.",
+        en: "A woman from Germany is a German.",
+        case: "nom",
+      },
+      {
+        de: "Die Deutsche spricht Deutsch und Französisch.",
+        en: "The German speaks German and French.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 50087,
+    eng: "Ghanaian",
+    article: "der",
+    noun: "Ghanaer",
+    plural: "Ghanaer",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: {
+      article: "die",
+      singular: "Ghanaerin",
+      plural: "Ghanaerinnen",
+    },
+    notes: {
+      miscNote:
+        "Ghana was the first sub-Saharan African country to gain independence. English is official; Akan, Ewe, and Ga are widely spoken.",
+    },
+    sentences: [
+      {
+        de: "Ein Mann aus Ghana ist ein Ghanaer.",
+        en: "A man from Ghana is a Ghanaian.",
+        case: "nom",
+      },
+      {
+        de: "Der Ghanaer spricht Englisch und Akan.",
+        en: "The Ghanaian speaks English and Akan.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 51087,
+    eng: "Ghanaian",
+    article: "die",
+    noun: "Ghanaerin",
+    plural: "Ghanaerinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: { article: "der", singular: "Ghanaer", plural: "Ghanaer" },
+    notes: {
+      miscNote:
+        "Ghana was the first sub-Saharan African country to gain independence. English is official; Akan, Ewe, and Ga are widely spoken.",
+    },
+    sentences: [
+      {
+        de: "Eine Frau aus Ghana ist eine Ghanaerin.",
+        en: "A woman from Ghana is a Ghanaian.",
+        case: "nom",
+      },
+      {
+        de: "Die Ghanaerin spricht Englisch und Ewe.",
+        en: "The Ghanaian speaks English and Ewe.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 50088,
+    eng: "Gibraltarian",
+    article: "der",
+    noun: "Gibraltarer",
+    plural: "Gibraltarer",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: {
+      article: "die",
+      singular: "Gibraltarerin",
+      plural: "Gibraltarerinnen",
+    },
+    notes: {
+      miscNote:
+        "Gibraltar is a British Overseas Territory at the entrance to the Mediterranean. English and Spanish are both spoken; Arabic influence is also present.",
+    },
+    sentences: [
+      {
+        de: "Ein Mann aus Gibraltar ist ein Gibraltarer.",
+        en: "A man from Gibraltar is a Gibraltarian.",
+        case: "nom",
+      },
+      {
+        de: "Der Gibraltarer spricht Englisch und Spanisch.",
+        en: "The Gibraltarian speaks English and Spanish.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 51088,
+    eng: "Gibraltarian",
+    article: "die",
+    noun: "Gibraltarerin",
+    plural: "Gibraltarerinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: {
+      article: "der",
+      singular: "Gibraltarer",
+      plural: "Gibraltarer",
+    },
+    notes: {
+      miscNote:
+        "Gibraltar is a British Overseas Territory at the entrance to the Mediterranean. English and Spanish are both spoken; Arabic influence is also present.",
+    },
+    sentences: [
+      {
+        de: "Eine Frau aus Gibraltar ist eine Gibraltarerin.",
+        en: "A woman from Gibraltar is a Gibraltarian.",
+        case: "nom",
+      },
+      {
+        de: "Die Gibraltarerin spricht Englisch und Arabisch.",
+        en: "The Gibraltarian speaks English and Arabic.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 50089,
+    eng: "Greek",
+    article: "der",
+    noun: "Grieche",
+    plural: "Griechen",
+    hasNoPlural: false,
+    weakMasculine: true,
+    genderPair: { article: "die", singular: "Griechin", plural: "Griechinnen" },
+    notes: {
+      weakMascHint: "Nouns ending in '-e' (people, animals)",
+      miscNote:
+        "Greece is the birthplace of Western philosophy, democracy, and the Olympics. Greek has influenced many European languages.",
+    },
+    sentences: [
+      {
+        de: "Ein Mann aus Griechenland ist ein Grieche.",
+        en: "A man from Greece is a Greek.",
+        case: "nom",
+      },
+      {
+        de: "Der Grieche spricht Griechisch und Englisch.",
+        en: "The Greek speaks Greek and English.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 51089,
+    eng: "Greek",
+    article: "die",
+    noun: "Griechin",
+    plural: "Griechinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: { article: "der", singular: "Grieche", plural: "Griechen" },
+    notes: {
+      miscNote:
+        "Greece is the birthplace of Western philosophy, democracy, and the Olympics. Greek has influenced many European languages.",
+    },
+    sentences: [
+      {
+        de: "Eine Frau aus Griechenland ist eine Griechin.",
+        en: "A woman from Greece is a Greek.",
+        case: "nom",
+      },
+      {
+        de: "Die Griechin spricht Griechisch und Deutsch.",
+        en: "The Greek speaks Greek and German.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 50090,
+    eng: "Greenlandic",
+    article: "der",
+    noun: "Grönländer",
+    plural: "Grönländer",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: {
+      article: "die",
+      singular: "Grönländerin",
+      plural: "Grönländerinnen",
+    },
+    notes: {
+      miscNote:
+        "Greenland is the world's largest island and an autonomous territory of Denmark. Greenlandic is the official language; Danish is also widely spoken.",
+    },
+    sentences: [
+      {
+        de: "Ein Mann aus Grönland ist ein Grönländer.",
+        en: "A man from Greenland is Greenlandic.",
+        case: "nom",
+      },
+      {
+        de: "Der Grönländer spricht Grönländisch und Dänisch.",
+        en: "The Greenlandic person speaks Greenlandic and Danish.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 51090,
+    eng: "Greenlandic",
+    article: "die",
+    noun: "Grönländerin",
+    plural: "Grönländerinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: {
+      article: "der",
+      singular: "Grönländer",
+      plural: "Grönländer",
+    },
+    notes: {
+      miscNote:
+        "Greenland is the world's largest island and an autonomous territory of Denmark. Greenlandic is the official language; Danish is also widely spoken.",
+    },
+    sentences: [
+      {
+        de: "Eine Frau aus Grönland ist eine Grönländerin.",
+        en: "A woman from Greenland is Greenlandic.",
+        case: "nom",
+      },
+      {
+        de: "Die Grönländerin spricht Grönländisch und Isländisch.",
+        en: "The Greenlandic person speaks Greenlandic and Icelandic.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 50091,
+    eng: "Grenadian",
+    article: "der",
+    noun: "Grenader",
+    plural: "Grenader",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: {
+      article: "die",
+      singular: "Grenaderin",
+      plural: "Grenaderinnen",
+    },
+    notes: {
+      miscNote:
+        "Grenada is a Caribbean island nation known for spices, chocolate, and beautiful beaches. English is official; French Creole is also spoken.",
+    },
+    sentences: [
+      {
+        de: "Ein Mann aus Grenada ist ein Grenader.",
+        en: "A man from Grenada is a Grenadian.",
+        case: "nom",
+      },
+      {
+        de: "Der Grenader spricht Englisch und Kreolisch.",
+        en: "The Grenadian speaks English and Creole.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 51091,
+    eng: "Grenadian",
+    article: "die",
+    noun: "Grenaderin",
+    plural: "Grenaderinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: { article: "der", singular: "Grenader", plural: "Grenader" },
+    notes: {
+      miscNote:
+        "Grenada is a Caribbean island nation known for spices, chocolate, and beautiful beaches. English is official; French Creole is also spoken.",
+    },
+    sentences: [
+      {
+        de: "Eine Frau aus Grenada ist eine Grenaderin.",
+        en: "A woman from Grenada is a Grenadian.",
+        case: "nom",
+      },
+      {
+        de: "Die Grenaderin spricht Englisch und Französisch.",
+        en: "The Grenadian speaks English and French.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 50092,
+    eng: "Guamanian",
+    article: "der",
+    noun: "Guamaner",
+    plural: "Guamaner",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: {
+      article: "die",
+      singular: "Guamanerin",
+      plural: "Guamanerinnen",
+    },
+    notes: {
+      miscNote:
+        "Guam is a strategic U.S. territory in the Pacific. English and Chamorro are spoken; it's a crossroads of Asian and American cultures.",
+    },
+    sentences: [
+      {
+        de: "Ein Mann aus Guam ist ein Guamaner.",
+        en: "A man from Guam is a Guamanian.",
+        case: "nom",
+      },
+      {
+        de: "Der Guamaner spricht Englisch und Chamorro.",
+        en: "The Guamanian speaks English and Chamorro.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 51092,
+    eng: "Guamanian",
+    article: "die",
+    noun: "Guamanerin",
+    plural: "Guamanerinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: { article: "der", singular: "Guamaner", plural: "Guamaner" },
+    notes: {
+      miscNote:
+        "Guam is a strategic U.S. territory in the Pacific. English and Chamorro are spoken; it's a crossroads of Asian and American cultures.",
+    },
+    sentences: [
+      {
+        de: "Eine Frau aus Guam ist eine Guamanerin.",
+        en: "A woman from Guam is a Guamanian.",
+        case: "nom",
+      },
+      {
+        de: "Die Guamanerin spricht Englisch und Japanisch.",
+        en: "The Guamanian speaks English and Japanese.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 50093,
+    eng: "Guatemalan",
+    article: "der",
+    noun: "Guatemalteke",
+    plural: "Guatemalteken",
+    hasNoPlural: false,
+    weakMasculine: true,
+    genderPair: {
+      article: "die",
+      singular: "Guatemaltekin",
+      plural: "Guatemaltekinnen",
+    },
+    notes: {
+      weakMascHint: "Nouns ending in '-e' (people, animals)",
+      miscNote:
+        "Guatemala has incredible Mayan heritage and biodiversity. Spanish is official; over 20 Mayan languages are still spoken.",
+    },
+    sentences: [
+      {
+        de: "Ein Mann aus Guatemala ist ein Guatemalteke.",
+        en: "A man from Guatemala is a Guatemalan.",
+        case: "nom",
+      },
+      {
+        de: "Der Guatemalteke spricht Spanisch und K'iche'.",
+        en: "The Guatemalan speaks Spanish and K'iche'.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 51093,
+    eng: "Guatemalan",
+    article: "die",
+    noun: "Guatemaltekin",
+    plural: "Guatemaltekinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: {
+      article: "der",
+      singular: "Guatemalteke",
+      plural: "Guatemalteken",
+    },
+    notes: {
+      miscNote:
+        "Guatemala has incredible Mayan heritage and biodiversity. Spanish is official; over 20 Mayan languages are still spoken.",
+    },
+    sentences: [
+      {
+        de: "Eine Frau aus Guatemala ist eine Guatemaltekin.",
+        en: "A woman from Guatemala is a Guatemalan.",
+        case: "nom",
+      },
+      {
+        de: "Die Guatemaltekin spricht Spanisch und Kaqchikel.",
+        en: "The Guatemalan speaks Spanish and Kaqchikel.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 50094,
+    eng: "Bissau-Guinnean",
+    article: "der",
+    noun: "Guinea-Bissauer ",
+    plural: "Guinea-Bissauer ",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: {
+      article: "die",
+      singular: "Guinea-Bissauerin",
+      plural: "Guinea-Bissauerinnen",
+    },
+    notes: {
+      miscNote: "Multi-word nationality - needs review for German translation",
+    },
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "nom" },
+    ],
+    themes: ["people", "geography"],
+    completed: false,
+  },
+  {
+    id: 51094,
+    eng: "Bissau-Guinean",
+    article: "die",
+    noun: "Guinea-Bissauerin",
+    plural: "Guinea-Bissauerinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: {
+      article: "der",
+      singular: "Guinea-Bissauer",
+      plural: "Guinea-Bissauer",
+    },
+    notes: {
+      miscNote: "Multi-word nationality - needs review for German translation",
+    },
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "nom" },
+    ],
+    themes: ["people", "geography"],
+    completed: false,
+  },
+  {
+    id: 50095,
+    eng: "Guinean",
+    article: "der",
+    noun: "Guineer",
+    plural: "Guineer",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: {
+      article: "die",
+      singular: "Guineerin",
+      plural: "Guineerinnen",
+    },
+    notes: {
+      miscNote:
+        "Guinea is rich in mineral resources and has diverse landscapes from coast to highlands. French is official; Fula and Mandinka are widely spoken.",
+    },
+    sentences: [
+      {
+        de: "Ein Mann aus Guinea ist ein Guineer.",
+        en: "A man from Guinea is a Guinean.",
+        case: "nom",
+      },
+      {
+        de: "Der Guineer spricht Französisch und Fulfulde.",
+        en: "The Guinean speaks French and Fulfulde.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 51095,
+    eng: "Guinean",
+    article: "die",
+    noun: "Guineerin",
+    plural: "Guineerinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: { article: "der", singular: "Guineer", plural: "Guineer" },
+    notes: {
+      miscNote:
+        "Guinea is rich in mineral resources and has diverse landscapes from coast to highlands. French is official; Fula and Mandinka are widely spoken.",
+    },
+    sentences: [
+      {
+        de: "Eine Frau aus Guinea ist eine Guineerin.",
+        en: "A woman from Guinea is a Guinean.",
+        case: "nom",
+      },
+      {
+        de: "Die Guineerin spricht Französisch und Mandinka.",
+        en: "The Guinean speaks French and Mandinka.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 50096,
+    eng: "Guyanese",
+    article: "der",
+    noun: "Guyaner",
+    plural: "Guyaner",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: {
+      article: "die",
+      singular: "Guyanerin",
+      plural: "Guyanerinnen",
+    },
+    notes: {
+      miscNote:
+        "Guyana is the only English-speaking country in South America. It has vast rainforests and incredible biodiversity. Amerindian languages are also spoken.",
+    },
+    sentences: [
+      {
+        de: "Ein Mann aus Guyana ist ein Guyaner.",
+        en: "A man from Guyana is a Guyanese.",
+        case: "nom",
+      },
+      {
+        de: "Der Guyaner spricht Englisch und Arawakan.",
+        en: "The Guyanese speaks English and Arawakan.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 51096,
+    eng: "Guyanese",
+    article: "die",
+    noun: "Guyanerin",
+    plural: "Guyanerinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: { article: "der", singular: "Guyaner", plural: "Guyaner" },
+    notes: {
+      miscNote:
+        "Guyana is the only English-speaking country in South America. It has vast rainforests and incredible biodiversity. Amerindian languages are also spoken.",
+    },
+    sentences: [
+      {
+        de: "Eine Frau aus Guyana ist eine Guyanerin.",
+        en: "A woman from Guyana is a Guyanese.",
+        case: "nom",
+      },
+      {
+        de: "Die Guyanerin spricht Englisch und Portugiesisch.",
+        en: "The Guyanese speaks English and Portuguese.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 50097,
+    eng: "Haitian",
+    article: "der",
+    noun: "Haitianer",
+    plural: "Haitianer",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: {
+      article: "die",
+      singular: "Haitianerin",
+      plural: "Haitianerinnen",
+    },
+    notes: {
+      miscNote:
+        "Haiti was the first Black republic and the first successful slave revolution. French and Haitian Creole are official languages.",
+    },
+    sentences: [
+      {
+        de: "Ein Mann aus Haiti ist ein Haitianer.",
+        en: "A man from Haiti is a Haitian.",
+        case: "nom",
+      },
+      {
+        de: "Der Haitianer spricht Französisch und Kreolisch.",
+        en: "The Haitian speaks French and Creole.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 51097,
+    eng: "Haitian",
+    article: "die",
+    noun: "Haitianerin",
+    plural: "Haitianerinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: { article: "der", singular: "Haitianer", plural: "Haitianer" },
+    notes: {
+      miscNote:
+        "Haiti was the first Black republic and the first successful slave revolution. French and Haitian Creole are official languages.",
+    },
+    sentences: [
+      {
+        de: "Eine Frau aus Haiti ist eine Haitianerin.",
+        en: "A woman from Haiti is a Haitian.",
+        case: "nom",
+      },
+      {
+        de: "Die Haitianerin spricht Französisch und Englisch.",
+        en: "The Haitian speaks French and English.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 50098,
+    eng: "Honduran",
+    article: "der",
+    noun: "Honduraner",
+    plural: "Honduraner",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: {
+      article: "die",
+      singular: "Honduranerin",
+      plural: "Honduranerinnen",
+    },
+    notes: {
+      miscNote:
+        "Honduras is known for the Mesoamerican Barrier Reef and Mayan ruins. Spanish is official; indigenous languages like Garinagu are also spoken.",
+    },
+    sentences: [
+      {
+        de: "Ein Mann aus Honduras ist ein Honduraner.",
+        en: "A man from Honduras is a Honduran.",
+        case: "nom",
+      },
+      {
+        de: "Der Honduraner spricht Spanisch und Garífuna.",
+        en: "The Honduran speaks Spanish and Garífuna.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 51098,
+    eng: "Honduran",
+    article: "die",
+    noun: "Honduranerin",
+    plural: "Honduranerinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: {
+      article: "der",
+      singular: "Honduraner",
+      plural: "Honduraner",
+    },
+    notes: {
+      miscNote:
+        "Honduras is known for the Mesoamerican Barrier Reef and Mayan ruins. Spanish is official; indigenous languages like Garinagu are also spoken.",
+    },
+    sentences: [
+      {
+        de: "Eine Frau aus Honduras ist eine Honduranerin.",
+        en: "A woman from Honduras is a Honduran.",
+        case: "nom",
+      },
+      {
+        de: "Die Honduranerin spricht Spanisch und Englisch.",
+        en: "The Honduran speaks Spanish and English.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 50099,
+    eng: "Hongkonger",
+    article: "der",
+    noun: "Hongkonger",
+    plural: "Hongkonger",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: {
+      article: "die",
+      singular: "Hongkongerin",
+      plural: "Hongkongerinin",
+    },
+    notes: {
+      miscNote: "Multi-word or uncertain nationality - needs verification",
+    },
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "nom" },
+    ],
+    themes: ["people", "geography"],
+    completed: false,
+  },
+  {
+    id: 51099,
+    eng: "Hongkonger",
+    article: "die",
+    noun: "Hongkongerin",
+    plural: "Hongkongerinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: {
+      article: "der",
+      singular: "Hongkonger",
+      plural: "Hongkonger",
+    },
+    notes: {
+      miscNote: "Multi-word or uncertain nationality - needs verification",
+    },
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "nom" },
+    ],
+    themes: ["people", "geography"],
+    completed: false,
+  },
+  {
+    id: 50100,
+    eng: "Hungarian",
+    article: "der",
+    noun: "Ungar",
+    plural: "Ungarn",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: { article: "die", singular: "Ungarin", plural: "Ungarinnen" },
+    notes: {
+      miscNote:
+        "Hungary is famous for thermal baths, classical music, and the Danube River. Hungarian is a Uralic language, making it unique in Europe!",
+    },
+    sentences: [
+      {
+        de: "Ein Mann aus Ungarn ist ein Ungar.",
+        en: "A man from Hungary is a Hungarian.",
+        case: "nom",
+      },
+      {
+        de: "Der Ungar spricht Ungarisch und Deutsch.",
+        en: "The Hungarian speaks Hungarian and German.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 51100,
+    eng: "Hungarian",
+    article: "die",
+    noun: "Ungarin",
+    plural: "Ungarinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: { article: "der", singular: "Ungar", plural: "Ungarn" },
+    notes: {
+      miscNote:
+        "Hungary is famous for thermal baths, classical music, and the Danube River. Hungarian is a Uralic language, making it unique in Europe!",
+    },
+    sentences: [
+      {
+        de: "Eine Frau aus Ungarn ist eine Ungarin.",
+        en: "A woman from Hungary is a Hungarian.",
+        case: "nom",
+      },
+      {
+        de: "Die Ungarin spricht Ungarisch und Englisch.",
+        en: "The Hungarian speaks Hungarian and English.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 50101,
+    eng: "Icelander",
+    article: "der",
+    noun: "Isländer",
+    plural: "Isländer",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: {
+      article: "die",
+      singular: "Isländerin",
+      plural: "Isländerinnen",
+    },
+    notes: {
+      miscNote:
+        "Iceland is known for volcanoes, geysers, waterfalls, and the Northern Lights. Icelandic has changed little since Viking times!",
+    },
+    sentences: [
+      {
+        de: "Ein Mann aus Island ist ein Isländer.",
+        en: "A man from Iceland is an Icelander.",
+        case: "nom",
+      },
+      {
+        de: "Der Isländer spricht Isländisch und Dänisch.",
+        en: "The Icelander speaks Icelandic and Danish.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 51101,
+    eng: "Icelander",
+    article: "die",
+    noun: "Isländerin",
+    plural: "Isländerinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: { article: "der", singular: "Isländer", plural: "Isländer" },
+    notes: {
+      miscNote:
+        "Iceland is known for volcanoes, geysers, waterfalls, and the Northern Lights. Icelandic has changed little since Viking times!",
+    },
+    sentences: [
+      {
+        de: "Eine Frau aus Island ist eine Isländerin.",
+        en: "A woman from Iceland is an Icelander.",
+        case: "nom",
+      },
+      {
+        de: "Die Isländerin spricht Isländisch und Englisch.",
+        en: "The Icelander speaks Icelandic and English.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 50102,
+    eng: "Indian",
+    article: "der",
+    noun: "Inder",
+    plural: "Inder",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: { article: "die", singular: "Inderin", plural: "Inderinnen" },
+    notes: {
+      miscNote:
+        "India is the world's most populous democracy with incredible diversity. Hindi and English are official; over 700 languages are spoken!",
+    },
+    sentences: [
+      {
+        de: "Ein Mann aus Indien ist ein Inder.",
+        en: "A man from India is an Indian.",
+        case: "nom",
+      },
+      {
+        de: "Der Inder spricht Hindi und Englisch.",
+        en: "The Indian speaks Hindi and English.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 51102,
+    eng: "Indian",
+    article: "die",
+    noun: "Inderin",
+    plural: "Inderinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: { article: "der", singular: "Inder", plural: "Inder" },
+    notes: {
+      miscNote:
+        "India is the world's most populous democracy with incredible diversity. Hindi and English are official; over 700 languages are spoken!",
+    },
+    sentences: [
+      {
+        de: "Eine Frau aus Indien ist eine Inderin.",
+        en: "A woman from India is an Indian.",
+        case: "nom",
+      },
+      {
+        de: "Die Inderin spricht Hindi und Tamil.",
+        en: "The Indian speaks Hindi and Tamil.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 50103,
+    eng: "Indonesian",
+    article: "der",
+    noun: "Indonesier",
+    plural: "Indonesier",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: {
+      article: "die",
+      singular: "Indonesierin",
+      plural: "Indonesierinnen",
+    },
+    notes: {
+      miscNote:
+        "Indonesia is the world's largest archipelago with over 17,000 islands. Indonesian (Bahasa Indonesia) is the official language; hundreds of regional languages exist.",
+    },
+    sentences: [
+      {
+        de: "Ein Mann aus Indonesien ist ein Indonesier.",
+        en: "A man from Indonesia is an Indonesian.",
+        case: "nom",
+      },
+      {
+        de: "Der Indonesier spricht Indonesisch und Englisch.",
+        en: "The Indonesian speaks Indonesian and English.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 51103,
+    eng: "Indonesian",
+    article: "die",
+    noun: "Indonesierin",
+    plural: "Indonesierinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: {
+      article: "der",
+      singular: "Indonesier",
+      plural: "Indonesier",
+    },
+    notes: {
+      miscNote:
+        "Indonesia is the world's largest archipelago with over 17,000 islands. Indonesian (Bahasa Indonesia) is the official language; hundreds of regional languages exist.",
+    },
+    sentences: [
+      {
+        de: "Eine Frau aus Indonesien ist eine Indonesierin.",
+        en: "A woman from Indonesia is an Indonesian.",
+        case: "nom",
+      },
+      {
+        de: "Die Indonesierin spricht Indonesisch und Javanisch.",
+        en: "The Indonesian speaks Indonesian and Javanese.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 50104,
+    eng: "Iranian",
+    article: "der",
+    noun: "Iraner",
+    plural: "Iraner",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: { article: "die", singular: "Iranerin", plural: "Iranerinnen" },
+    notes: {
+      miscNote:
+        "Iran has one of the world's oldest continuous civilizations. Persian (Farsi) is official; Kurdish, Baloch, and Turkic languages are also spoken.",
+    },
+    sentences: [
+      {
+        de: "Ein Mann aus dem Iran ist ein Iraner.",
+        en: "A man from Iran is an Iranian.",
+        case: "nom",
+      },
+      {
+        de: "Der Iraner spricht Persisch und Englisch.",
+        en: "The Iranian speaks Persian and English.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 51104,
+    eng: "Iranian",
+    article: "die",
+    noun: "Iranerin",
+    plural: "Iranerinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: { article: "der", singular: "Iraner", plural: "Iraner" },
+    notes: {
+      miscNote:
+        "Iran has one of the world's oldest continuous civilizations. Persian (Farsi) is official; Kurdish, Baloch, and Turkic languages are also spoken.",
+    },
+    sentences: [
+      {
+        de: "Eine Frau aus dem Iran ist eine Iranerin.",
+        en: "A woman from Iran is an Iranian.",
+        case: "nom",
+      },
+      {
+        de: "Die Iranerin spricht Persisch und Französisch.",
+        en: "The Iranian speaks Persian and French.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 50105,
+    eng: "Iraqi",
+    article: "der",
+    noun: "Iraker",
+    plural: "Iraker",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: { article: "die", singular: "Irakerin", plural: "Irakerinnen" },
+    notes: {
+      miscNote:
+        "Iraq is in ancient Mesopotamia, the birthplace of civilization. Arabic is official; Kurdish is co-official in the Kurdistan region.",
+    },
+    sentences: [
+      {
+        de: "Ein Mann aus dem Irak ist ein Iraker.",
+        en: "A man from Iraq is an Iraqi.",
+        case: "nom",
+      },
+      {
+        de: "Der Iraker spricht Arabisch und Kurdisch.",
+        en: "The Iraqi speaks Arabic and Kurdish.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 51105,
+    eng: "Iraqi",
+    article: "die",
+    noun: "Irakerin",
+    plural: "Irakerinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: { article: "der", singular: "Iraker", plural: "Iraker" },
+    notes: {
+      miscNote:
+        "Iraq is in ancient Mesopotamia, the birthplace of civilization. Arabic is official; Kurdish is co-official in the Kurdistan region.",
+    },
+    sentences: [
+      {
+        de: "Eine Frau aus dem Irak ist eine Irakerin.",
+        en: "A woman from Iraq is an Iraqi.",
+        case: "nom",
+      },
+      {
+        de: "Die Irakerin spricht Arabisch und Englisch.",
+        en: "The Iraqi speaks Arabic and English.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 50106,
+    eng: "Irish",
+    article: "der",
+    noun: "Ire",
+    plural: "Iren",
+    hasNoPlural: false,
+    weakMasculine: true,
+    genderPair: { article: "die", singular: "Irin", plural: "Irinnen" },
+    notes: {
+      weakMascHint: "Nouns ending in '-e' (people, animals)",
+      miscNote:
+        "Ireland is the Emerald Isle known for its green landscapes, pubs, and literature. Irish (Gaeilge) is an official language alongside English.",
+    },
+    sentences: [
+      {
+        de: "Ein Mann aus Irland ist ein Ire.",
+        en: "A man from Ireland is an Irishman.",
+        case: "nom",
+      },
+      {
+        de: "Der Ire spricht Irisch und Englisch.",
+        en: "The Irishman speaks Irish and English.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 51106,
+    eng: "Irish",
+    article: "die",
+    noun: "Irin",
+    plural: "Irinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: { article: "der", singular: "Ire", plural: "Iren" },
+    notes: {
+      miscNote:
+        "Ireland is the Emerald Isle known for its green landscapes, pubs, and literature. Irish (Gaeilge) is an official language alongside English.",
+    },
+    sentences: [
+      {
+        de: "Eine Frau aus Irland ist eine Irin.",
+        en: "A woman from Ireland is an Irishwoman.",
+        case: "nom",
+      },
+      {
+        de: "Die Irin spricht Irisch und Deutsch.",
+        en: "The Irishwoman speaks Irish and German.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 50107,
+    eng: "Israeli",
+    article: "der",
+    noun: "Israeli",
+    plural: "Israelis",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: { article: "die", singular: "Israeli", plural: "Israelis" },
+    notes: {
+      miscNote:
+        "Israel is a Middle Eastern country with a history spanning millennia. Hebrew is official; Arabic is also widely spoken.",
+    },
+    sentences: [
+      {
+        de: "Ein Mann aus Israel ist ein Israeli.",
+        en: "A man from Israel is an Israeli.",
+        case: "nom",
+      },
+      {
+        de: "Der Israeli spricht Hebräisch und Englisch.",
+        en: "The Israeli speaks Hebrew and English.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 51107,
+    eng: "Israeli",
+    article: "die",
+    noun: "Israeli",
+    plural: "Israelis",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: { article: "der", singular: "Israeli", plural: "Israelis" },
+    notes: {
+      miscNote:
+        "Israel is a Middle Eastern country with a history spanning millennia. Hebrew is official; Arabic is also widely spoken.",
+    },
+    sentences: [
+      {
+        de: "Eine Frau aus Israel ist eine Israeli.",
+        en: "A woman from Israel is an Israeli.",
+        case: "nom",
+      },
+      {
+        de: "Die Israeli spricht Hebräisch und Französisch.",
+        en: "The Israeli speaks Hebrew and French.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 50108,
+    eng: "Italian",
+    article: "der",
+    noun: "Italiener",
+    plural: "Italiener",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: {
+      article: "die",
+      singular: "Italienerin",
+      plural: "Italienerinnen",
+    },
+    notes: {
+      miscNote:
+        "Italy is home to Renaissance art, Roman history, and world-famous cuisine. Italian is a Romance language with rich regional dialects.",
+    },
+    sentences: [
+      {
+        de: "Ein Mann aus Italien ist ein Italiener.",
+        en: "A man from Italy is an Italian.",
+        case: "nom",
+      },
+      {
+        de: "Der Italiener spricht Italienisch und Englisch.",
+        en: "The Italian speaks Italian and English.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 51108,
+    eng: "Italian",
+    article: "die",
+    noun: "Italienerin",
+    plural: "Italienerinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: { article: "der", singular: "Italiener", plural: "Italiener" },
+    notes: {
+      miscNote:
+        "Italy is home to Renaissance art, Roman history, and world-famous cuisine. Italian is a Romance language with rich regional dialects.",
+    },
+    sentences: [
+      {
+        de: "Eine Frau aus Italien ist eine Italienerin.",
+        en: "A woman from Italy is an Italian.",
+        case: "nom",
+      },
+      {
+        de: "Die Italienerin spricht Italienisch und Spanisch.",
+        en: "The Italian speaks Italian and Spanish.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 50109,
+    eng: "Ivorian",
+    article: "der",
+    noun: "Ivorer",
+    plural: "Ivorer",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: { article: "die", singular: "Ivorerin", plural: "Ivorerinnen" },
+    notes: {
+      miscNote:
+        "Côte d'Ivoire (Ivory Coast) is known for cocoa production and vibrant music. French is official; Akan, Kru, and Mandé languages are widely spoken.",
+    },
+    sentences: [
+      {
+        de: "Ein Mann aus Elfenbeinküste ist ein Ivorer.",
+        en: "A man from Côte d'Ivoire is an Ivorian.",
+        case: "nom",
+      },
+      {
+        de: "Der Ivorer spricht Französisch und Akan.",
+        en: "The Ivorian speaks French and Akan.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 51109,
+    eng: "Ivorian",
+    article: "die",
+    noun: "Ivorerin",
+    plural: "Ivorerinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: { article: "der", singular: "Ivorer", plural: "Ivorer" },
+    notes: {
+      miscNote:
+        "Côte d'Ivoire (Ivory Coast) is known for cocoa production and vibrant music. French is official; Akan, Kru, and Mandé languages are widely spoken.",
+    },
+    sentences: [
+      {
+        de: "Eine Frau aus Elfenbeinküste ist eine Ivorerin.",
+        en: "A woman from Côte d'Ivoire is an Ivorian.",
+        case: "nom",
+      },
+      {
+        de: "Die Ivorerin spricht Französisch und Yoruba.",
+        en: "The Ivorian speaks French and Yoruba.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+
+  {
+    id: 50110,
+    eng: "Jamaican",
+    article: "der",
+    noun: "Jamaikaner",
+    plural: "Jamaikaner",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: {
+      article: "die",
+      singular: "Jamaikanerin",
+      plural: "Jamaikanerinnen",
+    },
+    notes: {
+      miscNote:
+        "Jamaica is a Caribbean island known for reggae music, Bob Marley, and track and field. English is official; Jamaican Patois is widely spoken.",
+    },
+    sentences: [
+      {
+        de: "Ein Mann aus Jamaika ist ein Jamaikaner.",
+        en: "A man from Jamaica is a Jamaican.",
+        case: "nom",
+      },
+      {
+        de: "Der Jamaikaner spricht Englisch und Patois.",
+        en: "The Jamaican speaks English and Patois.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 51110,
+    eng: "Jamaican",
+    article: "die",
+    noun: "Jamaikanerin",
+    plural: "Jamaikanerinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: {
+      article: "der",
+      singular: "Jamaikaner",
+      plural: "Jamaikaner",
+    },
+    notes: {
+      miscNote:
+        "Jamaica is a Caribbean island known for reggae music, Bob Marley, and track and field. English is official; Jamaican Patois is widely spoken.",
+    },
+    sentences: [
+      {
+        de: "Eine Frau aus Jamaika ist eine Jamaikanerin.",
+        en: "A woman from Jamaica is a Jamaican.",
+        case: "nom",
+      },
+      {
+        de: "Die Jamaikanerin spricht Englisch und Spanisch.",
+        en: "The Jamaican speaks English and Spanish.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 50111,
+    eng: "Japanese",
+    article: "der",
+    noun: "Japaner",
+    plural: "Japaner",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: {
+      article: "die",
+      singular: "Japanerin",
+      plural: "Japanerinnen",
+    },
+    notes: {
+      miscNote:
+        "Japan is an island nation known for technology, anime, and beautiful gardens. Japanese has three writing systems: hiragana, katakana, and kanji!",
+    },
+    sentences: [
+      {
+        de: "Ein Mann aus Japan ist ein Japaner.",
+        en: "A man from Japan is a Japanese.",
+        case: "nom",
+      },
+      {
+        de: "Der Japaner spricht Japanisch und Englisch.",
+        en: "The Japanese person speaks Japanese and English.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 51111,
+    eng: "Japanese",
+    article: "die",
+    noun: "Japanerin",
+    plural: "Japanerinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: { article: "der", singular: "Japaner", plural: "Japaner" },
+    notes: {
+      miscNote:
+        "Japan is an island nation known for technology, anime, and beautiful gardens. Japanese has three writing systems: hiragana, katakana, and kanji!",
+    },
+    sentences: [
+      {
+        de: "Eine Frau aus Japan ist eine Japanerin.",
+        en: "A woman from Japan is a Japanese.",
+        case: "nom",
+      },
+      {
+        de: "Die Japanerin spricht Japanisch und Koreanisch.",
+        en: "The Japanese person speaks Japanese and Korean.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 50112,
+    eng: "Jordanian",
+    article: "der",
+    noun: "Jordanier",
+    plural: "Jordanier",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: {
+      article: "die",
+      singular: "Jordanierin",
+      plural: "Jordanierinnen",
+    },
+    notes: {
+      miscNote:
+        "Jordan is home to Petra, one of the Seven Wonders. Arabic is official; English is widely spoken among the younger generation.",
+    },
+    sentences: [
+      {
+        de: "Ein Mann aus Jordanien ist ein Jordanier.",
+        en: "A man from Jordan is a Jordanian.",
+        case: "nom",
+      },
+      {
+        de: "Der Jordanier spricht Arabisch und Englisch.",
+        en: "The Jordanian speaks Arabic and English.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 51112,
+    eng: "Jordanian",
+    article: "die",
+    noun: "Jordanierin",
+    plural: "Jordanierinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: { article: "der", singular: "Jordanier", plural: "Jordanier" },
+    notes: {
+      miscNote:
+        "Jordan is home to Petra, one of the Seven Wonders. Arabic is official; English is widely spoken among the younger generation.",
+    },
+    sentences: [
+      {
+        de: "Eine Frau aus Jordanien ist eine Jordanierin.",
+        en: "A woman from Jordan is a Jordanian.",
+        case: "nom",
+      },
+      {
+        de: "Die Jordanierin spricht Arabisch und Französisch.",
+        en: "The Jordanian speaks Arabic and French.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 50113,
+    eng: "Kazakh",
+    article: "der",
+    noun: "Kasache",
+    plural: "Kasachen",
+    hasNoPlural: false,
+    weakMasculine: true,
+    genderPair: { article: "die", singular: "Kasachin", plural: "Kasachinnen" },
+    notes: {
+      weakMascHint: "Nouns ending in '-e' (people, animals)",
+      miscNote:
+        "Kazakhstan is the world's largest landlocked country. Kazakh is official; Russian is widely spoken as a second language.",
+    },
+    sentences: [
+      {
+        de: "Ein Mann aus Kasachstan ist ein Kasache.",
+        en: "A man from Kazakhstan is a Kazakh.",
+        case: "nom",
+      },
+      {
+        de: "Der Kasache spricht Kasachisch und Russisch.",
+        en: "The Kazakh speaks Kazakh and Russian.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 51113,
+    eng: "Kazakh",
+    article: "die",
+    noun: "Kasachin",
+    plural: "Kasachinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: { article: "der", singular: "Kasache", plural: "Kasachen" },
+    notes: {
+      miscNote:
+        "Kazakhstan is the world's largest landlocked country. Kazakh is official; Russian is widely spoken as a second language.",
+    },
+    sentences: [
+      {
+        de: "Eine Frau aus Kasachstan ist eine Kasachin.",
+        en: "A woman from Kazakhstan is a Kazakh.",
+        case: "nom",
+      },
+      {
+        de: "Die Kasachin spricht Kasachisch und Englisch.",
+        en: "The Kazakh speaks Kazakh and English.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 50114,
+    eng: "Kenyan",
+    article: "der",
+    noun: "Kenianer",
+    plural: "Kenianer",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: {
+      article: "die",
+      singular: "Kenianerin",
+      plural: "Kenianerinnen",
+    },
+    notes: {
+      miscNote:
+        "Kenya is known for its wildlife, safaris, and long-distance runners. Swahili and English are official; many ethnic languages are also spoken.",
+    },
+    sentences: [
+      {
+        de: "Ein Mann aus Kenia ist ein Kenianer.",
+        en: "A man from Kenya is a Kenyan.",
+        case: "nom",
+      },
+      {
+        de: "Der Kenianer spricht Swahili und Englisch.",
+        en: "The Kenyan speaks Swahili and English.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 51114,
+    eng: "Kenyan",
+    article: "die",
+    noun: "Kenianerin",
+    plural: "Kenianerinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: { article: "der", singular: "Kenianer", plural: "Kenianer" },
+    notes: {
+      miscNote:
+        "Kenya is known for its wildlife, safaris, and long-distance runners. Swahili and English are official; many ethnic languages are also spoken.",
+    },
+    sentences: [
+      {
+        de: "Eine Frau aus Kenia ist eine Kenianerin.",
+        en: "A woman from Kenya is a Kenyan.",
+        case: "nom",
+      },
+      {
+        de: "Die Kenianerin spricht Swahili und Französisch.",
+        en: "The Kenyan speaks Swahili and French.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+
+  // There is no standard, official single-word demonym or adjective for someone from St. Kitts and Nevis in German.
+  // Official style guides—including the German, Austrian, and Swiss foreign offices—use "von St. Kitts und Nevis"
+  // (from St. Kitts and Nevis) for both the adjective and the citizen designation
+  {
+    id: 50115,
+    eng: "Kittitian", // Kittitian Nevisian
+    article: "der",
+    noun: "PLACEHOLDER",
+    plural: "PLACEHOLDER",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: {
+      article: "die",
+      singular: "PLACEHOLDER",
+      plural: "PLACEHOLDER",
+    },
+    notes: {
+      miscNote:
+        "Multi-word or uncertain nationality - needs verification (St. Kitts and Nevis)",
+    },
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "nom" },
+    ],
+    themes: ["people", "geography"],
+    completed: false,
+  },
+  {
+    id: 51115,
+    eng: "Kittitian",
+    article: "die",
+    noun: "PLACEHOLDER",
+    plural: "PLACEHOLDER",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: {
+      article: "der",
+      singular: "PLACEHOLDER",
+      plural: "PLACEHOLDER",
+    },
+    notes: {
+      miscNote:
+        "Multi-word or uncertain nationality - needs verification (St. Kitts and Nevis)",
+    },
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "nom" },
+    ],
+    themes: ["people", "geography"],
+    completed: false,
+  },
+  {
+    id: 50116,
+    eng: "Citizen of Kiribati",
+    article: "der",
+    noun: "Kiribatier",
+    plural: "Kiribatier",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: {
+      article: "die",
+      singular: "Kiribatierin",
+      plural: "Kiribatierinnen",
+    },
+    notes: {
+      miscNote: "Multi-word nationality - needs review for German translation",
+    },
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "nom" },
+    ],
+    themes: ["people", "geography"],
+    completed: false,
+  },
+  {
+    id: 51116,
+    eng: "Citizen of Kiribati",
+    article: "die",
+    noun: "Kiribatierin",
+    plural: "Kiribatierinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: {
+      article: "der",
+      singular: "Kiribatier",
+      plural: "Kiribatier",
+    },
+    notes: {
+      miscNote: "Multi-word nationality - needs review for German translation",
+    },
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "nom" },
+    ],
+    themes: ["people", "geography"],
+    completed: false,
+  },
+  {
+    id: 50117,
+    eng: "Kosovan",
+    article: "der",
+    noun: "Kosovare",
+    plural: "Kosovaren",
+    hasNoPlural: false,
+    weakMasculine: true,
+    genderPair: {
+      article: "die",
+      singular: "Kosovarin",
+      plural: "Kosovarinnen",
+    },
+    notes: {
+      weakMascHint: "Nouns ending in '-e' (people, animals)",
+      miscNote:
+        "Kosovo is a young country that declared independence in 2008. Albanian is official; Serbian is also spoken, reflecting the region's history.",
+    },
+    sentences: [
+      {
+        de: "Ein Mann aus dem Kosovo ist ein Kosovare.",
+        en: "A man from Kosovo is a Kosovan.",
+        case: "nom",
+      },
+      {
+        de: "Der Kosovare spricht Albanisch und Serbisch.",
+        en: "The Kosovan speaks Albanian and Serbian.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
+  {
+    id: 51117,
+    eng: "Kosovan",
+    article: "die",
+    noun: "Kosovarin",
+    plural: "Kosovarinnen",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: { article: "der", singular: "Kosovare", plural: "Kosovaren" },
+    notes: {
+      miscNote:
+        "Kosovo is a young country that declared independence in 2008. Albanian is official; Serbian is also spoken, reflecting the region's history.",
+    },
+    sentences: [
+      {
+        de: "Eine Frau aus dem Kosovo ist eine Kosovarin.",
+        en: "A woman from Kosovo is a Kosovan.",
+        case: "nom",
+      },
+      {
+        de: "Die Kosovarin spricht Albanisch und Englisch.",
+        en: "The Kosovan speaks Albanian and English.",
+        case: "nom",
+      },
+    ],
+    themes: ["people", "geography"],
+    completed: true,
+  },
 ];
