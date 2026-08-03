@@ -1,4 +1,8 @@
 import { VocabEntry } from "../types";
+
+// make sep entries from demonyms for those that are so different between eng and ger (eng and deutsch already done)
+// Österreich: Austria Ungarn: Hungary Griechenland: Greece Tschechien: Czechia / Czech Republic
+// Niederlande: The Netherlands Weißrussland: Belarus Ägypten: Egypt Elfenbeinküste: Ivory Coast
 export const VOCAB_MISC_1: VocabEntry[] = [
   {
     id: 64,
@@ -15492,22 +15496,6 @@ export const VOCAB_MISC_1: VocabEntry[] = [
     completed: false,
   },
   {
-    id: 1064,
-    eng: "american",
-    article: "der",
-    noun: "Amerikaner",
-    plural: "Amerikaner",
-    hasNoPlural: false,
-    weakMasculine: false,
-    notes: {},
-    sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
-    ],
-    themes: ["misc"],
-    completed: false,
-  },
-  {
     id: 1065,
     eng: "ruby",
     article: "der",
@@ -21158,9 +21146,10 @@ export const VOCAB_MISC_1: VocabEntry[] = [
     themes: ["misc"],
     completed: false,
   },
+  // another entry. not using the demonyn list here as it's an example of eng/german being so different
   {
     id: 1438,
-    eng: "german",
+    eng: "German",
     article: "der",
     noun: "Deutsche",
     plural: "Deutschen",
@@ -21171,7 +21160,32 @@ export const VOCAB_MISC_1: VocabEntry[] = [
       singular: "Deutsche",
       plural: "Deutschen",
     },
-    notes: {},
+    notes: {
+      miscNote: `"Deutsche" follows the same ending rules as adjectives, so it ends up like a weak masculine noun.`,
+    },
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+    ],
+    themes: ["misc"],
+    completed: false,
+  },
+  {
+    id: 14388,
+    eng: "German",
+    article: "die",
+    noun: "Deutsche",
+    plural: "Deutschen",
+    hasNoPlural: false,
+    weakMasculine: true,
+    genderPair: {
+      article: "der",
+      singular: "Deutsche",
+      plural: "Deutschen",
+    },
+    notes: {
+      miscNote: `"Deutsche" follows the same ending rules as adjectives.`,
+    },
     sentences: [
       { de: "SATZ1", en: "SENTENCE1", case: "nom" },
       { de: "SATZ2", en: "SENTENCE2", case: "acc" },

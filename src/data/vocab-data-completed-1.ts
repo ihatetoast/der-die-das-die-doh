@@ -9,16 +9,17 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
-      miscNote:
-        'Idioms: "Zeit totschlagen" (lit: to beat time to death) — to kill/waste time while waiting; "Kommt Zeit, kommt Rat" (lit. comes time, comes advice) — time will tell.',
+      miscNote: `Idioms: "Zeit totschlagen" (lit: to beat time to death) — to kill/waste time while waiting \n
+        "Kommt Zeit, kommt Rat" (lit. comes time, comes advice) — time will tell\n
+        "Andere Zeiten, andere Sitten" (lit. other times; other morals) - Other times, other manners. / Times change, and customs change with them`,
       otherEngDefinitions: "term, period",
       compoundWords:
         "Jahreszeit (season), Mahlzeit (meal time), Freizeit (free time), Arbeitszeit (working hours), Schlafenszeit (bedtime)",
     },
     sentences: [
       {
-        de: "Andere Zeiten, andere Sitten.",
-        en: "Other times, other manners. / Times change, and customs change with them.",
+        de: "Die guten Zeiten sind vorbei.",
+        en: "The good times are over.",
         case: "nom",
       },
       {
@@ -39,6 +40,9 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
+      otherGerDefinitions: "der Mensch",
+      miscNote: `Don't confuse Mann with man. The German word "man" is like the English word "one" in "One should wash their hands before eating.".\n
+      The German word "(der) Mensch refers to "man" as in "mankind".`,
       compoundWords:
         "Bergmann (digger), Seemann (sailor), Fachmann (male expert v Fachfrau), Kaufmann (male businessman v Kauffrau), Ehemann (husband).",
     },
@@ -62,10 +66,10 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
+      compoundWords: `Freihand (freehand or hands-free), Rückhand (backhand)`,
       pluralNote:
         "Feminine nouns that are monosyllabic with a or u often add ¨-e like Kuh/Kühe and Nuss/Nüsse.",
-      miscNote:
-        'Idiom: "Hand und Fuß haben" (lit. to have hand and foot) - to make sense',
+      miscNote: `Idioms: "Hand und Fuß haben" (lit. to have hand and foot) - to make sense\n"Hand aufs Herz" - hand on heart`,
     },
     sentences: [
       {
@@ -91,10 +95,10 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
+      compoundWords: `Vatertag (Father's Day), Muttertag (Mother's Day), Namenstag (saint's day), Vortag (previous day)`,
       pluralNote:
         "Almost all masculine nouns will add an -e to make it plural.",
-      miscNote:
-        "Idiom: \"Man soll den Tag nicht vor dem Abend loben\" (lit.One shouldn't praise the day before the evening.) - Don't count your chickens before they hatch.",
+      miscNote: `Idiom: "Man soll den Tag nicht vor dem Abend loben" (lit.One shouldn't praise the day before the evening.) - Don't count your chickens before they hatch.`,
     },
     sentences: [
       {
@@ -120,7 +124,12 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
-      otherEngDefinitions: "path",
+      compoundWords:
+        "Kreuzweg (crossroad), Spazierweg (promenade / pedestrian area / walkway)",
+      otherGerDefinitions: "die Richtung, die Methode",
+      otherEngDefinitions: "path, route, alley, driveway, land, track",
+      miscNote: `Expressions: "den Weg bahnen" (to blaze a trail), "den Weg versperren" (to bar the way)\n
+      "auf kürzestem Weg" (lit. on the shortest way) - as the crow flies, "ein umsändlicher Weg" (a roundabout way)`,
     },
     sentences: [
       {
@@ -145,7 +154,14 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     plural: "Augen",
     hasNoPlural: false,
     weakMasculine: false,
-    notes: {},
+    notes: {
+      pluralNote: `Only a few singular neuter nouns ending with -e take -n plural form: das Auge, die Augen; das Interesse die Interessen.`,
+      compoundWords:
+        "Glupschauge (bulgy eyes, colloquial), Falkenauge (eagle eye, lit falcon eye)",
+      miscNote: `Expressions/idioms: "im Auge behalten - keep an eye on; \n
+      "mit einem blauen Auge davonkommen" (lit. to get away with a blue eye) - get off with a slap on the wrist.\n
+      "ein Auge zudrücken" (lit. press close an eye) - turn a blind eye`,
+    },
     sentences: [
       { de: "Er hat ein blaues Auge", en: "He as a black eye", case: "acc" },
       {
@@ -165,7 +181,13 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     plural: "Sachen",
     hasNoPlural: false,
     weakMasculine: false,
-    notes: {},
+    notes: {
+      pluralNote: `It's common for feminine nouns that end in -e to take the -n in plural`,
+      otherEngDefinitions: "case, item, cause",
+      miscNote: `Expressions/idioms: "gute Sache" - worthy cause; "zur Sache kommen" - come to business; \n
+      "sich erfolversprechenden Sache anschließen" - to climb on the bandwagon\n
+      "zur Sache gehörig" - relevant, pertinent to VS "nicht zur Sache gehörig" - beside the point`,
+    },
     sentences: [
       {
         de: "Die ganze Sache sieht verdächtig aus",
@@ -189,7 +211,13 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     plural: "Köpfe",
     hasNoPlural: false,
     weakMasculine: false,
-    notes: {},
+    notes: {
+      compoundWords:
+        "Quatschkopf (silly goose / goofball), Totenkopf (skull and crossbones), Kindskopf (silly person)",
+      miscNote: `"Brett vor dem Kopf haben" (lit. to have a board in front of your head) - to be slow on the update / to be a bit slow\n
+      "jemandem die Haare vom Kopf fressen" (lit. to eat the hair from someone's head) - to eat someone out of house and home\n
+      "nicht auf den Kopf gefallen sein" (lit. didn't fall out of the head) - to be clever`,
+    },
     sentences: [
       {
         de: "Er wird dir schon nicht gleich den Kopf abbeißen.",
@@ -205,6 +233,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     themes: ["body"],
     completed: true,
   },
+  // KATY: START PROOFREADING HERE. FIRST WITH THE // KATY FILL ONES
   {
     id: 9,
     eng: "year",
@@ -213,7 +242,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     plural: "Jahre",
     hasNoPlural: false,
     weakMasculine: false,
-    notes: {},
+    notes: {}, // KATY FILL
     sentences: [
       {
         de: "Das Jahn neigt sich am Ende zu.",
@@ -448,7 +477,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     plural: "Väter",
     hasNoPlural: false,
     weakMasculine: false,
-    notes: {},
+    notes: {}, // KATY FILL
     sentences: [
       {
         de: "Mein Vater heißt Richard.",
@@ -499,7 +528,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     plural: "Rücken",
     hasNoPlural: false,
     weakMasculine: false,
-    notes: {},
+    notes: {}, // KATY FILL
     sentences: [
       {
         de: "Sie stärkten mir in allem den Rücken.",
@@ -1041,7 +1070,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     plural: "Morgen",
     hasNoPlural: false,
     weakMasculine: false,
-    notes: {},
+    notes: {}, // KATY FILL
     sentences: [
       {
         de: "Wir erwarten den Morgen",
@@ -1472,7 +1501,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     plural: "Wochen",
     hasNoPlural: false,
     weakMasculine: false,
-    notes: {},
+    notes: {}, // KATY FILL
     sentences: [
       { de: "Die Woche ist vorbei.", en: "The week is over.", case: "nom" },
       {
@@ -1492,7 +1521,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     plural: "Arbeiten",
     hasNoPlural: false,
     weakMasculine: false,
-    notes: {},
+    notes: {}, // KATY FILL
     sentences: [
       {
         de: "Montag geht die Arbeit los.",
@@ -1804,20 +1833,25 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     plural: "Fronten",
     hasNoPlural: false,
     weakMasculine: false,
-    notes: { genderNote: "The seasons are masculine." },
+    notes: {
+      compoundWords:
+        "Schneefront (snow front), Wetterfront (weather front), Polarfront (polar front)",
+      miscNote: `Idiom: "an vordester Front stehen (lit. to stand on the first front) be in the frontline / forefront, \n
+      "die Fronten klären" (lit. clear the fronts) - draw the battle lines / clear the air`,
+    },
     sentences: [
       {
-        de: "Der Frühling kommt nach dem Winter.",
-        en: "Spring comes after winter.",
+        de: "Wir liegen neun Kilometer hinter der Front.",
+        en: "We are nine kilometers behind the front.",
         case: "dat",
       },
       {
-        de: "Deutsche Winter sind kalt.",
-        en: "German winters are cold.",
-        case: "nom",
+        de: "Ihr Vater wurde an die Front abkommandiert.",
+        en: "Her father was assigned to the front.",
+        case: "acc",
       },
     ],
-    themes: ["misc"],
+    themes: ["misc", "weather", "military"],
     completed: true,
   },
 
@@ -1845,7 +1879,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
         case: "gen",
       },
     ],
-    themes: ["misc"],
+    themes: ["time", "weather"],
     completed: true,
   },
   {
@@ -2714,7 +2748,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     plural: "Poster",
     hasNoPlural: false,
     weakMasculine: false,
-    notes: {},
+    notes: {}, // KATY FILL
     sentences: [
       {
         de: "Sie hat überall in der Stadt Poster aufgehängt",
@@ -3115,7 +3149,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     plural: "no plural",
     hasNoPlural: true,
     weakMasculine: false,
-    notes: {},
+    notes: {}, // KATY FILL
     sentences: [
       {
         de: "Kochen ist nicht meine Stärke.",
@@ -3280,7 +3314,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
       singular: "Philosoph",
       plural: "Philosophen",
     },
-    notes: {},
+    notes: {}, // KATY FILL
     sentences: [
       {
         de: "Meine Tochter war schon immer eine Philosophin.",
@@ -3495,7 +3529,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
       singular: "Patient",
       plural: "Patienten",
     },
-    notes: {},
+    notes: {}, // KATY FILL
     sentences: [
       {
         de: "Die Patientin geht es von Tag zu Tag schlechter.",
@@ -3629,7 +3663,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
       singular: "Kollege",
       plural: "Kollegen",
     },
-    notes: {},
+    notes: {}, // KATY FILL
     sentences: [
       {
         de: "Die Mutter unserer Kollegin ist gestorben.",
@@ -3658,7 +3692,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
       singular: "Senator",
       plural: "Senatoren",
     },
-    notes: {},
+    notes: {}, // KATY FILL
     sentences: [
       {
         de: "Die Senatorin traf sich mit dem Bürgermeister, um das neue Stadtentwicklungsprojekt zu besprechen.",
@@ -3687,7 +3721,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
       singular: "Fotograf",
       plural: "Fotografen",
     },
-    notes: {},
+    notes: {}, // KATY FILL
     sentences: [
       {
         de: "Maria ist Fotografin.",
@@ -3716,7 +3750,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
       singular: "Inspektor",
       plural: "Inspektoren",
     },
-    notes: {},
+    notes: {}, // KATY FILL
     sentences: [
       {
         de: "Sie arbeitet als Inspektorin im gehobenen Dienst.",
@@ -3745,7 +3779,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
       singular: "Experte",
       plural: "Experten",
     },
-    notes: {},
+    notes: {}, // KATY FILL
     sentences: [
       {
         de: "Loretta ist die Experte hier.",

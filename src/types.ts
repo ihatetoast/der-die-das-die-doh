@@ -53,6 +53,7 @@ export const THEMES = [
   "home",
   "hospital",
   "hotel",
+  "military",
   "nature",
   "office",
   "people",

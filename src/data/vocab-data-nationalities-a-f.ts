@@ -528,6 +528,7 @@ export const VOCAB_NATIONALITIES_A_F: VocabEntry[] = [
       plural: "Argentinierinnen",
     },
     notes: {
+      otherEngDefinitions: "Argentinian",
       miscNote:
         "Argentina is famous for tango dancing, gaucho culture, and incredible beef. Spanish with a distinctive accent is spoken.",
     },
@@ -780,6 +781,7 @@ export const VOCAB_NATIONALITIES_A_F: VocabEntry[] = [
       plural: "Aserbaidschanerinnen",
     },
     notes: {
+      otherEngDefinitions: "Azeri",
       miscNote:
         "Azerbaijan sits at the crossroads of Europe and Asia. The country is known for its oil wealth and fire mountains (natural gas fires on hillsides).",
     },
@@ -812,6 +814,7 @@ export const VOCAB_NATIONALITIES_A_F: VocabEntry[] = [
       plural: "Aserbaidschaner",
     },
     notes: {
+      otherEngDefinitions: "Azeri",
       miscNote:
         "Azerbaijan sits at the crossroads of Europe and Asia. The country is known for its oil wealth and fire mountains (natural gas fires on hillsides).",
     },
@@ -1029,6 +1032,7 @@ export const VOCAB_NATIONALITIES_A_F: VocabEntry[] = [
       plural: "Barbadierinnen",
     },
     notes: {
+      otherEngDefinitions: "Bajan",
       miscNote:
         "Barbados is a Caribbean island famous for rum, cricket, and calypso music. It's one of the most easterly Caribbean islands.",
     },
@@ -1270,6 +1274,7 @@ export const VOCAB_NATIONALITIES_A_F: VocabEntry[] = [
       plural: "Beninerinnen",
     },
     notes: {
+      otherEngDefinitions: "Beninois",
       miscNote:
         "Benin is a West African country with a rich history of art and storytelling. It's known for its colorful textiles and vibrant markets.",
     },
@@ -1298,6 +1303,7 @@ export const VOCAB_NATIONALITIES_A_F: VocabEntry[] = [
     weakMasculine: false,
     genderPair: { article: "der", singular: "Beniner", plural: "Beniner" },
     notes: {
+      otherEngDefinitions: "Beninoise",
       miscNote:
         "Benin is a West African country with a rich history of art and storytelling. It's known for its colorful textiles and vibrant markets.",
     },
@@ -1330,6 +1336,7 @@ export const VOCAB_NATIONALITIES_A_F: VocabEntry[] = [
       plural: "Bermuderinnen",
     },
     notes: {
+      otherEngDefinitions: "Bermudan",
       miscNote:
         "Bermuda is a British Overseas Territory famous for pink sand beaches and as a hurricane-prone area. It has no natural freshwater sources!",
     },
@@ -1500,9 +1507,10 @@ export const VOCAB_NATIONALITIES_A_F: VocabEntry[] = [
     themes: ["people", "geography"],
     completed: true,
   },
+  // for Bosnia and Herzogovina, use Bosnian and Herzegovinian separately. add a note.
   {
     id: 50037,
-    eng: "Citizen of Bosnia and Herzegovina",
+    eng: "Bosnian",
     article: "der",
     noun: "PLACEHOLDER",
     plural: "PLACEHOLDER",
@@ -1525,7 +1533,53 @@ export const VOCAB_NATIONALITIES_A_F: VocabEntry[] = [
   },
   {
     id: 51037,
-    eng: "Citizen of Bosnia and Herzegovina",
+    eng: "Bosnian",
+    article: "die",
+    noun: "PLACEHOLDER",
+    plural: "PLACEHOLDER",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: {
+      article: "der",
+      singular: "PLACEHOLDER",
+      plural: "PLACEHOLDER",
+    },
+    notes: {
+      miscNote: "Multi-word nationality - needs review for German translation",
+    },
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+    ],
+    themes: ["people", "geography"],
+    completed: false,
+  },
+  {
+    id: 500377,
+    eng: "Herzegovinians",
+    article: "der",
+    noun: "PLACEHOLDER",
+    plural: "PLACEHOLDER",
+    hasNoPlural: false,
+    weakMasculine: false,
+    genderPair: {
+      article: "die",
+      singular: "PLACEHOLDER",
+      plural: "PLACEHOLDER",
+    },
+    notes: {
+      miscNote: "Multi-word nationality - needs review for German translation",
+    },
+    sentences: [
+      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
+      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
+    ],
+    themes: ["people", "geography"],
+    completed: false,
+  },
+  {
+    id: 510377,
+    eng: "Herzegovinians",
     article: "die",
     noun: "PLACEHOLDER",
     plural: "PLACEHOLDER",
@@ -2027,6 +2081,7 @@ export const VOCAB_NATIONALITIES_A_F: VocabEntry[] = [
       plural: "Burunderinnen",
     },
     notes: {
+      otherEngDefinitions: "Barundi",
       miscNote:
         "Burundi is one of Africa's smallest countries but has beautiful highland scenery. It's home to mountain gorillas and incredible biodiversity.",
     },
@@ -2261,27 +2316,28 @@ export const VOCAB_NATIONALITIES_A_F: VocabEntry[] = [
     id: 50048,
     eng: "Cape Verdean",
     article: "der",
-    noun: "Kap-Verdier",
-    plural: "Kap-Verdier",
+    noun: "Kapverdier",
+    plural: "Kapverdier",
     hasNoPlural: false,
     weakMasculine: false,
     genderPair: {
       article: "die",
-      singular: "Kap-Verdierin",
-      plural: "Kap-Verdierinnen",
+      singular: "Kapverdierin",
+      plural: "Kapverdierinnen",
     },
     notes: {
+      otherEngDefinitions: "Cabo Verdean",
       miscNote:
         "Cape Verde is an island nation off the coast of West Africa. It's known for music, salt mines, and as a whale-watching destination.",
     },
     sentences: [
       {
-        de: "Ein Mann aus Kap Verde ist Kap-Verdier.",
+        de: "Ein Mann aus Kap Verde ist Kapverdier.",
         en: "A man from Cape Verde is a Cape Verdean.",
         case: "nom",
       },
       {
-        de: "Der Kap-Verdier spricht Portugiesisch und Kapverdisches Kreolisch.",
+        de: "Der Kapverdier spricht Portugiesisch und Kapverdisches Kreolisch.",
         en: "The Cape Verdean speaks Portuguese and Cape Verdean Creole.",
         case: "nom",
       },
@@ -2293,14 +2349,14 @@ export const VOCAB_NATIONALITIES_A_F: VocabEntry[] = [
     id: 51048,
     eng: "Cape Verdean",
     article: "die",
-    noun: "Kap-Verdierin",
-    plural: "Kap-Verdierinnen",
+    noun: "Kapverdierin",
+    plural: "Kapverdierinnen",
     hasNoPlural: false,
     weakMasculine: false,
     genderPair: {
       article: "der",
-      singular: "Kap-Verdier",
-      plural: "Kap-Verdier",
+      singular: "Kapverdier",
+      plural: "Kapverdier",
     },
     notes: {
       miscNote:
@@ -2308,12 +2364,12 @@ export const VOCAB_NATIONALITIES_A_F: VocabEntry[] = [
     },
     sentences: [
       {
-        de: "Eine Frau aus Kap Verde ist Kap-Verdierin.",
+        de: "Eine Frau aus Kap Verde ist Kapverdierin.",
         en: "A woman from Cape Verde is a Cape Verdean.",
         case: "nom",
       },
       {
-        de: "Die Kap-Verdierin spricht Portugiesisch und Französisch.",
+        de: "Die Kapverdierin spricht Portugiesisch und Französisch.",
         en: "The Cape Verdean speaks Portuguese and French.",
         case: "nom",
       },
@@ -2671,6 +2727,7 @@ export const VOCAB_NATIONALITIES_A_F: VocabEntry[] = [
       plural: "Komanerinnen",
     },
     notes: {
+      otherEngDefinitions: "Comorian",
       miscNote:
         "The Comoros is a volcanic island nation in the Indian Ocean. Comorian, French, and Arabic are all spoken; the culture blends African, Arab, and French influences.",
     },
@@ -2699,6 +2756,7 @@ export const VOCAB_NATIONALITIES_A_F: VocabEntry[] = [
     weakMasculine: false,
     genderPair: { article: "der", singular: "Komoraner", plural: "Komoraner" },
     notes: {
+      otherEngDefinitions: "Comorian",
       miscNote:
         "The Comoros is a volcanic island nation in the Indian Ocean. Comorian, French, and Arabic are all spoken; the culture blends African, Arab, and French influences.",
     },
@@ -3425,6 +3483,7 @@ export const VOCAB_NATIONALITIES_A_F: VocabEntry[] = [
       plural: "Niederländerinnen",
     },
     notes: {
+      otherEngDefinitions: "Dutchman, Netherlander",
       miscNote:
         "The Netherlands is famous for windmills, tulips, canals, and cycling. Many Dutch people speak multiple languages fluently.",
     },
@@ -3457,6 +3516,7 @@ export const VOCAB_NATIONALITIES_A_F: VocabEntry[] = [
       plural: "Niederländer",
     },
     notes: {
+      otherEngDefinitions: "Dutchwoman, Netherlander",
       miscNote:
         "The Netherlands is famous for windmills, tulips, canals, and cycling. Many Dutch people speak multiple languages fluently.",
     },
@@ -3734,6 +3794,7 @@ export const VOCAB_NATIONALITIES_A_F: VocabEntry[] = [
       plural: "Engländerinnen",
     },
     notes: {
+      otherEngDefinitions: "Englishman",
       miscNote:
         "England is part of the United Kingdom but has its own distinct culture. English is the world's most widely spoken language!",
     },
@@ -3762,6 +3823,7 @@ export const VOCAB_NATIONALITIES_A_F: VocabEntry[] = [
     weakMasculine: false,
     genderPair: { article: "der", singular: "Engländer", plural: "Engländer" },
     notes: {
+      otherEngDefinitions: "Englishwoman",
       miscNote:
         "England is part of the United Kingdom but has its own distinct culture. English is the world's most widely spoken language!",
     },
@@ -3794,6 +3856,7 @@ export const VOCAB_NATIONALITIES_A_F: VocabEntry[] = [
       plural: "Äquatorialguineerinnen",
     },
     notes: {
+      otherEngDefinitions: "Equatorguinean",
       miscNote:
         "Äquatorialguinea / Die Republik Äquatorialguinea,Multi-word or uncertain nationality - needs verification",
     },
@@ -3818,6 +3881,7 @@ export const VOCAB_NATIONALITIES_A_F: VocabEntry[] = [
       plural: "Äquatorialguineerinnen",
     },
     notes: {
+      otherEngDefinitions: "Equatorguinean",
       miscNote:
         "Equatorial Guinea is the only Spanish-speaking country in Africa. Spanish, French, and Portuguese are official; Fang and Bube are native languages.",
     },
@@ -4171,7 +4235,7 @@ export const VOCAB_NATIONALITIES_A_F: VocabEntry[] = [
   },
   {
     id: 51080,
-    eng: "Filipino",
+    eng: "Filipina",
     article: "die",
     noun: "Philippinerin",
     plural: "Philippinerinnen",
@@ -4272,6 +4336,7 @@ export const VOCAB_NATIONALITIES_A_F: VocabEntry[] = [
       plural: "Französinnen",
     },
     notes: {
+      otherEngDefinitions: "Frenchman",
       weakMascHint: "Nouns ending in '-e' (people, animals)",
       miscNote:
         "France is the world's most visited country. French has influenced English more than any other language!",
@@ -4301,6 +4366,7 @@ export const VOCAB_NATIONALITIES_A_F: VocabEntry[] = [
     weakMasculine: false,
     genderPair: { article: "der", singular: "Franzose", plural: "Franzosen" },
     notes: {
+      otherEngDefinitions: "Frenchwoman",
       miscNote:
         "France is the world's most visited country. French has influenced English more than any other language!",
     },

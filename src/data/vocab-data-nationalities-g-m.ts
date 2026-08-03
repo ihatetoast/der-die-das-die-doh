@@ -22,6 +22,7 @@ export const VOCAB_NATIONALITIES_G_M: VocabEntry[] = [
       plural: "Gabunerinnen",
     },
     notes: {
+      otherEngDefinitions: "Gabonaise",
       miscNote:
         "Gabon is a Central African country known for oil wealth and rainforests. French is official; Fang and Bantu languages are widely spoken.",
     },
@@ -50,6 +51,7 @@ export const VOCAB_NATIONALITIES_G_M: VocabEntry[] = [
     weakMasculine: false,
     genderPair: { article: "der", singular: "Gabuner", plural: "Gabuner" },
     notes: {
+      otherEngDefinitions: "Gabonaise",
       miscNote:
         "Gabon is a Central African country known for oil wealth and rainforests. French is official; Fang and Bantu languages are widely spoken.",
     },
@@ -378,6 +380,7 @@ export const VOCAB_NATIONALITIES_G_M: VocabEntry[] = [
     weakMasculine: true,
     genderPair: { article: "die", singular: "Griechin", plural: "Griechinnen" },
     notes: {
+      otherEngDefinitions: "Hellene",
       weakMascHint: "Nouns ending in '-e' (people, animals)",
       miscNote:
         "Greece is the birthplace of Western philosophy, democracy, and the Olympics. Greek has influenced many European languages.",
@@ -407,6 +410,7 @@ export const VOCAB_NATIONALITIES_G_M: VocabEntry[] = [
     weakMasculine: false,
     genderPair: { article: "der", singular: "Grieche", plural: "Griechen" },
     notes: {
+      otherEngDefinitions: "Hellene",
       miscNote:
         "Greece is the birthplace of Western philosophy, democracy, and the Olympics. Greek has influenced many European languages.",
     },
@@ -978,6 +982,7 @@ export const VOCAB_NATIONALITIES_G_M: VocabEntry[] = [
       plural: "Hongkongerinin",
     },
     notes: {
+      otherEngDefinitions: "Hong Kongese",
       miscNote: "Multi-word or uncertain nationality - needs verification",
     },
     sentences: [
@@ -1001,6 +1006,7 @@ export const VOCAB_NATIONALITIES_G_M: VocabEntry[] = [
       plural: "Hongkonger",
     },
     notes: {
+      otherEngDefinitions: "Hong Kongese",
       miscNote: "Multi-word or uncertain nationality - needs verification",
     },
     sentences: [
@@ -1020,6 +1026,7 @@ export const VOCAB_NATIONALITIES_G_M: VocabEntry[] = [
     weakMasculine: false,
     genderPair: { article: "die", singular: "Ungarin", plural: "Ungarinnen" },
     notes: {
+      otherEngDefinitions: "Magyar",
       miscNote:
         "Hungary is famous for thermal baths, classical music, and the Danube River. Hungarian is a Uralic language, making it unique in Europe!",
     },
@@ -1048,6 +1055,7 @@ export const VOCAB_NATIONALITIES_G_M: VocabEntry[] = [
     weakMasculine: false,
     genderPair: { article: "der", singular: "Ungar", plural: "Ungarn" },
     notes: {
+      otherEngDefinitions: "Magyar",
       miscNote:
         "Hungary is famous for thermal baths, classical music, and the Danube River. Hungarian is a Uralic language, making it unique in Europe!",
     },
@@ -1544,7 +1552,7 @@ export const VOCAB_NATIONALITIES_G_M: VocabEntry[] = [
     genderPair: { article: "die", singular: "Ivorerin", plural: "Ivorerinnen" },
     notes: {
       miscNote:
-        "Côte d'Ivoire (Ivory Coast) is known for cocoa production and vibrant music. French is official; Akan, Kru, and Mandé languages are widely spoken.",
+        "Elfenbeinküste / Côte d'Ivoire (Ivory Coast) is known for cocoa production and vibrant music. French is official; Akan, Kru, and Mandé languages are widely spoken.",
     },
     sentences: [
       {
@@ -1784,6 +1792,7 @@ export const VOCAB_NATIONALITIES_G_M: VocabEntry[] = [
     weakMasculine: true,
     genderPair: { article: "die", singular: "Kasachin", plural: "Kasachinnen" },
     notes: {
+      otherEngDefinitions: "Kazakhstani",
       weakMascHint: "Nouns ending in '-e' (people, animals)",
       miscNote:
         "Kazakhstan is the world's largest landlocked country. Kazakh is official; Russian is widely spoken as a second language.",
@@ -1813,6 +1822,7 @@ export const VOCAB_NATIONALITIES_G_M: VocabEntry[] = [
     weakMasculine: false,
     genderPair: { article: "der", singular: "Kasache", plural: "Kasachen" },
     notes: {
+      otherEngDefinitions: "Kazakhstani",
       miscNote:
         "Kazakhstan is the world's largest landlocked country. Kazakh is official; Russian is widely spoken as a second language.",
     },
@@ -2120,6 +2130,7 @@ export const VOCAB_NATIONALITIES_G_M: VocabEntry[] = [
     weakMasculine: true,
     genderPair: { article: "die", singular: "Kirgisin", plural: "Kirgisinnen" },
     notes: {
+      otherEngDefinitions: "Kyrgyzstani, Kirgiz, Kirghiz",
       weakMascHint: "Nouns ending in '-e' (people, animals)",
       miscNote:
         "Kyrgyzstan is a mountainous country in Central Asia. Kyrgyz is official; Russian is widely spoken as a second language.",
@@ -2149,6 +2160,7 @@ export const VOCAB_NATIONALITIES_G_M: VocabEntry[] = [
     weakMasculine: false,
     genderPair: { article: "der", singular: "Kirgise", plural: "Kirgisen" },
     notes: {
+      otherEngDefinitions: "Kyrgyzstani, Kirgiz, Kirghiz",
       miscNote:
         "Kyrgyzstan is a mountainous country in Central Asia. Kyrgyz is official; Russian is widely spoken as a second language.",
     },
@@ -2177,6 +2189,7 @@ export const VOCAB_NATIONALITIES_G_M: VocabEntry[] = [
     weakMasculine: true,
     genderPair: { article: "die", singular: "Laotin", plural: "Laotinnen" },
     notes: {
+      otherEngDefinitions: "Laotian",
       weakMascHint: "Nouns ending in '-e' (people, animals)",
       miscNote:
         "Laos is a Southeast Asian country known for temples and the Mekong River. Lao is official; French is still understood by older generations.",
@@ -2206,6 +2219,7 @@ export const VOCAB_NATIONALITIES_G_M: VocabEntry[] = [
     weakMasculine: false,
     genderPair: { article: "der", singular: "Laote", plural: "Laoten" },
     notes: {
+      otherEngDefinitions: "Laotian",
       miscNote:
         "Laos is a Southeast Asian country known for temples and the Mekong River. Lao is official; French is still understood by older generations.",
     },
@@ -2234,6 +2248,7 @@ export const VOCAB_NATIONALITIES_G_M: VocabEntry[] = [
     weakMasculine: true,
     genderPair: { article: "die", singular: "Lettin", plural: "Lettinnen" },
     notes: {
+      otherEngDefinitions: "Lett",
       weakMascHint: "Nouns ending in '-e' (people, animals)",
       miscNote:
         "Latvia is a Baltic country known for its pine forests and amber. Latvian is official; Russian is widely spoken.",
@@ -2263,6 +2278,7 @@ export const VOCAB_NATIONALITIES_G_M: VocabEntry[] = [
     weakMasculine: false,
     genderPair: { article: "der", singular: "Lette", plural: "Letten" },
     notes: {
+      otherEngDefinitions: "Lett",
       miscNote:
         "Latvia is a Baltic country known for its pine forests and amber. Latvian is official; Russian is widely spoken.",
     },
@@ -2770,6 +2786,7 @@ export const VOCAB_NATIONALITIES_G_M: VocabEntry[] = [
       plural: "Madagassinnen",
     },
     notes: {
+      otherEngDefinitions: "Madagascans",
       weakMascHint: "Nouns ending in '-e' (people, animals)",
       miscNote:
         "Madagascar is the world's fourth-largest island with unique wildlife found nowhere else. Malagasy is official; French is widely spoken.",
@@ -2799,6 +2816,7 @@ export const VOCAB_NATIONALITIES_G_M: VocabEntry[] = [
     weakMasculine: false,
     genderPair: { article: "der", singular: "Madagasse", plural: "Madagassen" },
     notes: {
+      otherEngDefinitions: "Madagascans",
       miscNote:
         "Madagascar is the world's fourth-largest island with unique wildlife found nowhere else. Malagasy is official; French is widely spoken.",
     },
@@ -3192,6 +3210,7 @@ export const VOCAB_NATIONALITIES_G_M: VocabEntry[] = [
       plural: "Martinikanerinnen",
     },
     notes: {
+      otherEngDefinitions: "Martiniquais",
       miscNote:
         "Multi-word or uncertain nationality - needs verification (Martinique)",
     },
@@ -3216,6 +3235,7 @@ export const VOCAB_NATIONALITIES_G_M: VocabEntry[] = [
       plural: "Martinikaner",
     },
     notes: {
+      otherEngDefinitions: "Martiniquaise",
       miscNote:
         "Multi-word or uncertain nationality - needs verification (Martinique)",
     },
@@ -3536,7 +3556,7 @@ export const VOCAB_NATIONALITIES_G_M: VocabEntry[] = [
   },
   {
     id: 50143,
-    eng: "Monegasque",
+    eng: "Monégasque",
     article: "der",
     noun: "Monegasse",
     plural: "Monegassen",
@@ -3548,6 +3568,7 @@ export const VOCAB_NATIONALITIES_G_M: VocabEntry[] = [
       plural: "Monegassinnen",
     },
     notes: {
+      otherEngDefinitions: "Monacan",
       weakMascHint: "Nouns ending in '-e' (people, animals)",
       miscNote:
         "Monaco is a tiny but glamorous principality on the French Riviera. French is official; Monegasque (a local language) and Italian are also spoken.",
@@ -3569,7 +3590,7 @@ export const VOCAB_NATIONALITIES_G_M: VocabEntry[] = [
   },
   {
     id: 51143,
-    eng: "Monegasque",
+    eng: "Monégasque",
     article: "die",
     noun: "Monegassin",
     plural: "Monegassinnen",
@@ -3577,6 +3598,7 @@ export const VOCAB_NATIONALITIES_G_M: VocabEntry[] = [
     weakMasculine: false,
     genderPair: { article: "der", singular: "Monegasse", plural: "Monegassen" },
     notes: {
+      otherEngDefinitions: "Monacan",
       miscNote:
         "Monaco is a tiny but glamorous principality on the French Riviera. French is official; Monegasque (a local language) and Italian are also spoken.",
     },
@@ -3609,6 +3631,7 @@ export const VOCAB_NATIONALITIES_G_M: VocabEntry[] = [
       plural: "Mongolinnen",
     },
     notes: {
+      otherEngDefinitions: "Mongol",
       weakMascHint: "Nouns ending in '-e' (people, animals)",
       miscNote:
         "Mongolia is a vast country known for the Gobi Desert and nomadic traditions. Mongolian is official; Russian and English are also spoken.",
@@ -3638,6 +3661,7 @@ export const VOCAB_NATIONALITIES_G_M: VocabEntry[] = [
     weakMasculine: false,
     genderPair: { article: "der", singular: "Mongole", plural: "Mongolen" },
     notes: {
+      otherEngDefinitions: "Mongol",
       miscNote:
         "Mongolia is a vast country known for the Gobi Desert and nomadic traditions. Mongolian is official; Russian and English are also spoken.",
     },
