@@ -672,10 +672,13 @@ export const VOCAB_MISC_1: VocabEntry[] = [
     eng: "death",
     article: "der",
     noun: "Tod",
-    plural: "Tode",
-    hasNoPlural: false,
+    plural: "no plural",
+    hasNoPlural: true,
     weakMasculine: false,
-    notes: {},
+    notes: {
+      pluralNote: `The Germans use a roundabout way to express plurals for some nouns: \n
+      der Tod becomes die Todesfälle`,
+    },
     sentences: [
       { de: "SATZ1", en: "SENTENCE1", case: "" },
       {
@@ -796,10 +799,13 @@ export const VOCAB_MISC_1: VocabEntry[] = [
     eng: "breath",
     article: "der",
     noun: "Atem",
-    plural: "Atemzüge",
-    hasNoPlural: false,
+    plural: "no plural",
+    hasNoPlural: true,
     weakMasculine: false,
-    notes: {},
+    notes: {
+      pluralNote: `The Germans use a roundabout way to express plurals for some nouns: \n
+      der Atem becomes die Atemzüge`,
+    },
     sentences: [
       { de: "SATZ1", en: "SENTENCE1", case: "" },
       {
@@ -1968,10 +1974,13 @@ export const VOCAB_MISC_1: VocabEntry[] = [
     eng: "age",
     article: "das",
     noun: "Alter",
-    plural: "REPLACE",
-    hasNoPlural: false,
+    plural: "no plural",
+    hasNoPlural: true,
     weakMasculine: false,
-    notes: {},
+    notes: {
+      pluralNote: `The Germans use a roundabout way to express plurals for some nouns: \n
+      das Alter becomes die Altersstufen`,
+    },
     sentences: [
       { de: "SATZ1", en: "SENTENCE1", case: "nom" },
       { de: "SATZ2", en: "SENTENCE2", case: "acc" },
@@ -4429,22 +4438,7 @@ export const VOCAB_MISC_1: VocabEntry[] = [
     themes: ["misc"],
     completed: false,
   },
-  {
-    id: 339,
-    eng: "bank",
-    article: "die",
-    noun: "Bank",
-    plural: "Banken",
-    hasNoPlural: false,
-    weakMasculine: false,
-    notes: {},
-    sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
-    ],
-    themes: ["misc"],
-    completed: false,
-  },
+
   {
     id: 340,
     eng: "team",
@@ -7923,22 +7917,6 @@ export const VOCAB_MISC_1: VocabEntry[] = [
     completed: false,
   },
   {
-    id: 571,
-    eng: "bench, reef",
-    article: "die",
-    noun: "Bank",
-    plural: "Bänke",
-    hasNoPlural: false,
-    weakMasculine: false,
-    notes: {},
-    sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
-    ],
-    themes: ["misc"],
-    completed: false,
-  },
-  {
     id: 572,
     eng: "traffic",
     article: "der",
@@ -8533,9 +8511,9 @@ export const VOCAB_MISC_1: VocabEntry[] = [
   },
   {
     id: 611,
-    eng: "milk",
+    eng: "",
     article: "die",
-    noun: "Milch",
+    noun: "REPLACE",
     plural: "REPLACE",
     hasNoPlural: false,
     weakMasculine: false,
@@ -9113,10 +9091,13 @@ export const VOCAB_MISC_1: VocabEntry[] = [
     eng: "lawn",
     article: "der",
     noun: "Rasen",
-    plural: "Rasen",
-    hasNoPlural: false,
+    plural: "no plural",
+    hasNoPlural: true,
     weakMasculine: false,
-    notes: {},
+    notes: {
+      pluralNote: `The Germans use a roundabout way to express plurals for some nouns: \n
+      der Rasen becomes die Rasenflächen`,
+    },
     sentences: [
       { de: "SATZ1", en: "SENTENCE1", case: "nom" },
       { de: "SATZ2", en: "SENTENCE2", case: "acc" },
@@ -9751,7 +9732,7 @@ export const VOCAB_MISC_1: VocabEntry[] = [
   },
   {
     id: 689,
-    eng: "result",
+    eng: "outcome",
     article: "das",
     noun: "Ergebnis",
     plural: "Ergebnisse",
@@ -13206,10 +13187,13 @@ export const VOCAB_MISC_1: VocabEntry[] = [
     eng: "sport",
     article: "der",
     noun: "Sport",
-    plural: "Sportarten",
-    hasNoPlural: false,
+    plural: "no plural",
+    hasNoPlural: true,
     weakMasculine: false,
-    notes: {},
+    notes: {
+      pluralNote: `The Germans use a roundabout way to express plurals for some nouns: \n
+      der Sport becomes die Sportarten`,
+    },
     sentences: [
       { de: "SATZ1", en: "SENTENCE1", case: "nom" },
       { de: "SATZ2", en: "SENTENCE2", case: "acc" },
@@ -15963,22 +15947,7 @@ export const VOCAB_MISC_1: VocabEntry[] = [
     themes: ["misc"],
     completed: false,
   },
-  {
-    id: 1097,
-    eng: "cheese",
-    article: "der",
-    noun: "Käse",
-    plural: "Käse",
-    hasNoPlural: false,
-    weakMasculine: false,
-    notes: {},
-    sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
-    ],
-    themes: ["misc"],
-    completed: false,
-  },
+
   {
     id: 1098,
     eng: "hood",
@@ -24854,13 +24823,16 @@ export const VOCAB_MISC_1: VocabEntry[] = [
   },
   {
     id: 1678,
-    eng: "tomato",
-    article: "die",
-    noun: "Tomate",
-    plural: "Tomaten",
-    hasNoPlural: false,
+    eng: "anxiety",
+    article: "der",
+    noun: "Kummer",
+    plural: "no plural",
+    hasNoPlural: true,
     weakMasculine: false,
-    notes: {},
+    notes: {
+      pluralNote: `The Germans use a roundabout way to express plurals for some nouns: \n
+      der Kummer becomes die Kümmernisse`,
+    },
     sentences: [
       { de: "SATZ1", en: "SENTENCE1", case: "nom" },
       { de: "SATZ2", en: "SENTENCE2", case: "acc" },
