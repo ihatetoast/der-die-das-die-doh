@@ -170,18 +170,18 @@ export const TEST_VOCAB: VocabEntry[] = [
     notes: {
       weakMascHint: "Exceptions: add '-n' and not '-en'",
       miscNote: `Expressions/idioms: "Die Kirschen in Nachbars Garten schmecken immer ein bisschen süßer." 
-      (lit. The cherries in the neighbour's garden always taste a bit sweeter.) - 
+      (lit. The cherries in the neighbor's garden always taste a bit sweeter.) - 
       The grass is always greener on the other side of the fence.`,
     },
     sentences: [
       {
         de: "Thomas ist mein directer Nachbar.",
-        en: "Thomas is my nextdoor neighbour.",
+        en: "Thomas is my nextdoor neighbor.",
         case: "nom",
       },
       {
         de: "Er fährt selbst zum Nachbarn mit dem Auto.",
-        en: "He drives himself by car to the neighbour.",
+        en: "He drives himself by car to the neighbor.",
         case: "dat",
       },
     ],
@@ -203,17 +203,17 @@ export const TEST_VOCAB: VocabEntry[] = [
     },
     notes: {
       miscNote:
-        "Use 'direkt' to mean 'nextdoor': direkte Nachbarin (or direkter Nachbar).",
+        "Use 'direkt' to mean 'nextdoor': direkte Nachbarin (or direkter Nachbar for the male counterpart).",
     },
     sentences: [
       {
         de: "Das ist der Hund von meiner Nachbarin.",
-        en: "That's my neighbour's dog.",
+        en: "That's my neighbor's dog.",
         case: "dat",
       },
       {
         de: "Meine Nachbarin ist Ärztin.",
-        en: "My neighbour is a doctor.",
+        en: "My neighbor is a doctor.",
         case: "nom",
       },
     ],

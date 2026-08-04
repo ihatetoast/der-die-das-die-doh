@@ -52,11 +52,13 @@ const PracticeBoard = ({
           <ul>
             <li>
               <span className={classes.listEmoji}>🇬🇧</span>
-              English<span className={classes.example}> (eg Book)</span>
+              The English definition
+              <span className={classes.example}> (eg Book)</span>
             </li>
             <li>
               <span className={classes.listEmoji}>🇩🇪</span>
-              German<span className={classes.example}> (eg Buch)</span>
+              The German definition
+              <span className={classes.example}> (eg Buch)</span>
             </li>
             <li>
               <span className={classes.listEmoji}>🇩🇪</span>
@@ -65,25 +67,28 @@ const PracticeBoard = ({
             </li>
             <li>
               <span className={classes.listEmoji}>🇩🇪</span>
-              Plural<span className={classes.example}> (eg die Bücher)</span>
+              The plural form
+              <span className={classes.example}> (eg Bücher)</span>
             </li>
             <li>
               <span className={classes.listEmoji}>🇩🇪</span>
-              Sentences
-              <span className={classes.example}>
-                {" "}
-                (eg Ich gebe ihm das Buch. / I give him the book.)
-              </span>
+              Sentences with the word
             </li>
             <li>
-              <span className={classes.listEmoji}>🇩🇪</span>Review of the word
+              <span className={classes.listEmoji}>🇩🇪</span>Notes on the word
               <span className={classes.example}>
                 {" "}
-                (eg Book, das Buch, die Bücher; or notes if there are any.)
+                (or a review of the word if there are no notes)
               </span>
             </li>
           </ul>
-          <p>Choose the number of words you'd like to practice:</p>
+          <p>
+            Note: For words with a gender pair (eg Journalist → der Journalist
+            or die Journalistin), a small badge will appear so you know which
+            one you're practicing. We assume that you know a female journalist
+            is die and a male journalist is der.
+          </p>
+          <p>How many words do you want to practice? :</p>
           <div className={classes.btnContainer}>
             <button onClick={() => handleInitialDeckChoice(5)}>5</button>
             <button onClick={() => handleInitialDeckChoice(10)}>10</button>

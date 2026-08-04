@@ -1,3 +1,11 @@
+.bold {
+  font-weight: bold;
+}
+
+.ital {
+  font-style: italic;
+}
+
 .learningCube {
   background-color: var(--light-green);
   display: flex;
@@ -40,6 +48,28 @@
   -webkit-font-smoothing: antialiased;
   backface-visibility: hidden;
   padding: 0.25rem;
+}
+
+.badge {
+  position: absolute;
+  display: inline-flex;
+  top: 16px;
+  right: 16px;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+.badge.female {
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #000;
+}
+.badge.male {
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #fff;
 }
 
 /* hide a sentence on smaller screens  */
@@ -165,6 +195,14 @@
   margin-right: 0.5rem;
 }
 
+.article span.bold.ital {
+  font-size: 1.25rem;
+}
+.genderBtn {
+  padding: 0.25rem 1rem;
+  border: 2px solid var(--primary);
+  border-radius: var(--btn-radius);
+}
 @media screen and (min-width: 430px) {
   .learningCube {
     gap: 1rem;

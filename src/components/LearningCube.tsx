@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { VocabEntry } from "../types";
 
 import classes from "./LearningCube.module.css";
@@ -12,6 +12,7 @@ type LearningCubeProps = {
 
 const LearningCube = ({ word }: LearningCubeProps) => {
   const cubeRef = useRef<HTMLDivElement>(null);
+  const [showGenderPair, setShowGenderPair] = useState(false);
   const handleRotate = (faceClass: string) => {
     cubeRef.current?.classList.remove(
       classes.showEnglish,
@@ -22,8 +23,9 @@ const LearningCube = ({ word }: LearningCubeProps) => {
       classes.showNotes,
     );
     cubeRef.current?.classList.add(faceClass);
+    setShowGenderPair(false);
   };
-  console.log(word);
+
   useEffect(() => {
     handleRotate(classes.showEnglish);
   }, [word]);
@@ -36,6 +38,17 @@ const LearningCube = ({ word }: LearningCubeProps) => {
             data-face="english-side"
             className={`${classes.face} ${classes.english}`}
           >
+            {word.genderPair && (
+              <span
+                className={`${classes.badge} ${word.article === "die" ? classes.female : classes.male}`}
+              >
+                {word.article === "die" ? (
+                  <i className="fa-solid fa-venus"></i>
+                ) : (
+                  <i className="fa-solid fa-mars"></i>
+                )}
+              </span>
+            )}
             <h3>English: {word.eng}</h3>
             {word.notes.otherEngDefinitions && (
               <p>
@@ -49,6 +62,20 @@ const LearningCube = ({ word }: LearningCubeProps) => {
             className={`${classes.face} ${classes.german}`}
           >
             <h3>German: {word.noun}</h3>
+            {word.genderPair && (
+              <button
+                className={classes.genderBtn}
+                onClick={() => setShowGenderPair(!showGenderPair)}
+              >
+                {showGenderPair ? "− Hide" : "+ Show"}{" "}
+                {word.article === "die" ? "masculine" : "feminine"} form
+              </button>
+            )}
+            {word.genderPair && (
+              <div className={showGenderPair ? "visible" : "hidden"}>
+                <h3>{word.genderPair.singular}</h3>
+              </div>
+            )}
 
             {word.weakMasculine && (
               <p className={classes.weakMascPara}>
@@ -75,19 +102,39 @@ const LearningCube = ({ word }: LearningCubeProps) => {
             data-face="article-side"
             className={`${classes.face} ${classes.article}`}
           >
-            <h3>Article:</h3>
-            <p>{word.article}</p>
+            <h3>Article: </h3>
+            <h3>
+              <span className={`${classes.bold} ${classes.ital}`}>
+                {word.article}
+              </span>
+              {"   "}
+              {word.noun}
+            </h3>
           </div>
           <div
             data-face="plural-side"
             className={`${classes.face} ${classes.plural}`}
           >
-            <h3>Plural:</h3>
-            <p>
+            <h3>
+              Plural:{" "}
               {word.plural === "no plural"
                 ? `Note: ${word.noun} has no plural. Some nouns may add "-sorten" (sorts or types) to indicate a more than one type of something.`
                 : `die ${word.plural}`}
-            </p>
+            </h3>
+            {word.genderPair && (
+              <button
+                className={classes.genderBtn}
+                onClick={() => setShowGenderPair(!showGenderPair)}
+              >
+                {showGenderPair ? "− Hide" : "+ Show"}{" "}
+                {word.article === "die" ? "masculine" : "feminine"} plural form
+              </button>
+            )}
+            {word.genderPair && (
+              <div className={showGenderPair ? "visible" : "hidden"}>
+                <h3>die {word.genderPair.plural}</h3>
+              </div>
+            )}
           </div>
           <div
             data-face="sentence-side"
@@ -101,7 +148,6 @@ const LearningCube = ({ word }: LearningCubeProps) => {
                   <dt>
                     <span className={classes.emoji}>🇩🇪</span>
                     {sent.de}{" "}
-                    <span className={classes.case}>({sent.case})</span>
                   </dt>
                   <dd>
                     <span className={classes.emoji}>🇬🇧</span>

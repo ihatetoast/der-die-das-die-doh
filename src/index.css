@@ -82,6 +82,19 @@ main {
   font-weight: 700;
 }
 
+.ital {
+  font-style: italic;
+}
+
+.hidden {
+  /* display: none; */
+  visibility: hidden;
+}
+.visible {
+  /* display: block; */
+  visibility: visible;
+}
+
 .intro-images {
   display: flex;
   flex-direction: column;

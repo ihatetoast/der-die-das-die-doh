@@ -2068,12 +2068,12 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     sentences: [
       {
         de: "Thomas ist mein directer Nachbar.",
-        en: "Thomas is my nextdoor neighbour.",
+        en: "Thomas is my nextdoor neighbor.",
         case: "nom",
       },
       {
         de: "Er fährt selbst zum Nachbarn mit dem Auto.",
-        en: "He drives himself by car to the neighbour.",
+        en: "He drives himself by car to the neighbor.",
         case: "dat",
       },
     ],
@@ -3040,12 +3040,12 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     sentences: [
       {
         de: "Das ist der Hund von meiner Nachbarin.",
-        en: "That's my neighbour's dog.",
+        en: "That's my neighbor's dog.",
         case: "dat",
       },
       {
         de: "Meine Nachbarin ist Ärztin.",
-        en: "My neighbour is a doctor.",
+        en: "My neighbor is a doctor.",
         case: "nom",
       },
     ],
