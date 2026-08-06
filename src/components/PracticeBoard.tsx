@@ -42,9 +42,9 @@ const PracticeBoard = ({
 
   return (
     <div className={classes.practiceBoard}>
-      <h2>Let's practice!</h2>
       {words.length === 0 && cardsToReview.length === 0 && (
         <section className={classes.instructions}>
+          <h2>Let's practice!</h2>
           <p>
             You'll have a stack of cubes to practice your vocabulary, and each
             side has information about the word:
@@ -88,7 +88,7 @@ const PracticeBoard = ({
             one you're practicing. We assume that you know a female journalist
             is die and a male journalist is der.
           </p>
-          <p>How many words do you want to practice? :</p>
+          <p>How many words do you want to practice?</p>
           <div className={classes.btnContainer}>
             <button onClick={() => handleInitialDeckChoice(5)}>5</button>
             <button onClick={() => handleInitialDeckChoice(10)}>10</button>
@@ -98,17 +98,15 @@ const PracticeBoard = ({
       )}
       {cardsToReview.length > 0 && (
         <section className={classes.cubeSection}>
+          <LearningCube word={cardsToReview[0]} />
           <div className={classes.reviewInstructions}>
-            <p>
-              Got this? Remove it from the deck; otherwise, keep it in the deck.
-            </p>
             <div
               className={`${classes.btnContainer} ${classes.instructionsBtn}`}
             >
               <button
                 onClick={() => setCardsToReview((prev) => [...prev.slice(1)])}
               >
-                I got this
+                Remove from deck
               </button>
               <button
                 className={classes.warning}
@@ -116,11 +114,10 @@ const PracticeBoard = ({
                   setCardsToReview((prev) => [...prev.slice(1), prev[0]])
                 }
               >
-                D'oh! I need to review
+                Keep & review
               </button>
             </div>
           </div>
-          <LearningCube word={cardsToReview[0]} />
         </section>
       )}
       {words.length > 0 && cardsToReview.length === 0 && (

@@ -16,7 +16,6 @@ const Header = ({
   sessionComplete,
   deckTooSmall,
 }: HeaderProps) => {
-  console.log(sessionComplete);
   if (deckTooSmall) return <p>D'oh! Deck is too small...</p>;
   if (mode === "home") {
     return (

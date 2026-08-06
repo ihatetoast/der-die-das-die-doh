@@ -30,6 +30,9 @@ const LearningCube = ({ word }: LearningCubeProps) => {
     handleRotate(classes.showEnglish);
   }, [word]);
 
+  // remove after testing
+  console.log(word);
+
   return (
     <div className={classes.learningCube}>
       <div className={classes.cubeContainer}>
@@ -62,6 +65,12 @@ const LearningCube = ({ word }: LearningCubeProps) => {
             className={`${classes.face} ${classes.german}`}
           >
             <h3>German: {word.noun}</h3>
+            {word.hasNoSingular && (
+              <p>
+                <span>⚠️</span>
+                {`${word.plural} is a "plurala tantum", i.e. it appears only in the plural.`}
+              </p>
+            )}
             {word.genderPair && (
               <button
                 className={classes.genderBtn}
@@ -76,11 +85,10 @@ const LearningCube = ({ word }: LearningCubeProps) => {
                 <h3>{word.genderPair.singular}</h3>
               </div>
             )}
-
             {word.weakMasculine && (
               <p className={classes.weakMascPara}>
                 <span className={classes.weakMascEmoji}>📣</span>
-                {`${word.noun} is a "weak" masculine (N-declension) noun. It adds an "-n" in all cases except nominative, eg "dem Jungen." or "den Studenten". There are some exceptions. See "Notes" for exceptions or hints.`}
+                Weak masculine (N-declension)
               </p>
             )}
             {word.notes.otherGerDefinitions && (
@@ -108,8 +116,19 @@ const LearningCube = ({ word }: LearningCubeProps) => {
                 {word.article}
               </span>
               {"   "}
-              {word.noun}
+              {word.hasNoSingular ? word.plural : word.noun}
             </h3>
+            {word.hasNoSingular && (
+              <p>
+                Note: Article is pluras, as this noun exists only in plural form
+                (pluralia tantum).
+              </p>
+            )}
+            {word.notes.weakMascHint && (
+              <p>Weak masculine: {word.notes.weakMascHint}</p>
+            )}
+
+            {word.notes.genderNote && <p>Gender: {word.notes.genderNote}</p>}
           </div>
           <div
             data-face="plural-side"
@@ -134,6 +153,11 @@ const LearningCube = ({ word }: LearningCubeProps) => {
               <div className={showGenderPair ? "visible" : "hidden"}>
                 <h3>die {word.genderPair.plural}</h3>
               </div>
+            )}
+            {word.notes.pluralNote && (
+              <p>
+                <span className="bold">Note:</span> {word.notes.pluralNote}
+              </p>
             )}
           </div>
           <div

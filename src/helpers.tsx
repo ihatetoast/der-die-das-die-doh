@@ -31,15 +31,9 @@ export const scramble = (word: string): string => {
 const getPrimaryNote = (word: VocabEntry): NoteWithType[] => {
   const notesToShow: NoteWithType[] = [];
 
-  if (word.weakMasculine && word.notes.weakMascHint) {
-    notesToShow.push({ type: "weakMasc", value: word.notes.weakMascHint }); // Always show
-  }
-
   // Random rotation through other notes
   const otherNotes: NoteWithType[] = [
     word.notes.miscNote && { type: "misc", value: word.notes.miscNote },
-    word.notes.genderNote && { type: "gender", value: word.notes.genderNote },
-    word.notes.pluralNote && { type: "plural", value: word.notes.pluralNote },
     word.notes.genitiveNote && {
       type: "genitive",
       value: word.notes.genitiveNote,
@@ -78,10 +72,7 @@ const getDefaultSummary = (word: VocabEntry): ReactElement => {
 
 const formatNotesWithLabels = (notesToShow: NoteWithType[]): ReactElement => {
   const labels: Record<string, string> = {
-    weakMasc: "Weak masculine hint:",
-    misc: "Notes:",
-    gender: "Gender notes or tips:",
-    plural: "Notes on plural:",
+    misc: "Interesting tidbits:",
     genitive: "Genitive notes:",
   };
 

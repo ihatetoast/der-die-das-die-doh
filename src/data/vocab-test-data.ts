@@ -75,6 +75,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     hasNoPlural: false,
     weakMasculine: false,
     notes: {
+      pluralNote: `Most masculine nouns take the -e plural form. It's a good bet when in doubt.`,
       compoundWords:
         "Kreuzweg (crossroad), Spazierweg (promenade / pedestrian area / walkway)",
       otherGerDefinitions: "die Richtung, die Methode",
@@ -115,7 +116,7 @@ export const TEST_VOCAB: VocabEntry[] = [
       "ein Auge zudrücken" (lit. press close an eye) - turn a blind eye`,
     },
     sentences: [
-      { de: "Er hat ein blaues Auge", en: "He as a black eye", case: "acc" },
+      { de: "Er hat ein blaues Auge", en: "He has a black eye", case: "acc" },
       {
         de: "Bei manchen sind die Augen größer als der Magen.",
         en: "Some have eyes bigger than their stomach.",
@@ -132,9 +133,10 @@ export const TEST_VOCAB: VocabEntry[] = [
     noun: "no singular",
     plural: "Leute",
     hasNoPlural: false,
+    hasNoSingular: true,
     weakMasculine: false,
     notes: {
-      compoundWords: `Arbeitsleute (workmen, people, laborers), deutsche/französische/thailändische Landsleute (fellow Germans/French/Thais)`,
+      compoundWords: `Arbeitsleute (workmen, laborers), deutsche/französische/thailändische Landsleute (fellow Germans/French/Thais)`,
       pluralNote: "Exists only in plural form.",
       miscNote: `Expressions/idioms: "Kleider machen Leute" (lit. Clothes make the people) - Clothes make the man / Fine feathers make fine birdsn\n
       "Hinterm Berge wohnen auch Leute" (lit. Behind the mountain live people, too) - You're not the only pebble on the beach`,

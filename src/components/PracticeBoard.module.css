@@ -3,7 +3,6 @@
   flex-direction: column;
 }
 
-
 .practiceBoard h2 {
   font-size: 1.25rem;
   text-align: center;
@@ -85,20 +84,20 @@
 }
 
 @media screen and (min-width: 430px) {
-.practiceBoard h2 {
-  font-size: 1.5rem;
-}
+  .practiceBoard h2 {
+    font-size: 1.5rem;
+  }
 
-.practiceBoard p {
-  margin-bottom: 0.5rem;
-}
+  .practiceBoard p {
+    margin-bottom: 0.5rem;
+  }
 
   .example {
     display: inline;
   }
 
   .instructions {
-    width: 70%;
+    width: 90%;
     max-width: 600px;
     margin: 0 auto;
   }

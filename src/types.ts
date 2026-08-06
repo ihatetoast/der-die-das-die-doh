@@ -85,12 +85,12 @@ export interface VocabEntry {
   plural: string;
   genderPair?: GenderPair;
   hasNoPlural: boolean; // for things like blood. and remove notes about no plural
+  hasNoSingular?: boolean; // for pluralia tanum like Leute and Ferien
   weakMasculine: boolean;
   notes: NotesType;
   sentences: Sentence[];
   themes: [Theme, ...Theme[]];
   completed: boolean;
-  // theme: 'airport' | 'animals' | 'body' | 'house' | 'family' | 'misc';
 }
 // add theme as you reorg data. using text books you've bought
 // consider using completed: true; to find what are done to add them to new file so incompleted are not even seen.
@@ -102,10 +102,10 @@ export type NotesType = {
   otherGerDefinitions?: string;
   compoundWords?: string;
   pluralNote?: string;
-  miscNote?: string; // find idioms for here, etymology
+  miscNote?: string; // find idioms for here, expressions. anything funky
   genderNote?: string;
   weakMascHint?: WeakMascComment;
-  genitiveNote?: string; // KATY remove soon
+  genitiveNote?: string;
 };
 // miscNote: 'Idioms: "Zeit totschlagen" (lit: to beat time to death) — to kill/waste time while waiting; "Kommt Zeit, kommt Rat" (lit. comes time, comes advice) — time will tell.',
 export type ModeProp = "practice" | "test" | "home";
