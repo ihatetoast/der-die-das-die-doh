@@ -1086,7 +1086,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
         case: "dat",
       },
     ],
-    themes: ["misc"],
+    themes: ["home"],
     completed: true,
   },
   {
@@ -1141,7 +1141,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
         case: "acc",
       },
     ],
-    themes: ["misc"],
+    themes: ["home"],
     completed: true,
   },
   {

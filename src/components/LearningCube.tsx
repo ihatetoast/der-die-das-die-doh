@@ -100,7 +100,11 @@ const LearningCube = ({ word }: LearningCubeProps) => {
             {word.notes.compoundWords && (
               <p>
                 <span className="bold">
-                  Compound words ending in -{word.noun.toLowerCase()}:
+                  Compound words ending in -
+                  {word.hasNoSingular
+                    ? word.plural.toLowerCase()
+                    : word.noun.toLowerCase()}
+                  :
                 </span>{" "}
                 {word.notes.compoundWords}
               </p>
@@ -116,14 +120,9 @@ const LearningCube = ({ word }: LearningCubeProps) => {
                 {word.article}
               </span>
               {"   "}
-              {word.hasNoSingular ? word.plural : word.noun}
+              {word.hasNoSingular ? `${word.plural} (pl.)` : word.noun}
             </h3>
-            {word.hasNoSingular && (
-              <p>
-                Note: Article is pluras, as this noun exists only in plural form
-                (pluralia tantum).
-              </p>
-            )}
+
             {word.notes.weakMascHint && (
               <p>Weak masculine: {word.notes.weakMascHint}</p>
             )}
@@ -136,10 +135,11 @@ const LearningCube = ({ word }: LearningCubeProps) => {
           >
             <h3>
               Plural:{" "}
-              {word.plural === "no plural"
-                ? `Note: ${word.noun} has no plural. Some nouns may add "-sorten" (sorts or types) to indicate a more than one type of something.`
-                : `die ${word.plural}`}
+              {word.plural === "no plural" ? "None" : `die ${word.plural}`}
             </h3>
+            {word.plural === "no plural" && (
+              <p>{`Some nouns without plural may add "-sorten" (sorts or types) to indicate a more than one type of something.`}</p>
+            )}
             {word.genderPair && (
               <button
                 className={classes.genderBtn}

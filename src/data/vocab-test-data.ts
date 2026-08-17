@@ -17,7 +17,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     notes: {
       miscNote: `Idioms: "Zeit totschlagen" (lit: to beat time to death) — to kill/waste time while waiting \n
         "Kommt Zeit, kommt Rat" (lit. comes time, comes advice) — time will tell\n
-        "Andere Zeiten, andere Sitten" (lit. other times; other morals) - Other times, other manners. / Times change, and customs change with them`,
+        "Andere Zeiten, andere Sitten" (lit. other times; other morals) — Other times, other manners. / Times change, and customs change with them`,
       otherEngDefinitions: "term, period",
       compoundWords:
         "Jahreszeit (season), Mahlzeit (meal time), Freizeit (free time), Arbeitszeit (working hours), Schlafenszeit (bedtime)",
@@ -49,7 +49,7 @@ export const TEST_VOCAB: VocabEntry[] = [
       compoundWords: `Freihand (freehand or hands-free), Rückhand (backhand)`,
       pluralNote:
         "Feminine nouns that are monosyllabic with a or u often add ¨-e like Kuh/Kühe and Nuss/Nüsse.",
-      miscNote: `Idioms: "Hand und Fuß haben" (lit. to have hand and foot) - to make sense\n"Hand aufs Herz" - hand on heart`,
+      miscNote: `Idioms: "Hand und Fuß haben" (lit. to have hand and foot) - to make sense. \n "Hand aufs Herz" - hand on heart`,
     },
     sentences: [
       {
@@ -80,8 +80,7 @@ export const TEST_VOCAB: VocabEntry[] = [
         "Kreuzweg (crossroad), Spazierweg (promenade / pedestrian area / walkway)",
       otherGerDefinitions: "die Richtung, die Methode",
       otherEngDefinitions: "path, route, alley, driveway, land, track",
-      miscNote: `Expressions: "den Weg bahnen" (to blaze a trail), "den Weg versperren" (to bar the way)\n
-      "auf kürzestem Weg" (lit. on the shortest way) - as the crow flies, "ein umsändlicher Weg" (a roundabout way)`,
+      miscNote: `Expressions: "den Weg bahnen" (to blaze a trail), "den Weg versperren" (to bar the way) "auf kürzestem Weg" (lit. on the shortest way) - as the crow flies, "ein umsändlicher Weg" (a roundabout way)`,
     },
     sentences: [
       {
@@ -138,7 +137,7 @@ export const TEST_VOCAB: VocabEntry[] = [
     notes: {
       compoundWords: `Arbeitsleute (workmen, laborers), deutsche/französische/thailändische Landsleute (fellow Germans/French/Thais)`,
       pluralNote: "Exists only in plural form.",
-      miscNote: `Expressions/idioms: "Kleider machen Leute" (lit. Clothes make the people) - Clothes make the man / Fine feathers make fine birdsn\n
+      miscNote: `Expressions/idioms: "Kleider machen Leute" (lit. Clothes make the people) - Clothes make the man / Fine feathers make fine birds\n
       "Hinterm Berge wohnen auch Leute" (lit. Behind the mountain live people, too) - You're not the only pebble on the beach`,
     },
     sentences: [

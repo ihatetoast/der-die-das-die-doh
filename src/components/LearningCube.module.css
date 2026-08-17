@@ -58,6 +58,9 @@
   padding: 0.25rem;
   transform-origin: center center;
 }
+.face p {
+  white-space: pre-wrap; /* preserves \n as line breaks */
+}
 
 .badge {
   position: absolute;
@@ -259,7 +262,7 @@
 
 @media screen and (min-width: 768px) {
   :root {
-    --cube-size: 400px;
+    --cube-size: 380px;
   }
 
   .cubeContainer,

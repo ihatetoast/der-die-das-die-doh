@@ -182,6 +182,7 @@ function App() {
             words={activeDeck}
             deckSize={deckSize}
             handleGetInitialActiveDeck={handleGetInitialActiveDeck}
+            handleGetTestType={handleGetTestType}
             handleRefillActiveDeck={handleRefillActiveDeck}
             onSessionComplete={handleSessionComplete}
           />

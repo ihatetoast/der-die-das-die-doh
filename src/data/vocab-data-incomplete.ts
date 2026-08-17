@@ -261,7 +261,7 @@ export const VOCAB_MISC_1: VocabEntry[] = [
         case: "",
       },
     ],
-    themes: ["misc"],
+    themes: ["home"],
     completed: false,
   },
   {
@@ -6955,22 +6955,7 @@ export const VOCAB_MISC_1: VocabEntry[] = [
     themes: ["misc"],
     completed: false,
   },
-  {
-    id: 508,
-    eng: "professor",
-    article: "der",
-    noun: "Professor",
-    plural: "Professoren",
-    hasNoPlural: false,
-    weakMasculine: false,
-    notes: {},
-    sentences: [
-      { de: "SATZ1", en: "SENTENCE1", case: "nom" },
-      { de: "SATZ2", en: "SENTENCE2", case: "acc" },
-    ],
-    themes: ["misc"],
-    completed: false,
-  },
+
   {
     id: 509,
     eng: "play",
@@ -32667,6 +32652,32 @@ export const VOCAB_MISC_1: VocabEntry[] = [
       },
     ],
     themes: ["misc"],
+    completed: false,
+  },
+
+  // extras added. start at 7001
+  {
+    id: 7001,
+    eng: "wastepaper basket",
+    article: "der",
+    noun: "Papierkorb",
+    plural: "Papierkörbe",
+    hasNoPlural: false,
+    weakMasculine: false,
+    notes: {},
+    sentences: [
+      {
+        de: "",
+        en: "",
+        case: "",
+      },
+      {
+        de: ".",
+        en: "",
+        case: "",
+      },
+    ],
+    themes: ["misc", "home"],
     completed: false,
   },
 ];
