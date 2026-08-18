@@ -6,66 +6,66 @@
 import type { VocabEntry } from "../types";
 
 export const TEST_VOCAB: VocabEntry[] = [
-  {
-    id: 10000000,
-    eng: "time",
-    article: "die",
-    noun: "Zeit",
-    plural: "Zeiten",
-    hasNoPlural: false,
-    weakMasculine: false,
-    notes: {
-      miscNote: `Idioms: "Zeit totschlagen" (lit: to beat time to death) — to kill/waste time while waiting \n
-        "Kommt Zeit, kommt Rat" (lit. comes time, comes advice) — time will tell\n
-        "Andere Zeiten, andere Sitten" (lit. other times; other morals) — Other times, other manners. / Times change, and customs change with them`,
-      otherEngDefinitions: "term, period",
-      compoundWords:
-        "Jahreszeit (season), Mahlzeit (meal time), Freizeit (free time), Arbeitszeit (working hours), Schlafenszeit (bedtime)",
-    },
-    sentences: [
-      {
-        de: "Die guten Zeiten sind vorbei.",
-        en: "The good times are over.",
-        case: "nom",
-      },
-      {
-        de: "Es ist nur eine Frage der Zeit.",
-        en: "It is merely a matter of time.",
-        case: "gen",
-      },
-    ],
-    themes: ["time"],
-    completed: true,
-  },
-  {
-    id: 10000001,
-    eng: "hand",
-    article: "die",
-    noun: "Hand",
-    plural: "Hände",
-    hasNoPlural: false,
-    weakMasculine: false,
-    notes: {
-      compoundWords: `Freihand (freehand or hands-free), Rückhand (backhand)`,
-      pluralNote:
-        "Feminine nouns that are monosyllabic with a or u often add ¨-e like Kuh/Kühe and Nuss/Nüsse.",
-      miscNote: `Idioms: "Hand und Fuß haben" (lit. to have hand and foot) - to make sense. \n "Hand aufs Herz" - hand on heart`,
-    },
-    sentences: [
-      {
-        de: "Mir sind die Hände in Unschuld.",
-        en: "I wash my hands of it",
-        case: "nom",
-      },
-      {
-        de: "Sie leben von der Hand in den Mund.",
-        en: "They live from hand to mouth.",
-        case: "dat",
-      },
-    ],
-    themes: ["body"],
-    completed: true,
-  },
+  // {
+  //   id: 10000000,
+  //   eng: "time",
+  //   article: "die",
+  //   noun: "Zeit",
+  //   plural: "Zeiten",
+  //   hasNoPlural: false,
+  //   weakMasculine: false,
+  //   notes: {
+  //     miscNote: `Idioms: "Zeit totschlagen" (lit: to beat time to death) — to kill/waste time while waiting \n
+  //       "Kommt Zeit, kommt Rat" (lit. comes time, comes advice) — time will tell\n
+  //       "Andere Zeiten, andere Sitten" (lit. other times; other morals) — Other times, other manners. / Times change, and customs change with them`,
+  //     otherEngDefinitions: "term, period",
+  //     compoundWords:
+  //       "Jahreszeit (season), Mahlzeit (meal time), Freizeit (free time), Arbeitszeit (working hours), Schlafenszeit (bedtime)",
+  //   },
+  //   sentences: [
+  //     {
+  //       de: "Die guten Zeiten sind vorbei.",
+  //       en: "The good times are over.",
+  //       case: "nom",
+  //     },
+  //     {
+  //       de: "Es ist nur eine Frage der Zeit.",
+  //       en: "It is merely a matter of time.",
+  //       case: "gen",
+  //     },
+  //   ],
+  //   themes: ["time"],
+  //   completed: true,
+  // },
+  // {
+  //   id: 10000001,
+  //   eng: "hand",
+  //   article: "die",
+  //   noun: "Hand",
+  //   plural: "Hände",
+  //   hasNoPlural: false,
+  //   weakMasculine: false,
+  //   notes: {
+  //     compoundWords: `Freihand (freehand or hands-free), Rückhand (backhand)`,
+  //     pluralNote:
+  //       "Feminine nouns that are monosyllabic with a or u often add ¨-e like Kuh/Kühe and Nuss/Nüsse.",
+  //     miscNote: `Idioms: "Hand und Fuß haben" (lit. to have hand and foot) - to make sense. \n "Hand aufs Herz" - hand on heart`,
+  //   },
+  //   sentences: [
+  //     {
+  //       de: "Mir sind die Hände in Unschuld.",
+  //       en: "I wash my hands of it",
+  //       case: "nom",
+  //     },
+  //     {
+  //       de: "Sie leben von der Hand in den Mund.",
+  //       en: "They live from hand to mouth.",
+  //       case: "dat",
+  //     },
+  //   ],
+  //   themes: ["body"],
+  //   completed: true,
+  // },
   {
     id: 10000002,
     eng: "way",
@@ -155,72 +155,72 @@ export const TEST_VOCAB: VocabEntry[] = [
     themes: ["people"],
     completed: true,
   },
-  {
-    id: 10000005,
-    eng: "neighbor",
-    article: "der",
-    noun: "Nachbar",
-    plural: "Nachbarn",
-    hasNoPlural: false,
-    weakMasculine: true,
-    genderPair: {
-      article: "die",
-      singular: "Nachbarin",
-      plural: "Nachbarinnen",
-    },
-    notes: {
-      weakMascHint: "Exceptions: add '-n' and not '-en'",
-      miscNote: `Expressions/idioms: "Die Kirschen in Nachbars Garten schmecken immer ein bisschen süßer." 
-      (lit. The cherries in the neighbor's garden always taste a bit sweeter.) - 
-      The grass is always greener on the other side of the fence.`,
-    },
-    sentences: [
-      {
-        de: "Thomas ist mein directer Nachbar.",
-        en: "Thomas is my nextdoor neighbor.",
-        case: "nom",
-      },
-      {
-        de: "Er fährt selbst zum Nachbarn mit dem Auto.",
-        en: "He drives himself by car to the neighbor.",
-        case: "dat",
-      },
-    ],
-    themes: ["people", "city", "social"],
-    completed: true,
-  },
-  {
-    id: 10000006,
-    eng: "neighbor",
-    article: "die",
-    noun: "Nachbarin",
-    plural: "Nachbarinnen",
-    hasNoPlural: false,
-    weakMasculine: false,
-    genderPair: {
-      article: "der",
-      singular: "Nachbar",
-      plural: "Nachbarn",
-    },
-    notes: {
-      miscNote:
-        "Use 'direkt' to mean 'nextdoor': direkte Nachbarin (or direkter Nachbar for the male counterpart).",
-    },
-    sentences: [
-      {
-        de: "Das ist der Hund von meiner Nachbarin.",
-        en: "That's my neighbor's dog.",
-        case: "dat",
-      },
-      {
-        de: "Meine Nachbarin ist Ärztin.",
-        en: "My neighbor is a doctor.",
-        case: "nom",
-      },
-    ],
-    themes: ["people", "city", "social"],
-    completed: true,
-  },
+  // {
+  //   id: 10000005,
+  //   eng: "neighbor",
+  //   article: "der",
+  //   noun: "Nachbar",
+  //   plural: "Nachbarn",
+  //   hasNoPlural: false,
+  //   weakMasculine: true,
+  //   genderPair: {
+  //     article: "die",
+  //     singular: "Nachbarin",
+  //     plural: "Nachbarinnen",
+  //   },
+  //   notes: {
+  //     weakMascHint: "Exceptions: add '-n' and not '-en'",
+  //     miscNote: `Expressions/idioms: "Die Kirschen in Nachbars Garten schmecken immer ein bisschen süßer."
+  //     (lit. The cherries in the neighbor's garden always taste a bit sweeter.) -
+  //     The grass is always greener on the other side of the fence.`,
+  //   },
+  //   sentences: [
+  //     {
+  //       de: "Thomas ist mein directer Nachbar.",
+  //       en: "Thomas is my nextdoor neighbor.",
+  //       case: "nom",
+  //     },
+  //     {
+  //       de: "Er fährt selbst zum Nachbarn mit dem Auto.",
+  //       en: "He drives himself by car to the neighbor.",
+  //       case: "dat",
+  //     },
+  //   ],
+  //   themes: ["people", "city", "social"],
+  //   completed: true,
+  // },
+  // {
+  //   id: 10000006,
+  //   eng: "neighbor",
+  //   article: "die",
+  //   noun: "Nachbarin",
+  //   plural: "Nachbarinnen",
+  //   hasNoPlural: false,
+  //   weakMasculine: false,
+  //   genderPair: {
+  //     article: "der",
+  //     singular: "Nachbar",
+  //     plural: "Nachbarn",
+  //   },
+  //   notes: {
+  //     miscNote:
+  //       "Use 'direkt' to mean 'nextdoor': direkte Nachbarin (or direkter Nachbar for the male counterpart).",
+  //   },
+  //   sentences: [
+  //     {
+  //       de: "Das ist der Hund von meiner Nachbarin.",
+  //       en: "That's my neighbor's dog.",
+  //       case: "dat",
+  //     },
+  //     {
+  //       de: "Meine Nachbarin ist Ärztin.",
+  //       en: "My neighbor is a doctor.",
+  //       case: "nom",
+  //     },
+  //   ],
+  //   themes: ["people", "city", "social"],
+  //   completed: true,
+  // },
   {
     id: 10000007,
     eng: "cheese",
@@ -278,4 +278,82 @@ export const TEST_VOCAB: VocabEntry[] = [
     themes: ["misc"],
     completed: true,
   },
+  // {
+  //   id: 100000033,
+  //   eng: "water",
+  //   article: "das",
+  //   noun: "Wasser",
+  //   plural: "Wasser",
+  //   hasNoPlural: false,
+  //   weakMasculine: false,
+  //   notes: {
+  //     compoundWords:
+  //       "Abwasser (effluent), Badewasser (bathw water), Mineralwasser (mineral water).",
+  //     pluralNote: `Usually uncountable, but can be made plural in two ways.
+  //     \nDie Wasser: Used in a formal or poetic way to mean large bodies of water, oceans, or seas (like the English "waters") and found in set phrases, such as "mit allen Wassern gewaschen" (to be street-smart or cunning).
+  //     \ndie Wässer: Used when talking about different kinds or brands of liquid, medicinal lotions, colognes, or types of schnapps/brandy, and is more common in technical, commercial, or medical contexts when sorting distinct types of fluid
+  //     \nIn test mode, use "Wasser".`,
+  //   },
+  //   sentences: [
+  //     { de: "Das Wasser kocht.", en: "The water's boiling.", case: "nom" },
+  //     {
+  //       de: "Ich trinke nur warmes Wasser.",
+  //       en: "I only drink warm water.",
+  //       case: "acc",
+  //     },
+  //   ],
+  //   themes: ["nature", "food"],
+  //   completed: true,
+  // },
+  // {
+  //   id: 1000000166,
+  //   eng: "clothes",
+  //   article: "die",
+  //   noun: "Kleidung",
+  //   plural: "Kleidungen",
+  //   hasNoPlural: false,
+  //   weakMasculine: false,
+  //   notes: {
+  //     genderNote: "Words ending in -ung are generally feminine.",
+  //     pluralNote:
+  //       'Kleidung is generally uncountable (likes clothes). "Kleidungen" exists but people generally use "Kleidungsstücke" (items of clothing) or "Kleider" (dresses/clothes).',
+  //   },
+  //   sentences: [
+  //     {
+  //       de: "Wo ist keine Kleidung?.",
+  //       en: "Where are your clothes?",
+  //       case: "nom",
+  //     },
+  //     {
+  //       de: "Meine Kleidung sieht teuer aus.",
+  //       en: "My clothes look expensive.",
+  //       case: "nom",
+  //     },
+  //   ],
+  //   themes: ["personal", "clothing"],
+  //   completed: true,
+  // },
+  // {
+  //   id: 1000000797,
+  //   eng: "dragon",
+  //   article: "der",
+  //   noun: "Drache",
+  //   plural: "Drachen",
+  //   hasNoPlural: false,
+  //   weakMasculine: true,
+  //   notes: {
+  //     miscNote: "Careful: dragon - der Drache BUT kite - der Drachen",
+  //     weakMascHint: "Nouns ending in '-e' (people, animals)",
+  //   },
+  //   sentences: [
+  //     { de: "Hier sind Drachen!", en: "Here be dragons", case: "nom" },
+  //     {
+  //       de: "Ich kenne eine Geschichte über den Drachen.",
+  //       en: "I know a story about a dragon.",
+  //       case: "acc",
+  //     },
+  //   ],
+  //   themes: ["animals", "fantasy"],
+  //   completed: true,
+  // },
 ];

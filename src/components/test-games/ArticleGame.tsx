@@ -4,7 +4,7 @@ import { VocabEntry, AnswerState, GameState, GameProps } from "../../types";
 
 import classes from "./ArticleGame.module.css";
 import Timer from "../Timer";
-import GameOver from "./GameOver.tsx";
+import GameOver from "../UI/GameOver.tsx";
 
 const TIME_TO_GUESS = 5000;
 

@@ -11,7 +11,7 @@ import WeakMascGame from "./test-games/WeakMascGame.tsx";
 import MiniGameGerToEng from "./test-games/MiniGameGerToEng.tsx";
 import MiniGameEngToGer from "./test-games/MiniGameEngToGer.tsx";
 
-import TextCard from "./UI/TextCard.tsx";
+import TestCard from "./UI/TestCard.tsx";
 
 type Props = {
   words: VocabEntry[];
@@ -31,6 +31,7 @@ const TestBoard = ({
   handleSetMode,
   onSessionComplete,
 }: Props) => {
+  console.log("TestBoard received testType:", testType);
   const handleTestButtonClick = (size: DeckSize, test: TestType) => {
     handleGetInitialActiveDeck(size, test);
     handleGetTestType(test);
@@ -66,11 +67,15 @@ const TestBoard = ({
         />
       )}
       {testType === "eng-ger-mini" && (
-        <MiniGameEngToGer
-          words={words}
-          handleSetMode={handleSetMode}
-          onSessionComplete={onSessionComplete}
-        />
+        <>
+          {console.log("MiniGameEngToGer receiving words:", words.length)}
+
+          <MiniGameEngToGer
+            words={words}
+            handleSetMode={handleSetMode}
+            onSessionComplete={onSessionComplete}
+          />
+        </>
       )}
       {testType === "german-full" && (
         <GermanFullGame
@@ -88,39 +93,39 @@ const TestBoard = ({
       )}
       {!testType && (
         <section className={classes.testGrid}>
-          <TextCard
+          <TestCard
             title="Article Speed Round"
             desc="Pick the correct article (substantive) before the time is up."
-            deckSizeOptions={[10, 20, 40]}
+            deckSizeOptions={[5, 10, 20]}
             testType="article"
             handleTestStart={handleTestButtonClick}
           />
 
-          <TextCard
+          <TestCard
             title="German-to-English Mini"
             desc="Given the German word, write the English translation"
-            deckSizeOptions={[10, 25, 50]}
+            deckSizeOptions={[5, 15, 25]}
             testType="ger-eng-mini"
             handleTestStart={handleTestButtonClick}
           />
 
-          <TextCard
+          <TestCard
             title="English-to-German Mini"
             desc="Given the English word, write the German translation"
-            deckSizeOptions={[10, 25, 50]}
+            deckSizeOptions={[5, 15, 25]}
             testType="eng-ger-mini"
             handleTestStart={handleTestButtonClick}
           />
 
-          <TextCard
+          <TestCard
             title="Plural Mini"
             desc="Given the German word, write its plural"
-            deckSizeOptions={[10, 20, 40]}
+            deckSizeOptions={[5, 10, 20]}
             testType="plural"
             handleTestStart={handleTestButtonClick}
           />
 
-          <TextCard
+          <TestCard
             title="English to German Full"
             desc="Given the German word, write its plural"
             deckSizeOptions={[5, 15, 25]}
@@ -128,10 +133,10 @@ const TestBoard = ({
             handleTestStart={handleTestButtonClick}
           />
 
-          <TextCard
+          <TestCard
             title="Spot the Weakling: Speed Round"
             desc="Decide quickly if it's a weak masculine (n-declension) noun"
-            deckSizeOptions={[10, 50]}
+            deckSizeOptions={[5, 10]}
             testType="weak-masc"
             handleTestStart={handleTestButtonClick}
           />

@@ -122,7 +122,7 @@ function App() {
     setAllShuffledDeck(shuffled);
     // setAllShuffledDeck(shuffled.slice(0, 2)); // to test if i lose all my words.
   }
-
+  console.log(activeDeck);
   return (
     <>
       <Header
@@ -139,8 +139,8 @@ function App() {
               <div className="intro-images learn">
                 <h2>Learn & Practice</h2>
                 <p>
-                  Choose "Learn & Practice" to review gender and plural as well
-                  as see example sentences and notes about the word.
+                  To review gender and plural as well as see example sentences
+                  and notes about the word.
                 </p>
                 <div className="mode-image-container">
                   <img
@@ -148,21 +148,22 @@ function App() {
                     alt="screenshot of practice mode"
                   />
                 </div>
-                <ModeButton onClick={handleSetMode} mode="practice" />
+                <ModeButton onClick={handleSetMode} mode="practice">
+                  Learn & Practice
+                </ModeButton>
               </div>
               <div className="intro-images test">
-                <h2>Test</h2>
-                <p>
-                  Choose "Test" to see what you've learned and what you need to
-                  review.
-                </p>
+                <h2>Tests</h2>
+                <p>To find various ways to test your knowledge.</p>
                 <div className="mode-image-container">
                   <img
                     src={`${import.meta.env.BASE_URL}test-view.png`}
                     alt="screenshot of test mode"
                   />
                 </div>
-                <ModeButton onClick={handleSetMode} mode="test" />
+                <ModeButton onClick={handleSetMode} mode="test">
+                  Tests
+                </ModeButton>
               </div>
             </div>
           </>
@@ -181,8 +182,10 @@ function App() {
           <PracticeBoard
             words={activeDeck}
             deckSize={deckSize}
+            testType={testType}
             handleGetInitialActiveDeck={handleGetInitialActiveDeck}
             handleGetTestType={handleGetTestType}
+            handleSetMode={handleSetMode}
             handleRefillActiveDeck={handleRefillActiveDeck}
             onSessionComplete={handleSessionComplete}
           />

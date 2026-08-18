@@ -10,6 +10,7 @@ import ArticleGame from "./test-games/ArticleGame.tsx";
 type Props = {
   words: VocabEntry[];
   deckSize: DeckSize | null;
+  testType: TestType | null;
   handleGetInitialActiveDeck: (size: DeckSize) => void;
   handleGetTestType: (test: TestType) => void;
   handleRefillActiveDeck: (size: DeckSize) => void;
@@ -20,6 +21,7 @@ type Props = {
 const PracticeBoard = ({
   words,
   deckSize,
+  testType,
   handleGetInitialActiveDeck,
   handleGetTestType,
   handleRefillActiveDeck,
@@ -29,7 +31,6 @@ const PracticeBoard = ({
   const [cardsToReview, setCardsToReview] = useState<VocabEntry[]>([]);
   // first length (more than one as it has been filled)
   const prevLengthRef = useRef(cardsToReview.length);
-  const [vocTest, setVocTest] = useState<TestType | null>(null);
   // first effect gets the cards:
   useEffect(() => {
     if (words.length > 0) setCardsToReview([...words]);
@@ -48,35 +49,33 @@ const PracticeBoard = ({
     handleGetInitialActiveDeck(size);
   };
   const handleTestButtonClick = (test: TestType) => {
-    setVocTest(test);
     handleGetTestType(test);
-    // console.log(`testtype is ${test}`);
   };
 
   return (
     <div>
-      {vocTest === "german-full" && (
+      {testType === "german-full" && (
         <GermanFullGame
           words={words}
           handleSetMode={handleSetMode}
           onSessionComplete={onSessionComplete}
         />
       )}
-      {vocTest === "ger-eng-mini" && (
+      {testType === "ger-eng-mini" && (
         <MiniGameGerToEng
           words={words}
           handleSetMode={handleSetMode}
           onSessionComplete={onSessionComplete}
         />
       )}
-      {vocTest === "article" && (
+      {testType === "article" && (
         <ArticleGame
           words={words}
           handleSetMode={handleSetMode}
           onSessionComplete={onSessionComplete}
         />
       )}
-      {!vocTest && (
+      {!testType && (
         <div className={classes.practiceBoard}>
           {words.length === 0 && cardsToReview.length === 0 && (
             <section className={classes.instructions}>

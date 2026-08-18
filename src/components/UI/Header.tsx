@@ -30,9 +30,15 @@ const Header = ({
       <header>
         <h1>Der Die Das Die ... D'oh!</h1>
         <div className={classes.buttonContainer}>
-          <ModeButton onClick={onSetMode} mode="home" />
-          <ModeButton onClick={onSetMode} mode="practice" />
-          <ModeButton onClick={onSetMode} mode="test" />
+          <ModeButton onClick={onSetMode} mode="home">
+            Home
+          </ModeButton>
+          <ModeButton onClick={onSetMode} mode="practice">
+            Learn & Practice
+          </ModeButton>
+          <ModeButton onClick={onSetMode} mode="test">
+            Tests
+          </ModeButton>
         </div>
       </header>
     );
@@ -41,7 +47,9 @@ const Header = ({
   return (
     <header className={classes.header}>
       <h1>Der Die Das Die ... D'oh!</h1>
-      <ModeButton onClick={onSetMode} mode="home" />
+      <ModeButton onClick={onSetMode} mode="home">
+        Back to home
+      </ModeButton>
     </header>
   );
 };

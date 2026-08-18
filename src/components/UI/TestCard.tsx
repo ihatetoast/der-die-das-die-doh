@@ -8,7 +8,7 @@ type TestCardProps = {
   handleTestStart: (size: DeckSize, test: TestType) => void;
 };
 
-const TextCard = ({
+const TestCard = ({
   title,
   desc,
   testType,
@@ -34,4 +34,4 @@ const TextCard = ({
   );
 };
 
-export default TextCard;
+export default TestCard;

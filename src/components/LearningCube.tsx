@@ -30,9 +30,6 @@ const LearningCube = ({ word }: LearningCubeProps) => {
     handleRotate(classes.showEnglish);
   }, [word]);
 
-  // remove after testing
-  console.log(word);
-
   return (
     <div className={classes.learningCube}>
       <div className={classes.cubeContainer}>

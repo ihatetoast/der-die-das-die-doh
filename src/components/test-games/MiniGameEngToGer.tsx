@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { useFlashcardLogic } from "../../hooks/useFlashcardLogic.ts";
 import { ArticleType } from "../../types.ts";
 
-import GameOver from "./GameOver.tsx";
+import GameOver from "../UI/GameOver.tsx";
 
 import classes from "./Game.module.css";
 import { GameProps } from "../../types.ts";
@@ -12,6 +12,9 @@ const MiniGameEngToGer = ({
   handleSetMode,
   onSessionComplete,
 }: GameProps) => {
+  console.log(
+    "MiniGameEngToGer about to call hook with testType: eng-ger-mini",
+  );
   const {
     cardsToTest,
     setCardsToTest,
@@ -27,7 +30,6 @@ const MiniGameEngToGer = ({
     answerState,
     setAnswerState,
   } = useFlashcardLogic(words, "eng-ger-mini");
-
   const [userInputArticle, setUserInputArticle] = useState<ArticleType | null>(
     null,
   );
@@ -56,7 +58,7 @@ const MiniGameEngToGer = ({
   }, [testState, onSessionComplete]);
 
   useEffect(() => {
-    if (cardsToTest[0].genderPair) {
+    if (cardsToTest.length > 0 && cardsToTest[0]?.genderPair) {
       const articleRight =
         userInputArticle === cardsToTest[0].genderPair.article;
       const nounRight =
@@ -68,7 +70,7 @@ const MiniGameEngToGer = ({
         return;
       }
     }
-  });
+  }, [cardsToTest, userInputArticle, userInputNoun, setAnswerState]);
 
   // pause for style change. only let user know correct or incorrect, not answer
   useEffect(() => {
@@ -134,6 +136,7 @@ const MiniGameEngToGer = ({
   };
 
   const handleSubmit = () => {
+    if (cardsToTest.length === 0) return;
     // both empty
     if (userInputNoun.trim() === "" && userInputArticle === null) {
       setAnswerState("skipped");
@@ -145,7 +148,7 @@ const MiniGameEngToGer = ({
       return;
     }
 
-    const otherGerDefs = cardsToTest[0].notes.otherGerDefinitions;
+    const otherGerDefs = cardsToTest[0]?.notes.otherGerDefinitions;
 
     const nounRight = evalAnswerGerNoun(
       userInputNoun,
@@ -155,7 +158,7 @@ const MiniGameEngToGer = ({
 
     const articleRight =
       userInputArticle === cardsToTest[0].article ||
-      cardsToTest[0].genderPair?.article === userInputArticle;
+      cardsToTest[0]?.genderPair?.article === userInputArticle;
 
     const isCorrect = articleRight && nounRight;
     setArticleIsCorrect(articleRight);

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useFlashcardLogic } from "../../hooks/useFlashcardLogic.ts";
-import GameOver from "./GameOver.tsx";
+import GameOver from "../UI/GameOver.tsx";
 
 import classes from "./Game.module.css";
 import { GameProps } from "../../types.ts";
@@ -27,12 +27,6 @@ const MiniGameGerToEng = ({
     setAnswerState,
   } = useFlashcardLogic(words, "ger-eng-mini");
 
-  // todo: address if a user can submit then add to input.
-  // onKeyDown={(e) => {
-  //   if (e.key === 'Enter' && canSubmit) {
-  //     handleSubmit();
-  //   }
-  // }}
   if (testState === "over") {
     onSessionComplete();
   }
@@ -106,7 +100,6 @@ const MiniGameGerToEng = ({
       return prev;
     });
   };
-
   return (
     <>
       <h2>German-to-English Mini Test</h2>

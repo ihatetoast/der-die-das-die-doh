@@ -10,7 +10,7 @@ import {
 
 import classes from "./WeakMascGame.module.css";
 import Timer from "../Timer";
-import GameOver from "./GameOver.tsx";
+import GameOver from "../UI/GameOver.tsx";
 
 const TIME_TO_GUESS = 5000;
 const TIME_TO_NEXT_QUESTION = 2000;

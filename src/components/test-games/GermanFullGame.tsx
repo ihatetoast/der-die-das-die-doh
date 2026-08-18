@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useFlashcardLogic } from "../../hooks/useFlashcardLogic.ts";
 import { ArticleType } from "../../types.ts";
 
-import GameOver from "./GameOver.tsx";
+import GameOver from "../UI/GameOver.tsx";
 
 // import classes from './GermanFullGame.module.css';
 import classes from "./Game.module.css";

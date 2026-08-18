@@ -3,7 +3,7 @@ import { GameProps } from "../../types.ts";
 import { useFlashcardLogic } from "../../hooks/useFlashcardLogic.ts";
 import classes from "./PluralGame.module.css";
 
-import GameOver from "./GameOver.tsx";
+import GameOver from "../UI/GameOver.tsx";
 
 const PluralGame = ({ words, handleSetMode, onSessionComplete }: GameProps) => {
   const {

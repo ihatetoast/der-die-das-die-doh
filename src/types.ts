@@ -10,7 +10,7 @@ export type SpecialCharacter = {
   code: string; // numbers to match chars will be "1" - "7"
 };
 
-// GenderPair is for Student/Studentin NOT Neffe Niechte
+// GenderPair is for Student/Studentin NOT Neffe Niechte or Mädchen Junge
 export interface GenderPair {
   article: "der" | "die";
   singular: string;
@@ -110,7 +110,7 @@ export type NotesType = {
 // miscNote: 'Idioms: "Zeit totschlagen" (lit: to beat time to death) — to kill/waste time while waiting; "Kommt Zeit, kommt Rat" (lit. comes time, comes advice) — time will tell.',
 export type ModeProp = "practice" | "test" | "home";
 // controlling decksize until I have >500 completed: true. egads
-export type DeckSize = 5 | 10 | 15 | 20 | 25 | 40 | 50;
+export type DeckSize = 5 | 10 | 15 | 20 | 25;
 
 export type MiniTestType = "eng-ger-mini" | "ger-eng-mini";
 export type TestType =
