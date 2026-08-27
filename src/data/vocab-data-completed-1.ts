@@ -74,7 +74,7 @@ export const VOCAB_COMPLETED_1: VocabEntry[] = [
     sentences: [
       {
         de: "Mir sind die Hände in Unschuld.",
-        en: "I wash my hands of it",
+        en: "I wash my hands of it.",
         case: "nom",
       },
       {

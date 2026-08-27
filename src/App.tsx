@@ -75,6 +75,11 @@ function App() {
       const finalDeck = shuffle([...weakDeck, ...otherDeck]);
 
       deck = finalDeck.slice(0, size);
+    } else if (testType === "article") {
+      const nounsWithSingulars = allShuffledDeck.filter(
+        (n) => !n.hasNoSingular,
+      );
+      deck = nounsWithSingulars.slice(0, size);
     } else {
       deck = allShuffledDeck.slice(0, size);
     }

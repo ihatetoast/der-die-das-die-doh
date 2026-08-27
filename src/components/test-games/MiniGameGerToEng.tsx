@@ -6,6 +6,8 @@ import classes from "./Game.module.css";
 import { GameProps } from "../../types.ts";
 // todo: mention in the intro to NOT put in female or (female) for words that have a feminine ending.
 // a doctor is a doctor. not doctor v female doctor. this isn't 1980.
+
+// todo: see if no singular matters for the UI
 const MiniGameGerToEng = ({
   words,
   handleSetMode,

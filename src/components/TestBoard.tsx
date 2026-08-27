@@ -32,6 +32,7 @@ const TestBoard = ({
   onSessionComplete,
 }: Props) => {
   console.log("TestBoard received testType:", testType);
+
   const handleTestButtonClick = (size: DeckSize, test: TestType) => {
     handleGetInitialActiveDeck(size, test);
     handleGetTestType(test);

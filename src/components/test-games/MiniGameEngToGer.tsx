@@ -6,7 +6,8 @@ import GameOver from "../UI/GameOver.tsx";
 
 import classes from "./Game.module.css";
 import { GameProps } from "../../types.ts";
-
+// todo: handle no singular
+// ex the parents -> show die and ask for "Eltern"
 const MiniGameEngToGer = ({
   words,
   handleSetMode,
