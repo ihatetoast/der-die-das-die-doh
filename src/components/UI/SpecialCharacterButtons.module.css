@@ -1,3 +1,12 @@
 .germanKeysCont {
-  border: 1px solid green;
+  display: flex;
+  justify-content: space-between;
+}
+
+.umlautBtn {
+  padding: 0.25rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 16px;
+  border: 1px solid var(--primary);
 }

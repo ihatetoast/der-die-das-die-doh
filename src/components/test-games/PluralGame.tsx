@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { GameProps } from "../../types.ts";
 import { useFlashcardLogic } from "../../hooks/useFlashcardLogic.ts";
 import classes from "./PluralGame.module.css";
 
+import SpecialCharacterButtons from "../UI/SpecialCharacterButtons.tsx";
 import GameOver from "../UI/GameOver.tsx";
 
 const PluralGame = ({ words, handleSetMode, onSessionComplete }: GameProps) => {
@@ -19,6 +20,9 @@ const PluralGame = ({ words, handleSetMode, onSessionComplete }: GameProps) => {
 
   // const [message, setMessage] = useState<string>('');
   const [userInputPlural, setUserInputPlural] = useState<string>("");
+
+  // special chars
+  const inputRef = useRef<HTMLInputElement>(null);
   useEffect(() => {
     if (testState === "over") {
       onSessionComplete();
@@ -173,6 +177,7 @@ const PluralGame = ({ words, handleSetMode, onSessionComplete }: GameProps) => {
               <input
                 type="text"
                 id="plural"
+                ref={inputRef}
                 value={userInputPlural}
                 className={`
                   ${classes.pluralAnswer} 
@@ -186,6 +191,7 @@ const PluralGame = ({ words, handleSetMode, onSessionComplete }: GameProps) => {
                   }
                 }}
               />
+              <SpecialCharacterButtons inputRef={inputRef} />
               <button
                 disabled={answerState !== "waiting"}
                 onClick={handleSubmit}

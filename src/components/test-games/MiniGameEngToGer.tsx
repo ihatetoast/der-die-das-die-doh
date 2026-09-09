@@ -2,20 +2,17 @@ import { useState, useEffect, useRef } from "react";
 import { useFlashcardLogic } from "../../hooks/useFlashcardLogic.ts";
 import { ArticleType } from "../../types.ts";
 
+import SpecialCharacterButtons from "../UI/SpecialCharacterButtons.tsx";
 import GameOver from "../UI/GameOver.tsx";
 
 import classes from "./Game.module.css";
 import { GameProps } from "../../types.ts";
-// todo: handle no singular
-// ex the parents -> show die and ask for "Eltern"
+
 const MiniGameEngToGer = ({
   words,
   handleSetMode,
   onSessionComplete,
 }: GameProps) => {
-  console.log(
-    "MiniGameEngToGer about to call hook with testType: eng-ger-mini",
-  );
   const {
     cardsToTest,
     setCardsToTest,
@@ -45,6 +42,8 @@ const MiniGameEngToGer = ({
 
   // for focus to return to first button after loading and play has started.
   const derButtonRef = useRef<HTMLButtonElement>(null);
+  // for special characters in input (ü)
+  const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     if (testState === "active" && answerState === "waiting") {
@@ -186,8 +185,6 @@ const MiniGameEngToGer = ({
             translation in the input field.
           </p>
 
-          <p>TO DO: KEYBOARD HINTS AND/OR BUTTONS FOR ä Ä ö Ö ü Ü and ß</p>
-
           <p>
             If you need help, click "Hint" to get a scrambled version of the
             German noun. Still stuck? Click "Reveal?" to get the answer.
@@ -268,6 +265,7 @@ const MiniGameEngToGer = ({
                 id="word"
                 value={userInputNoun}
                 placeholder="German noun"
+                ref={inputRef}
                 onChange={(e) => setUserInputNoun(e.target.value)}
                 onKeyDown={(e) => {
                   if (e.key === "Enter") {
@@ -280,7 +278,7 @@ const MiniGameEngToGer = ({
                     ${gerNounIsCorrect === false ? classes.incorrectGer : ""}
                   `.trim()}
               />
-
+              <SpecialCharacterButtons inputRef={inputRef} />
               <div className={classes.btnContainer}>
                 <button
                   onClick={handleSubmit}

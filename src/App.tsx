@@ -75,11 +75,14 @@ function App() {
       const finalDeck = shuffle([...weakDeck, ...otherDeck]);
 
       deck = finalDeck.slice(0, size);
-    } else if (testType === "article") {
+    } else if (testType === "article" || testType === "ger-eng-mini") {
       const nounsWithSingulars = allShuffledDeck.filter(
         (n) => !n.hasNoSingular,
       );
       deck = nounsWithSingulars.slice(0, size);
+    } else if (testType === "plural") {
+      const nounsWithPlurals = allShuffledDeck.filter((n) => !n.hasNoPlural);
+      deck = nounsWithPlurals.slice(0, size);
     } else {
       deck = allShuffledDeck.slice(0, size);
     }
@@ -127,7 +130,6 @@ function App() {
     setAllShuffledDeck(shuffled);
     // setAllShuffledDeck(shuffled.slice(0, 2)); // to test if i lose all my words.
   }
-  console.log(activeDeck);
   return (
     <>
       <Header

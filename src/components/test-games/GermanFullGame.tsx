@@ -1,7 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useFlashcardLogic } from "../../hooks/useFlashcardLogic.ts";
 import { ArticleType } from "../../types.ts";
 
+import SpecialCharacterButtons from "../UI/SpecialCharacterButtons.tsx";
 import GameOver from "../UI/GameOver.tsx";
 
 // import classes from './GermanFullGame.module.css';
@@ -32,7 +33,12 @@ const GermanFullGame = ({
   const targetWord = cardsToTest[0]?.noun;
   const targetArticle = cardsToTest[0]?.article;
   const targetPlural = cardsToTest[0]?.plural;
+  const hasNoPlural = cardsToTest[0]?.hasNoPlural;
+  const hasNoSingular = cardsToTest[0]?.hasNoSingular;
 
+  // special chars
+  const nounInputRef = useRef<HTMLInputElement>(null);
+  const pluralInputRef = useRef<HTMLInputElement>(null);
   useEffect(() => {
     if (testState === "over") {
       onSessionComplete();
@@ -136,8 +142,10 @@ const GermanFullGame = ({
   };
 
   const allEmpty =
-    userInputNoun.trim() === "" &&
     userInputArticle === "" &&
+    !hasNoPlural &&
+    userInputNoun.trim() === "" &&
+    !hasNoSingular &&
     userInputPlural.trim() === "";
 
   const handleArticleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -192,13 +200,14 @@ const GermanFullGame = ({
       }
     }
 
-    const nounRight = evalAnswerGerNoun(
-      userInputNoun,
-      targetWord,
-      otherGerDefs,
-    );
+    const nounRight = hasNoSingular
+      ? true
+      : evalAnswerGerNoun(userInputNoun, targetWord, otherGerDefs);
     const articleRight = evalAnswerArticle(userInputArticle, targetArticle);
-    const pluralRight = evalAnswerPlural(userInputPlural, targetPlural);
+    // handle plurale tantum aka only plural like pants scissors people
+    const pluralRight = hasNoPlural
+      ? true
+      : evalAnswerPlural(userInputPlural, targetPlural);
 
     const isCorrect = articleRight && nounRight && pluralRight;
     setAnswerState(isCorrect ? "correct" : "incorrect");
@@ -249,55 +258,66 @@ const GermanFullGame = ({
               >
                 {message}
               </p>
-
-              <input
-                type="text"
-                autoFocus={testState === "active"}
-                id="article"
-                list="articles"
-                value={userInputArticle}
-                placeholder="ex: das"
-                onChange={handleArticleChange}
-                className={classes.articleAnswer}
-              />
-              <datalist id="articles">
-                <option>der</option>
-                <option>die</option>
-                <option>das</option>
-              </datalist>
-              <input
-                type="text"
-                id="word"
-                value={userInputNoun}
-                placeholder="ex: Buch"
-                onChange={(e) => setUserInputNoun(e.target.value)}
-                className={classes.nounAnswer}
-              />
-              <div className={classes.germanPlural}>
-                <span className={classes.pluralArticle}>die</span>
+              <div>
                 <input
                   type="text"
-                  id="plural"
-                  value={
-                    cardsToTest[0]?.hasNoPlural ? "no plural" : userInputPlural
-                  }
-                  className={classes.pluralAnswer}
-                  placeholder="ex: Bücher"
-                  disabled={cardsToTest[0]?.hasNoPlural}
-                  onChange={(e) => setUserInputPlural(e.target.value)}
-                  onKeyDown={(e) => {
-                    if (
-                      e.key === "Enter" &&
-                      userInputArticle !== null &&
-                      userInputNoun !== "" &&
-                      userInputPlural !== ""
-                    ) {
-                      handleSubmit();
-                    }
-                  }}
+                  autoFocus={testState === "active"}
+                  id="article"
+                  list="articles"
+                  value={userInputArticle}
+                  placeholder="ex: das"
+                  onChange={handleArticleChange}
+                  className={classes.articleAnswer}
                 />
+                <datalist id="articles">
+                  <option>der</option>
+                  <option>die</option>
+                  <option>das</option>
+                </datalist>
               </div>
-
+              {hasNoSingular ? (
+                <p>{`die ${cardsToTest[0]?.plural} is plurale tantum, (ie has no singular form)`}</p>
+              ) : (
+                <input
+                  type="text"
+                  id="word"
+                  ref={nounInputRef}
+                  value={userInputNoun}
+                  placeholder="ex: Buch"
+                  onChange={(e) => setUserInputNoun(e.target.value)}
+                  className={classes.nounAnswer}
+                />
+              )}
+              <SpecialCharacterButtons inputRef={nounInputRef} />
+              <div className={classes.germanPlural}>
+                {hasNoPlural ? (
+                  <p>{`${cardsToTest[0]?.noun} is singulare tantum in German, (ie has no plural form). To get around, "-sorten" can be added to the end. eg Käsesorten.`}</p>
+                ) : (
+                  <>
+                    <span className={classes.pluralArticle}>die</span>
+                    <input
+                      type="text"
+                      id="plural"
+                      value={userInputPlural}
+                      ref={pluralInputRef}
+                      className={classes.pluralAnswer}
+                      placeholder="ex: Bücher"
+                      onChange={(e) => setUserInputPlural(e.target.value)}
+                      onKeyDown={(e) => {
+                        if (
+                          e.key === "Enter" &&
+                          userInputArticle !== null &&
+                          userInputNoun !== "" &&
+                          userInputPlural !== ""
+                        ) {
+                          handleSubmit();
+                        }
+                      }}
+                    />
+                  </>
+                )}
+              </div>
+              <SpecialCharacterButtons inputRef={pluralInputRef} />
               <div className={classes.btnContainer}>
                 <button
                   onClick={handleSubmit}
