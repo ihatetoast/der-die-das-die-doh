@@ -185,7 +185,7 @@ const PracticeBoard = ({
                 </button>
               </div>
               <div className={classes.cubePlaceholder}>
-                <p>Yay! Deck completed.</p>
+                <p>Yay! Deck completed. replace or size me later.</p>
               </div>
               <p>
                 If you want to completely start over with a clean slate, click

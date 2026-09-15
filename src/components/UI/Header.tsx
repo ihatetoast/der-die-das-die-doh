@@ -21,6 +21,10 @@ const Header = ({
     return (
       <header className={classes.header}>
         <h1>Der Die Das Die ... D'oh!</h1>
+        <p>
+          Your one-stop noun shop: gender, plural, definitions, and more more
+          more ...
+        </p>
       </header>
     );
   }

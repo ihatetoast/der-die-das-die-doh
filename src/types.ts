@@ -107,7 +107,7 @@ export type NotesType = {
   weakMascHint?: WeakMascComment;
   genitiveNote?: string;
 };
-// miscNote: 'Idioms: "Zeit totschlagen" (lit: to beat time to death) — to kill/waste time while waiting; "Kommt Zeit, kommt Rat" (lit. comes time, comes advice) — time will tell.',
+
 export type ModeProp = "practice" | "test" | "home";
 // controlling decksize until I have >500 completed: true. egads
 export type DeckSize = 5 | 10 | 15 | 20 | 25;

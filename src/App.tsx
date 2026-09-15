@@ -138,35 +138,31 @@ function App() {
         deckTooSmall={deckTooSmall}
         sessionComplete={sessionComplete}
       />
-      {deckTooSmall && <div>STYLE ME WITH SADNESS LATER</div>}
-      <main>
+
+      <main className="app-container">
+        {deckTooSmall && <div>STYLE ME WITH SADNESS LATER</div>}
         {!deckTooSmall && mode === "home" && (
           <>
             <div className="images-container">
-              <div className="intro-images learn">
-                <h2>Learn & Practice</h2>
-                <p>
-                  To review gender and plural as well as see example sentences
-                  and notes about the word.
-                </p>
+              <div className="intro-images">
+                <h2>Practice</h2>
+                <p>Get a deck of nouns to study.</p>
                 <div className="mode-image-container">
-                  <img
-                    src={`${import.meta.env.BASE_URL}practice-view.png`}
-                    alt="screenshot of practice mode"
-                  />
+                  <span aria-label="stack of books" role="img">
+                    📚
+                  </span>
                 </div>
                 <ModeButton onClick={handleSetMode} mode="practice">
-                  Learn & Practice
+                  Practice
                 </ModeButton>
               </div>
-              <div className="intro-images test">
-                <h2>Tests</h2>
-                <p>To find various ways to test your knowledge.</p>
+              <div className="intro-images">
+                <h2>Test yourself</h2>
+                <p>Pick a quiz to see what you've remembered.</p>
                 <div className="mode-image-container">
-                  <img
-                    src={`${import.meta.env.BASE_URL}test-view.png`}
-                    alt="screenshot of test mode"
-                  />
+                  <span aria-label="brain" role="img">
+                    🧠
+                  </span>
                 </div>
                 <ModeButton onClick={handleSetMode} mode="test">
                   Tests

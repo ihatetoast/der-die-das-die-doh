@@ -31,8 +31,6 @@ const TestBoard = ({
   handleSetMode,
   onSessionComplete,
 }: Props) => {
-  console.log("TestBoard received testType:", testType);
-
   const handleTestButtonClick = (size: DeckSize, test: TestType) => {
     handleGetInitialActiveDeck(size, test);
     handleGetTestType(test);
@@ -68,15 +66,11 @@ const TestBoard = ({
         />
       )}
       {testType === "eng-ger-mini" && (
-        <>
-          {console.log("MiniGameEngToGer receiving words:", words.length)}
-
-          <MiniGameEngToGer
-            words={words}
-            handleSetMode={handleSetMode}
-            onSessionComplete={onSessionComplete}
-          />
-        </>
+        <MiniGameEngToGer
+          words={words}
+          handleSetMode={handleSetMode}
+          onSessionComplete={onSessionComplete}
+        />
       )}
       {testType === "german-full" && (
         <GermanFullGame

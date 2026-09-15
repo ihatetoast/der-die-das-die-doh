@@ -134,10 +134,7 @@ const MiniGameGerToEng = ({
         </div>
       )}
       {testState === "over" && (
-        <GameOver
-          title="German-to-English Flashcards Mini"
-          onSetMode={handleSetMode}
-        />
+        <GameOver title="German-to-English Mini" onSetMode={handleSetMode} />
       )}
       {testState === "active" && cardsToTest.length > 0 && (
         <section className={classes.gameContainer}>

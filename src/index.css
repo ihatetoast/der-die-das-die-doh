@@ -5,10 +5,30 @@
 
   --serif: "Rufina", "Georgia", "Garamond", serif;
   --sans-serif: "Sintony", "Arial", "Verdana", sans-serif;
+  --box-shadow: 0px 9px 15px 1px rgba(2, 36, 33, 0.72);
 
-  --primary: #1f3634; /* v dk green  */
-  --accent: #cace00;
+  --background: #c7ede4; /* frozen water  */
+
+  --primary: #1b1f3b; /* space indigo */
   --white: #fcfbf4;
+  /* landing page and general global */
+  --general-btn: #4d7ea8; /* der die das, deck size, special char */
+  --secondary-btn: #6da34d; /*rename later? currently go button as seen across views */
+  --light-blue: #7fdbff; /* learn/practice. usu in header */
+  --middle-blue: #0074d9; /* home. usu in header and cube is front-back eng/ger */
+  --navy-blue: #001f3f; /* tests. usu in header */
+
+  /* practice page. cube matches --middle-blue: #0074D9; which is front/back color */
+  --left-right: #b07c9e; /*mauve? sent/notes */
+  --top-bottom: #dde8b9; /* tea green art/plural */
+
+  --deck-nav: #3d2b56; /* remove or readd to deck */
+
+  /* test page matches --navy-blue: #0074d9 */
+
+  /* these are old colors. replacing. keep until replaced  */
+  --accent: #cace00;
+
   --red: #e7403c; /* error or mistake feedback */
   --pink: #e9bac3; /* error  accent */
   --green: #035a5c; /* v dark teal  */
@@ -25,8 +45,6 @@
   --bottom: #a3aad8; /*  plural  */
   --left: #d4c9f0; /* sentence  */
   --right: #7ba3ce; /* notes  */
-
-  --box-shadow: 0px 9px 15px 1px rgba(2, 36, 33, 0.72);
 }
 
 * {
@@ -41,7 +59,7 @@ body {
   min-height: 100vh;
   max-width: 100%;
   overflow-x: hidden;
-  background-color: var(--white);
+  background-color: var(--background);
   color: var(--slate);
   font-family: var(--sans-serif);
   color: var(--primary);
@@ -71,8 +89,8 @@ h2 {
   font-family: var(--serif);
 }
 
-main {
-  padding: 0 1rem;
+.app-container {
+  padding: 0.5rem 3rem;
   flex: 1;
   max-width: 1000px;
   margin: 0 auto;
@@ -106,22 +124,30 @@ main {
   gap: 0.5rem;
   flex-direction: column;
 }
+
 .intro-images {
   border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin-bottom: 1rem;
   align-items: center;
+  padding: 2rem 1rem;
+  text-align: center;
+  background: var(--white);
 }
 
 .intro-images .mode-image-container {
-  width: 180px;
-  height: 180px;
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.25rem;
 }
-
-.intro-images .mode-image-container img {
-  width: 100%;
+.intro-images p {
+  font-size: 1.1rem;
+}
+.intro-images .mode-image-container span {
+  font-size: 64px;
 }
 
 ul {
@@ -144,23 +170,7 @@ ul {
   }
 
   .intro-images .mode-image-container {
-    width: 275px;
-    height: 275px;
     margin-bottom: 1rem;
-  }
-
-  .images-container {
-    flex-direction: row;
-    gap: 2rem;
-  }
-
-  .intro-images {
-    width: 50%;
-    height: 560px;
-  }
-
-  .intro-images p {
-    flex: 1;
   }
 }
 
