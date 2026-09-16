@@ -88,7 +88,7 @@ const MiniGameEngToGer = ({
         setAnswerState("waiting");
         setArticleIsCorrect(null);
         setGerNounIsCorrect(null);
-      }, 3000);
+      }, 2500);
     }
   }, [
     answerState,
@@ -178,12 +178,11 @@ const MiniGameEngToGer = ({
     <>
       <h2>English-to-German Mini Test</h2>
       {testState === "waiting" && (
-        <div>
-          <p>
-            You're given a noun in English, and you need choose the correct
-            article by clicking the appropriate button and entering the
-            translation in the input field.
-          </p>
+        <div className={classes.instructions}>
+          <h3>
+            Given an English noun, choose the appropriate article button and
+            enter the German noun translation space provided.
+          </h3>
 
           <p>
             If you need help, click "Hint" to get a scrambled version of the
@@ -203,9 +202,7 @@ const MiniGameEngToGer = ({
           </button>
         </div>
       )}
-      {testState === "over" && (
-        <GameOver title="English-to-German Mini" onSetMode={handleSetMode} />
-      )}
+      {testState === "over" && <GameOver />}
       {testState === "active" && cardsToTest.length > 0 && (
         <section className={classes.gameContainer}>
           <div className={classes.wordsContainer}>

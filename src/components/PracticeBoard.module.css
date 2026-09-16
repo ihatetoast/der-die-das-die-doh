@@ -1,6 +1,9 @@
 .practiceBoard {
   display: flex;
   flex-direction: column;
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  padding: 1rem 0.5rem;
 }
 
 .practiceBoard h2 {
@@ -19,36 +22,73 @@
 .listEmoji {
   margin-right: 0.25rem;
 }
+.deckBox {
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+}
 
 .btnContainer {
   display: flex;
   justify-content: center;
+  gap: 1.5rem;
+  padding-top: 1rem;
+}
+
+.reviewComplete p {
+  margin: 0.5rem auto 0.25rem;
+}
+
+.btnContainer.testBtns .mobileBtn {
+  display: inline;
+}
+
+.btnContainer.testBtns span:not(.mobileBtn) {
+  display: none;
+}
+
+.btnContainer.reviewBtns,
+.btnContainer.testBtns {
   gap: 1rem;
-  padding: 0.25rem;
+  flex-wrap: wrap;
+  padding-top: 0;
+}
+.btnContainer.reviewBtns button,
+.btnContainer.testBtns button {
+  padding: 0.5rem 0.75rem;
+}
+.btnContainer.reviewBtns button {
+  background-color: var(--color-triad-two);
+  border-radius: var(--btn-radius);
+}
+
+.btnContainer.testBtns button {
+  background-color: var(--color-triad-three);
+  border-radius: var(--btn-radius);
 }
 
 .btnContainer.instructionsBtn {
-  flex-direction: column;
-  gap: 0.2rem;
+  gap: 0.5rem;
   width: 15rem;
   margin: 0 auto;
 }
 
 .instructions .btnContainer button {
   padding: 1rem;
-  border-radius: 50%;
+  border-radius: var(--btn-radius);
   width: 3rem;
   height: 3rem;
-  background-color: var(--black);
+  background-color: var(--primary);
   color: var(--white);
+  font-size: 1rem;
 }
 
 .btnContainer.instructionsBtn button:not(.warning) {
-  background-color: var(--blue);
+  background-color: var(--success);
 }
 
 .warning {
-  background-color: var(--red);
+  background-color: var(--error);
 }
 
 .btnContainer.instructionsBtn button {
@@ -118,17 +158,33 @@
   }
 }
 
+@media screen and (min-width: 515px) {
+  .btnContainer.testBtns .mobileBtn {
+    display: none;
+  }
+
+  .btnContainer.testBtns span:not(.mobileBtn) {
+    display: inline;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .practiceBoard h2 {
     font-size: 1.75rem;
   }
+
   .btnContainer.instructionsBtn {
     width: 60%;
     max-width: 640px;
     margin-bottom: 2rem;
   }
 
+  .btnContainer {
+    padding-top: 0.25rem;
+  }
+
   .btnContainer.instructionsBtn button {
     padding: 0.75rem 1rem;
+    color: red; /* is this anywhere? */
   }
 }

@@ -1,19 +1,36 @@
 /* todo: work on the color styles for german. too many colors  */
 
+h3 {
+  font-weight: 500;
+}
+
+.instructions p {
+  margin: 0.5rem auto;
+}
+
 .gameContainer {
   width: 100%;
 }
 .highlight {
-  color: var(--red);
+  color: var(--error);
 }
 .wordsContainer {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.targetWord {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
 }
 
 .originWord {
   display: flex;
-  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 /* specific to full game:  */
 .englishWord {
@@ -28,20 +45,33 @@
   display: inline;
 }
 
+.emoji {
+  font-size: 1.2rem;
+  color: var(--error);
+  margin: 0 0.5rem;
+}
+
 .message {
   height: 2rem;
   margin-bottom: 1rem;
 }
 .message.correctGer {
-  color: #0052a3;
+  color: var(--success);
 }
 .message.incorrectGer {
-  color: var(--red);
+  color: var(--error);
 }
+
 /* end specific to full game:  */
+
+.hints {
+  text-align: center;
+}
+
 .hint {
   height: 2rem;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .pluralAnswer,
@@ -56,12 +86,13 @@
   font-size: 1rem;
   display: inline-flex;
   align-items: flex-end;
-  min-height: 2rem;
+  min-height: 3rem;
   appearance: none;
-  background-color: #fff;
+  background-color: var(--white);
   font-family: inherit;
   padding: 0.25em 0.5em;
-  border: 2px solid var(--input-border);
+  margin: 0.5rem 0 1rem;
+  border: 2px solid var(--primary);
   border-radius: 4px;
 }
 
@@ -70,58 +101,68 @@
 }
 
 .nounAnswer.skipped {
-  border: 3px solid var(--pink);
+  border: 3px solid var(--color-triad-one);
 }
 
 .nounAnswer.incorrect {
-  border: 3px solid var(--red);
+  border: 3px solid var(--error);
 }
 
 .nounAnswer.correct {
-  border: 3px solid var(--accent);
+  border: 3px solid var(--success);
 }
 
 .nounAnswer.correctGer {
-  color: var(--accent);
-  border: 3px solid var(--accent);
-  font-weight: bold;
-  background-color: #0052a3;
+  color: var(--black);
+  border: 3px solid var(--primary);
+  font-weight: 700;
+  background-color: var(--success);
 }
 
 .nounAnswer.incorrectGer {
-  color: var(--red);
+  color: var(--black);
+  border: 3px solid var(--primary);
+  font-weight: 700;
+  background-color: var(--error);
 }
 
 .btnContainer {
   display: flex;
   gap: 1rem;
-  margin-top: 1rem;
+  margin: 1rem auto 0;
+  max-width: 18rem;
+}
+
+.btnContainer button {
+  font-size: 1rem;
 }
 
 .startBtn,
 .submitBtn,
 .hintBtn {
-  text-transform: uppercase;
   padding: 0.3rem;
   border-radius: var(--btn-radius);
   min-width: 5rem;
   border: 2px solid transparent;
 }
 .startBtn {
-  background-color: var(--green);
+  background-color: var(--primary);
   color: var(--white);
+  margin: 0 auto;
+  display: block;
+  font-size: 1rem;
 }
 
 .submitBtn {
-  background-color: var(--pink);
+  background-color: var(--color-triad-one);
 }
 
 .hintBtn {
-  background-color: var(--accent);
+  background-color: var(--color-triad-three);
 }
 
 .hintBtn.scrambled {
-  background-color: var(--pink);
+  background-color: var(--color-triad-two);
 }
 
 .hintBtn.revealed {
@@ -130,13 +171,14 @@
 
 .articleButtonContainer {
   display: flex;
-  justify-content: space-between;
-  margin: 0.5rem 0;
+  gap: 1rem;
+  margin: 0.5rem auto 0;
   max-width: 18rem;
 }
 
 .articleButtonContainer button {
-  background-color: var(--blue);
+  background-color: var(--primary);
+  color: var(--white);
   padding: 0.3rem;
   border-radius: var(--btn-radius);
   min-width: 5rem;
@@ -144,22 +186,25 @@
   font-size: 1rem;
 }
 
-.articleButtonContainer button.selected,
-.articleButtonContainer button:focus {
+.articleButtonContainer button.selected {
   border: 2px solid var(--black);
+}
+.articleButtonContainer button:focus {
+  border: 2px solid var(--accent);
 }
 
 .articleButtonContainer button.incorrect {
-  border: 2px solid var(--red);
-  background-color: var(--red);
-  color: var(--white);
+  border: 2px solid var(--error);
+  background-color: var(--black);
+  font-weight: 700;
+  color: var(--error);
 }
 
 .articleButtonContainer button.correct {
-  border: 2px solid var(--accent);
-  font-weight: bold;
-  background-color: #0052a3;
-  color: var(--accent);
+  border: 2px solid var(--success);
+  font-weight: 700;
+  background-color: var(--black);
+  color: var(--success);
 }
 
 @media screen and (min-width: 520px) {

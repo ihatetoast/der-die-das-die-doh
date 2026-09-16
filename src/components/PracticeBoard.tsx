@@ -81,9 +81,9 @@ const PracticeBoard = ({
             <section className={classes.instructions}>
               <h2>Let's practice!</h2>
               <p>
-                You'll have a stack of cubes to practice your vocabulary, and
-                each side has information about the word:
+                Choose a deck of words to practice. Each word will be on a cube.
               </p>
+              <p>Cube faces:</p>
               <ul>
                 <li>
                   <span className={classes.listEmoji}>🇬🇧</span>
@@ -111,23 +111,24 @@ const PracticeBoard = ({
                 </li>
                 <li>
                   <span className={classes.listEmoji}>🇩🇪</span>Notes on the word
-                  <span className={classes.example}>
-                    {" "}
-                    (or a review of the word if there are no notes)
-                  </span>
                 </li>
               </ul>
               <p>
                 Note: For words with a gender pair (eg Journalist → der
-                Journalist or die Journalistin), a small badge will appear so
-                you know which one you're practicing. We assume that you know a
-                female journalist is die and a male journalist is der.
+                Journalist / die Journalistin), a badge will appear so you know
+                which one you're targeting.
               </p>
-              <p>How many words do you want to practice?</p>
-              <div className={classes.btnContainer}>
-                <button onClick={() => handleInitialDeckChoice(5)}>5</button>
-                <button onClick={() => handleInitialDeckChoice(10)}>10</button>
-                <button onClick={() => handleInitialDeckChoice(20)}>20</button>
+              <div className={classes.deckBox}>
+                <p className="center">Pick a deck size: </p>
+                <div className={classes.btnContainer}>
+                  <button onClick={() => handleInitialDeckChoice(5)}>5</button>
+                  <button onClick={() => handleInitialDeckChoice(10)}>
+                    10
+                  </button>
+                  <button onClick={() => handleInitialDeckChoice(20)}>
+                    20
+                  </button>
+                </div>
               </div>
             </section>
           )}
@@ -143,7 +144,7 @@ const PracticeBoard = ({
                       setCardsToReview((prev) => [...prev.slice(1)])
                     }
                   >
-                    Remove from deck
+                    Remove
                   </button>
                   <button
                     className={classes.warning}
@@ -151,46 +152,48 @@ const PracticeBoard = ({
                       setCardsToReview((prev) => [...prev.slice(1), prev[0]])
                     }
                   >
-                    Keep & review
+                    Review
                   </button>
                 </div>
               </div>
             </section>
           )}
           {words.length > 0 && cardsToReview.length === 0 && (
-            <section>
+            <section className={classes.reviewComplete}>
               <p>
-                Way to go. You've gone through the deck and have no cards to
-                review. What's next? New deck and another {deckSize} words? Test
-                yourself? repeat this deck?
+                w00t. You've gone through the deck and have no cards to review.
+                What's next?
               </p>
-              <div className={classes.btnContainer}>
+              <p>Review me:</p>
+              <div className={`${classes.btnContainer} ${classes.reviewBtns}`}>
                 <button onClick={() => setCardsToReview(words)}>
-                  Review current deck
+                  My current deck
                 </button>
                 {deckSize && (
                   <button onClick={() => handleRefillActiveDeck(deckSize)}>
-                    Get {deckSize} new ones!
+                    Get {deckSize} new words
                   </button>
                 )}
-
+              </div>
+              <p>Test me:</p>
+              <div className={`${classes.btnContainer} ${classes.testBtns}`}>
                 <button onClick={() => handleTestButtonClick("german-full")}>
-                  Test me: English to German
+                  <span className={classes.mobileBtn}>Eng to Ger</span>
+                  <span>English to German</span>
                 </button>
                 <button onClick={() => handleTestButtonClick("ger-eng-mini")}>
-                  Test me: German to English
+                  <span className={classes.mobileBtn}>Ger to Eng</span>
+                  <span>German to English</span>
                 </button>
                 <button onClick={() => handleTestButtonClick("article")}>
-                  Test me: Article speed round!
+                  <span className={classes.mobileBtn}>Art speed round</span>
+                  <span> Article speed round</span>
                 </button>
               </div>
               <div className={classes.cubePlaceholder}>
                 <p>Yay! Deck completed. replace or size me later.</p>
               </div>
-              <p>
-                If you want to completely start over with a clean slate, click
-                "Home" in the header.
-              </p>
+              <p className="center">Totally new deck? Click "Home".</p>
             </section>
           )}
         </div>

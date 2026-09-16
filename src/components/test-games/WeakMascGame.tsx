@@ -97,9 +97,7 @@ const WeakMascGame = ({
           </button>
         </div>
       )}
-      {testState === "over" && (
-        <GameOver title="Be strong with weak nouns" onSetMode={handleSetMode} />
-      )}
+      {testState === "over" && <GameOver />}
       {testState === "active" && (
         <>
           <Timer

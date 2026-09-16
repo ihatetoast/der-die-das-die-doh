@@ -14,7 +14,7 @@ const TIME_TO_NEXT_QUESTION = 2000;
 
 const ArticleGame = ({
   words,
-  handleSetMode,
+  // handleSetMode,
   onSessionComplete,
 }: GameProps) => {
   const [cardsToTest, setCardsToTest] = useState<VocabEntry[]>([]);
@@ -75,13 +75,10 @@ const ArticleGame = ({
     <>
       <h2>Article Speed Round</h2>
       {testState === "waiting" && (
-        <div>
-          <p>You will be shown a word. Pick the correct article. </p>
-          <p>
-            If you picked the correct article, the word will be removed from the
-            stack. If you pick the wrong article, the word will be returned the
-            stack.
-          </p>
+        <div className={classes.instructions}>
+          <h3>Given a German noun, pick the correct article. </h3>
+          <p>If you guess incorrectly, the card is returned to the deck. </p>
+          <p>Test is complete when all articles have been picked correctly.</p>
           <p>When you're ready, click "Go!".</p>
           <button
             className={classes.startBtn}
@@ -92,9 +89,7 @@ const ArticleGame = ({
         </div>
       )}
 
-      {testState === "over" && (
-        <GameOver title="Article Speed Round" onSetMode={handleSetMode} />
-      )}
+      {testState === "over" && <GameOver />}
       {testState === "active" && (
         <>
           <Timer

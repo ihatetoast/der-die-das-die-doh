@@ -4,22 +4,23 @@
   text-transform: uppercase;
   padding: 0.5rem;
   border-radius: var(--btn-radius);
-  min-width: 10rem;
+  min-width: 6.5rem;
   border: 2px solid transparent;
   font-size: 1rem;
 }
 
 .test {
-  background-color: var(--navy-blue);
-  color: var(--white);
+  background-color: var(--color-triad-three);
+  color: var(--black);
 }
 
 .practice {
-  background-color: var(--light-blue);
+  background-color: var(--color-triad-two);
+  color: var(--black);
 }
 
 .home {
-  background-color: var(--green);
+  background-color: var(--primary);
   color: var(--white);
 }
 

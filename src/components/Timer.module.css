@@ -1,7 +1,7 @@
-
 .timerDigits {
   text-align: center;
   margin-top: 1rem;
+  height: 32px;
 }
 
 .timerDigits span {

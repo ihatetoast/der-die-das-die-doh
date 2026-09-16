@@ -23,12 +23,12 @@
 }
 
 button[data-state="correct"] {
-  background: var(--accent);
+  background: var(--success);
 }
 button[data-state="incorrect"] {
-  background: var(--red);
+  background: var(--error);
 }
 
 .highlight {
-  color: var(--red);
+  color: var(--error);
 }

@@ -5,46 +5,21 @@
 
   --serif: "Rufina", "Georgia", "Garamond", serif;
   --sans-serif: "Sintony", "Arial", "Verdana", sans-serif;
-  --box-shadow: 0px 9px 15px 1px rgba(2, 36, 33, 0.72);
+  --box-shadow: 0px 5px 15px 1px rgba(2, 36, 33, 0.72);
 
-  --background: #c7ede4; /* frozen water  */
-
-  --primary: #1b1f3b; /* space indigo */
-  --white: #fcfbf4;
-  /* landing page and general global */
-  --general-btn: #4d7ea8; /* der die das, deck size, special char */
-  --secondary-btn: #6da34d; /*rename later? currently go button as seen across views */
-  --light-blue: #7fdbff; /* learn/practice. usu in header */
-  --middle-blue: #0074d9; /* home. usu in header and cube is front-back eng/ger */
-  --navy-blue: #001f3f; /* tests. usu in header */
-
-  /* practice page. cube matches --middle-blue: #0074D9; which is front/back color */
-  --left-right: #b07c9e; /*mauve? sent/notes */
-  --top-bottom: #dde8b9; /* tea green art/plural */
-
-  --deck-nav: #3d2b56; /* remove or readd to deck */
-
-  /* test page matches --navy-blue: #0074d9 */
-
-  /* these are old colors. replacing. keep until replaced  */
-  --accent: #cace00;
-
-  --red: #e7403c; /* error or mistake feedback */
-  --pink: #e9bac3; /* error  accent */
-  --green: #035a5c; /* v dark teal  */
-  --blue: #7ba3ce; /* positive feedback  */
+  /* https://dribbble.com/shots/2101536-Style-Tile */
+  --background: #f5f2ea;
+  --primary: #5f5f5f;
+  --white: #fff;
   --black: #022421;
-  /* create colors for test version. don't like using the ones for primary etc. keep those for real accents or errors and generic buttons
-  todo: testing colors. study colors ok as is.
-  */
-  /* die/cube and buttons must match side */
-  --light-green: #f2fff2; /* bg to die/cube  */
-  --front: #5ba78f; /* english  */
-  --back: #5fa5ad; /* german  */
-  --top: #cca4d8; /* article  */
-  --bottom: #a3aad8; /*  plural  */
-  --left: #d4c9f0; /* sentence  */
-  --right: #7ba3ce; /* notes  */
+
+  --color-triad-one: #e87759;
+  --color-triad-two: #f0c951;
+  --color-triad-three: #5cc6d8;
+
+  --error: #e85965;
+  --success: #5cd86f;
+  --accent: #edf051;
 }
 
 * {
@@ -60,7 +35,7 @@ body {
   max-width: 100%;
   overflow-x: hidden;
   background-color: var(--background);
-  color: var(--slate);
+  color: var(--primary);
   font-family: var(--sans-serif);
   color: var(--primary);
   font-size: 16px;
@@ -90,14 +65,19 @@ h2 {
 }
 
 .app-container {
-  padding: 0.5rem 3rem;
+  padding: 0.5rem 0.25rem;
   flex: 1;
+  width: 100%;
   max-width: 1000px;
   margin: 0 auto;
 }
 
 .bold {
   font-weight: 700;
+}
+
+.center {
+  text-align: center;
 }
 
 .ital {
@@ -113,11 +93,6 @@ h2 {
   visibility: visible;
 }
 
-.intro-images {
-  display: flex;
-  flex-direction: column;
-}
-
 .images-container {
   display: flex;
   justify-content: center;
@@ -126,9 +101,12 @@ h2 {
 }
 
 .intro-images {
+  width: 90%;
+  margin: 0 auto 1rem;
+  display: flex;
+  flex-direction: column;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
-  margin-bottom: 1rem;
   align-items: center;
   padding: 2rem 1rem;
   text-align: center;
@@ -175,13 +153,14 @@ ul {
 }
 
 @media screen and (min-width: 900px) {
-  .intro-images .mode-image-container {
-    width: 350px;
-    height: 350px;
-    border-width: 8px;
+  .images-container {
+    flex-direction: row;
+    justify-content: space-between;
   }
-
   .intro-images {
-    margin-top: 1rem;
+    width: 45%;
+  }
+  .mode-image-container {
+    flex-grow: 1;
   }
 }

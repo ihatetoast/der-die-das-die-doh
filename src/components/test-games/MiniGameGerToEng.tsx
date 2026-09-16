@@ -4,10 +4,7 @@ import GameOver from "../UI/GameOver.tsx";
 
 import classes from "./Game.module.css";
 import { GameProps } from "../../types.ts";
-// todo: mention in the intro to NOT put in female or (female) for words that have a feminine ending.
-// a doctor is a doctor. not doctor v female doctor. this isn't 1980.
 
-// todo: see if no singular matters for the UI
 const MiniGameGerToEng = ({
   words,
   handleSetMode,
@@ -106,18 +103,22 @@ const MiniGameGerToEng = ({
     <>
       <h2>German-to-English Mini Test</h2>
       {testState === "waiting" && (
-        <div>
-          <p>
+        <div className={classes.instructions}>
+          <h3>
             You're given a noun in German. Write the English definition (in
-            singular). <br />
-            <span className={classes.highlight}>Note:</span> Do not add
-            modifiers such as 'male' or 'female' to answers. The answer is
-            'student,' never 'female student' or 'male student.' Gender only
-            matters when the story requires it.
-          </p>
+            singular).
+          </h3>
           <p>
-            Need help? Click "Hint" to get the answer scrambled. Still stuck?
-            Click "Reveal?" to get the answer.
+            <span className={classes.highlight}>Note:</span> Do not add
+            modifiers such as "male" or "female" to answers, i.e. write
+            "student", not "female student".
+          </p>
+          <p className={classes.hints}>
+            Need help? <span className={classes.emoji}>➡</span> "Hint".{" "}
+          </p>
+          <p className={classes.hints}>
+            Still stuck?<span className={classes.emoji}>➡</span>
+            "Reveal?"
           </p>
           <p>
             Words that were incorrect or required a hint will be returned to the
@@ -133,9 +134,7 @@ const MiniGameGerToEng = ({
           </button>
         </div>
       )}
-      {testState === "over" && (
-        <GameOver title="German-to-English Mini" onSetMode={handleSetMode} />
-      )}
+      {testState === "over" && <GameOver />}
       {testState === "active" && cardsToTest.length > 0 && (
         <section className={classes.gameContainer}>
           <div className={classes.wordsContainer}>
@@ -153,25 +152,26 @@ const MiniGameGerToEng = ({
                     ? cardsToTest[0].eng
                     : message}
               </p>
-              <span>the </span>
-
-              <input
-                autoFocus={testState === "active"}
-                type="text"
-                id="word"
-                value={userInputNoun}
-                className={`
+              <div>
+                <span>the </span>
+                <input
+                  autoFocus={testState === "active"}
+                  type="text"
+                  id="word"
+                  value={userInputNoun}
+                  className={`
                   ${classes.nounAnswer} 
                     ${classes[answerState]}
                   `.trim()}
-                placeholder="English word"
-                onChange={(e) => setUserInputNoun(e.target.value)}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter") {
-                    handleSubmit();
-                  }
-                }}
-              />
+                  placeholder="English word"
+                  onChange={(e) => setUserInputNoun(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                      handleSubmit();
+                    }
+                  }}
+                />
+              </div>
 
               <div className={classes.btnContainer}>
                 <button

@@ -20,7 +20,7 @@ const Header = ({
   if (mode === "home") {
     return (
       <header className={classes.header}>
-        <h1>Der Die Das Die ... D'oh!</h1>
+        <h1 className={classes.title}>Der Die Das Die ... D'oh!</h1>
         <p>
           Your one-stop noun shop: gender, plural, definitions, and more more
           more ...
@@ -31,14 +31,14 @@ const Header = ({
   // practice sesh or test is done ...
   if (sessionComplete) {
     return (
-      <header>
-        <h1>Der Die Das Die ... D'oh!</h1>
+      <header className={classes.header}>
+        <h1 className={classes.title}>Der Die Das Die ... D'oh!</h1>
         <div className={classes.buttonContainer}>
           <ModeButton onClick={onSetMode} mode="home">
             Home
           </ModeButton>
           <ModeButton onClick={onSetMode} mode="practice">
-            Learn & Practice
+            Practice
           </ModeButton>
           <ModeButton onClick={onSetMode} mode="test">
             Tests
@@ -50,9 +50,9 @@ const Header = ({
   // ... ; otherwise, just give them an option to go home any time and that is a total reset.
   return (
     <header className={classes.header}>
-      <h1>Der Die Das Die ... D'oh!</h1>
+      <h1 className={classes.title}>Der Die Das Die ... D'oh!</h1>
       <ModeButton onClick={onSetMode} mode="home">
-        Back to home
+        Home
       </ModeButton>
     </header>
   );

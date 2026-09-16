@@ -9,14 +9,14 @@
   border-bottom-width: 1px;
 }
 .pluralGrid div {
-  padding: .1rem .5rem;
+  padding: 0.1rem 0.5rem;
   border-bottom: 1px solid var(--front);
 }
 .pluralSignal {
   text-align: right;
 }
 .highlight {
-  color: var(--red);
+  color: var(--error);
 }
 
 .wordsContainer {
@@ -34,19 +34,18 @@
   margin-bottom: 1rem;
 }
 
-
 .pluralAnswer {
   display: inline-flex;
   align-items: flex-end;
-  min-height: 2rem;
-    appearance: none;
+  min-height: 3rem;
+  appearance: none;
   font-size: 1rem;
   field-sizing: content; /* to allow it to grow if we get a large german word*/
   min-width: 10rem;
   font-family: inherit;
   padding: 0.25em 0.5em;
-  background-color: #fff;
-  border: 2px solid var(--input-border);
+  background-color: var(--white);
+  border: 2px solid var(--primary);
   border-radius: 4px;
 }
 
@@ -55,11 +54,11 @@
 }
 
 .pluralAnswer.skipped {
-  border: 3px solid var(--pink);
+  border: 3px solid var(--color-triad-one);
 }
 
 .pluralAnswer.incorrect {
-  border: 3px solid var(--red);
+  border: 3px solid var(--error);
 }
 
 .pluralAnswer.correct {
@@ -67,7 +66,7 @@
 }
 
 .message {
-    height: 2rem;
+  height: 2rem;
   margin-bottom: 1rem;
 }
 @media screen and (min-width: 520px) {

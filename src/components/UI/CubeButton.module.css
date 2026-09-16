@@ -5,30 +5,24 @@
   text-transform: capitalize;
   border: 2px solid transparent;
   transition: all 0.2s ease-in-out;
+  font-size: 1rem;
 }
 
-.btn.english {
-  background-color: var(--front);
-}
+.btn.english,
 .btn.german {
-  background-color: var(--back);
-  color: var(--black);
-}
-.btn.article {
-  background-color: var(--top);
-  color: var(--black);
-}
-.btn.plural {
-  background-color: var(--bottom);
-  color: var(--black);
-}
-.btn.sentence {
-  background-color: var(--left);
+  background-color: var(--color-triad-three);
   color: var(--black);
 }
 
+.btn.article,
+.btn.plural {
+  background-color: var(--color-triad-two);
+  color: var(--black);
+}
+
+.btn.sentence,
 .btn.notes {
-  background-color: var(--right);
+  background-color: var(--color-triad-one);
   color: var(--black);
 }
 

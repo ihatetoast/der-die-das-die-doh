@@ -240,9 +240,7 @@ const GermanFullGame = ({
           </button>
         </div>
       )}
-      {testState === "over" && (
-        <GameOver title="English to German Test" onSetMode={handleSetMode} />
-      )}
+      {testState === "over" && <GameOver />}
       {testState === "active" && cardsToTest.length > 0 && (
         <section className={classes.gameContainer}>
           <div className={classes.englishWord}>

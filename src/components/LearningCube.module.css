@@ -13,7 +13,7 @@
 }
 
 .learningCube {
-  background-color: var(--light-green);
+  background-color: var(--background);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,6 +39,7 @@
   margin-top: calc(var(--cube-size) / -2);
   transform-style: preserve-3d;
   transition: transform 0.9s ease-in-out;
+  color: var(--primary);
 }
 
 .cube .face {
@@ -47,7 +48,6 @@
   height: var(--cube-size);
   top: 0;
   left: 0;
-  border: 5px solid var(--primary);
   border-radius: var(--border-radius);
   display: flex;
   flex-direction: column;
@@ -57,6 +57,8 @@
   backface-visibility: hidden;
   padding: 0.25rem;
   transform-origin: center center;
+  border-width: 6px;
+  border-style: solid;
 }
 .face p {
   white-space: pre-wrap; /* preserves \n as line breaks */
@@ -74,14 +76,14 @@
   align-items: center;
 }
 .badge.female {
-  background-color: #fff;
-  color: #000;
-  border: 2px solid #000;
+  background-color: var(--background);
+  color: var(--black);
+  border: 2px solid var(--black);
 }
 .badge.male {
-  background-color: #000;
-  color: #fff;
-  border: 2px solid #fff;
+  background-color: var(--black);
+  color: var(--background);
+  border: 2px solid var(--background);
 }
 
 /* hide a sentence on smaller screens  */
@@ -91,36 +93,42 @@
 
 /* rotate x or y / left right or top bot by 90  */
 /* front back rot on Y */
+.cube .english,
+.cube .german {
+  border-color: var(--color-triad-three);
+}
 .cube .english {
   transform: rotateY(0deg) translateZ(var(--cube-radius));
-  background-color: var(--front);
 }
 
 .cube .german {
   transform: rotateY(180deg) translateZ(var(--cube-radius));
-  background-color: var(--back);
 }
 
 /* top bot rot on X */
+.cube .article,
+.cube .plural {
+  border-color: var(--color-triad-two);
+}
 .cube .article {
   transform: rotateX(90deg) translateZ(var(--cube-radius));
-  background-color: var(--top);
 }
 .cube .plural {
   transform: rotateX(-90deg) translateZ(var(--cube-radius));
-  background-color: var(--bottom);
 }
 
 /* left right rot on y  */
+.cube .sentences,
+.cube .notes {
+  border-color: var(--color-triad-one);
+}
 .cube .sentences {
   transform: rotateY(-90deg) translateZ(var(--cube-radius));
-  background-color: var(--left);
   align-items: flex-start;
 }
 
 .cube .notes {
   transform: rotateY(90deg) translateZ(var(--cube-radius));
-  background-color: var(--right);
   align-items: flex-start;
 }
 
@@ -131,7 +139,8 @@
 }
 
 .cubeControls {
-  margin-top: 2rem;
+  margin-top: 1rem;
+  width: 90%;
 }
 
 .btnContainer {

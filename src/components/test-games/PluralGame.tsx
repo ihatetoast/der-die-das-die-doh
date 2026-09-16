@@ -160,9 +160,7 @@ const PluralGame = ({ words, handleSetMode, onSessionComplete }: GameProps) => {
           </button>
         </div>
       )}
-      {testState === "over" && (
-        <GameOver title="German Plural Mini" onSetMode={handleSetMode} />
-      )}
+      {testState === "over" && <GameOver />}
       {testState === "active" && cardsToTest.length > 0 && (
         <section className={classes.pluralGame}>
           <div className={classes.wordsContainer}>
