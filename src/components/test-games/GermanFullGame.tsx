@@ -217,19 +217,19 @@ const GermanFullGame = ({
     <>
       <h2>English to German Test</h2>
       {testState === "waiting" && (
-        <div>
-          <p>
-            Given a noun in English, please supply the correct German article,
-            translation, and its plural form.
-          </p>
+        <div className={classes.instructions}>
+          <h3>
+            Given an English noun, please supply the correct German article,
+            translation, and plural form.
+          </h3>
           <p>
             Test is over when all nouns were answered with the correct article,
-            translation, and plural. Correct answers remove the card (noun) from
-            the deck; incorrect and skipped answers are returned.
+            translation, and plural and witout the use of hints.
           </p>
           <p>
-            Note: for this app, please use the correct umlaut vowel and not the
-            non-umlaut equivalent (i.e. Use ü or ä and not ue or ae).
+            <span className={classes.highlight}>Note:</span> for this app,
+            please use the correct umlaut vowel and not the non-umlaut
+            equivalent (i.e. Use ü or ä and not ue or ae).
           </p>
           <p>When you're ready, click "Go!".</p>
           <button

@@ -1,6 +1,9 @@
 .pluralGame {
   width: 100%;
 }
+.instructions p {
+  margin: 0.5rem auto;
+}
 
 .pluralGrid {
   display: grid;
@@ -22,6 +25,7 @@
 .wordsContainer {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .originWord {
@@ -34,12 +38,47 @@
   margin-bottom: 1rem;
 }
 
+.startBtn,
+.submitBtn {
+  padding: 0.3rem;
+  border-radius: var(--btn-radius);
+  min-width: 5rem;
+  border: 2px solid transparent;
+}
+.startBtn {
+  background-color: var(--primary);
+  color: var(--white);
+  margin: 0 auto;
+  display: block;
+  font-size: 1rem;
+}
+.submitBtn {
+  margin: 1rem auto;
+  background-color: var(--color-triad-one);
+  align-self: center;
+}
+.targetWord {
+  display: flex;
+  flex-direction: column;
+}
+
+.targetWord p {
+  text-align: center;
+  font-size: 1.2rem;
+}
+.pluralContainer {
+  display: flex;
+  align-items: center;
+}
+.pluralContainer span {
+  font-size: 1.2rem;
+}
+
 .pluralAnswer {
   display: inline-flex;
   align-items: flex-end;
   min-height: 3rem;
   appearance: none;
-  font-size: 1rem;
   field-sizing: content; /* to allow it to grow if we get a large german word*/
   min-width: 10rem;
   font-family: inherit;
@@ -47,6 +86,10 @@
   background-color: var(--white);
   border: 2px solid var(--primary);
   border-radius: 4px;
+  flex-grow: 1;
+  margin: 0.5rem 0 1rem;
+  margin-left: 0.2rem;
+  font-size: 1.2rem;
 }
 
 .pluralAnswer.waiting {
@@ -59,10 +102,14 @@
 
 .pluralAnswer.incorrect {
   border: 3px solid var(--error);
+  background-color: var(--error);
+  color: var(--black);
 }
 
 .pluralAnswer.correct {
-  border: 3px solid var(--accent);
+  border: 3px solid var(--success);
+  background-color: var(--success);
+  color: var(--black);
 }
 
 .message {

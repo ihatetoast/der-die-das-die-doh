@@ -193,6 +193,11 @@ const MiniGameEngToGer = ({
             returned to the deck to review. When the deck is emptied, the test
             is over.
           </p>
+          <p>
+            <span className={classes.highlight}>Note:</span> for this app,
+            please use the correct umlaut vowel and not the non-umlaut
+            equivalent (i.e. Use ü or ä and not ue or ae).
+          </p>
           <p>When you're ready, click "Go!".</p>
           <button
             className={classes.startBtn}

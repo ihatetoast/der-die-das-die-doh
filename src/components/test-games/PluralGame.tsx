@@ -81,14 +81,15 @@ const PluralGame = ({ words, handleSetMode, onSessionComplete }: GameProps) => {
     <>
       <h2>German Plural Mini Test</h2>
       {testState === "waiting" && (
-        <div>
-          <p>
+        <div className={classes.instructions}>
+          <h3>
             You'll get an English word with the German translation in singular.
             You need to provide the correct plural.
-          </p>
+          </h3>
           <p>
-            Note: for this app, please use the correct umlaut vowel and not the
-            non-umlaut equivalent (i.e. Use ü or ä and not ue or ae).
+            <span className={classes.highlight}>Note:</span> for this app,
+            please use the correct umlaut vowel and not the non-umlaut
+            equivalent (i.e. Use ü or ä and not ue or ae).
           </p>
           <div>
             <h3>Quick refresher</h3>
@@ -169,30 +170,35 @@ const PluralGame = ({ words, handleSetMode, onSessionComplete }: GameProps) => {
             </div>
             <div className={classes.targetWord}>
               <p className={classes.message}>{message}</p>
-              <span>
-                German: {cardsToTest[0].article} {cardsToTest[0].noun}, die{" "}
-              </span>
-              <input
-                type="text"
-                id="plural"
-                ref={inputRef}
-                value={userInputPlural}
-                className={`
+              <p>
+                German: {cardsToTest[0].article} {cardsToTest[0].noun},
+              </p>
+              <div className={classes.pluralContainer}>
+                <span>die </span>
+                <input
+                  type="text"
+                  id="plural"
+                  ref={inputRef}
+                  value={userInputPlural}
+                  className={`
                   ${classes.pluralAnswer} 
                     ${classes[answerState]}
                   `.trim()}
-                placeholder="plural form"
-                onChange={(e) => setUserInputPlural(e.target.value)}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter") {
-                    handleSubmit();
-                  }
-                }}
-              />
+                  placeholder="plural form"
+                  onChange={(e) => setUserInputPlural(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                      handleSubmit();
+                    }
+                  }}
+                />
+              </div>
+
               <SpecialCharacterButtons inputRef={inputRef} />
               <button
                 disabled={answerState !== "waiting"}
                 onClick={handleSubmit}
+                className={classes.submitBtn}
               >
                 {userInputPlural.trim() === "" ? "Skip" : "Check"}
               </button>
