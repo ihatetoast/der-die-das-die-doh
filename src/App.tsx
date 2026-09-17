@@ -29,7 +29,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    setActiveDeck([]);
+    setActiveDeck([]); // check if clearing this with test change if that's what i want
     setDeckSize(null);
   }, [testType, setActiveDeck, setDeckSize]);
 

@@ -2,18 +2,31 @@
   width: 100%;
 }
 
+.instructions p {
+  margin: 0.5rem auto;
+}
+
 .startBtn {
-  background-color: var(--green);
+  background-color: var(--primary);
   color: var(--white);
   text-transform: uppercase;
   padding: 0.3rem;
   border-radius: var(--btn-radius);
   min-width: 5rem;
   border: 2px solid transparent;
+  margin: 0 auto;
+  display: block;
+  font-size: 1rem;
 }
 
+/* TODO: STYLE THESE
+style these
+.gameCard
+gameWord
+*/
+
 .gameWeakMasc button {
-  background-color: var(--green);
+  background-color: var(--color-triad-three);
   color: var(--white);
   text-transform: uppercase;
   padding: 0.3rem;

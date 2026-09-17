@@ -12,7 +12,7 @@ import { GameProps } from "../../types.ts";
 
 const GermanFullGame = ({
   words,
-  handleSetMode,
+  handleSetMode, // NEEDED?
   onSessionComplete,
 }: GameProps) => {
   const {
@@ -60,7 +60,7 @@ const GermanFullGame = ({
         setUserInputNoun("");
         setUserInputPlural("");
         setAnswerState("waiting");
-      }, 3000);
+      }, 300000);
     } else if (answerState === "skipped") {
       setMessage("");
     }
@@ -263,7 +263,7 @@ const GermanFullGame = ({
                   id="article"
                   list="articles"
                   value={userInputArticle}
-                  placeholder="ex: das"
+                  placeholder="der/die/das"
                   onChange={handleArticleChange}
                   className={classes.articleAnswer}
                 />
@@ -281,7 +281,7 @@ const GermanFullGame = ({
                   id="word"
                   ref={nounInputRef}
                   value={userInputNoun}
-                  placeholder="ex: Buch"
+                  placeholder="singular"
                   onChange={(e) => setUserInputNoun(e.target.value)}
                   className={classes.nounAnswer}
                 />
@@ -291,15 +291,15 @@ const GermanFullGame = ({
                 {hasNoPlural ? (
                   <p>{`${cardsToTest[0]?.noun} is singulare tantum in German, (ie has no plural form). To get around, "-sorten" can be added to the end. eg Käsesorten.`}</p>
                 ) : (
-                  <>
-                    <span className={classes.pluralArticle}>die</span>
+                  <div className={classes.pluralContainer}>
+                    <span>die</span>
                     <input
                       type="text"
                       id="plural"
                       value={userInputPlural}
                       ref={pluralInputRef}
                       className={classes.pluralAnswer}
-                      placeholder="ex: Bücher"
+                      placeholder="plural"
                       onChange={(e) => setUserInputPlural(e.target.value)}
                       onKeyDown={(e) => {
                         if (
@@ -312,7 +312,7 @@ const GermanFullGame = ({
                         }
                       }}
                     />
-                  </>
+                  </div>
                 )}
               </div>
               <SpecialCharacterButtons inputRef={pluralInputRef} />

@@ -15,11 +15,7 @@ import GameOver from "../UI/GameOver.tsx";
 const TIME_TO_GUESS = 5000;
 const TIME_TO_NEXT_QUESTION = 2000;
 
-const WeakMascGame = ({
-  words,
-  handleSetMode,
-  onSessionComplete,
-}: GameProps) => {
+const WeakMascGame = ({ words, onSessionComplete }: GameProps) => {
   const [cardsToTest, setCardsToTest] = useState<VocabEntry[]>([]);
   const [answerState, setAnswerState] = useState<AnswerState>("waiting");
   const [testState, setTestState] = useState<GameState>("waiting");
@@ -74,12 +70,14 @@ const WeakMascGame = ({
     <>
       <h2>Spot the weakling!</h2>
       {testState === "waiting" && (
-        <div>
+        <div className={classes.instructions}>
+          <h3>
+            Given a noun, decide if it's schwach (a weak masculine noun), normal
+            masculine, or not masculine at all (feminine or neuter).
+          </h3>
           <p>
-            You'll be given a noun. Is it a "weak" ("schwach)") masculine noun
-            (aka N-declension)? Click "Schwach", "Normal", or "Nicht mask." if
-            it's feminine or neutral. Don't be wishy-washy namby-pamby, Bambi.
-            You have only {TIME_TO_GUESS / 1000} seconds.
+            Don't be wishy-washy namby-pamby, Bambi. You have only{" "}
+            {TIME_TO_GUESS / 1000} seconds.
           </p>
           <p>
             Jung → Schwach (zB Ich sehe den Jung

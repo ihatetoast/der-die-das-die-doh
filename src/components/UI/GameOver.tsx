@@ -1,8 +1,4 @@
-import ModeButton from "./ModeButton.tsx";
-
 import classes from "./GameOver.module.css";
-
-import { ModeProp } from "../../types.ts";
 
 const GameOver = () => {
   return (

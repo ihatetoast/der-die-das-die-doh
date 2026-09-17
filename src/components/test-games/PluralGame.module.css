@@ -60,6 +60,7 @@
 .targetWord {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
 .targetWord p {
@@ -102,14 +103,18 @@
 
 .pluralAnswer.incorrect {
   border: 3px solid var(--error);
-  background-color: var(--error);
+  /* background-color: var(--error); */
   color: var(--black);
 }
 
 .pluralAnswer.correct {
   border: 3px solid var(--success);
-  background-color: var(--success);
+  /* background-color: var(--success); */
   color: var(--black);
+}
+/* TODO: FIX THE WIDTH SO MESSAGES DON'T MAKE IT JUMP  */
+.messageContainer {
+  width: 100%;
 }
 
 .message {
@@ -127,10 +132,6 @@
 }
 
 @media screen and (min-width: 768px) {
-  .wordsContainer {
-    flex-direction: row;
-    gap: 2rem;
-  }
   .originWord {
     margin-left: 10%;
   }

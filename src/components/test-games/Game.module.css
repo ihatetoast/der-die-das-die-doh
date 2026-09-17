@@ -39,10 +39,27 @@ h3 {
 
 .germanAnswers {
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.germanAnswers div {
+  flex-grow: 1;
+}
+
+.germanAnswers input {
+  width: 100%;
 }
 
 .germanPlural {
   display: inline;
+}
+
+.pluralContainer {
+  display: flex;
+  align-items: center;
+}
+.pluralContainer span {
+  font-size: 1.2rem;
 }
 
 .emoji {
@@ -54,6 +71,7 @@ h3 {
 .message {
   height: 2rem;
   margin-bottom: 1rem;
+  flex-grow: 1;
 }
 .message.correctGer {
   color: var(--success);
@@ -91,7 +109,7 @@ h3 {
   background-color: var(--white);
   font-family: inherit;
   padding: 0.25em 0.5em;
-  margin: 0.5rem 0 1rem;
+  margin: 0.5rem 0;
   border: 2px solid var(--primary);
   border-radius: 4px;
 }
@@ -189,6 +207,11 @@ h3 {
 .articleButtonContainer button.selected {
   border: 2px solid var(--black);
 }
+
+.wordsContainer input:focus {
+  border: 2px solid var(--accent);
+}
+
 .articleButtonContainer button:focus {
   border: 2px solid var(--accent);
 }

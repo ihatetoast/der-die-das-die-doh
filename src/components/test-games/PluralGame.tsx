@@ -169,10 +169,16 @@ const PluralGame = ({ words, handleSetMode, onSessionComplete }: GameProps) => {
               <h3>English: the {cardsToTest[0].eng}</h3>
             </div>
             <div className={classes.targetWord}>
-              <p className={classes.message}>{message}</p>
-              <p>
-                German: {cardsToTest[0].article} {cardsToTest[0].noun},
-              </p>
+              <div className={classes.messageContainer}>
+                <p className={classes.message}>{message}</p>
+              </div>
+
+              {cardsToTest[0].hasNoSingular ? (
+                "Plurale tantum, i.e. No singular"
+              ) : (
+                <p>{`${cardsToTest[0].article} ${cardsToTest[0].noun}`}</p>
+              )}
+
               <div className={classes.pluralContainer}>
                 <span>die </span>
                 <input

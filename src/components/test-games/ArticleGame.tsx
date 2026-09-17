@@ -9,14 +9,8 @@ import GameOver from "../UI/GameOver.tsx";
 const TIME_TO_GUESS = 5000;
 
 const TIME_TO_NEXT_QUESTION = 2000;
-// if they chose, give 2 secs for pause. for style. don't reveal correct answer,
-// but reveal that user was right or wrong
 
-const ArticleGame = ({
-  words,
-  // handleSetMode,
-  onSessionComplete,
-}: GameProps) => {
+const ArticleGame = ({ words, onSessionComplete }: GameProps) => {
   const [cardsToTest, setCardsToTest] = useState<VocabEntry[]>([]);
   const [answerState, setAnswerState] = useState<AnswerState>("waiting");
   const [testState, setTestState] = useState<GameState>("waiting");
@@ -48,9 +42,6 @@ const ArticleGame = ({
     setTimeout(() => {
       setAnswerState("waiting");
     }, 500);
-    if (cardsToTest.length === 0) {
-      setTestState("over");
-    }
   };
 
   const handleUserAnswerSelect = (article: VocabEntry["article"]) => {
@@ -65,10 +56,6 @@ const ArticleGame = ({
       }
       setAnswerState("waiting");
     }, TIME_TO_NEXT_QUESTION);
-    if (cardsToTest.length === 0) {
-      // test is completed
-      setTestState("over");
-    }
   };
 
   return (
