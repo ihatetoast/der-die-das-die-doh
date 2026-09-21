@@ -64,6 +64,10 @@ h2 {
   font-family: var(--serif);
 }
 
+h3 {
+  font-weight: 500;
+}
+
 .app-container {
   padding: 0.5rem 0.25rem;
   flex: 1;
@@ -91,6 +95,10 @@ h2 {
 .visible {
   /* display: block; */
   visibility: visible;
+}
+
+.highlight {
+  color: var(--error);
 }
 
 .images-container {

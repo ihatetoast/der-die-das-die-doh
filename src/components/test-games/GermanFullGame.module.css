@@ -1,3 +1,96 @@
 .germanFullGame {
   width: 100%;
 }
+
+.instructions p {
+  margin: 0.5rem auto;
+}
+
+.startBtn,
+.submitBtn {
+  padding: 0.3rem;
+  border-radius: var(--btn-radius);
+  min-width: 5rem;
+  border: 2px solid transparent;
+}
+
+.startBtn {
+  background-color: var(--primary);
+  color: var(--white);
+  margin: 0 auto;
+  display: block;
+  font-size: 1rem;
+}
+
+.submitBtn {
+  background-color: var(--color-triad-one);
+}
+
+.englishWord {
+  text-align: center;
+}
+
+.germanAnswers {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.germanAnswers div {
+  flex-grow: 1;
+}
+
+.germanAnswers input {
+  width: 100%;
+}
+
+.pluralAnswer,
+.articleAnswer,
+.nounAnswer {
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: flex-end;
+  min-height: 3rem;
+  appearance: none;
+  background-color: var(--white);
+  font-family: inherit;
+  padding: 0.25em 0.5em;
+  margin: 0.5rem 0;
+  border: 2px solid var(--primary);
+  border-radius: 4px;
+}
+
+.pluralAnswer {
+  field-sizing: content; /* to allow it to grow if we get a large german word*/
+  flex-grow: 1;
+  margin-left: 0.2rem;
+}
+
+.germanPlural {
+  display: inline;
+}
+
+.pluralContainer {
+  display: flex;
+  align-items: center;
+}
+.pluralContainer span {
+  font-size: 1.2rem;
+}
+
+.emoji {
+  font-size: 1.2rem;
+  color: var(--error);
+  margin: 0 0.5rem;
+}
+
+.message {
+  height: 2rem;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+.message.correctGer {
+  color: var(--success);
+}
+.message.incorrectGer {
+  color: var(--error);
+}

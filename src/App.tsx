@@ -63,7 +63,9 @@ function App() {
       const weakCount = Math.ceil(size * (weakPercentage / 100));
 
       const weakNouns = allShuffledDeck.filter((n) => n.weakMasculine);
-      const otherNouns = allShuffledDeck.filter((n) => !n.weakMasculine);
+      const otherNouns = allShuffledDeck.filter(
+        (n) => !n.weakMasculine && !n.hasNoSingular,
+      );
 
       const remaining = size - weakCount;
 

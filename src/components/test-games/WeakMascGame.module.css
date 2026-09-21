@@ -19,15 +19,31 @@
   font-size: 1rem;
 }
 
-/* TODO: STYLE THESE
-style these
-.gameCard
-gameWord
-*/
+.gameCard {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 1rem auto;
+}
+
+.gameWord {
+  text-align: center;
+}
+
+.gameWord h3 {
+  font-size: 1.5rem;
+}
+
+.gameWeakMasc {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
 
 .gameWeakMasc button {
   background-color: var(--color-triad-three);
-  color: var(--white);
+  color: var(--black);
   text-transform: uppercase;
   padding: 0.3rem;
   border-radius: var(--btn-radius);
@@ -40,8 +56,4 @@ button[data-state="correct"] {
 }
 button[data-state="incorrect"] {
   background: var(--error);
-}
-
-.highlight {
-  color: var(--error);
 }

@@ -87,9 +87,9 @@ const PluralGame = ({ words, handleSetMode, onSessionComplete }: GameProps) => {
             You need to provide the correct plural.
           </h3>
           <p>
-            <span className={classes.highlight}>Note:</span> for this app,
-            please use the correct umlaut vowel and not the non-umlaut
-            equivalent (i.e. Use ü or ä and not ue or ae).
+            <span className="highlight">Note:</span>Please use the correct
+            umlaut vowel and not the non-umlaut equivalent (i.e. Use ü or ä and
+            not ue or ae).
           </p>
           <div>
             <h3>Quick refresher</h3>
@@ -100,57 +100,57 @@ const PluralGame = ({ words, handleSetMode, onSessionComplete }: GameProps) => {
               <div className={classes.pluralSignal}>¨-</div>
               <div>der Bruder</div>
               <div>
-                die Br<span className={classes.highlight}>ü</span>der
+                die Br<span className="highlight">ü</span>der
               </div>
               <div className={classes.pluralSignal}>-e</div>
               <div>der Tisch</div>
               <div>
-                die Tisch<span className={classes.highlight}>e</span>
+                die Tisch<span className="highlight">e</span>
               </div>
               <div className={classes.pluralSignal}>¨-e</div>
               <div>der Stuhl</div>
               <div>
-                die St<span className={classes.highlight}>ü</span>hl
-                <span className={classes.highlight}>e</span>
+                die St<span className="highlight">ü</span>hl
+                <span className="highlight">e</span>
               </div>
               <div className={classes.pluralSignal}>-er</div>
               <div>das Kind</div>
               <div>
-                die Kind<span className={classes.highlight}>er</span>
+                die Kind<span className="highlight">er</span>
               </div>
               <div className={classes.pluralSignal}>¨-er</div>
               <div>das Buch</div>
               <div>
-                die B<span className={classes.highlight}>ü</span>ch
-                <span className={classes.highlight}>er</span>
+                die B<span className="highlight">ü</span>ch
+                <span className="highlight">er</span>
               </div>
 
               <div className={classes.pluralSignal}>-en</div>
               <div>die Frau</div>
               <div>
-                die Frau<span className={classes.highlight}>en</span>
+                die Frau<span className="highlight">en</span>
               </div>
               <div className={classes.pluralSignal}>-n</div>
               <div>die Lampe</div>
               <div>
-                die Lampe<span className={classes.highlight}>n</span>
+                die Lampe<span className="highlight">n</span>
               </div>
               <div className={classes.pluralSignal}>-nen</div>
               <div>die Studentin</div>
               <div>
-                die Studentin<span className={classes.highlight}>nen</span>
+                die Studentin<span className="highlight">nen</span>
               </div>
               <div className={classes.pluralSignal}>-s</div>
               <div>das Handy</div>
               <div>
-                die Handy<span className={classes.highlight}>s</span>
+                die Handy<span className="highlight">s</span>
               </div>
             </div>
           </div>
           <p>
             Look out for Greek or Latin exceptions like das Vis
-            <span className={classes.highlight}>a</span> / die Vis
-            <span className={classes.highlight}>um</span>.
+            <span className="highlight">a</span> / die Vis
+            <span className="highlight">um</span>.
           </p>
           <p>When you're ready, click "Go!".</p>
           <button

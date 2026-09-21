@@ -14,13 +14,14 @@ import GameOver from "../UI/GameOver.tsx";
 
 const TIME_TO_GUESS = 5000;
 const TIME_TO_NEXT_QUESTION = 2000;
+const MAX_ROUNDS = 3;
 
 const WeakMascGame = ({ words, onSessionComplete }: GameProps) => {
   const [cardsToTest, setCardsToTest] = useState<VocabEntry[]>([]);
   const [answerState, setAnswerState] = useState<AnswerState>("waiting");
   const [testState, setTestState] = useState<GameState>("waiting");
   const [userChoice, setUserChoice] = useState<WeakMascAnswer | "">("");
-
+  const [consecutiveSkips, setConsecutiveSkips] = useState(0); // so if they die during the game, ...
   useEffect(() => {
     if (words.length > 0) setCardsToTest([...words]);
   }, [words]);
@@ -38,6 +39,13 @@ const WeakMascGame = ({ words, onSessionComplete }: GameProps) => {
   }, [cardsToTest, testState, onSessionComplete]);
 
   const handleSkipped = () => {
+    setConsecutiveSkips((prev) => prev + 1); // reset to 0 when answered right or wrong
+
+    if (consecutiveSkips + 1 >= MAX_ROUNDS * cardsToTest.length) {
+      setTestState("over");
+      return;
+    }
+
     setAnswerState("skipped");
     setCardsToTest((prev) => [...prev.slice(1), prev[0]]);
 
@@ -48,6 +56,7 @@ const WeakMascGame = ({ words, onSessionComplete }: GameProps) => {
   };
 
   const handleUserAnswerSelect = (answer: WeakMascAnswer) => {
+    setConsecutiveSkips(0);
     setUserChoice(answer);
     let isCorrect;
     if (cardsToTest[0].article === "der") {
@@ -81,7 +90,7 @@ const WeakMascGame = ({ words, onSessionComplete }: GameProps) => {
           </p>
           <p>
             Jung → Schwach (zB Ich sehe den Jung
-            <span className={classes.highlight}>en</span>.)
+            <span className="highlight">en</span>.)
           </p>
           <p>Hund → Normal (zB Ich sehe den Hund.)</p>
           <p>Buch → Nicht mask. (zB Ich lese das Buch.)</p>

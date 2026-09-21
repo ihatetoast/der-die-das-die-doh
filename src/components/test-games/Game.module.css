@@ -1,9 +1,5 @@
 /* todo: work on the color styles for german. too many colors  */
 
-h3 {
-  font-weight: 500;
-}
-
 .instructions p {
   margin: 0.5rem auto;
 }
@@ -11,9 +7,7 @@ h3 {
 .gameContainer {
   width: 100%;
 }
-.highlight {
-  color: var(--error);
-}
+
 .wordsContainer {
   display: flex;
   flex-direction: column;
@@ -32,55 +26,6 @@ h3 {
   justify-content: center;
   width: 100%;
 }
-/* specific to full game:  */
-.englishWord {
-  text-align: center;
-}
-
-.germanAnswers {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-}
-.germanAnswers div {
-  flex-grow: 1;
-}
-
-.germanAnswers input {
-  width: 100%;
-}
-
-.germanPlural {
-  display: inline;
-}
-
-.pluralContainer {
-  display: flex;
-  align-items: center;
-}
-.pluralContainer span {
-  font-size: 1.2rem;
-}
-
-.emoji {
-  font-size: 1.2rem;
-  color: var(--error);
-  margin: 0 0.5rem;
-}
-
-.message {
-  height: 2rem;
-  margin-bottom: 1rem;
-  flex-grow: 1;
-}
-.message.correctGer {
-  color: var(--success);
-}
-.message.incorrectGer {
-  color: var(--error);
-}
-
-/* end specific to full game:  */
 
 .hints {
   text-align: center;

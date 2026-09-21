@@ -5,16 +5,12 @@ import { ArticleType } from "../../types.ts";
 import SpecialCharacterButtons from "../UI/SpecialCharacterButtons.tsx";
 import GameOver from "../UI/GameOver.tsx";
 
-// import classes from './GermanFullGame.module.css';
-import classes from "./Game.module.css";
+import classes from "./GermanFullGame.module.css";
+// import classes from "./Game.module.css";
 
 import { GameProps } from "../../types.ts";
 
-const GermanFullGame = ({
-  words,
-  handleSetMode, // NEEDED?
-  onSessionComplete,
-}: GameProps) => {
+const GermanFullGame = ({ words, onSessionComplete }: GameProps) => {
   const {
     cardsToTest,
     setCardsToTest,
@@ -60,7 +56,7 @@ const GermanFullGame = ({
         setUserInputNoun("");
         setUserInputPlural("");
         setAnswerState("waiting");
-      }, 300000);
+      }, 3000);
     } else if (answerState === "skipped") {
       setMessage("");
     }
@@ -227,9 +223,9 @@ const GermanFullGame = ({
             translation, and plural and witout the use of hints.
           </p>
           <p>
-            <span className={classes.highlight}>Note:</span> for this app,
-            please use the correct umlaut vowel and not the non-umlaut
-            equivalent (i.e. Use ü or ä and not ue or ae).
+            <span className="highlight">Note:</span> Please use the correct
+            umlaut vowel and not the non-umlaut equivalent (i.e. Use ü or ä and
+            not ue or ae).
           </p>
           <p>When you're ready, click "Go!".</p>
           <button

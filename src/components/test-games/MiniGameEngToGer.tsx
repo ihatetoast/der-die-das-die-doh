@@ -8,11 +8,7 @@ import GameOver from "../UI/GameOver.tsx";
 import classes from "./Game.module.css";
 import { GameProps } from "../../types.ts";
 
-const MiniGameEngToGer = ({
-  words,
-  handleSetMode,
-  onSessionComplete,
-}: GameProps) => {
+const MiniGameEngToGer = ({ words, onSessionComplete }: GameProps) => {
   const {
     cardsToTest,
     setCardsToTest,
@@ -194,9 +190,9 @@ const MiniGameEngToGer = ({
             is over.
           </p>
           <p>
-            <span className={classes.highlight}>Note:</span> for this app,
-            please use the correct umlaut vowel and not the non-umlaut
-            equivalent (i.e. Use ü or ä and not ue or ae).
+            <span className="highlight">Note:</span> Please use the correct
+            umlaut vowel and not the non-umlaut equivalent (i.e. Use ü or ä and
+            not ue or ae).
           </p>
           <p>When you're ready, click "Go!".</p>
           <button

@@ -109,9 +109,9 @@ const MiniGameGerToEng = ({
             singular).
           </h3>
           <p>
-            <span className={classes.highlight}>Note:</span> Do not add
-            modifiers such as "male" or "female" to answers, i.e. write
-            "student", not "female student".
+            <span className="highlight">Note:</span> Do not add modifiers such
+            as "male" or "female" to answers, i.e. write "student", not "female
+            student".
           </p>
           <p className={classes.hints}>
             Need help? <span className={classes.emoji}>➡</span> "Hint".{" "}
