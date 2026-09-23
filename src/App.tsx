@@ -34,19 +34,13 @@ function App() {
   }, [testType, setActiveDeck, setDeckSize]);
 
   const handleSetMode = (mode: ModeProp) => {
-    // home is a total refresh
-    if (mode === "home") {
-      shuffleDeck();
-      setActiveDeck([]);
-      setCardsReviewed([]);
-      setDeckSize(null);
-      setTestType(null);
-      setSessionComplete(false);
-    }
-    // reset the sesh
-    if (mode === "practice" || mode === "test") {
-      setSessionComplete(false);
-    }
+    shuffleDeck();
+    setActiveDeck([]);
+    setCardsReviewed([]);
+    setDeckSize(null);
+    setTestType(null);
+    setSessionComplete(false);
+
     setMode(mode);
   };
 
@@ -54,8 +48,16 @@ function App() {
     setSessionComplete(true);
   }, []);
 
-  // this has one job: handle the start. Only called at start or after total refresh.
+  // this has one job: handle the start.
+  // Only called at start or after total refresh.
   const handleGetInitialActiveDeck = (size: DeckSize, testType?: TestType) => {
+    console.log(
+      "handleGetInitialActiveDeck called with size:",
+      size,
+      "testType:",
+      testType,
+    );
+    console.log("allShuffledDeck length:", allShuffledDeck.length);
     setDeckSize(size);
     let deck: VocabEntry[];
     if (testType === "weak-masc") {
@@ -132,6 +134,7 @@ function App() {
     setAllShuffledDeck(shuffled);
     // setAllShuffledDeck(shuffled.slice(0, 2)); // to test if i lose all my words.
   }
+  console.log("active deck from app.tsx: ", activeDeck);
   return (
     <>
       <Header

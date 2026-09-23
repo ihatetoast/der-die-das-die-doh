@@ -114,9 +114,9 @@ const PracticeBoard = ({
                 </li>
               </ul>
               <p>
-                Note: For words with a gender pair (eg Journalist → der
-                Journalist / die Journalistin), a badge will appear so you know
-                which one you're targeting.
+                <span className="highlight">Note:</span> For nouns with a gender
+                pair (eg Journalist → der Journalist / die Journalistin), a
+                badge will let know which one you're targeting.
               </p>
               <div className={classes.deckBox}>
                 <p className="center">Pick a deck size: </p>
@@ -175,7 +175,7 @@ const PracticeBoard = ({
                   </button>
                 )}
               </div>
-              <p>Test me:</p>
+              <p>Test me on this deck:</p>
               <div className={`${classes.btnContainer} ${classes.testBtns}`}>
                 <button onClick={() => handleTestButtonClick("german-full")}>
                   <span className={classes.mobileBtn}>Eng to Ger</span>
